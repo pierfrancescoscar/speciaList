@@ -19,4 +19,22 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware('auth')
+    ->namespace('Admin')
+    ->name('admin.')
+    ->prefix('admin')
+    ->group(function(){
+
+        // Admin homepage
+        Route::get('/home', 'HomeController@index')->name('home');
+
+        // Doctor Route
+        Route::resource('/doctor', 'DoctorController');
+});
+
+// Guest 'any' route
+Route::get('{any?}', function () {
+    return view('guests.home');
+})->where('any', '.*' );
+
+
