@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Doctor;
+
 class DoctorController extends Controller
 {
     /**
@@ -55,9 +57,11 @@ class DoctorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        //
+        /* $doctor = Doctor::where('slug', $slug)->first();
+
+        return view('admin.doctor.edit', compact('doctor')); */
     }
 
     /**
