@@ -6,3 +6,36 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+#app {
+    header {
+        .navbar {
+            .container {
+                height: 60px;
+                .navbar-brand {
+                    height: 100%;
+                    .logo {
+                        height: 100%;
+                        transform: scale(2);
+                    }
+                }
+                .navbar-collapse {
+                    .navbar-nav {
+                        .nav-item {
+                            .nav-link {
+                                color: #0071c3;
+                                &.btn-1 {
+                                    color: white;
+                                }
+                            }
+                            .btn-1 {
+                                background-color: #0071c3;
+                                border-radius: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
