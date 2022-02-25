@@ -40,7 +40,6 @@ class DoctorController extends Controller
      */
     public function store(Request $request)
     {
-        // Validation rules
         $request->validate($this->validation_create());
 
         $data = $request->all();
