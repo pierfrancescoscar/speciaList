@@ -27,11 +27,13 @@
         {{-- Header --}}
         <header>
             @include('partials.header')
+            {{-- <a href="{{ route('doctors.show', $Doctor->id) }}">Show</a> --}}
         </header>
         
         {{-- Main Content --}}
         <main class="py-4">
             @yield('content')
+            
         </main>
 
         {{-- Footer --}}

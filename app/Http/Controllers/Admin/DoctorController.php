@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Doctor;
 
 class DoctorController extends Controller
 {
@@ -44,10 +45,19 @@ class DoctorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
+
     {
-        //
+        $doctor = Doctor::where('slug', '=', $slug)->first();
+
+
+        if (!$doctor) {
+            abort(404);
+        }
+
+        return view('admin.doctors.show', compact('doctor'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
