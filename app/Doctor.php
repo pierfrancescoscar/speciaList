@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Doctor extends Model
 {
+
+    // Fillable
+    protected $fillable = [
+        'name', 'surname', 'slug', 'curriculum', 'phone_number', 'email', 'medical_service', 'description', 'address', 'profile_pic',
+    ];
+
     // Relation between Doctors and Categories (Many to Many)
     public function categories() {
         return $this->belongsToMany('App\Category');
