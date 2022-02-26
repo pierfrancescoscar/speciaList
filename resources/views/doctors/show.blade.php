@@ -2,32 +2,45 @@
 
 @section('content')
     <div class="container">
-        <h1>{{ $doctor->name }}</h1>
-        <h1>{{ $doctor->surname }}</h1>
-        <h1>{{ $doctor->phone_number }}</h1>
-        <h1>{{ $doctor->email }}</h1>
-        <h1>{{ $doctor->address }}</h1>
 
-        <div class="row mt-5 mb-5">
+        {{-- Name --}}
+        <h1 class="mb-5">{{ $doctor->name }}</h1>
 
-            {{-- doctor description --}}
-            <div class="{{ $doctor->description ? 'col-md-6' : 'col' }}">
-                {!! $post->description !!}
-            </div>
+        {{-- Surname --}}
+        <h3 class="mb-5">{{ $doctor->surname }}</h3>
 
-            {{-- profile_pic --}}
-            @if($post->cover)
-                <div class="col-md-6">
-                    <img class="img-fluid" src="{{ asset('storage/' . $doctor->profile_pic) }}" alt="{{ $doctor->name }}">
-                </div>
-            @endif
+        {{-- Phone Number --}}
+        <h3 class="mb-5">{{ $doctor->phone_number }}</h3>
+
+        {{-- Email --}}
+        <h3 class="mb-5">{{ $doctor->email }}</h3>
+
+        {{-- Address --}}
+        <h3 class="mb-5">{{ $doctor->address }}</h3>
+
+        {{-- Description --}}
+        <p class="mb-5">{{ $doctor->description }}</p>
+
+        {{-- Profile Pic --}}
+        @if ($doctor->profile_pic)
+
+        <div class="col-6">
+            <img class="img-fluid" src="{{ asset('storage/' . $doctor->profile_pic) }}" alt="{{ $doctor->name }}">
         </div>
 
-        <div class="mt-5">
-            <a class="btn btn-primary" href="">Edit</a>
+        @endif
+
+        {{-- Curriculum --}}
+        @if ($doctor->curriculum)
+
+        <div class="col-6">
+            <a href="{{ asset('storage/' . $doctor->curriculum) }}">Clicca qui per visualizzare il CV</a>
         </div>
-        <div class="mt-5">
-            <a class="btn btn-success" href="">Back to HomePage</a>
-        </div>
-    </div>
+
+        @endif
+
+        {{-- Action buttons  --}}
+        <a class="btn btn-warning" href="{{ route('admin.doctor.edit', $doctor->id) }}">Edit</a>
+        <a class="btn btn-danger" href="/">Back to archive</a>
+
 @endsection
