@@ -1,46 +1,90 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container show_style mb-3">
 
-        {{-- Name --}}
-        <h1 class="mb-5">{{ $doctor->name }}</h1>
+        <div class="first_row">
 
-        {{-- Surname --}}
-        <h3 class="mb-5">{{ $doctor->surname }}</h3>
+            <div class="left_container ">
 
-        {{-- Phone Number --}}
-        <h3 class="mb-5">{{ $doctor->phone_number }}</h3>
+                {{-- Profile Pic --}}
+                @if ($doctor->profile_pic)
 
-        {{-- Email --}}
-        <h3 class="mb-5">{{ $doctor->email }}</h3>
+                <div class="profile_pic">
+                    <img class="img-fluid" src="{{ asset('storage/' . $doctor->profile_pic) }}" alt="{{ $doctor->name }}">
+                </div>
 
-        {{-- Address --}}
-        <h3 class="mb-5">{{ $doctor->address }}</h3>
+                @endif
 
-        {{-- Description --}}
-        <p class="mb-5">{{ $doctor->description }}</p>
+                <div class="doctor_primary_info text-center">
 
-        {{-- Profile Pic --}}
-        @if ($doctor->profile_pic)
+                    {{-- doctor id --}}
+                    <h2 class="mb-2">{{ $doctor->name }} {{ $doctor->surname }}</h2>
 
-        <div class="col-6">
-            <img class="img-fluid" src="{{ asset('storage/' . $doctor->profile_pic) }}" alt="{{ $doctor->name }}">
+                    {{-- doctor category --}}
+                    <h3 class="mb-2">categoria</h3>
+                </div>
+
+                <a class="btn btn-primary" href="{{ route('admin.doctor.edit', $doctor->id) }}">Edit</a>
+
+            </div>
+
+            <div class="right_container">
+
+                <div class="title_container_info">
+                    <span>Informazioni personali</span>
+                </div>
+
+                <div class="container_info">
+
+                    @if ($doctor->curriculum)
+
+                        <span class="name_info_row">Curriculum</span>
+
+                        <div class="row_info">
+                            <a href="{{ asset('storage/' . $doctor->curriculum) }}">Clicca qui per visualizzare il CV</a>
+                        </div>
+
+                    @endif
+
+                    {{-- Phone Number --}}
+                    <span class="name_info_row">Numero di telefono</span>
+
+                    <div class="row_info">
+                        <span class="mb-0">{{ $doctor->phone_number }}</span>
+                    </div>
+
+                    {{-- Email --}}
+                    <span class="name_info_row">Email</span>
+
+                    <div class="row_info">
+                        <span class="mb-0">{{ $doctor->email }}</sp>
+                    </div>
+
+                    {{-- medic service --}}
+                    <span class="name_info_row">Servizi</span>
+
+                    <div class="row_info">
+                        <p class="mb-0">{{ $doctor->medical_service }}</p>
+                    </div>
+
+                    {{-- Description --}}
+                    <span class="name_info_row">Descrizione</span>
+
+                    <div class="row_info">
+                        <p>{{ $doctor->description }}</p>
+                    </div>
+
+                    {{-- Address --}}
+                    <span class="name_info_row">Indirizzo</span>
+
+                    <div class="row_info">
+                        <span class="mb-0">{{ $doctor->address }}</span>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        @endif
-
-        {{-- Curriculum --}}
-        @if ($doctor->curriculum)
-
-        <div class="col-6">
-            <a href="{{ asset('storage/' . $doctor->curriculum) }}">Clicca qui per visualizzare il CV</a>
-        </div>
-
-        @endif
-
-        {{-- Action buttons  --}}
-        <a class="btn btn-warning" href="{{ route('admin.doctor.edit', $doctor->id) }}">Edit</a>
-        <a class="btn btn-danger" href="/">Back to archive</a>
+    </div>
 
 @endsection
