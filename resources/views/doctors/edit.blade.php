@@ -120,6 +120,20 @@
 
                 <input class="form-control" type="file" name="profile_pic" id="profile_pic">
             </div>
+
+            {{-- Category --}}
+            <div class="mb-5">
+                <label for="category">Specializzazione</label>
+                <select id="category" name="categories[]" multiple="multiple" size="5" class="form-control">
+                    @foreach($categories as $category)
+                            <option value="{{ $category->id }}"
+                                @if($doctor->categories->contains($category->id)) selected @endif>
+                                {{$category->name}}
+                            </option>
+                    @endforeach
+                </select>
+                <span style="font-size: 0.7em;">(Premere CTRL/COMMAND per le scelte multiple)</span>
+            </div>
            
             {{-- Submit --}}
             <button class="btn btn-primary" type="submit">Modifica il tuo profilo</button>

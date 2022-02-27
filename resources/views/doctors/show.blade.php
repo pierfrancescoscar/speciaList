@@ -39,6 +39,14 @@
 
         @endif
 
+        {{-- Specializzazione --}}
+        <div class="mt-5">
+            <strong class="badge bg-success mt-3">Specializzazione:</strong>
+            @foreach($doctor->categories as $category)
+                {{ $category->name }},
+            @endforeach
+        </div>
+
         {{-- Action buttons  --}}
         <a class="btn btn-warning" href="{{ route('admin.doctor.edit', $doctor->id) }}">Edit</a>
         <a class="btn btn-danger" href="/">Back to archive</a>

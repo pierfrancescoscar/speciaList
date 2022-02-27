@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Doctor;
+use App\Category;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -27,8 +28,8 @@ class DoctorController extends Controller
      */
     public function create()
     {
-
-        return view('doctors.create');
+        $categories = Category::all();
+        return view('doctors.create', compact('categories'));
     }
 
     /**
@@ -42,6 +43,7 @@ class DoctorController extends Controller
         $request->validate($this->validation_create());
 
         $data = $request->all();
+        //dd($data);
 
         // Profile Pic control
         if (array_key_exists('profile_pic', $data)) {
@@ -73,6 +75,11 @@ class DoctorController extends Controller
 
         $new_doctor->save();
 
+        //salvataggio in pivot 
+        if (array_key_exists('categories', $data)) {
+            $new_doctor->categories()->attach($data['categories']);
+        }
+
         return redirect()->route('admin.doctor.show', $new_doctor->slug);
     }
 
@@ -103,12 +110,13 @@ class DoctorController extends Controller
     public function edit($id)
     {
         $doctor = Doctor::find($id);
+        $categories = Category::all();
 
         if (!$doctor) {
             abort(404);
         }
 
-        return view('doctors.edit', compact('doctor'));
+        return view('doctors.edit', compact('doctor', 'categories'));
     }
 
     /**
@@ -171,6 +179,13 @@ class DoctorController extends Controller
         }
 
         $doctor->update($data);
+
+        // aggiornamento tabella pivot
+        if (array_key_exists('categories', $data)) {
+            $doctor->categories()->sync($data['categories']); // update(aggiornamento) dei tags 
+        } else {
+            $doctor->categories()->detach(); //nessun check selazione della form quindi pulizia
+        }
 
         return redirect()->route('admin.doctor.show', $doctor->slug);
     }

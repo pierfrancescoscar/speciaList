@@ -10019,3 +10019,23 @@ h3 {
     border-color: #dee2e6;
   }
 }
+#app header .navbar .container {
+  height: 60px;
+}
+#app header .navbar .container .navbar-brand {
+  height: 100%;
+}
+#app header .navbar .container .navbar-brand .logo {
+  height: 100%;
+  transform: scale(2);
+}
+#app header .navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: #0071c3;
+}
+#app header .navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link.btn-1 {
+  color: white;
+}
+#app header .navbar .container .navbar-collapse .navbar-nav .nav-item .btn-1 {
+  background-color: #0071c3;
+  border-radius: 20px;
+}
