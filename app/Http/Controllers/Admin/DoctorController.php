@@ -5,11 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Doctor;
-<<<<<<< HEAD
-=======
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
->>>>>>> master
 
 class DoctorController extends Controller
 {
@@ -30,9 +27,8 @@ class DoctorController extends Controller
      */
     public function create()
     {
-    
+
         return view('doctors.create');
-     
     }
 
     /**
@@ -48,13 +44,13 @@ class DoctorController extends Controller
         $data = $request->all();
 
         // Profile Pic control
-        if(array_key_exists('profile_pic', $data)) {
+        if (array_key_exists('profile_pic', $data)) {
             $img = Storage::put('doctors_img', $data['profile_pic']);
             $data['profile_pic'] = $img;
         }
 
         // Curriculum control
-        if(array_key_exists('curriculum', $data)) {
+        if (array_key_exists('curriculum', $data)) {
             $cv = Storage::put('doctors_curriculum', $data['curriculum']);
             $data['curriculum'] = $cv;
         }
@@ -66,7 +62,7 @@ class DoctorController extends Controller
         $slug = Str::slug($slug_name, '-');
         $count = 1;
 
-        while(Doctor::where('slug', $slug)->first()) {
+        while (Doctor::where('slug', $slug)->first()) {
             $slug .= '-' . $count;
             $count++;
         }
@@ -78,7 +74,6 @@ class DoctorController extends Controller
         $new_doctor->save();
 
         return redirect()->route('admin.doctor.show', $new_doctor->slug);
-
     }
 
     /**
@@ -88,27 +83,14 @@ class DoctorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($slug)
-<<<<<<< HEAD
-
     {
-        $doctor = Doctor::where('slug', '=', $slug)->first();
-
+        $doctor = Doctor::where('slug', $slug)->first();
 
         if (!$doctor) {
             abort(404);
         }
 
-        return view('admin.doctors.show', compact('doctor'));
-=======
-    {
-        $doctor = Doctor::where('slug', $slug)->first();
-
-        if(! $doctor) {
-            abort(404);
-        }
-
         return view('doctors.show', compact('doctor'));
->>>>>>> master
     }
 
 
@@ -122,7 +104,7 @@ class DoctorController extends Controller
     {
         $doctor = Doctor::find($id);
 
-        if(! $doctor) {
+        if (!$doctor) {
             abort(404);
         }
 
@@ -149,9 +131,9 @@ class DoctorController extends Controller
 
         // Add / Update Profile Pic if already exists
 
-        if(array_key_exists('profile_pic', $data)) {
+        if (array_key_exists('profile_pic', $data)) {
 
-            if($doctor->profile_pic) {
+            if ($doctor->profile_pic) {
                 Storage::delete($doctor->profile_pic);
             }
 
@@ -160,9 +142,9 @@ class DoctorController extends Controller
 
         // Add / Update Curriculum if already exists
 
-        if(array_key_exists('curriculum', $data)) {
+        if (array_key_exists('curriculum', $data)) {
 
-            if($doctor->curriculum) {
+            if ($doctor->curriculum) {
                 Storage::delete($doctor->curriculum);
             }
 
@@ -171,31 +153,26 @@ class DoctorController extends Controller
 
         // Slug update ONLY IF already exists
 
-        if($data['name'] != $doctor->name || $data['surname'] != $doctor->surname ) {
+        if ($data['name'] != $doctor->name || $data['surname'] != $doctor->surname) {
             $slug_name = $data['name'] . '-' . $data['surname'];
             $slug = Str::slug($slug_name, '-');
             $count = 1;
             $base_slug = $slug;
 
-        // Loop if slug already exists
-        while(Doctor::where('slug', $slug)->first()) {
-            $slug = $base_slug . '-' . $count;
-            $count++;
-        }
+            // Loop if slug already exists
+            while (Doctor::where('slug', $slug)->first()) {
+                $slug = $base_slug . '-' . $count;
+                $count++;
+            }
 
-        $data['slug'] = $slug;
-
-        }
-        else {
+            $data['slug'] = $slug;
+        } else {
             $data['slug'] = $doctor->slug;
         }
 
         $doctor->update($data);
 
         return redirect()->route('admin.doctor.show', $doctor->slug);
-
-
-
     }
 
     /**
@@ -210,7 +187,8 @@ class DoctorController extends Controller
     }
 
     // Form Validations
-    private function validation_create() {
+    private function validation_create()
+    {
 
         return [
             'name' => 'required',
@@ -224,7 +202,5 @@ class DoctorController extends Controller
             'curriculum' => 'required|file|mimes:pdf',
             'profile_pic' => 'file|mimes:jpg,jpeg,png,bmp',
         ];
-
     }
-
 }
