@@ -58,7 +58,7 @@
                     <span class="name_info_row">Email</span>
 
                     <div class="row_info">
-                        <span class="mb-0">{{ $doctor->email }}</sp>
+                        <span class="mb-0">{{ $doctor->email }}</span>
                     </div>
 
                     {{-- medic service --}}
@@ -72,7 +72,7 @@
                     <span class="name_info_row">Descrizione</span>
 
                     <div class="row_info">
-                        <p>{{ $doctor->description }}</p>
+                        <p class="mb-0">{{ $doctor->description }}</p>
                     </div>
 
                     {{-- Address --}}
@@ -81,18 +81,20 @@
                     <div class="row_info">
                         <span class="mb-0">{{ $doctor->address }}</span>
                     </div>
+
+                    {{-- Specializzazione --}}
+                    <div class="mt-5">
+                        <strong class="badge bg-success mt-3">Specializzazione:</strong>
+                        @foreach($doctor->categories as $category)
+                            {{ $category->name }},
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
 
 
-        {{-- Specializzazione --}}
-        <div class="mt-5">
-            <strong class="badge bg-success mt-3">Specializzazione:</strong>
-            @foreach($doctor->categories as $category)
-                {{ $category->name }},
-            @endforeach
-        </div>
+        
 
         {{-- Action buttons  --}}
         <a class="btn btn-warning" href="{{ route('admin.doctor.edit', $doctor->id) }}">Edit</a>

@@ -128,7 +128,7 @@ class DoctorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate($this->validation_create());
+        $request->validate($this->validation_update());
 
         $data = $request->all();
 
@@ -210,12 +210,24 @@ class DoctorController extends Controller
             'surname' => 'required',
             'email' => 'required',
             'phone_number' => 'required',
-            'medical_service' => 'nullable',
+            'medical_service' => 'required',
             'description' => 'nullable',
             'address' => 'nullable',
-            'profile_pic' => 'nullable',
             'curriculum' => 'required|file|mimes:pdf',
-            'profile_pic' => 'file|mimes:jpg,jpeg,png,bmp',
+            'profile_pic' => 'nullable|file|mimes:jpg,jpeg,png,bmp',
+        ];
+    }
+
+    private function validation_update()
+    {
+        return [
+            'name' => 'required',
+            'surname' => 'required',
+            'email' => 'required',
+            'phone_number' => 'required',
+            'medical_service' => 'required',
+            'description' => 'nullable',
+            'address' => 'nullable',
         ];
     }
 }

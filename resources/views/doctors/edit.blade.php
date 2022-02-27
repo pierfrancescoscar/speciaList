@@ -48,9 +48,11 @@
 
                 @if($doctor->curriculum)
                     <a href="{{ asset('storage/' . $doctor->curriculum) }}">Clicca qui per visualizzare il CV</a>
+                    <input class="form-control" type="file" name="curriculum" id="curriculum" value="{{ old('curriculum', $doctor->curriculum) }}">
+                @else
+                <input class="form-control" type="file" name="curriculum" id="curriculum">
                 @endif
 
-                <input class="form-control" type="file" name="curriculum" id="curriculum">
             </div>
 
             {{-- Phone Number --}}
@@ -103,7 +105,7 @@
 
                 <label class="form-label" for="address">Indirizzo</label>
 
-                <input placeholder="Indirizzo*" class="form-control" type="text" name="address" id="address" value="{{ Auth::user()->address }}">
+                <input placeholder="Indirizzo*" class="form-control" type="text" name="address" id="address" value="{{ old('address', $doctor->address) }}">
             </div>
 
             {{-- Profile Pic --}}
@@ -123,6 +125,9 @@
 
             {{-- Category --}}
             <div class="mb-5">
+                @error('medical_service')
+                <div class="text-danger">{{ $message }}</div>
+                @enderror
                 <label for="category">Specializzazione</label>
                 <select id="category" name="categories[]" multiple="multiple" size="5" class="form-control">
                     @foreach($categories as $category)

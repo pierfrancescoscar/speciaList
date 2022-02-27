@@ -12,10 +12,10 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto d-flex aligni-items-center">
                     <!-- Authentication Links -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('FAQ') }}</a>
+                    </li>
                     @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('FAQ') }}</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Accedi') }}</a>
                         </li>
