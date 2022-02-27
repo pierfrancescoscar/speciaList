@@ -14,9 +14,11 @@
 
                 @if ($doctor->profile_pic)
 
-                <div class="profile_pic mb-2">
-                    <img class="img-fluid" src="{{ asset('storage/' . $doctor->profile_pic) }}" alt="{{ $doctor->name }}">
+                <div class="w-50">
+                    <img class="img-fluid img-thumbnail" src="{{ asset('storage/' . $doctor->profile_pic) }}" alt="{{ $doctor->name }}">
                 </div>
+                    
+                
 
                 @endif
 
