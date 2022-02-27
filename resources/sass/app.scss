@@ -7,5 +7,8 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-/* partials */
-@import 'show_style.scss';
+// Header
+@import 'partials/header.scss';
+
+// doctor show
+@import 'partials/show_style.scss';
