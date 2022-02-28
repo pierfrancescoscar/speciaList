@@ -92,7 +92,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    <a href="{{ asset('doctors.create') }}">{{ __('Register') }}</a>
+                                    {{ __('Register') }}
                                     {{-- {{ __('Register') }} --}}
                                 </button>
                             </div>
