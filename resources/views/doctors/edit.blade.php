@@ -124,7 +124,7 @@
             </div>
 
             {{-- Category --}}
-            <div class="mb-5">
+            {{-- <div class="mb-5">
                 @error('medical_service')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
@@ -138,6 +138,27 @@
                     @endforeach
                 </select>
                 <span style="font-size: 0.7em;">(Premere CTRL/COMMAND per le scelte multiple)</span>
+            </div> --}}
+            <div class="mb-3 mt-5">
+                <h4>Specializzazione</h4>
+
+                @foreach($categories as $category) 
+                    <span class="d-inline-block mr-5">
+                        <input type="checkbox" name="categories[]" id="category{{ $loop->iteration }}" value="{{ $category->id}}"
+                        @if($errors->any() && in_array($category->id, old('categories'))) 
+                            checked
+                        @elseif (!$errors->any() && $doctor->categories->contains($category->id))
+                            checked
+                        @endif
+                        >
+                        <label for="category{{ $loop->iteration }}">
+                            {{$category->name}}
+                        </label>
+                    </span>
+                @endforeach
+                @error('categories')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
             </div>
            
             {{-- Submit --}}

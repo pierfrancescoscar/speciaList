@@ -36,8 +36,8 @@
                     <h4 class="mb-2 mt-2 text-center">Specializzazione:</h4>
                     <ul class="">
                         @foreach($doctor->categories as $category)
-                            <li class="">
-                                <a href="" class="badge badge_profile">{{ $category->name }}</a>
+                            <li>
+                                <a class="badge badge_profile" href="">{{ $category->name }}</a>
                             </li>
                         @endforeach
                     </ul>
@@ -100,6 +100,8 @@
                     <div class="row_info">
                         <span class="mb-0">{{ $doctor->address }}</span>
                     </div>
+
+                    
                 </div>
             </div>
         </div>
