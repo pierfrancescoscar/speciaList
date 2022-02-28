@@ -9,6 +9,8 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+use Illuminate\Support\Str;
+
 class RegisterController extends Controller
 {
     /*
@@ -52,7 +54,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'surname' => ['required', 'string', 'max:255'],
-            'address' => ['required', 'string', 'max:255'],
+            'surname' => ['nullable', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -66,9 +68,24 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        /* controllo slug */
+        $slug_first = $data['name'] .'-' .$data['surname'];
+        $slug = Str::slug($slug_first, '-');
+        $count = 1;
+        $base_slug = $slug;
+
+        while (User::where('slug', $slug)->first()) {
+            $slug = $base_slug  .'-' . $count;
+            $count++;
+        }
+
+
         return User::create([
+
             'name' => $data['name'],
             'surname' => $data['surname'],
+            'slug' => $slug,
             'address' => $data['address'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),

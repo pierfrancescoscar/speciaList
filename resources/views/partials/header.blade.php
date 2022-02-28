@@ -37,6 +37,10 @@
                                     {{ __('Logout') }}
                                 </a>
 
+                                <a class="dropdown-item" href="{{ route('admin.doctor.show', Auth::user()->slug) }}">
+                                    il mio acccount
+                                </a>
+
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
