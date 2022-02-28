@@ -1,0 +1,33 @@
+
+.blue_bg {
+    background-color: $primary;
+    box-shadow: 5px 10px 5px #00000040;
+    color: white;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 3;
+}
+
+
+.white_bg {
+    background-color: white;
+    color: $primary;
+    box-shadow: 5px 10px 5px #00000040;
+
+    .form-control {
+        border:1px solid $primary;
+        transition: .3s background-color;
+    
+    }
+
+}
+
+.form_style {
+    padding: 2rem 2rem 3rem;
+}
+
+.btn-1 {
+    background-color: #0071c3;
+    border-radius: 20px;
+    color: white;
+}
