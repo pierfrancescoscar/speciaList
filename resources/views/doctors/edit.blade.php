@@ -127,20 +127,24 @@
                     </div>
 
                     {{-- Category --}}
-                    <div class="mb-5">
-                        @error('medical_service')
-                        <div class="text-danger">{{ $message }}</div>
+                    <div class="mb-3 mt-5">
+                        <h4>Specializzazione:</h4>
+                        @foreach($categories as $category) 
+                            <span class="d-inline-block mr-5">
+                                <input type="checkbox" name="categories[]" id="category{{ $loop->iteration }}" value="{{ $category->id}}"
+                                @if($errors->any() && in_array($category->id, old('categories'))) 
+                                    checked 
+                                @elseif(!$errors->any() && $doctor->categories->contains($category->id))
+                                    checked
+                                @endif>
+                                <label for="category{{ $loop->iteration }}">
+                                    {{$category->name}}
+                                </label>
+                            </span>
+                        @endforeach
+                        @error('categories')
+                            <div class="text-danger">{{ $message }}</div>
                         @enderror
-                        <label for="category">Specializzazione</label>
-                        <select id="category" name="categories[]" multiple="multiple" size="5" class="form-control">
-                            @foreach($categories as $category)
-                                    <option value="{{ $category->id }}"
-                                        @if($doctor->categories->contains($category->id)) selected @endif>
-                                        {{$category->name}}
-                                    </option>
-                            @endforeach
-                        </select>
-                        <span style="font-size: 0.7em;">(Premere CTRL/COMMAND per le scelte multiple)</span>
                     </div>
                 
                     {{-- Submit --}}
@@ -148,6 +152,9 @@
 
                 </form>
             </div>
+<<<<<<< HEAD
+        </div>
+=======
 
 
             {{-- Phone Number --}}
@@ -263,4 +270,5 @@
     </div>
         </div>
 
+>>>>>>> d818f42be45e945c0523405c929ea9b663f5d829
 @endsection

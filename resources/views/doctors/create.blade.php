@@ -100,6 +100,7 @@
                 <input class="form-control" type="file" name="profile_pic" id="profile_pic">
             </div>
 
+            {{-- specializzazione --}}
             <div class="mb-3 mt-5">
                 <h4>Specializzazione:</h4>
 
