@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Doctor;
+use App\User;
 use App\Category;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -29,6 +30,7 @@ class DoctorController extends Controller
     public function create()
     {
         $categories = Category::all();
+
         return view('doctors.create', compact('categories'));
     }
 
@@ -43,7 +45,6 @@ class DoctorController extends Controller
         $request->validate($this->validation_create());
 
         $data = $request->all();
-        //dd($data);
 
         // Profile Pic control
         if (array_key_exists('profile_pic', $data)) {
@@ -57,22 +58,31 @@ class DoctorController extends Controller
             $data['curriculum'] = $cv;
         }
 
+        /* crreate a new doctor */
         $new_doctor = new Doctor();
 
-        // Slug validity check
-        $slug_name = $data['name'] . '-' . $data['surname'];
-        $slug = Str::slug($slug_name, '-');
+        /* create slug */
+        $slug_first = $data['name'] .'-' .$data['surname'];
+        $slug = Str::slug($slug_first, '-');
         $count = 1;
+        $base_slug = $slug;
 
         while (Doctor::where('slug', $slug)->first()) {
-            $slug .= '-' . $count;
+            $slug = $base_slug  .'-' . $count;
             $count++;
         }
 
-        $data['slug'] = $slug;
+        /* find user by doctor slug */
+        $user_id = User::where('slug', $slug)->value('id');
+        $MyUser = User::find($user_id);
 
+        /* overight doctor slug */
+        $data['slug'] = $MyUser['slug'];
+
+        /* create a new doctor by data */
         $new_doctor->fill($data);
 
+        /* save te new doctor */
         $new_doctor->save();
 
         //salvataggio in pivot 
@@ -131,11 +141,18 @@ class DoctorController extends Controller
         $request->validate($this->validation_update());
 
         $data = $request->all();
-
-        // dump($data);
-
+        
         // Update
         $doctor = Doctor::find($id);
+
+
+        /* find doctor by slug */
+        $slug_doc_us = $doctor['slug'];
+
+        $user_id = User::where('slug', $slug_doc_us)->value('id');
+
+        $MYuser = User::find($user_id);
+
 
         // Add / Update Profile Pic if already exists
 
@@ -160,7 +177,6 @@ class DoctorController extends Controller
         }
 
         // Slug update ONLY IF already exists
-
         if ($data['name'] != $doctor->name || $data['surname'] != $doctor->surname) {
             $slug_name = $data['name'] . '-' . $data['surname'];
             $slug = Str::slug($slug_name, '-');
@@ -178,6 +194,16 @@ class DoctorController extends Controller
             $data['slug'] = $doctor->slug;
         }
 
+        // dd($data['slug']);
+
+        /* update user row */
+        $MYuser->update([
+            'slug' => $data['slug'],
+            'surname' => $data['surname'],
+            'name' => $data['name'],
+        ]);
+
+        /* update doctor row */
         $doctor->update($data);
 
         // aggiornamento tabella pivot
