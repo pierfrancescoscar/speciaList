@@ -230,13 +230,13 @@ class DoctorController extends Controller
         $doctor = Doctor::find($id);
 
         //controllo presenza image.  eliminare il file fisico: non lasciare l image orfana all interno della cartella posts-cover
-        if ($doctor->profile_pic) {
-            Storage::delete($doctor->profile_pic);
+        if ($doctor->profile_pic && $doctor->curriculum) {
+            Storage::delete($doctor->profile_pic, $doctor->curriculum);
         }
 
         $doctor->delete();
 
-        return redirect()->route('admin.doctor.create')->with('delete', $doctor->title);
+        return redirect()->route('admin.doctor.create')->with('delete', $doctor->name);
     }
 
     // Form Validations
