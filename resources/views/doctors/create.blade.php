@@ -60,7 +60,7 @@
                 @error('email')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="email">Email</label>
+                <label class="form-label" for="email">Email*</label>
                 <input placeholder="Email*" class="form-control" type="text" name="email" id="email" value="{{ Auth::user()->email }}" readonly>
             </div>
 
