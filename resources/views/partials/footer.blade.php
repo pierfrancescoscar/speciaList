@@ -184,7 +184,7 @@
     >
     © 2020 Copyright:
     <a class="text-white" href="https://mdbootstrap.com/"
-    >MDBootstrap.com</a
+    ></a
     >
 </div>
 <!-- Copyright -->
