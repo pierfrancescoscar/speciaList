@@ -23,6 +23,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/admin';
 
+    /* route crate page */
+    public const CREATE = '/admin/doctor/create';
+
     /**
      * Define your route model bindings, pattern filters, etc.
      *
