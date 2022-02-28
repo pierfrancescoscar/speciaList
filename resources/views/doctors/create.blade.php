@@ -24,8 +24,8 @@
                 @error('name')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="name">Nome*</label>
-                <input placeholder="Nome" class="form-control" type="text" name="name" id="name" value="{{ Auth::user()->name }}">
+                <label class="form-label" for="name">Nome</label>
+                <input placeholder="Nome" class="form-control" type="text" name="name" id="name" value="{{ Auth::user()->name }}" disabled="disabled">
             </div>
 
             {{-- Surname --}}
@@ -33,8 +33,8 @@
                 @error('surname')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="surname">Cognome*</label>
-                <input placeholder="Cognome*" class="form-control" type="text" name="surname" id="surname" value="{{ Auth::user()->surname }}">
+                <label class="form-label" for="surname">Cognome</label>
+                <input placeholder="Cognome*" class="form-control" type="text" name="surname" id="surname" value="{{ Auth::user()->surname }}" disabled="disabled">
             </div>
 
             {{-- Curriculum --}}
@@ -60,8 +60,8 @@
                 @error('email')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="email">Email*</label>
-                <input placeholder="Inserisci il tuo indirizzo email" class="form-control" type="text" name="email" id="email" value="{{ Auth::user()->email }}">
+                <label class="form-label" for="email">Email</label>
+                <input placeholder="Email*" class="form-control" type="text" name="email" id="email" value="{{ Auth::user()->email }}" disabled="disabled">
             </div>
 
             {{-- Medical Service --}}
@@ -87,8 +87,8 @@
                 @error('address')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="address">Indirizzo*</label>
-                <input placeholder="Inserisci il tuo indirizzo" class="form-control" type="text" name="address" id="address" value="{{ Auth::user()->address }}">
+                <label class="form-label" for="address">Indirizzo</label>
+                <input placeholder="Indirizzo*" class="form-control" type="text" name="address" id="address" value="{{ Auth::user()->address }}" disabled="disabled">
             </div>
 
             {{-- Profile Pic --}}
