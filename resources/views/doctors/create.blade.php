@@ -42,7 +42,7 @@
                 @error('curriculum')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="curriculum">Curriculum</label>
+                <label class="form-label" for="curriculum">Curriculum*</label>
                 <input class="form-control" type="file" name="curriculum" id="curriculum">
             </div>
 
@@ -51,8 +51,8 @@
                 @error('phone_number')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="phone_number">Numero di telefono</label>
-                <input placeholder="Numero di telefono*" class="form-control" type="text" name="phone_number" id="phone_number" value="{{ old('phone_number') }}">
+                <label class="form-label" for="phone_number">Numero di telefono*</label>
+                <input placeholder="Inserisci il tuo numero di telefono" class="form-control" type="text" name="phone_number" id="phone_number" value="{{ old('phone_number') }}">
             </div>
 
             {{-- Email --}}
@@ -69,8 +69,8 @@
                 @error('medical_service')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="medical_service">Servizi</label>
-                <textarea placeholder="Servizi*" class="form-control" name="medical_service" row="4" id="medical_service">{{ old('medical_service') }}</textarea>
+                <label class="form-label" for="medical_service">Servizi*</label>
+                <textarea placeholder="Inserisci i tuoi servizi" class="form-control" name="medical_service" row="4" id="medical_service">{{ old('medical_service') }}</textarea>
             </div>
 
             {{-- Description --}}
@@ -78,8 +78,8 @@
                 @error('description')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="description">Descrizione</label>
-                <textarea placeholder="Descrizione*" class="form-control" name="description" row="4" id="description">{{ old('description') }}</textarea>
+                <label class="form-label" for="description">Descrizione*</label>
+                <textarea placeholder="" class="form-control" name="description" row="4" id="description">{{ old('description') }}</textarea>
             </div>
 
             {{-- Address --}}
@@ -96,22 +96,29 @@
                 @error('profile_pic')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="profile_pic">Immagine del profilo</label>
+                <label class="form-label" for="profile_pic">Immagine del profilo*</label>
                 <input class="form-control" type="file" name="profile_pic" id="profile_pic">
             </div>
 
-            {{-- Category --}}
-            <div class="mb-5 bootstrap-select-wrapper">
-                <label for="category">Specializzazione</label>
-                <select id="category" name="categories[]" multiple="multiple" size="5" class="form-control">
-                    @foreach($categories as $category)
-                        <option value="{{ $category->id }}">
+            {{-- specializzazione --}}
+            <div class="mb-3 mt-5">
+                <h4>Specializzazione:</h4>
+
+                @foreach($categories as $category) 
+                    <span class="d-inline-block mr-5">
+                        <input type="checkbox" name="categories[]" id="category{{ $loop->iteration }}" value="{{ $category->id}}"
+                        {{-- @if(in_array($tag->id, old('tags', []))) checked @endif --}}
+                        >
+                        <label for="category{{ $loop->iteration }}">
                             {{$category->name}}
-                        </option>
-                    @endforeach
-                </select>
-                <span style="font-size: 0.7em;">(Premere CTRL/COMMAND per le scelte multiple)</span>
+                        </label>
+                    </span>
+                @endforeach
+                @error('categories')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
             </div>
+    
 
             {{-- Submit --}}
             <button class="btn btn-primary" type="submit">Registrati</button>
