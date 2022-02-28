@@ -9,32 +9,39 @@
 
                 {{-- Profile Pic --}}
                 <div class="title_container_info mb-5">
-                    <span>{{ $doctor->name }} {{ $doctor->surname }}</span>
+                    <span class=""> 
+                        <i class="fa-solid fa-user"></i>
+                        {{ $doctor->name }} {{ $doctor->surname }}
+                    </span>
+                    <a class="btn btn-edit" href="{{ route('admin.doctor.edit', $doctor->id) }}">
+                        Modifica il tuo profilo
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
                 </div>
 
                 @if ($doctor->profile_pic)
 
-                <div class="w-50">
-                    <img class="img-fluid img-thumbnail" src="{{ asset('storage/' . $doctor->profile_pic) }}" alt="{{ $doctor->name }}">
+                <div class="img_profile">
+                    <img class="img-thumbnail" src="{{ asset('storage/' . $doctor->profile_pic) }}" alt="{{ $doctor->name }}">
                 </div>
                     
                 
 
                 @endif
 
-                <div class="doctor_primary_info">
+                <div class="doctor_primary_info mb-3">
 
                     {{-- doctor id --}}
                     {{-- doctor category --}}
                     <h4 class="mb-2 mt-2 text-center">Specializzazione:</h4>
                     <ul class="">
                         @foreach($doctor->categories as $category)
-                            <li class="">{{ $category->name }}</li>
+                            <li class="">
+                                <a href="" class="badge badge_profile">{{ $category->name }}</a>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
-
-                <a class="btn btn-edit" href="{{ route('admin.doctor.edit', $doctor->id) }}">Modifica il tuo profilo</a>
 
                 <div class="statistiche">
 
