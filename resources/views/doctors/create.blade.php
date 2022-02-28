@@ -6,13 +6,11 @@
        
         @if ($errors->any())
 
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
+        @if (session('delete'))
+            <div class="alert alert-success">
+                {{ session('delete') }} = deleted successfully.
+            </div>
+        @endif
 
         @endif
 
