@@ -25,7 +25,7 @@
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
                 <label class="form-label" for="name">Nome</label>
-                <input placeholder="Nome" class="form-control" type="text" name="name" id="name" value="{{ Auth::user()->name }}" disabled="disabled">
+                <input placeholder="Nome" class="form-control" type="text" name="name" id="name" value="{{ Auth::user()->name }}" readonly>
             </div>
 
             {{-- Surname --}}
@@ -34,7 +34,7 @@
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
                 <label class="form-label" for="surname">Cognome</label>
-                <input placeholder="Cognome*" class="form-control" type="text" name="surname" id="surname" value="{{ Auth::user()->surname }}" disabled="disabled">
+                <input placeholder="Cognome*" class="form-control" type="text" name="surname" id="surname" value="{{ Auth::user()->surname }}" readonly>
             </div>
 
             {{-- Curriculum --}}
@@ -61,7 +61,7 @@
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
                 <label class="form-label" for="email">Email</label>
-                <input placeholder="Email*" class="form-control" type="text" name="email" id="email" value="{{ Auth::user()->email }}" disabled="disabled">
+                <input placeholder="Email*" class="form-control" type="text" name="email" id="email" value="{{ Auth::user()->email }}" readonly>
             </div>
 
             {{-- Medical Service --}}
@@ -88,7 +88,7 @@
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
                 <label class="form-label" for="address">Indirizzo</label>
-                <input placeholder="Indirizzo*" class="form-control" type="text" name="address" id="address" value="{{ Auth::user()->address }}" disabled="disabled">
+                <input placeholder="Indirizzo*" class="form-control" type="text" name="address" id="address" value="{{ Auth::user()->address }}" readonly>
             </div>
 
             {{-- Profile Pic --}}
