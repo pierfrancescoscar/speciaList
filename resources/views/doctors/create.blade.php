@@ -2,21 +2,22 @@
 
 @section('content')
     <div class="container">
-        <h1 class="mb-5">Entra in speciaList e registrati.</h1>
+        <div class="blue_bg offset-2 col-8 mt-5">Entra in specia<strong>list</strong> e registrati</div>
+        <div class="white_bg offset-2 col-8 mb-5">
        
         @if ($errors->any())
 
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
 
         @endif
 
-        <form action="{{ route('admin.doctor.store') }}" method="POST" enctype="multipart/form-data">
+        <form class="form_style" action="{{ route('admin.doctor.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             {{-- Name --}}
@@ -121,7 +122,7 @@
     
 
             {{-- Submit --}}
-            <button class="btn btn-primary" type="submit">Registrati</button>
+            <button class="btn btn-primary btn-1" type="submit">Registrati</button>
             
 
         </form>
