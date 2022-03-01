@@ -11,9 +11,10 @@
     <div class="row" style="align-items: center;">
         <!--Grid column-->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-            <div class="cont_img" style="height: 200px;">
-                <img src="{{ asset('assets/Specialist_Logo_Transparent_White_Tavola disegno 1.png')}}" style="width: 100%" alt="Logo">
-            </div>
+            {{-- <div class="cont_img"> --}}
+
+                <img src="{{ asset('assets/Specialist_Logo_Transparent_White_Tavola disegno 1.png')}}" style="width: 60%" alt="Logo">
+            {{-- </div> --}}
             {{-- <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p> --}}
@@ -113,7 +114,7 @@
     <!-- Section: CTA -->
     <section class="">
     <p class="d-flex justify-content-center align-items-center">
-        <span class="me-3">Registrati gratuitamente</span>
+        {{-- <span class="me-3">Registrati gratuitamente</span> --}}
         <button type="button" class="btn btn-outline-light btn-rounded">
         Accedi!
         </button>
@@ -127,7 +128,7 @@
     <section class="mb-4 text-center">
     <!-- Facebook -->
     <a
-        class="btn btn-outline-light btn-floating m-1"
+        class="social-btn btn btn-outline-light btn-floating m-1"
         href="#!"
         role="button"
         ><i class="fab fa-facebook-f"></i
@@ -165,13 +166,6 @@
         ><i class="fab fa-linkedin-in"></i
         ></a>
 
-    <!-- Github -->
-    <a
-        class="btn btn-outline-light btn-floating m-1"
-        href="#!"
-        role="button"
-        ><i class="fab fa-github"></i
-        ></a>
     </section>
     <!-- Section: Social media -->
 </div>
@@ -182,9 +176,9 @@
     class="text-center p-3"
     style="background-color: rgba(0, 0, 0, 0.2)"
     >
-    © 2020 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/"
-    >MDBootstrap.com</a
+    © 2022 Copyright: Team 3 with &hearts;
+    <a class="text-white" href="/"
+    ></a
     >
 </div>
 <!-- Copyright -->
