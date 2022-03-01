@@ -62,22 +62,26 @@ class DoctorController extends Controller
         $new_doctor = new Doctor();
 
         /* create slug */
-        $slug_first = $data['name'] .'-' .$data['surname'];
+        $slug_first = $data['name'] . '-' . $data['surname'];
         $slug = Str::slug($slug_first, '-');
         $count = 1;
         $base_slug = $slug;
 
         while (Doctor::where('slug', $slug)->first()) {
-            $slug = $base_slug  .'-' . $count;
+            $slug = $base_slug  . '-' . $count;
             $count++;
         }
 
+        
         /* find user by doctor slug */
         $user_id = User::where('slug', $slug)->value('id');
         $MyUser = User::find($user_id);
-
-        /* overight doctor slug */
-        $data['slug'] = $MyUser['slug'];
+        
+        
+        
+        /* overwrite doctor slug */
+        $MyUser['slug'] = $slug;
+        $data['slug'] = $slug;
 
         /* create a new doctor by data */
         $new_doctor->fill($data);
@@ -141,7 +145,7 @@ class DoctorController extends Controller
         $request->validate($this->validation_update());
 
         $data = $request->all();
-        
+
         // Update
         $doctor = Doctor::find($id);
 
@@ -232,9 +236,9 @@ class DoctorController extends Controller
     {
 
         return [
-            'name' => 'required',
-            'surname' => 'required',
-            'email' => 'required',
+            'name' => 'nullable',
+            'surname' => 'nullable',
+            'email' => 'nullable',
             'phone_number' => 'required',
             'medical_service' => 'required',
             'description' => 'nullable',
