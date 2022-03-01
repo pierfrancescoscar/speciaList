@@ -48,5 +48,9 @@
         </footer>
 
     </div>
+
+    {{-- Scripts --}}
+    <script src="{{ asset('js/category_validation.js') }}" defer></script>
+
 </body>
 </html>

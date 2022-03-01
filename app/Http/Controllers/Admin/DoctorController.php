@@ -245,6 +245,7 @@ class DoctorController extends Controller
             'address' => 'nullable',
             'curriculum' => 'required|file|mimes:pdf',
             'profile_pic' => 'required|file|mimes:jpg,jpeg,png,bmp',
+                       
         ];
     }
 
@@ -260,6 +261,9 @@ class DoctorController extends Controller
             'address' => 'nullable',
             'profile_pic' => 'nullable',
             'curriculum' => 'nullable',
+            'categories' => 'required|min:1',
+            
+       
         ];
     }
 }
