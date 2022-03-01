@@ -51,7 +51,7 @@
             <div class="right_container">
 
                 <div class="title_container_info">
-                    <span>Informazioni personali</span>
+                    <span><strong>Informazioni personali</strong></span>
                 </div>
 
                 <div class="container_info">
