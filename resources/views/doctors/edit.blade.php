@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content') 
+<<<<<<< HEAD
         <div class="container">
             <div class="blue_bg offset-2 col-8 mt-5">Modifica il tuo profilo specia<strong>list</strong></div>
             <div class="white_bg offset-2 col-8 mb-5">
@@ -172,6 +173,12 @@
 
                 @endif
 
+=======
+    <div class="container">
+        <div class="blue_bg offset-2 col-8 mt-5">Modifica il tuo profilo specia<strong>list</strong></div>
+        <div class="white_bg offset-2 col-8 mb-5">
+        
+>>>>>>> dev
                 <form class="form_style" action="{{ route('admin.doctor.update', $doctor->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
@@ -182,7 +189,7 @@
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
                         <label class="form-label" for="name">Nome</label>
-                        <input placeholder="Nome" class="form-control" type="text" name="name" id="name" value="{{ old('name', $doctor->name)}}">
+                        <input placeholder="Inserisci il tuo nome" class="form-control" type="text" name="name" id="name" value="{{ old('name', $doctor->name)}}">
                     </div>
 
                     {{-- Surname --}}
@@ -191,7 +198,7 @@
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
                         <label class="form-label" for="surname">Cognome</label>
-                        <input placeholder="Cognome*" class="form-control" type="text" name="surname" id="surname" value="{{ old('surname', $doctor->surname)}}">
+                        <input placeholder="Inserisci il tuo cognome" class="form-control" type="text" name="surname" id="surname" value="{{ old('surname', $doctor->surname)}}">
                     </div>
 
                     {{-- Curriculum --}}
@@ -219,7 +226,7 @@
 
                         <label class="form-label" for="phone_number">Numero di telefono</label>
 
-                        <input placeholder="Numero di telefono*" class="form-control" type="text" name="phone_number" id="phone_number" value="{{ old('phone_number', $doctor->phone_number) }}">
+                        <input placeholder="Inserisci il tuo numero di telefono" class="form-control" type="text" name="phone_number" id="phone_number" value="{{ old('phone_number', $doctor->phone_number) }}">
                     </div>
 
                     {{-- Email --}}
@@ -230,7 +237,7 @@
 
                         <label class="form-label" for="email">Email</label>
 
-                        <input placeholder="Email*" class="form-control" type="text" name="email" id="email" value="{{ Auth::user()->email }}">
+                        <input placeholder="Inserisci un email" class="form-control" type="text" name="email" id="email" value="{{ Auth::user()->email }}">
                     </div>
 
                     {{-- Medical Service --}}
@@ -241,7 +248,7 @@
 
                         <label class="form-label" for="medical_service">Servizi</label>
 
-                        <textarea placeholder="Servizi*" class="form-control" name="medical_service" row="4" id="medical_service">{{ old('medical_service', $doctor->medical_service) }}</textarea>
+                        <textarea placeholder="Elenca i servizi offerti" class="form-control" name="medical_service" row="4" id="medical_service">{{ old('medical_service', $doctor->medical_service) }}</textarea>
                     </div>
 
                     {{-- Description --}}
@@ -250,7 +257,7 @@
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
                         <label class="form-label" for="description">Descrizione</label>
-                        <textarea placeholder="Descrizione*" class="form-control" name="description" rows="4" id="description">{{ old('description', $doctor->description) }}</textarea>
+                        <textarea placeholder="Descriviti brevemente" class="form-control" name="description" rows="4" id="description">{{ old('description', $doctor->description) }}</textarea>
                     </div>
 
                     {{-- Address --}}
@@ -261,7 +268,7 @@
 
                         <label class="form-label" for="address">Indirizzo</label>
 
-                        <input placeholder="Indirizzo*" class="form-control" type="text" name="address" id="address" value="{{ old('address', $doctor->address) }}">
+                        <input placeholder="Inserisci il tuo indirizzo" class="form-control" type="text" name="address" id="address" value="{{ old('address', $doctor->address) }}">
                     </div>
 
                     {{-- Profile Pic --}}
@@ -279,17 +286,19 @@
                         <input class="form-control" type="file" name="profile_pic" id="profile_pic">
                     </div>
 
-                    {{-- Category --}}
+                    {{-- Specializzazioni --}}
                     <div class="mb-3 mt-5">
-                        <h4>Specializzazione:</h4>
+                        <h4>Specializzazione</h4>
+        
                         @foreach($categories as $category) 
                             <span class="d-inline-block mr-5">
                                 <input type="checkbox" name="categories[]" id="category{{ $loop->iteration }}" value="{{ $category->id}}"
                                 @if($errors->any() && in_array($category->id, old('categories'))) 
-                                    checked 
-                                @elseif(!$errors->any() && $doctor->categories->contains($category->id))
                                     checked
-                                @endif>
+                                @elseif (!$errors->any() && $doctor->categories->contains($category->id))
+                                    checked
+                                @endif
+                                >
                                 <label for="category{{ $loop->iteration }}">
                                     {{$category->name}}
                                 </label>
@@ -299,9 +308,9 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
-                
+                        
                     {{-- Submit --}}
-                    <button class="btn-1 p-2" type="submit">Modifica il tuo profilo</button>
+                    <button class="btn btn-primary btn-1 p-2" type="submit">Modifica il tuo profilo</button>
 
                 </form>
             </div>
@@ -311,6 +320,12 @@
 
 =======
 
+
         </div>
+<<<<<<< HEAD
+>>>>>>> dev
+=======
+
+    </div>
 >>>>>>> dev
 @endsection
