@@ -71,15 +71,16 @@ class DoctorController extends Controller
             $slug = $base_slug  . '-' . $count;
             $count++;
         }
-        // dd($slug);
+
+        
         /* find user by doctor slug */
         $user_id = User::where('slug', $slug)->value('id');
         $MyUser = User::find($user_id);
-
-
-
-        /* overight doctor slug */
-        $MyUser->update(['slug' => $slug]);
+        
+        
+        
+        /* overwrite doctor slug */
+        $MyUser['slug'] = $slug;
         $data['slug'] = $slug;
 
         /* create a new doctor by data */
@@ -244,9 +245,9 @@ class DoctorController extends Controller
     {
 
         return [
-            'name' => 'required',
-            'surname' => 'required',
-            'email' => 'required',
+            'name' => 'nullable',
+            'surname' => 'nullable',
+            'email' => 'nullable',
             'phone_number' => 'required',
             'medical_service' => 'required',
             'description' => 'nullable',

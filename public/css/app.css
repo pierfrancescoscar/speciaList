@@ -10161,17 +10161,21 @@ main {
 
 .blue_bg {
   background-color: #0071c3;
-  box-shadow: 5px 10px 5px #00000040;
+  box-shadow: 0 0 50px #00000080;
   color: white;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 3;
+  border-radius: 1rem 1rem 0 0;
+  font-size: 18px;
+  text-align: center;
 }
 
 .white_bg {
   background-color: white;
   color: #0071c3;
-  box-shadow: 5px 10px 5px #00000040;
+  box-shadow: 0 0 50px #00000040;
+  border-radius: 0 0 1rem 1rem;
 }
 .white_bg .form-control {
   border: 1px solid #0071c3;
@@ -10183,7 +10187,12 @@ main {
 }
 
 .btn-1 {
-  background-color: #0071c3;
-  border-radius: 20px;
-  color: white;
+  background-color: #0071c3 !important;
+}
+.btn-1:hover {
+  background-color: #0072c3de !important;
+}
+
+.social-btn {
+  border-radius: 50%;
 }
