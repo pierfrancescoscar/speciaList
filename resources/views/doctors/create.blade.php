@@ -7,13 +7,6 @@
        
         @if ($errors->any())
 
-<<<<<<< HEAD
-        @if (session('delete'))
-            <div class="alert alert-success">
-                {{ session('delete') }} = deleted successfully.
-            </div>
-        @endif
-=======
             <div class="alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
@@ -21,7 +14,6 @@
                     @endforeach
                 </ul>
             </div>
->>>>>>> dev
 
         @endif
 
@@ -111,6 +103,9 @@
 
             {{-- specializzazione --}}
             <div class="mb-3 mt-5">
+                @error('categories')
+                <div class="text-danger">{{ $message }}</div>
+                @enderror
                 <h4>Specializzazione:</h4>
 
                 @foreach($categories as $category) 
@@ -123,9 +118,6 @@
                         </label>
                     </span>
                 @endforeach
-                @error('categories')
-                    <div class="text-danger">{{ $message }}</div>
-                @enderror
             </div>
     
 

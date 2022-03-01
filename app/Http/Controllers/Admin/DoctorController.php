@@ -72,13 +72,13 @@ class DoctorController extends Controller
             $count++;
         }
 
-        
+
         /* find user by doctor slug */
         $user_id = User::where('slug', $slug)->value('id');
         $MyUser = User::find($user_id);
-        
-        
-        
+
+
+
         /* overwrite doctor slug */
         $MyUser['slug'] = $slug;
         $data['slug'] = $slug;
@@ -254,6 +254,7 @@ class DoctorController extends Controller
             'address' => 'nullable',
             'curriculum' => 'required|file|mimes:pdf',
             'profile_pic' => 'nullable|file|mimes:jpg,jpeg,png,bmp',
+            'categories' => 'required|exists:categories,id',
         ];
     }
 
@@ -267,6 +268,7 @@ class DoctorController extends Controller
             'medical_service' => 'required',
             'description' => 'nullable',
             'address' => 'nullable',
+            'categories' => 'required|exists:categories,id',
         ];
     }
 }
