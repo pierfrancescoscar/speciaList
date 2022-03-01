@@ -98,7 +98,7 @@
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
                 <label class="form-label" for="profile_pic">Immagine del profilo*</label>
-                <input class="form-control" type="file" name="profile_pic" id="profile_pic">
+                <input class="form-control" type="file" name="profile_pic" id="profile_pic" required>
             </div>
 
             {{-- specializzazione --}}
