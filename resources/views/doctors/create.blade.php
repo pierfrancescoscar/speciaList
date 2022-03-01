@@ -2,21 +2,22 @@
 
 @section('content')
     <div class="container">
-        <h1 class="mb-5">Entra in speciaList e registrati.</h1>
+        <div class="blue_bg offset-2 col-8 mt-5">Entra in specia<strong>list</strong> e registrati</div>
+        <div class="white_bg offset-2 col-8 mb-5">
        
         @if ($errors->any())
 
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
 
         @endif
 
-        <form action="{{ route('admin.doctor.store') }}" method="POST" enctype="multipart/form-data">
+        <form class="form_style" action="{{ route('admin.doctor.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             {{-- Name --}}
@@ -24,8 +25,8 @@
                 @error('name')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="name">Nome*</label>
-                <input placeholder="Nome" class="form-control" type="text" name="name" id="name" value="{{ Auth::user()->name }}">
+                <label class="form-label" for="name">Nome</label>
+                <input placeholder="Nome" class="form-control" type="text" name="name" id="name" value="{{ Auth::user()->name }}" readonly>
             </div>
 
             {{-- Surname --}}
@@ -33,8 +34,8 @@
                 @error('surname')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="surname">Cognome*</label>
-                <input placeholder="Cognome*" class="form-control" type="text" name="surname" id="surname" value="{{ Auth::user()->surname }}">
+                <label class="form-label" for="surname">Cognome</label>
+                <input placeholder="Cognome*" class="form-control" type="text" name="surname" id="surname" value="{{ Auth::user()->surname }}" readonly>
             </div>
 
             {{-- Curriculum --}}
@@ -61,7 +62,7 @@
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
                 <label class="form-label" for="email">Email*</label>
-                <input placeholder="Inserisci il tuo indirizzo email" class="form-control" type="text" name="email" id="email" value="{{ Auth::user()->email }}">
+                <input placeholder="Email*" class="form-control" type="text" name="email" id="email" value="{{ Auth::user()->email }}" readonly>
             </div>
 
             {{-- Medical Service --}}
@@ -87,8 +88,8 @@
                 @error('address')
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <label class="form-label" for="address">Indirizzo*</label>
-                <input placeholder="Inserisci il tuo indirizzo" class="form-control" type="text" name="address" id="address" value="{{ Auth::user()->address }}">
+                <label class="form-label" for="address">Indirizzo</label>
+                <input placeholder="Indirizzo*" class="form-control" type="text" name="address" id="address" value="{{ Auth::user()->address }}" readonly>
             </div>
 
             {{-- Profile Pic --}}
@@ -97,9 +98,10 @@
                 <div class="text-danger">{{ $message }}</div>
                 @enderror
                 <label class="form-label" for="profile_pic">Immagine del profilo*</label>
-                <input class="form-control" type="file" name="profile_pic" id="profile_pic">
+                <input class="form-control" type="file" name="profile_pic" id="profile_pic" required>
             </div>
 
+            {{-- specializzazione --}}
             <div class="mb-3 mt-5">
                 <h4>Specializzazione:</h4>
 
@@ -120,7 +122,7 @@
     
 
             {{-- Submit --}}
-            <button class="btn btn-primary" type="submit">Registrati</button>
+            <button class="btn btn-primary btn-1" type="submit">Registrati</button>
             
 
         </form>
