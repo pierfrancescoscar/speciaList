@@ -116,11 +116,11 @@
                         <span class="mb-0">{{ $doctor->address }}</span>
                     </div>
 
-                    <form action="{{ route('admin.doctor.destroy', $doctor->id) }}" method="post">
+                    {{-- <form action="{{ route('admin.doctor.destroy', $doctor->id) }}" method="post">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value="Reset dei campi" class="btn btn-danger">
-                    </form>
+                    </form> --}}
                 </div>
             </div>
         </div>
