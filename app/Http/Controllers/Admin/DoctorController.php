@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Doctor;
 use App\User;
 use App\Category;
@@ -108,6 +109,10 @@ class DoctorController extends Controller
         $doctor = Doctor::where('slug', $slug)->first();
 
         if (!$doctor) {
+            abort(404);
+        }
+
+        if(Auth::user()->slug != $doctor->slug) {
             abort(404);
         }
 

@@ -73,14 +73,15 @@
                     <span class="d-inline-block mr-5">
 
                         <input class="checked-category" type="checkbox" name="categories[]" id="category{{ $loop->iteration }}" value="{{ $category->id}}"
-                        {{-- @if ( in_array($category->id, old('categories', [])))
-                        checked
-                        @endif --}}
+                        @if ( in_array($category->id, old('categories', [])))
+                        checked @endif
+                        required
                         >
-
+                        
                         <label for="category{{ $loop->iteration }}">
                             {{$category->name}}
                         </label>
+
                     </span>
                 @endforeach
                 @error('categories')
