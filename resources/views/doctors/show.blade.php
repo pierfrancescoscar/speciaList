@@ -40,11 +40,21 @@
                     {{-- doctor category --}}
                     <h4 class="mb-2 mt-2 text-center">Specializzazione:</h4>
                     <ul class="">
+                        @if(!$doctor->categories->isEmpty())
+
                         @foreach($doctor->categories as $category)
+                        
                             <li>
                                 <a class="badge badge_profile" href="">{{ $category->name }}</a>
                             </li>
+
                         @endforeach
+
+                            @else
+                            <span>Nessuna specializzazione specificata</span>
+
+                        @endif
+                        
                     </ul>
                 </div>
 

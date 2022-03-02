@@ -120,12 +120,14 @@
         
                         @foreach($categories as $category) 
                             <span class="d-inline-block mr-5">
-                                <input type="checkbox" name="categories[]" id="category{{ $loop->iteration }}" value="{{ $category->id}}"
+                                <input class="checked-category" type="checkbox" name="categories[]" id="category{{ $loop->iteration }}" value="{{ $category->id}}"
                                 @if($errors->any() && in_array($category->id, old('categories'))) 
                                     checked
-                                @elseif (!$errors->any() && $doctor->categories->contains($category->id))
-                                    checked
+                                {{-- @elseif (!$errors->any() && $doctor->categories->contains($category->id))
+                                    checked --}}
                                 @endif
+                                {{-- onclick="validationCheckbox('checked-category')" --}}
+                                required
                                 >
                                 <label for="category{{ $loop->iteration }}">
                                     {{$category->name}}
@@ -138,8 +140,15 @@
                     </div>
                         
                     {{-- Submit --}}
+<<<<<<< HEAD
                     <button class="btn btn-primary btn-1 p-2" type="submit">Modifica il tuo profilo</button>
+=======
+                    <button id="submit-button" class="btn btn-primary btn-1 p-2" 
+                    type="submit">Modifica il tuo profilo</button>
+
+>>>>>>> dev
                 </form>
+
             </div>
             </div>
         </div>
