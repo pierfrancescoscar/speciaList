@@ -73,13 +73,13 @@ class DoctorController extends Controller
             $count++;
         }
 
-        
+
         /* find user by doctor slug */
         $user_id = User::where('slug', $slug)->value('id');
         $MyUser = User::find($user_id);
-        
-        
-        
+
+
+
         /* overwrite doctor slug */
         $MyUser['slug'] = $slug;
         $data['slug'] = $slug;
@@ -233,7 +233,16 @@ class DoctorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $doctor = Doctor::find($id);
+
+        //controllo presenza image.  eliminare il file fisico: non lasciare l image orfana all interno della cartella posts-cover
+        // if ($post->cover) {
+        //     Storage::delete($post->cover);
+        // }
+
+        $doctor->delete();
+
+        return redirect()->route('admin.doctor.create')->with('delete', $doctor->name);
     }
 
     // Form Validations
@@ -250,7 +259,7 @@ class DoctorController extends Controller
             'address' => 'nullable',
             'curriculum' => 'required|file|mimes:pdf',
             'profile_pic' => 'required|file|mimes:jpg,jpeg,png,bmp',
-                       
+
         ];
     }
 
@@ -267,8 +276,8 @@ class DoctorController extends Controller
             'profile_pic' => 'nullable',
             'curriculum' => 'nullable',
             'categories' => 'required|min:1',
-            
-       
+
+
         ];
     }
 }

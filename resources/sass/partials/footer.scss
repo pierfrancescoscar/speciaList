@@ -2,3 +2,26 @@
     border-radius: 50%;
 }
 
+.column {
+    height: 500px;
+}
+.column_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        border-radius: 15%;
+    }
+}
+ul {
+    justify-content: center;
+    li {
+        padding-right: 1rem;
+        a {
+            font-size: 12px;
+            img {
+                width: 60px;
+            }
+        }
+    }
+}

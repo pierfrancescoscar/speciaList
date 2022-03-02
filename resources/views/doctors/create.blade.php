@@ -67,6 +67,9 @@
 
             {{-- Specializzazione --}}
             <div class="mb-3 mt-5">
+                @error('categories')
+                <div class="text-danger">{{ $message }}</div>
+                @enderror
                 <h4>Specializzazione:</h4>
 
                 @foreach($categories as $category) 
@@ -84,9 +87,6 @@
 
                     </span>
                 @endforeach
-                @error('categories')
-                    <div class="text-danger">{{ $message }}</div>
-                @enderror
             </div>
     
 

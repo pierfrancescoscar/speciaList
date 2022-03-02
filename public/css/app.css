@@ -10152,7 +10152,7 @@ body {
 }
 
 #app {
-  background-color: #d9e4f5;
+  background-color: #dce4f1;
 }
 
 main {
@@ -10161,17 +10161,21 @@ main {
 
 .blue_bg {
   background-color: #0071c3;
-  box-shadow: 5px 10px 5px #00000040;
+  box-shadow: 0 0 50px #00000080;
   color: white;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 3;
+  border-radius: 1rem 1rem 0 0;
+  font-size: 18px;
+  text-align: center;
 }
 
 .white_bg {
   background-color: white;
   color: #0071c3;
-  box-shadow: 5px 10px 5px #00000040;
+  box-shadow: 0 0 50px #00000040;
+  border-radius: 0 0 1rem 1rem;
 }
 .white_bg .form-control {
   border: 1px solid #0071c3;
@@ -10183,7 +10187,81 @@ main {
 }
 
 .btn-1 {
+  background-color: #0071c3 !important;
+}
+.btn-1:hover {
+  background-color: #0072c3de !important;
+}
+
+.hero {
+  background-image: url("../assets/Hero_Specialist.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 600px;
+}
+.hero .hero-text .content {
+  background-color: rgba(220, 228, 241, 0.6);
+  border-radius: 10px;
+}
+.hero h2 {
+  color: #0071c3;
+}
+.hero h4 {
+  color: #0071c3;
+}
+.hero form {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #0071c3;
+}
+.hero form input {
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid #dadada;
+}
+.hero form input::-moz-placeholder {
+  color: silver;
+}
+.hero form input:-ms-input-placeholder {
+  color: silver;
+}
+.hero form input::placeholder {
+  color: silver;
+}
+.hero form .btn-1 {
   background-color: #0071c3;
   border-radius: 20px;
+  border: none;
   color: white;
+}
+
+.social-btn {
+  border-radius: 50%;
+}
+
+.column {
+  height: 500px;
+}
+
+.column_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.column_right img {
+  border-radius: 15%;
+}
+
+ul {
+  justify-content: center;
+}
+ul li {
+  padding-right: 1rem;
+}
+ul li a {
+  font-size: 12px;
+}
+ul li a img {
+  width: 60px;
 }

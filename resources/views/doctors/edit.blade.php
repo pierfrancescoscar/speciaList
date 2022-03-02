@@ -4,7 +4,6 @@
     <div class="container">
         <div class="blue_bg offset-2 col-8 mt-5">Modifica il tuo profilo specia<strong>list</strong></div>
         <div class="white_bg offset-2 col-8 mb-5">
-        
                 <form class="form_style" action="{{ route('admin.doctor.update', $doctor->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
@@ -37,7 +36,7 @@
 
                         @if($doctor->curriculum)
                             <a href="{{ asset('storage/' . $doctor->curriculum) }}">Clicca qui per visualizzare il CV</a>
-                            <input class="form-control" type="file" name="curriculum" id="curriculum" value="{{ old('curriculum', $doctor->curriculum) }}">
+                            <input class="form-control" type="file" name="curriculum" id="curriculum">
                         @else
                         <input class="form-control" type="file" name="curriculum" id="curriculum">
                         @endif
@@ -109,11 +108,14 @@
                             <img class="w-25" src="{{ asset('storage/' . $doctor->profile_pic) }}" alt="{{ $doctor->name }}">
                         @endif
 
-                        <input class="form-control" type="file" name="profile_pic" id="profile_pic">
+                        <input class="form-control" type="file" name="profile_pic" id="profile_pic" value="{{ old('address', $doctor->profile_pic) }}">
                     </div>
 
                     {{-- Specializzazioni --}}
                     <div class="mb-3 mt-5">
+                        @error('categories')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
                         <h4>Specializzazione</h4>
         
                         @foreach($categories as $category) 
@@ -144,9 +146,8 @@
                 </form>
 
             </div>
-
-
+            </div>
         </div>
-
+        </div>
     </div>
 @endsection
