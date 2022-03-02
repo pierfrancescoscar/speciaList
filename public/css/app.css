@@ -10239,3 +10239,26 @@ main {
 .social-btn {
   border-radius: 50%;
 }
+
+.column {
+  height: 500px;
+}
+
+.column_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  justify-content: center;
+}
+ul li {
+  padding-right: 1rem;
+}
+ul li a {
+  font-size: 12px;
+}
+ul li a img {
+  width: 60px;
+}
