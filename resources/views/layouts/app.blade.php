@@ -37,7 +37,7 @@
         </header>
         
         {{-- Main Content --}}
-        <main class="py-4">
+        <main class="pb-4">
             @yield('content')
             
         </main>
@@ -48,5 +48,9 @@
         </footer>
 
     </div>
+
+    {{-- Scripts --}}
+    <script src="{{ asset('js/category_validation.js') }}" defer></script>
+
 </body>
 </html>
