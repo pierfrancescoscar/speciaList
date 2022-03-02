@@ -109,10 +109,8 @@
                     <form action="{{ route('admin.doctor.destroy', $doctor->id) }}" method="post">
                         @csrf
                         @method('DELETE')
-                        <input type="submit" value="Delete" class="btn btn-danger">
+                        <input type="submit" value="Reset dei campi" class="btn btn-danger">
                     </form>
-
-                    
                 </div>
             </div>
         </div>

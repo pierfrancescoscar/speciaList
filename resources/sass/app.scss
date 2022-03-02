@@ -1,21 +1,20 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 // Header
-@import 'partials/header.scss';
+@import "partials/header.scss";
 
 // doctor show
-@import 'partials/show_style.scss';
+@import "partials/show_style.scss";
 
-// doctor edit 
-@import 'partials/edit_style.scss';
+// doctor edit
+@import "partials/edit_style.scss";
 
-// Footer 
-@import 'partials/footer.scss';
-
+// Footer
+@import "partials/footer.scss";
