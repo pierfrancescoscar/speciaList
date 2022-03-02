@@ -140,13 +140,9 @@
                     </div>
                         
                     {{-- Submit --}}
-<<<<<<< HEAD
-                    <button class="btn btn-primary btn-1 p-2" type="submit">Modifica il tuo profilo</button>
-=======
                     <button id="submit-button" class="btn btn-primary btn-1 p-2" 
                     type="submit">Modifica il tuo profilo</button>
 
->>>>>>> dev
                 </form>
 
             </div>
