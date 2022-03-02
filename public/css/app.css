@@ -10152,7 +10152,7 @@ body {
 }
 
 #app {
-  background-color: #d9e4f5;
+  background-color: #dce4f1;
 }
 
 main {
@@ -10191,6 +10191,49 @@ main {
 }
 .btn-1:hover {
   background-color: #0072c3de !important;
+}
+
+.hero {
+  background-image: url("../assets/Hero_Specialist.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 600px;
+}
+.hero .hero-text .content {
+  background-color: rgba(220, 228, 241, 0.6);
+  border-radius: 10px;
+}
+.hero h2 {
+  color: #0071c3;
+}
+.hero h4 {
+  color: #0071c3;
+}
+.hero form {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #0071c3;
+}
+.hero form input {
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid #dadada;
+}
+.hero form input::-moz-placeholder {
+  color: silver;
+}
+.hero form input:-ms-input-placeholder {
+  color: silver;
+}
+.hero form input::placeholder {
+  color: silver;
+}
+.hero form .btn-1 {
+  background-color: #0071c3;
+  border-radius: 20px;
+  border: none;
+  color: white;
 }
 
 .social-btn {

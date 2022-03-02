@@ -253,12 +253,8 @@ class DoctorController extends Controller
             'description' => 'nullable',
             'address' => 'nullable',
             'curriculum' => 'required|file|mimes:pdf',
-<<<<<<< HEAD
-            'profile_pic' => 'nullable|file|mimes:jpg,jpeg,png,bmp',
-=======
             'profile_pic' => 'required|file|mimes:jpg,jpeg,png,bmp',
-                       
->>>>>>> dev
+
         ];
     }
 
@@ -272,14 +268,11 @@ class DoctorController extends Controller
             'medical_service' => 'required',
             'description' => 'nullable',
             'address' => 'nullable',
-<<<<<<< HEAD
-=======
             'profile_pic' => 'nullable',
             'curriculum' => 'nullable',
             'categories' => 'required|min:1',
-            
-       
->>>>>>> dev
+
+
         ];
     }
 }
