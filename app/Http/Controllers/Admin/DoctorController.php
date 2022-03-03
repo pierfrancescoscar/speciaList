@@ -112,7 +112,7 @@ class DoctorController extends Controller
             abort(404);
         }
 
-        if(Auth::user()->slug != $doctor->slug) {
+        if (Auth::user()->slug != $doctor->slug) {
             abort(404);
         }
 
@@ -276,8 +276,6 @@ class DoctorController extends Controller
             'profile_pic' => 'nullable',
             'curriculum' => 'nullable',
             'categories' => 'required|min:1',
-
-
         ];
     }
 }
