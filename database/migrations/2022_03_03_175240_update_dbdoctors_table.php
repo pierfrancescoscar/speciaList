@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateDoctorsTable extends Migration
+class UpdateDbdoctorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,9 +15,9 @@ class UpdateDoctorsTable extends Migration
     {
         Schema::table('doctors', function (Blueprint $table) {
 
-            $table->string('medical_service')->nullable()->after('email');
-            $table->string('description')->nullable()->after('medical_service');
-            
+            $table->string('description')->nullable()->after('email');
+            $table->string('medical_service')->nullable()->before('address');
+
         });
     }
 
