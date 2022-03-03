@@ -26,7 +26,7 @@
             {{-- Curriculum --}}
             <div class="mb-5">
                 <label class="form-label" for="curriculum">Curriculum*</label>
-                <input class="form-control" type="file" name="curriculum" id="curriculum" required>
+                <input class="form-control" type="file" name="curriculum" id="curriculum" required >
             </div>
 
             {{-- Phone Number --}}
@@ -43,13 +43,13 @@
 
             {{-- Medical Service --}}
             <div class="mb-5">
-                <label class="form-label" for="medical_service">Servizi*</label>
+                <label class="form-label" for="medical_service">Servizi</label>
                 <textarea placeholder="Inserisci i tuoi servizi" class="form-control" name="medical_service" row="4" id="medical_service">{{ old('medical_service') }}</textarea>
             </div>
 
             {{-- Description --}}
             <div class="mb-5">
-                <label class="form-label" for="description">Descrizione*</label>
+                <label class="form-label" for="description">Descrizione</label>
                 <textarea placeholder="" class="form-control" name="description" row="4" id="description">{{ old('description') }}</textarea>
             </div>
 
