@@ -5,7 +5,7 @@
 
             <div class="doctor-single-card d-flex">
                 
-                <div v-for="(doctor, i) in doctors" :key="`doctor-${i}`" class="col-2 p-4 card me-4">
+                <div v-for="(doctor, i) in doctors" :key="`doctor-${i}`" class="p-4 card me-4">
                     <!-- Doc Image -->
                     <img class="img-fluid mb-2" src="https://t4.ftcdn.net/jpg/02/60/04/09/360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg" alt="">
                     <!-- Doc Name -->
@@ -13,7 +13,7 @@
                     <!-- Doc Specialization -->
                     <span class="d-block pb-2">Specializzazione: {{ doctor.category }}</span>
                     <!-- See More Button -->
-                    <button class="btn btn-primary mb-2">Scopri di più</button>
+                    <button class="btn btn-primary mb-2">Scopri di più!</button>
                 </div>
 
             </div>
