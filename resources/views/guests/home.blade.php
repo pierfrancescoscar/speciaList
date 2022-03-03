@@ -24,4 +24,6 @@
 
     <h1>Guest Home</h1>
 
+    <doctorcarousel></doctorcarousel>
+
 @endsection
