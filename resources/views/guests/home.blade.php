@@ -4,6 +4,8 @@
 
 @include('guests.hero')
 
+@include('guests.patacchi')
+
     <h1>Guest Home</h1>
     <li class="nav-item btn btn-secondary">
         <a class="nav-item" href="{{ route('admin.doctor.create') }}">Create a new doctor</a>
