@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Doctor;
 use App\User;
 use App\Category;
+//use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -254,11 +255,12 @@ class DoctorController extends Controller
             'surname' => 'nullable',
             'email' => 'nullable',
             'phone_number' => 'required',
-            'medical_service' => 'required',
+            'medical_service' => 'nullable',
             'description' => 'nullable',
-            'address' => 'nullable',
+            'address' => 'required',
             'curriculum' => 'required|file|mimes:pdf',
             'profile_pic' => 'required|file|mimes:jpg,jpeg,png,bmp',
+            'categories' => 'required|min:1',
 
         ];
     }
@@ -271,12 +273,11 @@ class DoctorController extends Controller
             'email' => 'required',
             'phone_number' => 'required',
             'medical_service' => 'required',
-            'description' => 'nullable',
-            'address' => 'nullable',
-            'profile_pic' => 'nullable',
+            'description' => 'required',
+            'address' => 'required',
             'curriculum' => 'nullable',
+            'profile_pic' => 'nullable',
             'categories' => 'required|min:1',
-
 
         ];
     }

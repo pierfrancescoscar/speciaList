@@ -132,7 +132,7 @@ for (i = 0; i < classes.length; i++) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/stefanofabrin/Desktop/speciaList/resources/js/category_validation.js */"./resources/js/category_validation.js");
+module.exports = __webpack_require__(/*! C:\Users\User\Documents\Boolean\speciaList\resources\js\category_validation.js */"./resources/js/category_validation.js");
 
 
 /***/ })
