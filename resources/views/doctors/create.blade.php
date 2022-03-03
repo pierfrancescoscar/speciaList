@@ -26,7 +26,7 @@
             {{-- Curriculum --}}
             <div class="mb-5">
                 <label class="form-label" for="curriculum">Curriculum*</label>
-                <input class="form-control" type="file" name="curriculum" id="curriculum" required>
+                <input class="form-control" type="file" name="curriculum" id="curriculum" required >
             </div>
 
             {{-- Phone Number --}}
@@ -50,7 +50,7 @@
             {{-- Description --}}
             <div class="mb-5">
                 <label class="form-label" for="description">Descrizione</label>
-                <textarea placeholder="" class="form-control" name="description" row="4" id="description" >{{ old('description') }}</textarea>
+                <textarea placeholder="" class="form-control" name="description" row="4" id="description">{{ old('description') }}</textarea>
             </div>
 
             {{-- Address --}}
