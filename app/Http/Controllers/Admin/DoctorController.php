@@ -278,10 +278,6 @@ class DoctorController extends Controller
             'curriculum' => 'nullable',
             'profile_pic' => 'nullable',
             'categories' => 'required|min:1',
-<<<<<<< HEAD
-=======
-
->>>>>>> dev
         ];
     }
 }
