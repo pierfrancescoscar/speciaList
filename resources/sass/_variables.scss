@@ -31,3 +31,12 @@ $primary: #0071c3;
     }
 }
 
+.btn-2 {
+    background-color: #2bf77a !important;
+    border-color: #2bf77a !important;
+
+    &:hover {
+        background-color: #25d368 !important;
+    }
+}
+
