@@ -1,4 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+.btn-1 {
+  background-color: #0071c3 !important;
+}
+.btn-1:hover {
+  background-color: #0072c3de !important;
+}
+
+.btn-2 {
+  background-color: #2bf77a !important;
+  border-color: #2bf77a !important;
+}
+.btn-2:hover {
+  background-color: #25d368 !important;
+}
+
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10264,4 +10279,118 @@ ul li a {
 }
 ul li a img {
   width: 60px;
+}
+
+.patacchi {
+  margin-top: 7rem;
+}
+
+.bg_light {
+  background-image: linear-gradient(to bottom, #e6f8ff, #def4ff, #d8f0ff, #d2ecff, #cde7ff);
+  border-radius: 2rem;
+  padding: 2rem 2rem;
+  position: relative;
+}
+
+.bg_dark {
+  position: absolute;
+  height: 24rem;
+  border-radius: 2rem;
+  transform: translateY(-50%);
+  left: 4rem;
+  top: 50%;
+  opacity: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0071c3;
+  transition: 0.3s;
+}
+.bg_dark:hover {
+  opacity: 0.6;
+}
+.bg_dark .borsa_img {
+  font-size: 14rem;
+  color: white;
+}
+
+.bg_light_green {
+  background-image: linear-gradient(to bottom, #deffea, #d9fde4, #d3fbde, #cff8d8, #caf6d2);
+  border-radius: 2rem;
+  padding: 2rem 2rem;
+  position: relative;
+}
+
+.bg_dark_green {
+  position: absolute;
+  height: 24rem;
+  border-radius: 2rem;
+  transform: translateY(-50%);
+  right: 4rem;
+  top: 50%;
+  opacity: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2bf77a;
+  transition: 0.3s;
+}
+.bg_dark_green:hover {
+  opacity: 0.6;
+}
+.bg_dark_green .borsa_img {
+  font-size: 14rem;
+  color: white;
+}
+
+@media all and (max-width: 992px) {
+  .patacchi {
+    margin-top: 4rem;
+  }
+
+  .bg_light {
+    padding: 1rem 0;
+  }
+  .bg_light .text_container {
+    margin-top: 14rem;
+  }
+  .bg_light .text_container .title {
+    font-size: 1.4rem;
+  }
+  .bg_light .text_container .text {
+    font-size: 1rem;
+  }
+
+  .bg_dark {
+    max-height: 12rem;
+    left: -5%;
+    top: 8rem;
+    width: 110%;
+  }
+  .bg_dark .borsa_img {
+    font-size: 9rem;
+  }
+
+  .bg_light_green {
+    padding: 1rem 0;
+  }
+  .bg_light_green .text_container {
+    margin-top: 14rem;
+  }
+  .bg_light_green .text_container .title {
+    font-size: 1.4rem;
+  }
+  .bg_light_green .text_container .text {
+    font-size: 1rem;
+  }
+
+  .bg_dark_green {
+    max-height: 12rem;
+    left: -5%;
+    top: 8rem;
+    width: 110%;
+  }
+  .bg_dark_green .borsa_img {
+    font-size: 9rem;
+  }
 }
