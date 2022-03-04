@@ -1,9 +1,4 @@
-/* @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8"; */
-
-* {
-  font-family: 'Poppins', sans-serif;
-}
-
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 .btn-1 {
   background-color: #0071c3 !important;
 }
