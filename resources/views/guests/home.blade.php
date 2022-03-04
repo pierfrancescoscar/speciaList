@@ -27,6 +27,8 @@
 
 <categoriescarousel></categoriescarousel>
 
+<reviews></reviews>
+
 @include('guests.patacchi')
 
 @endsection
