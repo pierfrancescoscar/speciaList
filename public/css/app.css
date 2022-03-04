@@ -10284,6 +10284,9 @@ ul li a img {
 .patacchi {
   margin-top: 7rem;
 }
+.patacchi .patacco {
+  margin-bottom: 7rem;
+}
 
 .bg_light {
   background-image: linear-gradient(to bottom, #e6f8ff, #def4ff, #d8f0ff, #d2ecff, #cde7ff);
