@@ -1,15 +1,15 @@
 .patacchi {
-    margin-top: 25rem;
+    margin-top: 7rem;
 }
 
-.bg_chiaro {
+.bg_light {
     background-image: linear-gradient(to bottom, #e6f8ff, #def4ff, #d8f0ff, #d2ecff, #cde7ff);
     border-radius: 2rem;
     padding: 2rem 2rem;
     position: relative;
 }
 
-.bg_scuro {
+.bg_dark {
     position: absolute;
     height: 24rem;
     border-radius: 2rem;
@@ -33,8 +33,43 @@
     }
 }
 
+.bg_light_green {
+    background-image: linear-gradient(to bottom, #deffea, #d9fde4, #d3fbde, #cff8d8, #caf6d2);    
+    border-radius: 2rem;
+    padding: 2rem 2rem;
+    position: relative;
+}
+
+.bg_dark_green {
+    position: absolute;
+    height: 24rem;
+    border-radius: 2rem;
+    transform: translateY(-50%);
+    right: 4rem;
+    top: 50%;
+    opacity: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2bf77a;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.6;
+    }
+    
+    .borsa_img {
+        font-size: 14rem;
+        color: white;
+    }
+}
+
 @media all and (max-width: 992px) {
-    .bg_chiaro {
+    .patacchi {
+        margin-top: 4rem;
+    }
+
+    .bg_light {
         padding: 1rem 0;
 
         .text_container {
@@ -50,14 +85,42 @@
         }
     }
     
-    .bg_scuro {
+    .bg_dark {
         max-height: 12rem;
-        left: -10%;
+        left: -5%;
         top: 8rem;
-        width: 120%;
+        width: 110%;
 
         .borsa_img {
             font-size: 9rem;
         }
     }
+    
+    .bg_light_green {
+        padding: 1rem 0;
+
+        .text_container {
+            margin-top: 14rem;
+
+            .title {
+                font-size: 1.4rem;
+            }
+
+            .text {
+                font-size: 1rem;
+            }
+        }
+    }
+    
+    .bg_dark_green {
+        max-height: 12rem;
+        left: -5%;
+        top: 8rem;
+        width: 110%;
+
+        .borsa_img {
+            font-size: 9rem;
+        }
+    }
+    
 }
