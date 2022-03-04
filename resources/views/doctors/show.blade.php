@@ -6,6 +6,11 @@
         <div class="first_row">
 
             <div class="left_container ">
+                @if (session('delete'))
+                <div class="alert alert-success">
+                    {{ session('delete') }} = deleted successfully.
+                </div>
+                @endif
 
                 {{-- Profile Pic --}}
                 <div class="title_container_info mb-5">
@@ -111,7 +116,11 @@
                         <span class="mb-0">{{ $doctor->address }}</span>
                     </div>
 
-                    
+                    {{-- <form action="{{ route('admin.doctor.destroy', $doctor->id) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="Reset dei campi" class="btn btn-danger">
+                    </form> --}}
                 </div>
             </div>
         </div>

@@ -4,7 +4,6 @@
     <div class="container">
         <div class="blue_bg offset-2 col-8 mt-5">Modifica il tuo profilo specia<strong>list</strong></div>
         <div class="white_bg offset-2 col-8 mb-5">
-        
                 <form class="form_style" action="{{ route('admin.doctor.update', $doctor->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
@@ -14,7 +13,7 @@
                         @error('name')
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
-                        <label class="form-label" for="name">Nome</label>
+                        <label class="form-label" for="name">Nome*</label>
                         <input placeholder="Inserisci il tuo nome" class="form-control" type="text" name="name" id="name" value="{{ old('name', $doctor->name)}}">
                     </div>
 
@@ -23,7 +22,7 @@
                         @error('surname')
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
-                        <label class="form-label" for="surname">Cognome</label>
+                        <label class="form-label" for="surname">Cognome*</label>
                         <input placeholder="Inserisci il tuo cognome" class="form-control" type="text" name="surname" id="surname" value="{{ old('surname', $doctor->surname)}}">
                     </div>
 
@@ -33,11 +32,11 @@
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
 
-                        <label class="form-label" for="curriculum">Curriculum</label>
+                        <label class="form-label" for="curriculum">Curriculum*</label>
 
                         @if($doctor->curriculum)
                             <a href="{{ asset('storage/' . $doctor->curriculum) }}">Clicca qui per visualizzare il CV</a>
-                            <input class="form-control" type="file" name="curriculum" id="curriculum" value="{{ old('curriculum', $doctor->curriculum) }}">
+                            <input class="form-control" type="file" name="curriculum" id="curriculum">
                         @else
                         <input class="form-control" type="file" name="curriculum" id="curriculum">
                         @endif
@@ -50,7 +49,7 @@
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
 
-                        <label class="form-label" for="phone_number">Numero di telefono</label>
+                        <label class="form-label" for="phone_number">Numero di telefono*</label>
 
                         <input placeholder="Inserisci il tuo numero di telefono" class="form-control" type="text" name="phone_number" id="phone_number" value="{{ old('phone_number', $doctor->phone_number) }}">
                     </div>
@@ -61,7 +60,7 @@
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
 
-                        <label class="form-label" for="email">Email</label>
+                        <label class="form-label" for="email">Email*</label>
 
                         <input placeholder="Inserisci un email" class="form-control" type="text" name="email" id="email" value="{{ Auth::user()->email }}">
                     </div>
@@ -74,7 +73,7 @@
 
                         <label class="form-label" for="medical_service">Servizi</label>
 
-                        <textarea placeholder="Elenca i servizi offerti" class="form-control" name="medical_service" row="4" id="medical_service">{{ old('medical_service', $doctor->medical_service) }}</textarea>
+                        <textarea placeholder="Elenca i servizi offerti" class="form-control" name="medical_service" row="4" required id="medical_service">{{ old('medical_service', $doctor->medical_service) }}</textarea>
                     </div>
 
                     {{-- Description --}}
@@ -92,7 +91,7 @@
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
 
-                        <label class="form-label" for="address">Indirizzo</label>
+                        <label class="form-label" for="address">Indirizzo*</label>
 
                         <input placeholder="Inserisci il tuo indirizzo" class="form-control" type="text" name="address" id="address" value="{{ old('address', $doctor->address) }}">
                     </div>
@@ -103,18 +102,21 @@
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
 
-                        <label class="form-label" for="profile_pic">Immagine del profilo</label>
+                        <label class="form-label" for="profile_pic">Immagine del profilo*</label>
 
                         @if($doctor->profile_pic)
                             <img class="w-25" src="{{ asset('storage/' . $doctor->profile_pic) }}" alt="{{ $doctor->name }}">
                         @endif
 
-                        <input class="form-control" type="file" name="profile_pic" id="profile_pic">
+                        <input class="form-control" type="file" name="profile_pic" id="profile_pic" value="{{ old('address', $doctor->profile_pic) }}">
                     </div>
 
                     {{-- Specializzazioni --}}
                     <div class="mb-3 mt-5">
-                        <h4>Specializzazione</h4>
+                        @error('categories')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                        <h4>Specializzazione*</h4>
         
                         @foreach($categories as $category) 
                             <span class="d-inline-block mr-5">
@@ -144,9 +146,8 @@
                 </form>
 
             </div>
-
-
+            </div>
         </div>
-
+        </div>
     </div>
 @endsection

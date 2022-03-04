@@ -26,7 +26,7 @@
             {{-- Curriculum --}}
             <div class="mb-5">
                 <label class="form-label" for="curriculum">Curriculum*</label>
-                <input class="form-control" type="file" name="curriculum" id="curriculum" required>
+                <input class="form-control" type="file" name="curriculum" id="curriculum" required >
             </div>
 
             {{-- Phone Number --}}
@@ -43,19 +43,21 @@
 
             {{-- Medical Service --}}
             <div class="mb-5">
-                <label class="form-label" for="medical_service">Servizi*</label>
-                <textarea placeholder="Inserisci i tuoi servizi" class="form-control" name="medical_service" row="4" id="medical_service">{{ old('medical_service') }}</textarea>
+                <label class="form-label" for="medical_service">Servizi</label>
+                <textarea placeholder="Inserisci i tuoi servizi" class="form-control" name="medical_service" row="4" id="medical_service">
+                    {{ old('medical_service') }}
+                </textarea>
             </div>
 
             {{-- Description --}}
             <div class="mb-5">
-                <label class="form-label" for="description">Descrizione*</label>
-                <textarea placeholder="" class="form-control" name="description" row="4" id="description">{{ old('description') }}</textarea>
+                <label class="form-label" for="description">Descrizione</label>
+                <textarea placeholder="inserici una descrizione" class="form-control" name="description" row="4" id="description">{{ old('description') }}</textarea>
             </div>
 
             {{-- Address --}}
             <div class="mb-5">
-                <label class="form-label" for="address">Indirizzo</label>
+                <label class="form-label" for="address">Indirizzo*</label>
                 <input placeholder="Indirizzo*" class="form-control" type="text" name="address" id="address" value="{{ Auth::user()->address }}" readonly>
             </div>
 
@@ -67,7 +69,10 @@
 
             {{-- Specializzazione --}}
             <div class="mb-3 mt-5">
-                <h4>Specializzazione:</h4>
+                @error('categories')
+                <div class="text-danger">{{ $message }}</div>
+                @enderror
+                <h4>Specializzazione*:</h4>
 
                 @foreach($categories as $category) 
                     <span class="d-inline-block mr-5">
@@ -84,9 +89,6 @@
 
                     </span>
                 @endforeach
-                @error('categories')
-                    <div class="text-danger">{{ $message }}</div>
-                @enderror
             </div>
     
 

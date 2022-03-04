@@ -17,7 +17,7 @@
                     </li>
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Accedi') }}</a>
+                            <a class="nav-link" href="{{ route('login')}}">{{ __('Accedi') }}</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
@@ -37,9 +37,19 @@
                                     {{ __('Logout') }}
                                 </a>
 
-                                <a class="dropdown-item" href="{{ route('admin.doctor.show', Auth::user()->slug) }}">
-                                    il mio acccount
-                                </a>
+                                @if (DB::table('doctors')->where('slug', Auth::user()->slug)->first())
+                                    
+                                    <a class="dropdown-item" href="{{ route('admin.doctor.show', Auth::user()->slug) }}">
+                                        Il mio profilo
+                                    </a>
+                                
+                                @else
+                                
+                                    <a class="dropdown-item" href="{{ route('admin.doctor.create') }}">
+                                        Completa il tuo profilo
+                                    </a>
+
+                                @endif
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
