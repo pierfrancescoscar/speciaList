@@ -19,4 +19,15 @@ $teal: #4dc0b5;
 $cyan: #6cb2eb;
 
 // More colours
-$primary: #0071c3
+$primary: #0071c3;
+
+
+// ---------------------------------- Utilities --------------------------------------- //
+.btn-1 {
+    background-color: #0071c3 !important;
+
+    &:hover {
+        background-color: #0072c3de !important;
+    }
+}
+
