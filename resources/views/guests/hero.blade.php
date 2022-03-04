@@ -6,23 +6,11 @@
                     <h2 class="m-0">
                         Cerca il tuo specialista!
                     </h2>
-                    <h4 class="mt-1 mb-0">scopri come possiamo esserti utili</h4>
+                    <h4 class="mt-1 mb-0">Scopri come possiamo esserti utili.</h4>
                     <form class="p-3 mt-4 d-flex flex-column align-items-center" action="poi vediamo">
-                        <input 
-                            class="form-control w-100 mb-2 p-0"
-                            placeholder="inserisci qui il nome"
-                            type="text"
-                            name="name"
-                        >
                         <input
                             class="form-control w-100 mb-2 p-0"
-                            placeholder="inserisci qui il cognome"
-                            type="text"
-                            name="surname"
-                        >
-                        <input
-                            class="form-control w-100 mb-2 p-0"
-                            placeholder="inserisci qui la specializzazione"
+                            placeholder="Inserisci qui la specializzazione"
                             type="text"
                             name="category"
                         >
