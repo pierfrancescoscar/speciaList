@@ -1,5 +1,5 @@
 <section class="patacchi">
-    <div class="patacco my-5">
+    <div class="patacco">
         <div class="bg_light col-10 offset-1">
             <div class="text_container col-12 col-lg-6 offset-lg-6">
                 <h2 class="mb-4 title" ><strong>Sei un dottore o uno specialista sanitario?<br>Entra nella nuova era digitale</strong></h2>
@@ -14,7 +14,7 @@
 
     </div>
 
-    <div class="patacco my-5">
+    <div class="patacco">
         <div class="bg_light_green col-10 offset-1">
             <div class="text_container col-12 col-lg-6">
                 <h2 class="mb-4 title" ><strong>Sei un dottore o uno specialista sanitario?<br>Entra nella nuova era digitale</strong></h2>
