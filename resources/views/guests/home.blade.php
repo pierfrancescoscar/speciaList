@@ -22,10 +22,12 @@
 
 @include('guests.hero')
 
-
-<h1>Guest Home</h1>
-
+{{-- Vue Components --}}
 <doctorcarousel></doctorcarousel>
+
+<categoriescarousel></categoriescarousel>
+
+<reviews></reviews>
 
 @include('guests.patacchi')
 

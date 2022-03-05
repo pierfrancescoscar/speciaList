@@ -31,6 +31,9 @@ import Vue from 'vue';
 Vue.component('DoctorCarousel', DoctorCarousel); */
 
 Vue.component('doctorcarousel' , require('./components/DoctorCarousel').default);
+Vue.component('categoriescarousel' , require('./components/CategoriesCarousel').default);
+Vue.component('app' , require('./components/App').default);
+Vue.component('reviews' , require('./components/Reviews').default);
 
 
 const app = new Vue({

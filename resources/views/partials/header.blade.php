@@ -13,12 +13,19 @@
                 <ul class="navbar-nav ml-auto d-flex aligni-items-center">
                     <!-- Authentication Links -->
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('specialist') }}">I nostri specialisti</a>
+                    </li>
+                    
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('FAQ') }}</a>
                     </li>
+                    
                     @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login')}}">{{ __('Accedi') }}</a>
                         </li>
+
+
                         @if (Route::has('register'))
                             <li class="nav-item">
                                 <a class="nav-link btn-1 ms-2 p-2" href="{{ route('register') }}">{{ __('Sei uno specialista? Registrati!') }}</a>
