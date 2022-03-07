@@ -7,7 +7,7 @@
                         Cerca il tuo specialista!
                     </h2>
                     <h4 class="mt-1 mb-0">Scopri come possiamo esserti utili.</h4>
-                    <form action="{{ route('specialist') }}" method="POST">
+                    <form action="{{ route('specialist-search') }}" method="POST">
                         @csrf
                         <input
                             class="form-control w-100 mb-2 p-0"

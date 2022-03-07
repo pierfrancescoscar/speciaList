@@ -2,6 +2,6 @@
 
 @section('content')
 
-<app :data=" '{{ $data }}' "></app>
+<app></app>
 
 @endsection

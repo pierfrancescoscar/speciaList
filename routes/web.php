@@ -17,7 +17,11 @@ Route::get('/', function () {
     return view('guests.home');
 });
 
-Route::post('/specialist', 'SearchController@index')->name('specialist');
+Route::post('/specialist', 'SearchController@index')->name('specialist-search');
+
+Route::get('/specialist', function () {
+    return view('guests.specialist_1');
+})->name('specialist_1');
 
 Auth::routes();
 
