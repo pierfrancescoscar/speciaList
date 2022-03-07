@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
-<app></app>
+<app :data=" '{{ $data }}' "></app>
 
 @endsection

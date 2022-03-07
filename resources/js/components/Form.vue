@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input v-model="Text" @keyup.enter="$emit('searchText', Text)" type="text" placeholder="Specializzazione">
+        <input value="ciao" v-model="Text" @keyup.enter="$emit('searchText', Text)" type="text" placeholder="Specializzazione">
     </div>
 </template>
 
@@ -10,8 +10,22 @@ export default {
     data() {
         return {
             Text: '',
+            test: this.testo,
         }
-    }
+    },
+
+    created () {
+        console.log('Ciao');
+        if (this.test != '') {
+            this.Text = this.test;
+            console.log(this.Text);
+            this.$emit('searchText', this.Text);
+        }
+    },
+
+    props: {
+        testo: String,
+    },
 }
 </script>
 

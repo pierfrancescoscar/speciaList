@@ -17,9 +17,7 @@ Route::get('/', function () {
     return view('guests.home');
 });
 
-Route::get('/specialist', function () {
-    return view('guests.specialist');
-})->name('specialist');
+Route::post('/specialist', 'SearchController@index')->name('specialist');
 
 Auth::routes();
 
