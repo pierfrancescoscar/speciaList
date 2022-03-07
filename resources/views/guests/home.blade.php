@@ -29,6 +29,8 @@
 
 <reviews></reviews>
 
+<formreview></formreview>
+
 @include('guests.patacchi')
 
 @endsection
