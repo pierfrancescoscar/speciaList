@@ -94,22 +94,17 @@
 /***/ (function(module, exports) {
 
 classes = document.querySelectorAll('.checked-category');
-console.log(classes.length); //DA ELIMINARE
 
 for (i = 0; i < classes.length; i++) {
   classes[i].addEventListener('click', function () {
     var flagChecked = false;
     var CheckboxChecked = document.querySelectorAll('.checked-category:checked');
-    console.log(CheckboxChecked.length); //DA ELIMINARE
 
     if (CheckboxChecked.length > 0) {
       flagChecked = true;
     }
 
-    console.log(flagChecked); //DA ELIMINARE
-
     var allCheckbox = document.querySelectorAll('.checked-category');
-    console.log(allCheckbox.length); //DA ELIMINARE
 
     if (flagChecked == true) {
       for (i = 0; i < allCheckbox.length; i++) {
