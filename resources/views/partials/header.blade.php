@@ -13,7 +13,7 @@
                 <ul class="navbar-nav ml-auto d-flex aligni-items-center">
                     <!-- Authentication Links -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('specialist') }}">I nostri specialisti</a>
+                        <a class="nav-link" href="{{route('specialist_1')}}">I nostri specialisti</a>
                     </li>
                     
                     <li class="nav-item">
