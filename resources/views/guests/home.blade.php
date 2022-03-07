@@ -28,8 +28,9 @@
 <categoriescarousel></categoriescarousel>
 
 <reviews></reviews>
-
 <contactdoctor></contactdoctor>
+<formreview></formreview>
+
 
 @include('guests.patacchi')
 
