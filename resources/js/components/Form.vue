@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input v-model="Text" @keyup.enter="$emit('searchText', Text)" type="text" placeholder="Search">
+        <input v-model="Text" @keyup.enter="$emit('searchText', Text)" type="text" placeholder="Specializzazione">
     </div>
 </template>
 
@@ -18,15 +18,15 @@ export default {
 <style scoped lang="scss">
     input {
         border: none;
+        border-bottom: 1px solid #0071c3;
         padding-left: 10px;
-        background-color: rgb(34, 34, 34);
+        background-color: transparent;
         height: 40px;
         width: 400px;
-        border-radius: 10px;
         font-size: 25px;
-        color: rgb(255, 255, 255);
+        color: #0071c3;
         &::placeholder {
-            color: rgb(175, 175, 175);
+            color: #68b0e4;
         }
     }
 </style>
