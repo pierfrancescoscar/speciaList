@@ -10,9 +10,13 @@ class DoctorController extends Controller
 {
     public function index() {
 
-        $doctors = Doctor::all();
+        $doctors = Doctor::All();
+
+        /* $doctors = Doctor::whereHas('categories')
+    ->orWhereHas('Medicina d’emergenza-urgenza')
+    ->get(); */
+        /* ->where('categories:name', 'Medicina d’emergenza-urgenza') */
 
         return response()->json($doctors);
-
     }
 }

@@ -2,47 +2,9 @@
     <div>
         <ul class="card-list">
             <li class="card" v-for="(card, i) in CardList" :key="`card-${i}`">
-                <img
-                    class="card-image"
-                    :src="card.poster_path === null ? require(`../assets/GeneralFilm.png`) : `https://image.tmdb.org/t/p/w342${card.poster_path}`"
-                    :alt="card.original_title ? card.original_title : card.original_name"
-                >
-                <div class="card-information">
-                    <h3>
-                        {{ card.title ? card.title : card.name }}
-                    </h3>
-                    <h4>
-                        {{ card.original_title ? card.original_title : card.original_name }}
-                    </h4>
-                    <div class="language">
-                        <span>Disponibile in lingua:</span>
-                        <div class="lang-img" v-if="languages.includes(card.original_language)">
-                            <img
-                                class="flag"
-                                :src="require(`../assets/${card.original_language}.png`)"
-                                :alt="card.original_language"
-                            >
-                        </div>
-                        <div v-else>
-                            {{ card.original_language }}
-                        </div>
-                    </div>
-                    <div v-show="card.overview != '' " class="description" :class="i === activeCard ? 'active' : '' ">
-                        <span>Riassunto:</span>
-                        <span>{{ card.overview }}</span>
-                    </div>
-                    <button v-show="card.overview != '' " @click="readAll(i)" :class="i === activeCard ? 'active' : '' "></button>
-                    <div class="vote">
-                        <div v-if="Math.ceil(card.vote_average / 2) !== 0">
-                            <span>Votazione media degli utenti: </span>
-                            <span v-for="n in Math.ceil(card.vote_average / 2)" :key="`star-${n}`">&starf;</span>
-                            <span v-for="n in (5 - Math.ceil(card.vote_average / 2))" :key="`star-${n}`">&star;</span>
-                        </div>
-                        <div v-else>
-                            Nessun voto presente
-                        </div>
-                    </div>
-                </div>
+                <h3>{{ card.doctor }} {{ card.surname }}</h3>
+                <img class="card-image" :src="`http://127.0.0.1:8000/storage/${ card.profile_pic }`" alt="">
+                <h4>{{ card.category }}</h4>
             </li>
         </ul>
     </div>
@@ -86,23 +48,27 @@ export default {
 <style scoped lang="scss">
     .card-list {
         list-style: none;
-        width: 100%;
         display: flex;
         align-items: center;
         overflow-x: auto;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         padding: 20px;
         overflow-y: hidden;
+        justify-content: start;
         .card {
             width: 340px;
             height: 500px;
             padding: 10px;
+            border-radius: 10px;
             flex-shrink: 0;
             position: relative;
             display: flex;
-            align-items: center;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            &:nth-of-type(5) {
+                margin-right: 0px;
+            }
             .card-image {
-                height: 100%;
                 width: 100%;
                 flex-grow: 1;
                 transition: 0.5s;
@@ -155,21 +121,6 @@ export default {
                     &.active {
                         &::before {
                             content: 'Read Less';
-                        }
-                    }
-                }
-                .language {
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 10px;
-                    .lang-img {
-                        width: 80px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        .flag {
-                            width: 50px;
-                            height: 25px;
                         }
                     }
                 }
