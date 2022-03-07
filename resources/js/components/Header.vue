@@ -3,7 +3,7 @@
       <h1>
           Inserisci qui la specializzazione che stai cercando
       </h1>
-      <Form @searchText="reciveText"/>
+      <Form :testo="testo" @searchText="reciveText"/>
   </div>
 </template>
 
@@ -26,7 +26,12 @@ export default {
         ApiSearch: '',
         languages: ['it', 'en'],
         section: 'Home',
+        testo: this.search,
         }
+    },
+
+    props: {
+        search: String,
     },
 
     computed: {
@@ -43,9 +48,7 @@ export default {
         call_api_movie(Api) {
                 Axios.get(Api)
                 .then(result => {
-                    console.log(result.data);
                     this.Films = result.data;
-                    console.log(this.Films);
                     this.$emit('film', this.Films);
                 })
                 .catch(error => console.log(error));

@@ -7,14 +7,15 @@
                         Cerca il tuo specialista!
                     </h2>
                     <h4 class="mt-1 mb-0">Scopri come possiamo esserti utili.</h4>
-                    <form class="p-3 mt-4 d-flex flex-column align-items-center" action="poi vediamo">
+                    <form action="{{ route('specialist') }}" method="POST">
+                        @csrf
                         <input
                             class="form-control w-100 mb-2 p-0"
                             placeholder="Inserisci qui la specializzazione"
                             type="text"
                             name="category"
                         >
-                        <button class="mt-2 btn-1 p-2 px-4" type="submit">Cerca</button>
+                        <button type="submit">GO TO PAGE</button>
                     </form>
                 </div>
             </div>

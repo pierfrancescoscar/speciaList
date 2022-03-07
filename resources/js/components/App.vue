@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <Header @film="ReciveFilms" @series="ReciveSeries"/>
+        <Header :search="dato" @film="ReciveFilms" @series="ReciveSeries"/>
         <h1 v-show="Films.length != 0">Ecco gli specialisti che abbiamo trovato per te!</h1>
         <CardList v-show="Films.length != 0" :CardList="Films"/>
     </div>
@@ -17,8 +17,13 @@ export default {
         return {
         Films: [],
         tvSeries: [],
+        dato: this.data,
         }
     },
+
+  props: {
+    data: String,
+  },
 
   components: {
     Header,
