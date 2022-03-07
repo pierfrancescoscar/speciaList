@@ -13,7 +13,7 @@
                     <!-- Doc Specialization -->
                     <span class="d-block pb-2">Specializzazione: {{ doctor.category }}</span>
                     <!-- See More Button -->
-                    <button class="btn btn-primary mb-2">Scopri di più!</button>
+                    <a class="btn btn-primary mb-2" :href="`http://127.0.0.1:8000/showdoctor/${doctor.slug}`">Scopri di più</a>
                 </div>
 
             </div>

@@ -1,23 +1,16 @@
 <template>
-  <section class="container">
-      <h3 class="mb-5">Contattaci</h3>
+  <section class="container p-0">
 
       <div class="row">
-          <div class="col-6">
-              <h4>speciaList</h4>
-              <div>Via del tutto Eccezionale, 99</div>
-              <div>hello@specialist.it</div>
-          </div>
 
-          <div class="col-6">
+          <div class="col-12 p-4 contact-doctor-col">
               <!-- Sent Successfully Message Alert -->
               <div v-show="success" class="alert alert-success">
                   Messaggio inviato correttamente.
               </div>
 
-              <h2 class="mb-4">Contattaci</h2>
-
               <form @submit.prevent="contactDoctor">
+                <h3 class="mb-4">Contatta lo speciaLista.</h3>
                 <!-- Send Name -->
                   <div class="mb-3">
                       <label for="name" class="form-label">Nome*</label>
@@ -127,19 +120,24 @@ export default {
             })
             .then(res => {
                 console.log(res.data);
-                // if(res.data.errors) {
-                //     this.errors = res.data.errors;
-                //     this.success = false;
-                // } else {
-                //     this.name = '';
-                //     this.email = '';
-                //     this.object = '';
-                //     this.message = '';
+                if(res.data.errors) {
+                    this.errors = res.data.errors;
+                    this.success = false;
+                } else {
+                    this.name = '';
+                    this.email = '';
+                    this.object = '';
+                    this.message = '';
 
-                //     // Feedback
-                //     this.errors = {};
-                //     this.success = true;
-                // }
+                    // Feedback
+                    this.errors = {};
+                    this.success = true;
+                    this.name = '';
+                    this.surname = '';
+                    this.email = '';
+                    this.content = '';
+                    this.content = '';
+                }
             })
             .catch(err => console.log(err));
         },
@@ -156,5 +154,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.contact-doctor-col {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 </style>

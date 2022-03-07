@@ -1,32 +1,19 @@
 <template>
-    <section class="container">
+    <section class="container reviews-container p-0">
 
-        <div class="contact__wrapper shadow-lg mt-n9">
+        <div class="contact__wrapper shadow-lg mt-n9 rounded-3">
             <div class="row no-gutters">
-                <div class="col-lg-5 contact-info__wrapper gradient-brand-color p-5 order-lg-2">
-                    <h3 class="color--white mb-5">Recapiti del dottore</h3>
         
-                    <ul class="contact-info__list list-style--none position-relative z-index-101">
-                        <li class="mb-4 pl-4">
-                            <span class="position-absolute"><i class="fas fa-envelope"></i></span> INSERIRE EMAIL DEL DOTTORE
-                        </li>
-                        <li class="mb-4 pl-4">
-                            <span class="position-absolute"><i class="fas fa-phone"></i></span> INSERIRE NUMERO DEL DOTTORE
-                        </li>
-                        <li class="mb-4 pl-4">
-                            <span class="position-absolute"><i class="fas fa-map-marker-alt"></i></span> INSERIRE VIA DELLO STUDIO
-        
-                            <div class="mt-3">
-                                <a href="https://www.google.com/maps" target="_blank" class="text-link link--right-icon text-white">Get directions <i class="link__icon fa fa-directions"></i></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-        
-                <div class="col-lg-7 contact-form__wrapper p-5 order-lg-1">
+                <div class="col-lg-12 p-4 contact-form__wrapper order-lg-1 ">
+
+                    <!-- Sent Successfully Message Alert -->
+                    <div v-show="success" class="alert alert-success">
+                       Recensione inviata correttamente.
+                    </div>
 
                     <!-- form -->
                     <form class="contact-form form-validate" @submit.prevent="ReviewForm">
+                        <h3 class="mb-4">Lascia una recensione.</h3>
                         <div class="row">
 
                             <!-- name -->
@@ -34,6 +21,14 @@
                                 <div class="form-group">
                                     <label class="required-field" for="name">Nome</label>
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Inserire il proprio nome" required v-model="name">
+                                    <!-- Check Errors Name -->
+                                    <div
+                                            v-for="(error, index) in errors.name"
+                                            :key="`err-name-${index}`"
+                                            class="text-danger"
+                                    >
+                                        {{ error }}
+                                    </div>
                                 </div>
                             </div>
         
@@ -42,6 +37,14 @@
                                 <div class="form-group">
                                     <label for="surname">Cognome</label>
                                     <input type="text" class="form-control" id="surname" name="surname" placeholder="Inserire il proprio cognome" required v-model="surname">
+                                    <!-- Check Errors Surname -->
+                                    <div
+                                            v-for="(error, index) in errors.surname"
+                                            :key="`err-surname-${index}`"
+                                            class="text-danger"
+                                    >
+                                        {{ error }}
+                                    </div>
                                 </div>
                             </div>
 
@@ -50,6 +53,14 @@
                                 <div class="form-group">
                                     <label class="required-field" for="email">Email</label>
                                     <input type="text" class="form-control" id="email" name="email" placeholder="Inserire la propria email" required v-model="email">
+                                    <!-- Check Errors Email -->
+                                    <div
+                                            v-for="(error, index) in errors.email"
+                                            :key="`err-email-${index}`"
+                                            class="text-danger"
+                                    >
+                                        {{ error }}
+                                    </div>
                                 </div>
                             </div>
 
@@ -71,6 +82,14 @@
 
                                             <i class="fa-solid fa-star my_star starIcon star_gray"></i>
                                         </div>
+                                            <!-- Check Errors Rating -->
+                                            <div
+                                            v-for="(error, index) in errors.rating"
+                                            :key="`err-rating-${index}`"
+                                            class="text-danger"
+                                            >
+                                            {{ error }}
+                                            </div>
                                     </div>
 
                                 </div>
@@ -81,6 +100,14 @@
                                 <div class="form-group">
                                     <label class="required-field" for="content">Recensione</label>
                                     <textarea class="form-control" id="content" name="content" rows="4" placeholder="Inserire la propria recensione" v-model="content"></textarea>
+                                    <!-- Check Errors Content -->
+                                    <div
+                                    v-for="(error, index) in errors.content"
+                                    :key="`err-content-${index}`"
+                                    class="text-danger"
+                                    >
+                                    {{ error }}
+                                    </div>
                                 </div>
                             </div>
         
@@ -115,6 +142,8 @@ export default {
             rating: null,
             content: '',
             date: '',
+            errors: {},
+            success: false,
         }
     },
     created() {
@@ -212,6 +241,7 @@ export default {
 
         ReviewForm() {
             console.log('invio');
+            
 
             axios.post('http://127.0.0.1:8000/api/reviews', {
 
@@ -226,6 +256,24 @@ export default {
             })
             .then(res =>{
                 console.log(res.data);
+                if(res.data.errors) {
+                    this.errors = res.data.errors;
+                    this.success = false;
+                } else {
+                    this.name = '';
+                    this.email = '';
+                    this.object = '';
+                    this.message = '';
+
+                    // Feedback
+                    this.errors = {};
+                    this.success = true;
+                    this.name = '';
+                    this.surname = '';
+                    this.email = '';
+                    this.content = '';
+                    this.content = '';
+                }
             })
             .catch(err =>{
                 console.log(err);
@@ -293,16 +341,9 @@ export default {
 }
 .contact-info__wrapper {
     overflow: hidden;
-    border-radius: .625rem .625rem 0 0;
     background-color: #2b71bd;
 }
 
-@media (min-width: 1024px) {
-    .contact-info__wrapper {
-        border-radius: 0 .625rem .625rem 0;
-        padding: 5rem !important;
-    }
-}
 .contact-info__list span.position-absolute {
     left: 0
 }
@@ -315,21 +356,14 @@ export default {
 
 .contact__wrapper {
     background-color: #fff;
-    border-radius: 0 0 .625rem .625rem;
     overflow: hidden;
 }
 
-@media (min-width: 1024px) {
-    .contact__wrapper {
-        border-radius: .625rem 0 .625rem .625rem
-    }
-}
-@media (min-width: 1024px) {
-    .contact-form__wrapper {
-        padding: 5rem !important
-    }
-}
 .shadow-lg, .shadow-lg--on-hover:hover {
     box-shadow: 0 1rem 3rem rgba(132,138,163,0.1) !important;
+}
+
+.reviews-container {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 </style>
