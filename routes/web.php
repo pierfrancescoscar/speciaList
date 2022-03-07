@@ -21,6 +21,9 @@ Route::get('/specialist', function () {
     return view('guests.specialist');
 })->name('specialist');
 
+Route::get('/showdoctor/{slug}', 'DoctorShowController@show')
+->name('showdoctor');
+
 Auth::routes();
 
 Route::middleware('auth')
