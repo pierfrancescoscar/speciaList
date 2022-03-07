@@ -29,6 +29,8 @@
 
 <reviews></reviews>
 
+<contactdoctor></contactdoctor>
+
 @include('guests.patacchi')
 
 @endsection
