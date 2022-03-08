@@ -52,7 +52,7 @@
                             <div class="col-sm-6 mb-3">
                                 <div class="form-group">
                                     <label class="required-field" for="email">Email</label>
-                                    <input type="text" class="form-control" id="email" name="email" placeholder="Inserire la propria email" required v-model="email">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Inserire la propria email" required v-model="email">
                                     <!-- Check Errors Email -->
                                     <div
                                             v-for="(error, index) in errors.email"

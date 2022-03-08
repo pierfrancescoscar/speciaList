@@ -40,7 +40,7 @@
                 <!-- Send Email -->
                   <div class="mb-3">
                       <label for="email" class="form-label">Email*</label>
-                      <input placeholder="Inserisci qui la tua mail..." type="text" class="form-control" id="email" v-model="email" required>
+                      <input placeholder="Inserisci qui la tua mail..." type="email" class="form-control" id="email" v-model="email" required>
                       <!-- Check Errors Email -->
                       <div
                             v-for="(error, index) in errors.email"
