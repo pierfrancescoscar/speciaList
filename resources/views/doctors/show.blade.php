@@ -125,12 +125,6 @@
             </div>
         </div>
 
-
-        
-
-        {{-- Action buttons  --}}
-        {{-- <a class="btn btn-warning" href="{{ route('admin.doctor.edit', $doctor->id) }}">Edit</a>
-        <a class="btn btn-danger" href="/">Back to archive</a> --}}
     </div>
 
 

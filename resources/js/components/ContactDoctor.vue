@@ -102,6 +102,9 @@ export default {
             date: '',
         }
     },
+    props: {
+        doctorMessages: Object,
+    },
     created() {
         this.getDate();
     },
@@ -109,13 +112,15 @@ export default {
         contactDoctor() {
             // console.log('Send');
             axios.post('http://127.0.0.1:8000/api/contactdoctor', {
+
+                doctor_id: this.doctorMessages.id,
                 name: this.name,
                 surname: this.surname,
                 email: this.email,
                 object: this.object,
                 content: this.message,
                 date: this.date,
-                slug: `message-${this.name}-${this.surname}`,
+                slug: this.doctorMessages.slug,
 
             })
             .then(res => {

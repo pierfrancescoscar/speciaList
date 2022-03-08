@@ -146,6 +146,9 @@ export default {
             success: false,
         }
     },
+    props: {
+        doctorReviews: Object,
+    },
     created() {
         this.GetDate();
     },
@@ -245,13 +248,14 @@ export default {
 
             axios.post('http://127.0.0.1:8000/api/reviews', {
 
+                doctor_id: this.doctorReviews.id,
                 name: this.name,
                 surname: this.surname,
                 email: this.email,
                 rating: this.rating,
                 content: this.content,
                 date: this.date,
-                slug: `review-${this.name}-${this.surname}`,
+                slug: this.doctorReviews.slug,
 
             })
             .then(res =>{
