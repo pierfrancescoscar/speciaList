@@ -49,6 +49,10 @@
                                     <a class="dropdown-item" href="{{ route('admin.doctor.show', Auth::user()->slug) }}">
                                         Il mio profilo
                                     </a>
+
+                                    <a class="dropdown-item" href="{{ route('admin.messages', Auth::user()->slug) }}">
+                                        Il miei messaggi
+                                    </a>
                                 
                                 @else
                                 

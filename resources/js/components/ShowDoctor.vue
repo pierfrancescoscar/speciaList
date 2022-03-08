@@ -85,11 +85,11 @@
     <div class="row">
         
         <div class="col-4 doctor-contact rounded-3">
-            <ContactDoctor />
+            <ContactDoctor :doctorMessages="doctor"/>
         </div>
     
         <div class="col-8 pe-0">
-            <FormReview />
+            <FormReview :doctorReviews="doctor"/>
         </div>
     
     </div>

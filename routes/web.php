@@ -39,6 +39,8 @@ Route::middleware('auth')
 
         // Doctor Route
         Route::resource('/doctor', 'DoctorController');
+
+        Route::get('/doctor/{slug}/messages', 'MessagesController@show')->name('messages');
 });
 
 // Guest 'any' route

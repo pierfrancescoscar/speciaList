@@ -9,7 +9,14 @@ class Review extends Model
 
     /* fillable */
     protected $fillable = [
-        'name', 'surname', 'email', 'rating', 'content', 'date', 'slug'
+        'doctor_id',
+        'name',
+        'surname',
+        'email',
+        'rating',
+        'content',
+        'date',
+        'slug',
     ];
 
      // Relation between Reviews and Doctors (1 to Many)

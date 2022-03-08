@@ -37,6 +37,7 @@ Vue.component('reviews' , require('./components/Reviews').default);
 Vue.component('contactdoctor' , require('./components/ContactDoctor').default);
 Vue.component('showdoctor' , require('./components/ShowDoctor').default);
 Vue.component('formreview' , require('./components/FormReview').default);
+Vue.component('mycontact' , require('./components/MyContact').default);
 
 
 const app = new Vue({
