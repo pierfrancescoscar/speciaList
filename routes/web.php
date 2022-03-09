@@ -41,6 +41,8 @@ Route::middleware('auth')
         Route::resource('/doctor', 'DoctorController');
 
         Route::get('/doctor/{slug}/messages', 'MessagesController@show')->name('messages');
+
+        Route::get('/doctor/{slug}/reviews', 'ReviewsController@show')->name('reviews');
 });
 
 // Guest 'any' route

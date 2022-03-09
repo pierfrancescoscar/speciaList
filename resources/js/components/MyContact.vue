@@ -7,12 +7,9 @@
                         <div class="tab-pane fade active show" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
                             <div class="bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews">
 
-                                <h5 class="mb-1">I miei messaggi</h5>
+                                <h5 class="mb-1">{{title}}</h5>
 
-                                <CardContact v-for="(singleContact, i) in messagesrecup.messages" :key="`content-${i}`"
-                                 :name="singleContact.name"
-                                 :date="singleContact.date"
-                                 :content="singleContact.content" />
+                                <CardContact :myloop="datarecup" />
 
                             </div>
                         </div>
@@ -35,7 +32,8 @@ export default {
         CardContact,
     },
     props: {
-        messagesrecup: Object,
+        datarecup: Array,
+        title: String,
     },
 
 
