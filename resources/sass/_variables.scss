@@ -25,6 +25,7 @@ $primary: #0071c3;
 // ---------------------------------- Utilities --------------------------------------- //
 .btn-1 {
     background-color: #0071c3 !important;
+    border: none !important;
 
     &:hover {
         background-color: #0072c3de !important;
@@ -32,11 +33,11 @@ $primary: #0071c3;
 }
 
 .btn-2 {
-    background-color: #2bf77a !important;
-    border-color: #2bf77a !important;
+    background-color: #b1f3ca !important;
+    border-color: #b1f3ca87 !important;
 
     &:hover {
-        background-color: #25d368 !important;
+        background-color: #b1f3ca87 !important;
     }
 }
 
