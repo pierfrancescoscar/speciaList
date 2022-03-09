@@ -1,6 +1,6 @@
 
 <!-- Footer -->
-<section class="col-12 d-flex flex-column justify-content-center my-5">
+<section class="col-12 d-flex flex-column justify-content-center mt-5">
 
 
     <div class="sopra col-10 offset-1 my-5 d-flex flex-column flex-xl-row-reverse">
@@ -38,7 +38,7 @@
 
         <div class="learn_and_connect learn_and_connect d-flex justify-content-center justify-content-xl-start text-xl-start text-center flex-column flex-xl-row col-12 col-xl-6">
 
-            <div class="learn mr-xl-5 mb-5"><strong>LEARN MORE</strong> 
+            <div class="learn mr-xl-5 mb-5"><strong>DELLE COSE</strong> 
                 <ul class="list-unstyled mt-3">
                     <li class="mt-2">CoseCoseCose</li>
                     <li class="mt-2">CoseCoseCose</li>
@@ -46,7 +46,7 @@
                 </ul>
             </div>
 
-            <div class="connect "><strong>CONNECT WITH US</strong>  
+            <div class="connect "><strong>CONTATTACI</strong>  
                 <ul class="list-unstyled mt-3">
                     <li class="mt-2">CoseCoseCose</li>
                 </ul>
@@ -62,7 +62,7 @@
         </div>
 
         <div class="sotto recensioni col-12 col-xl-10 offset-xl-1 text-center text-xl-start mb-5">
-            Did SpeciaList make a difference for you and your family? We'd love to hear about it <a href="/">here</a>.
+            Did a SpeciaList make a difference for you and your family? We'd love to hear about it <a class="here" href="/">here</a>.
         </div>
 
     </div>

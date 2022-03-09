@@ -1,33 +1,10 @@
-// .social-btn {
-//     border-radius: 50%;
-// }
-
-// .column {
-//     height: 500px;
-// }
-// .column_right {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     img {
-//         border-radius: 15%;
-//     }
-// }
-// ul {
-//     justify-content: center;
-//     li {
-//         padding-right: 1rem;
-//         a {
-//             font-size: 12px;
-//             img {
-//                 width: 60px;
-//             }
-//         }
-//     }
-// }
-
 
 // Footer
+
+footer {
+    background-color: $primary;
+}
+
 .logo {
     max-height: 25rem;
 
@@ -50,7 +27,7 @@
         text-decoration: none;
         border-radius: 50% !important;
         background-color: $footer-text;
-        color: $footer-bg;
+        color: $primary;
         width: 3.5rem;
         height: 3.5rem;
         display: flex;
@@ -75,6 +52,11 @@
 
 .sotto {
     color: $footer-text;
+
+    .here {
+        color: $footer-text;
+        text-decoration: underline;
+    }
 }
 
 
