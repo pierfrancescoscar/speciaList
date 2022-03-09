@@ -3,7 +3,7 @@
 @section('content')
     <div class="container show_style mb-3">
 
-        <mycontact :datarecup="{{$doctorMesssages->messages}}" :title="'I miei messaggi'" ></mycontact>
+        <mycontact :datarecup="{{$doctorReviews->reviews}}" :title="'Le mie recensioni'" ></mycontact>
 
     </div>
 
