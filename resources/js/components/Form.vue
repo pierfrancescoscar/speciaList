@@ -15,7 +15,6 @@ export default {
     },
 
     created () {
-        console.log('Ciao');
         if (this.test != '') {
             this.Text = this.test;
             console.log(this.Text);

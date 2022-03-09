@@ -4,8 +4,8 @@
         <div class="doctor-cards" id="carousel-categories">
 
             <div class="doctor-single-card d-flex">
-                
-                <div v-for="(category, i) in categories" :key="`category-${i}`" class="p-4 category-card card me-4">
+
+                <div @click="GoToPage(category.name)" v-for="(category, i) in categories" :key="`category-${i}`" class="p-4 category-card card me-4">
                     <!-- Specialization Image -->
                     <img class="img-fluid w-50 mb-2 icon" src="https://cdn-icons-png.flaticon.com/512/684/684262.png" alt="">
                     <span class="d-block category-name">{{ category.name }}</span>
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+
 import axios from 'axios';
 
 export default {
@@ -29,6 +30,7 @@ export default {
     name: 'CategoriesCarousel',
     data() {
         return {
+            Text: '',
             categories: null,
             carouselScroll: 0,
 			carousel: document.getElementById('carousel-categories'),
@@ -45,6 +47,19 @@ export default {
                 // console.log(res.data);
                 this.categories = res.data;
                 // console.log(res.data);
+            })
+        },
+
+        GoToPage(Param) {
+            //console.log(Param);
+            axios.post('http://127.0.0.1:8000/api/categorysearch', {
+                category: Param,
+            })
+            .then(res=>{
+                console.log(res.data.category);
+                this.Text = res.data.category;
+                console.log(this.Text);
+                this.$emit('searchText', this.Text);
             })
         },
 

@@ -24,4 +24,5 @@ Route::namespace('Api')->group( function() {
     Route::post('/contactdoctor', 'MessageController@store');
     Route::post('/reviews', 'ReviewController@store');
     Route::get('/search/{categoria}', 'SearchController@index');
+    Route::post('/categorysearch', 'CategorySearchController@store');
 });

@@ -1,5 +1,6 @@
 <template>
   <div class="header">
+      <CategoriesCarousel @searchText="reciveText"/>
       <h1>
           Inserisci qui la specializzazione che stai cercando
       </h1>
@@ -11,12 +12,14 @@
 
 import Axios from 'axios';
 import Form from './Form.vue';
+import CategoriesCarousel from './CategoriesCarousel.vue';
 
 export default {
     name: 'Header',
 
     components: {
         Form,
+        CategoriesCarousel,
     },
 
     data() {
@@ -66,9 +69,9 @@ export default {
 <style scoped lang="scss">
     .header {
         width: 100%;
-        height: 100px;
         background-color: transparent;
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
         padding: 10px;
