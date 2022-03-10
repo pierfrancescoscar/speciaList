@@ -1,6 +1,7 @@
 .hero {
     background-image: url('../assets/Hero_Specialist.jpg');
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: top;
     height: 600px;
@@ -35,4 +36,13 @@
             color: white;
         }
     }
+
 }
+.description-hero {
+    color: #0071c3;
+}
+
+.title-form-hero {
+    color: #0071c3 !important;
+}
+

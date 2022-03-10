@@ -1,6 +1,6 @@
 <template>
     <div class="container my-5 container_sponsored">
-        <h3 class="mb-4 title">Le specializzazioni più cercate</h3>
+        <h3 class="mb-5 title text-center">Le specializzazioni più cercate</h3>
         <div class="doctor-cards" id="carousel-categories">
 
             <div class="doctor-single-card d-flex">

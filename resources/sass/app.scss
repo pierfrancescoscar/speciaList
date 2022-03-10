@@ -7,6 +7,9 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+// Home
+@import "partials/home_style.scss";
+
 // Header
 @import "partials/header.scss";
 
@@ -24,4 +27,7 @@
 
 // Patacchi 
 @import 'partials/patacchi.scss';
+
+// How it works section
+@import 'partials/howitworks_style.scss';
 
