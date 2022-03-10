@@ -51,7 +51,7 @@
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('admin.messages', Auth::user()->slug) }}">
-                                        Il miei messaggi
+                                        I miei messaggi
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('admin.reviews', Auth::user()->slug) }}">

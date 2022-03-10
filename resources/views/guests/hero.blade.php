@@ -3,11 +3,11 @@
         <div class="row d-flex flex-row-reverse h-100">
             <div class="hero-text col-lg-5 col-md-7 col-sm-12 d-flex flex-column h-100 justify-content-center">
                 <div class="content p-3">
-                    <h2 class="m-0">
-                        Cerca il tuo specialista!
-                    </h2>
-                    <h4 class="mt-1 mb-0">Scopri come possiamo esserti utili.</h4>
-                    <form action="{{ route('specialist-search') }}" method="POST">
+                    <h1 class="m-0 title-form-hero">
+                        <strong>Cerca il tuo speciaList.</strong>
+                    </h1>
+                    <p class="description-hero mt-2">In speciaList puoi cercare il professionista giusto per te scegliendo tra diversi tipi di specializzazione.</p>
+                    <form class="py-3 px-3 mt-4" action="{{ route('specialist-search') }}" method="POST">
                         @csrf
                         <input
                             class="form-control w-100 mb-2 p-0"
@@ -15,7 +15,7 @@
                             type="text"
                             name="category"
                         >
-                        <button type="submit">GO TO PAGE</button>
+                            <button class="mt-2 text-center btn btn-primary" type="submit">Cerca</button>
                     </form>
                 </div>
             </div>
