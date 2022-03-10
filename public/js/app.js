@@ -2365,6 +2365,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'DoctorCarousel',
@@ -2383,6 +2386,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('http://127.0.0.1:8000/api/doctors').then(function (res) {
+        console.log(res.data);
         _this.doctors = res.data;
       });
     },
@@ -2985,7 +2989,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Reviews'
 });
@@ -3003,6 +3006,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ContactDoctor_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ContactDoctor.vue */ "./resources/js/components/ContactDoctor.vue");
 /* harmony import */ var _FormReview_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormReview.vue */ "./resources/js/components/FormReview.vue");
+//
+//
+//
 //
 //
 //
@@ -7599,7 +7605,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".title[data-v-71ec4b4a] {\n  color: #0071c3;\n}\n.doctor-cards[data-v-71ec4b4a] {\n  position: relative;\n  overflow-x: scroll;\n  height: 300px;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n.doctor-cards[data-v-71ec4b4a]::-webkit-scrollbar {\n  display: none;\n}\n.doctor-cards .doctor-single-card[data-v-71ec4b4a] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  padding: 0 40px;\n}\n.doctor-cards .doctor-single-card > div[data-v-71ec4b4a] {\n  min-width: 200px;\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.container_sponsored[data-v-71ec4b4a] {\n  position: relative;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a],\n.container_sponsored .next_btn[data-v-71ec4b4a] {\n  position: absolute;\n  transform: translateY(-50%);\n  top: 50%;\n  padding: 10px 15px;\n  border-radius: 28%;\n  background-color: #2b71bd;\n  color: white;\n  box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a]:hover,\n.container_sponsored .next_btn[data-v-71ec4b4a]:hover {\n  cursor: pointer;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a]:active,\n.container_sponsored .next_btn[data-v-71ec4b4a]:active {\n  box-shadow: none;\n  background-color: #1961af;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a] {\n  left: 7px;\n}\n.container_sponsored .next_btn[data-v-71ec4b4a] {\n  right: 7px;\n}", ""]);
+exports.push([module.i, ".btn-1[data-v-71ec4b4a] {\n  background-color: #0071c3 !important;\n  border: none !important;\n}\n.btn-1[data-v-71ec4b4a]:hover {\n  background-color: #0072c3de !important;\n}\n.btn-2[data-v-71ec4b4a] {\n  background-color: #b1f3ca !important;\n  border-color: #b1f3ca87 !important;\n}\n.btn-2[data-v-71ec4b4a]:hover {\n  background-color: #b1f3ca87 !important;\n}\n.title[data-v-71ec4b4a] {\n  color: #0071c3;\n}\n.doctor-cards[data-v-71ec4b4a] {\n  position: relative;\n  overflow-x: scroll;\n  height: 300px;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n.doctor-cards[data-v-71ec4b4a]::-webkit-scrollbar {\n  display: none;\n}\n.doctor-cards .doctor-single-card[data-v-71ec4b4a] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  padding: 0 40px;\n}\n.doctor-cards .doctor-single-card > div[data-v-71ec4b4a] {\n  min-width: 200px;\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.container_sponsored[data-v-71ec4b4a] {\n  position: relative;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a],\n.container_sponsored .next_btn[data-v-71ec4b4a] {\n  position: absolute;\n  transform: translateY(230%);\n  top: 50%;\n  padding: 10px 15px;\n  border-radius: 28%;\n  background-color: #2b71bd;\n  color: white;\n  box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a]:hover,\n.container_sponsored .next_btn[data-v-71ec4b4a]:hover {\n  cursor: pointer;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a]:active,\n.container_sponsored .next_btn[data-v-71ec4b4a]:active {\n  box-shadow: none;\n  background-color: #1961af;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a] {\n  left: 7px;\n}\n.container_sponsored .next_btn[data-v-71ec4b4a] {\n  right: 7px;\n}\n.doc-card[data-v-71ec4b4a] {\n  border-radius: 10px;\n  box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;\n}\n.specialist-icon[data-v-71ec4b4a] {\n  width: 150px !important;\n}", ""]);
 
 // exports
 
@@ -7694,7 +7700,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\nbody[data-v-29979800] {\n  margin-top: 20px;\n}\n.btn.btn-outline-primary[data-v-29979800]:hover, .bg-primary[data-v-29979800] {\n  background-color: #0cb4ce !important;\n}\n.section-medium[data-v-29979800] {\n  padding: 55px 0px;\n}\n.testimonial-four blockquote[data-v-29979800]:hover::after, .section-arrow-primary-color.section-arrow--bottom-center[data-v-29979800]:after {\n  border-right-color: #0cb4ce;\n}\n.section-arrow-primary-color.section-arrow--bottom-center[data-v-29979800]:after {\n  background-color: #0cb4ce;\n  border-right-color: #0cb4ce;\n  border-bottom-color: #0cb4ce;\n}\n.section-arrow--bottom-center[data-v-29979800]:after {\n  z-index: 1;\n  position: absolute;\n  left: 50%;\n  margin-left: -15px;\n  content: \"\";\n  position: absolute;\n  bottom: -15px;\n  width: 30px;\n  height: 30px;\n  border-right: 1px solid #262626;\n  border-bottom: 1px solid #262626;\n  transform: rotate(45deg);\n  background-color: #262626;\n}\n.text-white h1[data-v-29979800], .text-white h2[data-v-29979800], .text-white h3[data-v-29979800], .text-white h4[data-v-29979800], .text-white h5[data-v-29979800], .text-white h6[data-v-29979800] {\n  color: white !important;\n}\n.section-title[data-v-29979800] {\n  font-size: 32px;\n  font-weight: 600;\n  margin-top: 0.45em;\n  margin-bottom: 0.35em;\n  color: #303133;\n  font-family: Poppins;\n  letter-spacing: -0.02em;\n}\n.section-sub-title[data-v-29979800] {\n  font-size: 18px;\n  margin-bottom: 20px;\n  font-weight: 400;\n  font-family: Poppins;\n}\n.section-arrow-primary-color.section-arrow--bottom-center[data-v-29979800]:after {\n  border-bottom-color: #0cb4ce;\n}\n.section-arrow-primary-color.section-arrow--bottom-center[data-v-29979800]:after {\n  background-color: #0cb4ce;\n}\n.special-heading.line span[data-v-29979800]:before, .special-heading.line span[data-v-29979800]:after, .footer.footer-minimal[data-v-29979800], .t-bordered[data-v-29979800] {\n  border-top-color: #eaeaea;\n}\n.t-bordered[data-v-29979800] {\n  border-top: 1px solid #eaeaea;\n}\n.section-primary[data-v-29979800] {\n  padding: 75px 0px;\n}\nsection[data-v-29979800] {\n  position: relative;\n}\n.testimonial-two[data-v-29979800] {\n  padding: 20px;\n  border: 2px solid #0cb4ce;\n  border-radius: 2px;\n}\n.testimonial-two blockquote p[data-v-29979800]:before {\n  font-family: \"Playfair Display\";\n  font-size: 54px;\n  color: #0cb4ce;\n  font-weight: 900;\n  left: 10px;\n  color: #FFF;\n  content: \"\\201C\";\n  font-style: normal;\n  line-height: 1;\n  position: absolute;\n  top: 5px;\n  font-size: 45px;\n}\n.testimonial-two blockquote p[data-v-29979800]:after {\n  font-family: \"Playfair Display\";\n  font-size: 54px;\n  color: #0cb4ce;\n  content: \"\\201D\";\n  font-size: 80px;\n  font-style: normal;\n  line-height: 1;\n  position: absolute;\n  bottom: -0.5em;\n  right: 10px;\n  font-weight: 900;\n  transform: scaleY(-1);\n  font-size: 45px;\n  bottom: -5px;\n}\n.testimonial-two blockquote[data-v-29979800] {\n  padding: 15px 15px 15px 48px;\n  position: relative;\n}\n.testimonial-two blockquote p[data-v-29979800]:before,\n.testimonial-two blockquote p[data-v-29979800]:after {\n  color: #0cb4ce;\n  font-weight: 900;\n}\n.testimonial-two blockquote p[data-v-29979800] {\n  font-size: inherit;\n  font-weight: inherit;\n}\n.testimonial-two .testimonial-author p[data-v-29979800] {\n  color: #999;\n  margin: 0 0 0 25px;\n  text-align: left;\n}\n.testimonial-two .testimonial-author strong[data-v-29979800] {\n  display: block;\n  padding-top: 10px;\n  margin-bottom: -2px;\n  font-weight: 500;\n  font-size: 14px;\n  color: #444;\n}\n.testimonial-two .testimonial-author span[data-v-29979800] {\n  color: #666;\n  display: block;\n  font-size: 12px;\n}\n.testimonial-two .testimonial-author .testimonial-author-thumbnail[data-v-29979800] {\n  float: left;\n  margin-right: 15px;\n  width: auto;\n}\n.testimonial-two .testimonial-author img[data-v-29979800] {\n  max-width: 55px;\n}\n.testimonial-two .testimonial-author[data-v-29979800] {\n  margin-left: 12px;\n  margin-bottom: 15px;\n}\n.testimonial-two .owl-theme .owl-nav.disabled + .owl-dots[data-v-29979800] {\n  margin-top: 0px;\n}\n.testimonial-two .owl-theme .owl-dots[data-v-29979800] {\n  text-align: left;\n  margin-left: 50px;\n}\n.testimonial-two .owl-carousel .owl-dots .owl-dot.active span[data-v-29979800],\n.testimonial-two .owl-carousel .owl-dots .owl-dot:hover span[data-v-29979800] {\n  border-color: #0cb4ce;\n}\n.testimonial-two .owl-carousel .owl-dots .owl-dot.active span[data-v-29979800]:before,\n.testimonial-two .owl-carousel .owl-dots .owl-dot:hover span[data-v-29979800]:before {\n  background-color: #0cb4ce;\n}\n.testimonial-three .testimonial-image[data-v-29979800] {\n  float: left;\n  margin: 0 20px 0 0;\n  width: 80px;\n  height: 80px;\n  border-radius: 100px;\n  overflow: hidden;\n}\n.testimonial-three .testimonial-content[data-v-29979800] {\n  overflow: hidden;\n}\n.testimonial-three .testimonial-meta[data-v-29979800] {\n  position: relative;\n  overflow: hidden;\n  margin-left: 100px;\n}\n.testimonial-three .testimonial-name[data-v-29979800] {\n  display: block;\n}\n.testimonial-three .testimonial-three-col[data-v-29979800] {\n  padding-bottom: 35px;\n}\n.testimonial-three .testimonial-three-col[data-v-29979800] {\n  border-right-style: dashed;\n  border-right-width: 1px;\n  border-bottom-style: dashed;\n  border-bottom-width: 1px;\n  border-right-color: #ddd;\n  border-bottom-color: #ddd;\n  padding: 25px;\n}\n.testimonial-three .testimonial-three-col[data-v-29979800]:hover {\n  background-color: #f7f7f7;\n}\n.alternate-color .testimonial-three .testimonial-three-col[data-v-29979800]:hover {\n  background-color: white;\n}\n.testimonial-three.testimonial-three--col-two .testimonial-three-col[data-v-29979800]:nth-child(2n) {\n  border-right: none;\n}\n.testimonial-three.testimonial-three--col-two .testimonial-three-col[data-v-29979800]:nth-last-child(-n+2),\n.testimonial-three.testimonial-three--col-two .testimonial-three-col[data-v-29979800]:last-child {\n  border-bottom: none;\n}\n.testimonial-three.testimonial-three--col-three .testimonial-three-col[data-v-29979800]:nth-child(3n) {\n  border-right: none;\n}\n.testimonial-three.testimonial-three--col-three .testimonial-three-col[data-v-29979800]:nth-last-child(-n+3),\n.testimonial-three.testimonial-three--col-three .testimonial-three-col[data-v-29979800]:nth-last-child(-n+2),\n.testimonial-three.testimonial-three--col-three .testimonial-three-col[data-v-29979800]:last-child {\n  border-bottom: none;\n}\n.testimonial-four .testimonial-author .testimonial-author-thumbnail[data-v-29979800] {\n  float: left;\n  margin-right: 15px;\n  width: auto;\n}\n.testimonial-four .testimonial-author img[data-v-29979800] {\n  max-width: 55px;\n}\n.testimonial-four .testimonial-author strong[data-v-29979800] {\n  display: block;\n  padding-top: 10px;\n  margin-bottom: -2px;\n  font-weight: 500;\n  font-size: 14px;\n  color: #444;\n}\n.testimonial-four .testimonial-author span[data-v-29979800] {\n  color: #666;\n  display: block;\n  font-size: 12px;\n}\n.testimonial-four blockquote[data-v-29979800] {\n  padding: 30px;\n  width: 100%;\n  border-radius: 4px;\n  position: relative;\n  margin-bottom: 20px;\n  padding-bottom: 25px;\n  border: 2px solid #eaeaea;\n}\n.testimonial-four blockquote[data-v-29979800]::after {\n  content: \"\";\n  border-right: 2px solid #eaeaea;\n  border-bottom: 2px solid #eaeaea;\n  transform: rotate(55deg);\n  position: absolute;\n  left: 55px;\n  bottom: -12px;\n  width: 15px;\n  height: 21px;\n  overflow: hidden;\n  background: white;\n}\n.testimonial-four .owl-theme .owl-nav.disabled + .owl-dots[data-v-29979800] {\n  position: absolute;\n  float: right;\n  text-align: right;\n  right: 3px;\n  bottom: 40px;\n}\n.testimonial-four .testimonial-author[data-v-29979800] {\n  position: relative;\n  overflow: hidden;\n}\n.testimonial-four blockquote[data-v-29979800]:hover::after {\n  border-right: 2px solid #0cb4ce;\n  border-bottom: 2px solid #0cb4ce;\n}\n.testimonial-four blockquote[data-v-29979800]:hover {\n  border: 2px solid #0cb4ce;\n}\n.testimonial-five blockquote p[data-v-29979800] {\n  font-weight: 400;\n  font-size: 14.58px;\n  line-height: 1.6;\n  margin-bottom: 0;\n}\n.testimonial-five .testimonial-author .testimonial-author-thumbnail[data-v-29979800] {\n  float: left;\n  margin-right: 15px;\n  width: auto;\n}\n.testimonial-five .testimonial-author img[data-v-29979800] {\n  max-width: 55px;\n}\n.testimonial-five .testimonial-author strong[data-v-29979800] {\n  display: block;\n  padding-top: 10px;\n  margin-bottom: -2px;\n  font-weight: 600;\n  font-size: 13px;\n}\n.testimonial-five .testimonial-author span[data-v-29979800] {\n  color: #666;\n  display: block;\n  font-size: 12px;\n}\n.testimonial-five blockquote[data-v-29979800] {\n  padding: 32px 41px 37px;\n  width: 100%;\n  border-radius: 4px;\n  position: relative;\n  margin-bottom: 30px;\n  border: 0px solid #eaeaea;\n  background-color: #f7f7f7;\n}\n.testimonial-five blockquote[data-v-29979800]::after {\n  content: \"\";\n  border-right: 0px solid #eaeaea;\n  border-bottom: 0px solid #eaeaea;\n  transform: rotate(55deg);\n  position: absolute;\n  left: 55px;\n  bottom: -10px;\n  width: 15px;\n  height: 21px;\n  overflow: hidden;\n  background: #f7f7f7;\n}\n.testimonial-five.testimonial-light blockquote[data-v-29979800] {\n  background-color: white;\n}\n.testimonial-five.testimonial-light blockquote[data-v-29979800]::after {\n  background: white;\n}\n.testimonial-five .owl-theme .owl-nav.disabled + .owl-dots[data-v-29979800] {\n  position: absolute;\n  float: right;\n  text-align: right;\n  right: 3px;\n  bottom: 40px;\n}\n.testimonial-five .testimonial-author[data-v-29979800] {\n  position: relative;\n  overflow: hidden;\n}\n.testimonial-five blockquote[data-v-29979800]:before {\n  content: \"\\201C\";\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  font-size: 170px;\n  color: rgba(189, 189, 189, 0.2);\n  position: absolute;\n  top: 10px;\n  left: 20px;\n}\nimg[data-v-29979800] {\n  max-width: 100%;\n  height: auto;\n}", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\nbody[data-v-29979800] {\n  margin-top: 20px;\n}\n.btn.btn-outline-primary[data-v-29979800]:hover, .bg-primary[data-v-29979800] {\n  background-color: #0071c3 !important;\n}\n.testimonial-four blockquote[data-v-29979800]:hover::after, .section-arrow-primary-color.section-arrow--bottom-center[data-v-29979800]:after {\n  border-right-color: #0071c3;\n}\n.section-arrow-primary-color.section-arrow--bottom-center[data-v-29979800]:after {\n  background-color: #0071c3;\n  border-right-color: #0071c3;\n  border-bottom-color: #0071c3;\n}\n.section-arrow--bottom-center[data-v-29979800]:after {\n  z-index: 1;\n  position: absolute;\n  left: 50%;\n  margin-left: -15px;\n  content: \"\";\n  position: absolute;\n  bottom: -15px;\n  width: 30px;\n  height: 30px;\n  border-right: 1px solid #262626;\n  border-bottom: 1px solid #262626;\n  transform: rotate(45deg);\n  background-color: #262626;\n}\n.text-white h1[data-v-29979800], .text-white h2[data-v-29979800], .text-white h3[data-v-29979800], .text-white h4[data-v-29979800], .text-white h5[data-v-29979800], .text-white h6[data-v-29979800] {\n  color: white !important;\n}\n.section-title[data-v-29979800] {\n  font-size: 32px;\n  font-weight: 600;\n  margin-top: 0.45em;\n  margin-bottom: 0.35em;\n  color: #303133;\n  font-family: Poppins;\n  letter-spacing: -0.02em;\n}\n.section-sub-title[data-v-29979800] {\n  font-size: 18px;\n  margin-bottom: 20px;\n  font-weight: 400;\n  font-family: Poppins;\n}\n.section-arrow-primary-color.section-arrow--bottom-center[data-v-29979800]:after {\n  border-bottom-color: #0071c3;\n}\n.section-arrow-primary-color.section-arrow--bottom-center[data-v-29979800]:after {\n  background-color: #0071c3;\n}\n.special-heading.line span[data-v-29979800]:before, .special-heading.line span[data-v-29979800]:after, .footer.footer-minimal[data-v-29979800], .t-bordered[data-v-29979800] {\n  border-top-color: #eaeaea;\n}\n.t-bordered[data-v-29979800] {\n  border-top: 1px solid #eaeaea;\n}\n.section-primary[data-v-29979800] {\n  padding: 75px 0px;\n}\nsection[data-v-29979800] {\n  position: relative;\n}\n.testimonial-two[data-v-29979800] {\n  padding: 20px;\n  border: 2px solid #0cb4ce;\n  border-radius: 2px;\n}\n.testimonial-two blockquote p[data-v-29979800]:before {\n  font-family: \"Playfair Display\";\n  font-size: 54px;\n  color: #0cb4ce;\n  font-weight: 900;\n  left: 10px;\n  color: #FFF;\n  content: \"\\201C\";\n  font-style: normal;\n  line-height: 1;\n  position: absolute;\n  top: 5px;\n  font-size: 45px;\n}\n.testimonial-two blockquote p[data-v-29979800]:after {\n  font-family: \"Playfair Display\";\n  font-size: 54px;\n  color: #0cb4ce;\n  content: \"\\201D\";\n  font-size: 80px;\n  font-style: normal;\n  line-height: 1;\n  position: absolute;\n  bottom: -0.5em;\n  right: 10px;\n  font-weight: 900;\n  transform: scaleY(-1);\n  font-size: 45px;\n  bottom: -5px;\n}\n.testimonial-two blockquote[data-v-29979800] {\n  padding: 15px 15px 15px 48px;\n  position: relative;\n}\n.testimonial-two blockquote p[data-v-29979800]:before,\n.testimonial-two blockquote p[data-v-29979800]:after {\n  color: #0cb4ce;\n  font-weight: 900;\n}\n.testimonial-two blockquote p[data-v-29979800] {\n  font-size: inherit;\n  font-weight: inherit;\n}\n.testimonial-two .testimonial-author p[data-v-29979800] {\n  color: #999;\n  margin: 0 0 0 25px;\n  text-align: left;\n}\n.testimonial-two .testimonial-author strong[data-v-29979800] {\n  display: block;\n  padding-top: 10px;\n  margin-bottom: -2px;\n  font-weight: 500;\n  font-size: 14px;\n  color: #444;\n}\n.testimonial-two .testimonial-author span[data-v-29979800] {\n  color: #666;\n  display: block;\n  font-size: 12px;\n}\n.testimonial-two .testimonial-author .testimonial-author-thumbnail[data-v-29979800] {\n  float: left;\n  margin-right: 15px;\n  width: auto;\n}\n.testimonial-two .testimonial-author img[data-v-29979800] {\n  max-width: 55px;\n}\n.testimonial-two .testimonial-author[data-v-29979800] {\n  margin-left: 12px;\n  margin-bottom: 15px;\n}\n.testimonial-two .owl-theme .owl-nav.disabled + .owl-dots[data-v-29979800] {\n  margin-top: 0px;\n}\n.testimonial-two .owl-theme .owl-dots[data-v-29979800] {\n  text-align: left;\n  margin-left: 50px;\n}\n.testimonial-two .owl-carousel .owl-dots .owl-dot.active span[data-v-29979800],\n.testimonial-two .owl-carousel .owl-dots .owl-dot:hover span[data-v-29979800] {\n  border-color: #0cb4ce;\n}\n.testimonial-two .owl-carousel .owl-dots .owl-dot.active span[data-v-29979800]:before,\n.testimonial-two .owl-carousel .owl-dots .owl-dot:hover span[data-v-29979800]:before {\n  background-color: #0cb4ce;\n}\n.testimonial-three .testimonial-image[data-v-29979800] {\n  float: left;\n  margin: 0 20px 0 0;\n  width: 80px;\n  height: 80px;\n  border-radius: 100px;\n  overflow: hidden;\n}\n.testimonial-three .testimonial-content[data-v-29979800] {\n  overflow: hidden;\n}\n.testimonial-three .testimonial-meta[data-v-29979800] {\n  position: relative;\n  overflow: hidden;\n  margin-left: 100px;\n}\n.testimonial-three .testimonial-name[data-v-29979800] {\n  display: block;\n}\n.testimonial-three .testimonial-three-col[data-v-29979800] {\n  padding-bottom: 35px;\n}\n.testimonial-three .testimonial-three-col[data-v-29979800] {\n  border-right-style: dashed;\n  border-right-width: 1px;\n  border-bottom-style: dashed;\n  border-bottom-width: 1px;\n  border-right-color: #ddd;\n  border-bottom-color: #ddd;\n  padding: 25px;\n}\n.testimonial-three .testimonial-three-col[data-v-29979800]:hover {\n  background-color: #f7f7f7;\n}\n.alternate-color .testimonial-three .testimonial-three-col[data-v-29979800]:hover {\n  background-color: white;\n}\n.testimonial-three.testimonial-three--col-two .testimonial-three-col[data-v-29979800]:nth-child(2n) {\n  border-right: none;\n}\n.testimonial-three.testimonial-three--col-two .testimonial-three-col[data-v-29979800]:nth-last-child(-n+2),\n.testimonial-three.testimonial-three--col-two .testimonial-three-col[data-v-29979800]:last-child {\n  border-bottom: none;\n}\n.testimonial-three.testimonial-three--col-three .testimonial-three-col[data-v-29979800]:nth-child(3n) {\n  border-right: none;\n}\n.testimonial-three.testimonial-three--col-three .testimonial-three-col[data-v-29979800]:nth-last-child(-n+3),\n.testimonial-three.testimonial-three--col-three .testimonial-three-col[data-v-29979800]:nth-last-child(-n+2),\n.testimonial-three.testimonial-three--col-three .testimonial-three-col[data-v-29979800]:last-child {\n  border-bottom: none;\n}\n.testimonial-four .testimonial-author .testimonial-author-thumbnail[data-v-29979800] {\n  float: left;\n  margin-right: 15px;\n  width: auto;\n}\n.testimonial-four .testimonial-author img[data-v-29979800] {\n  max-width: 55px;\n}\n.testimonial-four .testimonial-author strong[data-v-29979800] {\n  display: block;\n  padding-top: 10px;\n  margin-bottom: -2px;\n  font-weight: 500;\n  font-size: 14px;\n  color: #444;\n}\n.testimonial-four .testimonial-author span[data-v-29979800] {\n  color: #666;\n  display: block;\n  font-size: 12px;\n}\n.testimonial-four blockquote[data-v-29979800] {\n  padding: 30px;\n  width: 100%;\n  border-radius: 4px;\n  position: relative;\n  margin-bottom: 20px;\n  padding-bottom: 25px;\n  border: 2px solid #eaeaea;\n}\n.testimonial-four blockquote[data-v-29979800]::after {\n  content: \"\";\n  border-right: 2px solid #eaeaea;\n  border-bottom: 2px solid #eaeaea;\n  transform: rotate(55deg);\n  position: absolute;\n  left: 55px;\n  bottom: -12px;\n  width: 15px;\n  height: 21px;\n  overflow: hidden;\n  background: white;\n}\n.testimonial-four .owl-theme .owl-nav.disabled + .owl-dots[data-v-29979800] {\n  position: absolute;\n  float: right;\n  text-align: right;\n  right: 3px;\n  bottom: 40px;\n}\n.testimonial-four .testimonial-author[data-v-29979800] {\n  position: relative;\n  overflow: hidden;\n}\n.testimonial-four blockquote[data-v-29979800]:hover::after {\n  border-right: 2px solid #0cb4ce;\n  border-bottom: 2px solid #0cb4ce;\n}\n.testimonial-four blockquote[data-v-29979800]:hover {\n  border: 2px solid #0cb4ce;\n}\n.testimonial-five blockquote p[data-v-29979800] {\n  font-weight: 400;\n  font-size: 14.58px;\n  line-height: 1.6;\n  margin-bottom: 0;\n}\n.testimonial-five .testimonial-author .testimonial-author-thumbnail[data-v-29979800] {\n  float: left;\n  margin-right: 15px;\n  width: auto;\n}\n.testimonial-five .testimonial-author img[data-v-29979800] {\n  max-width: 55px;\n}\n.testimonial-five .testimonial-author strong[data-v-29979800] {\n  display: block;\n  padding-top: 10px;\n  margin-bottom: -2px;\n  font-weight: 600;\n  font-size: 13px;\n}\n.testimonial-five .testimonial-author span[data-v-29979800] {\n  color: #666;\n  display: block;\n  font-size: 12px;\n}\n.testimonial-five blockquote[data-v-29979800] {\n  padding: 32px 41px 37px;\n  width: 100%;\n  border-radius: 4px;\n  position: relative;\n  margin-bottom: 30px;\n  border: 0px solid #eaeaea;\n  background-color: #f7f7f7;\n}\n.testimonial-five blockquote[data-v-29979800]::after {\n  content: \"\";\n  border-right: 0px solid #eaeaea;\n  border-bottom: 0px solid #eaeaea;\n  transform: rotate(55deg);\n  position: absolute;\n  left: 55px;\n  bottom: -10px;\n  width: 15px;\n  height: 21px;\n  overflow: hidden;\n  background: #f7f7f7;\n}\n.testimonial-five.testimonial-light blockquote[data-v-29979800] {\n  background-color: white;\n}\n.testimonial-five.testimonial-light blockquote[data-v-29979800]::after {\n  background: white;\n}\n.testimonial-five .owl-theme .owl-nav.disabled + .owl-dots[data-v-29979800] {\n  position: absolute;\n  float: right;\n  text-align: right;\n  right: 3px;\n  bottom: 40px;\n}\n.testimonial-five .testimonial-author[data-v-29979800] {\n  position: relative;\n  overflow: hidden;\n}\n.testimonial-five blockquote[data-v-29979800]:before {\n  content: \"\\201C\";\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  font-size: 170px;\n  color: rgba(189, 189, 189, 0.2);\n  position: absolute;\n  top: 10px;\n  left: 20px;\n}\nimg[data-v-29979800] {\n  max-width: 100%;\n  height: auto;\n}\n.reviews-icon[data-v-29979800] {\n  width: 150px !important;\n}", ""]);
 
 // exports
 
@@ -7713,7 +7719,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".doctor-detail-container[data-v-ed7d15b2] {\n  font-size: 16px;\n  color: #6f6f6f;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.8px;\n  margin-top: 20px;\n  background-color: white;\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.font-size38[data-v-ed7d15b2] {\n  font-size: 38px;\n}\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n  font-size: 36px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n  margin-bottom: 20px;\n}\n.team-single-img[data-v-ed7d15b2] {\n  display: flex;\n  justify-content: center;\n}\n@media screen and (max-width: 1199px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 32px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n    margin-bottom: 15px;\n}\n}\n@media screen and (max-width: 991px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 28px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n    margin-bottom: 10px;\n}\n}\n@media screen and (max-width: 767px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 24px;\n}\n}\n.team-single-icons ul li[data-v-ed7d15b2] {\n  display: inline-block;\n  border: 1px solid #02c2c7;\n  border-radius: 50%;\n  color: #86bc42;\n  margin-right: 8px;\n  margin-bottom: 5px;\n  transition-duration: 0.3s;\n}\n.team-single-icons ul li a[data-v-ed7d15b2] {\n  color: #02c2c7;\n  display: block;\n  font-size: 14px;\n  height: 25px;\n  line-height: 26px;\n  text-align: center;\n  width: 25px;\n}\n.team-single-icons ul li[data-v-ed7d15b2]:hover {\n  background: #02c2c7;\n  border-color: #02c2c7;\n}\n.team-single-icons ul li:hover a[data-v-ed7d15b2] {\n  color: #fff;\n}\n.team-social-icon li[data-v-ed7d15b2] {\n  display: inline-block;\n  margin-right: 5px;\n}\n.team-social-icon li[data-v-ed7d15b2]:last-child {\n  margin-right: 0;\n}\n.team-social-icon i[data-v-ed7d15b2] {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n  text-align: center;\n  font-size: 15px;\n  border-radius: 50px;\n}\n.padding-30px-all[data-v-ed7d15b2] {\n  padding: 30px;\n}\n.bg-light-gray[data-v-ed7d15b2] {\n  background-color: #f7f7f7;\n}\n.text-center[data-v-ed7d15b2] {\n  text-align: center !important;\n}\nimg[data-v-ed7d15b2] {\n  max-width: 100%;\n  height: auto;\n}\n.list-style9[data-v-ed7d15b2] {\n  list-style: none;\n  padding: 0;\n}\n.list-style9 li[data-v-ed7d15b2] {\n  position: relative;\n  padding: 0 0 15px 0;\n  margin: 0 0 15px 0;\n  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);\n}\n.list-style9 li[data-v-ed7d15b2]:last-child {\n  border-bottom: none;\n  padding-bottom: 0;\n  margin-bottom: 0;\n}\n.text-sky[data-v-ed7d15b2] {\n  color: #02c2c7;\n}\n.text-orange[data-v-ed7d15b2] {\n  color: #e95601;\n}\n.text-green[data-v-ed7d15b2] {\n  color: #5bbd2a;\n}\n.text-yellow[data-v-ed7d15b2] {\n  color: #f0d001;\n}\n.text-pink[data-v-ed7d15b2] {\n  color: #ff48a4;\n}\n.text-purple[data-v-ed7d15b2] {\n  color: #9d60ff;\n}\n.text-lightred[data-v-ed7d15b2] {\n  color: #ff5722;\n}\na.text-sky[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #02c2c7;\n}\na.text-orange[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #e95601;\n}\na.text-green[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #5bbd2a;\n}\na.text-yellow[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #f0d001;\n}\na.text-pink[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #ff48a4;\n}\na.text-purple[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #9d60ff;\n}\na.text-lightred[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #ff5722;\n}\n.custom-progress[data-v-ed7d15b2] {\n  height: 10px;\n  border-radius: 50px;\n  box-shadow: none;\n  margin-bottom: 25px;\n}\n.progress[data-v-ed7d15b2] {\n  display: flex;\n  height: 1rem;\n  overflow: hidden;\n  font-size: 0.75rem;\n  background-color: #e9ecef;\n  border-radius: 0.25rem;\n}\n.bg-sky[data-v-ed7d15b2] {\n  background-color: #02c2c7;\n}\n.bg-orange[data-v-ed7d15b2] {\n  background-color: #e95601;\n}\n.bg-green[data-v-ed7d15b2] {\n  background-color: #5bbd2a;\n}\n.bg-yellow[data-v-ed7d15b2] {\n  background-color: #f0d001;\n}\n.bg-pink[data-v-ed7d15b2] {\n  background-color: #ff48a4;\n}\n.bg-purple[data-v-ed7d15b2] {\n  background-color: #9d60ff;\n}\n.bg-lightred[data-v-ed7d15b2] {\n  background-color: #ff5722;\n}\n.doctor-contact[data-v-ed7d15b2] {\n  background-color: white;\n}", ""]);
+exports.push([module.i, ".card_doctor_title[data-v-ed7d15b2] {\n  background-color: #0071c3;\n  box-shadow: 0 0 50px #00000080;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  line-height: 3;\n  border-radius: 1rem 1rem 0 0;\n  font-size: 18px;\n  text-align: center;\n  padding: 1rem;\n}\n.white_bg[data-v-ed7d15b2] {\n  background-color: white;\n  color: #0071c3;\n  box-shadow: 0 0 50px #00000040;\n  border-radius: 0 0 1rem 1rem;\n  padding: 1rem;\n}\n.white_bg .text-details[data-v-ed7d15b2] {\n  color: #0071c3;\n}\n.white_bg .btn_details[data-v-ed7d15b2] {\n  background-color: #0071c3;\n  color: white;\n}\n.white_bg .btn_details[data-v-ed7d15b2]:hover {\n  background-color: #0072c3de;\n  color: white;\n}\n.doctor-detail-container[data-v-ed7d15b2] {\n  font-size: 16px;\n  color: #6f6f6f;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.8px;\n  margin-top: 20px;\n  background-color: white;\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.font-size38[data-v-ed7d15b2] {\n  font-size: 38px;\n}\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n  font-size: 36px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n  margin-bottom: 20px;\n}\n.team-single-img[data-v-ed7d15b2] {\n  display: flex;\n  justify-content: center;\n}\n@media screen and (max-width: 1199px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 32px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n    margin-bottom: 15px;\n}\n}\n@media screen and (max-width: 991px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 28px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n    margin-bottom: 10px;\n}\n}\n@media screen and (max-width: 767px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 24px;\n}\n}\n.team-single-icons ul li[data-v-ed7d15b2] {\n  display: inline-block;\n  border: 1px solid #02c2c7;\n  border-radius: 50%;\n  color: #86bc42;\n  margin-right: 8px;\n  margin-bottom: 5px;\n  transition-duration: 0.3s;\n}\n.team-single-icons ul li a[data-v-ed7d15b2] {\n  color: #02c2c7;\n  display: block;\n  font-size: 14px;\n  height: 25px;\n  line-height: 26px;\n  text-align: center;\n  width: 25px;\n}\n.team-single-icons ul li[data-v-ed7d15b2]:hover {\n  background: #02c2c7;\n  border-color: #02c2c7;\n}\n.team-single-icons ul li:hover a[data-v-ed7d15b2] {\n  color: #fff;\n}\n.team-social-icon li[data-v-ed7d15b2] {\n  display: inline-block;\n  margin-right: 5px;\n}\n.team-social-icon li[data-v-ed7d15b2]:last-child {\n  margin-right: 0;\n}\n.team-social-icon i[data-v-ed7d15b2] {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n  text-align: center;\n  font-size: 15px;\n  border-radius: 50px;\n}\n.padding-30px-all[data-v-ed7d15b2] {\n  padding: 30px;\n}\n.bg-light-gray[data-v-ed7d15b2] {\n  background-color: #f7f7f7;\n}\n.text-center[data-v-ed7d15b2] {\n  text-align: center !important;\n}\nimg[data-v-ed7d15b2] {\n  max-width: 100%;\n  height: auto;\n}\n.list-style9[data-v-ed7d15b2] {\n  list-style: none;\n  padding: 0;\n}\n.list-style9 li[data-v-ed7d15b2] {\n  position: relative;\n  padding: 0 0 15px 0;\n  margin: 0 0 15px 0;\n  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);\n}\n.list-style9 li[data-v-ed7d15b2]:last-child {\n  border-bottom: none;\n  padding-bottom: 0;\n  margin-bottom: 0;\n}\n.text-sky[data-v-ed7d15b2] {\n  color: #02c2c7;\n}\n.text-orange[data-v-ed7d15b2] {\n  color: #e95601;\n}\n.text-green[data-v-ed7d15b2] {\n  color: #5bbd2a;\n}\n.text-yellow[data-v-ed7d15b2] {\n  color: #f0d001;\n}\n.text-pink[data-v-ed7d15b2] {\n  color: #ff48a4;\n}\n.text-purple[data-v-ed7d15b2] {\n  color: #9d60ff;\n}\n.text-lightred[data-v-ed7d15b2] {\n  color: #ff5722;\n}\na.text-sky[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #02c2c7;\n}\na.text-orange[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #e95601;\n}\na.text-green[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #5bbd2a;\n}\na.text-yellow[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #f0d001;\n}\na.text-pink[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #ff48a4;\n}\na.text-purple[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #9d60ff;\n}\na.text-lightred[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #ff5722;\n}\n.custom-progress[data-v-ed7d15b2] {\n  height: 10px;\n  border-radius: 50px;\n  box-shadow: none;\n  margin-bottom: 25px;\n}\n.progress[data-v-ed7d15b2] {\n  display: flex;\n  height: 1rem;\n  overflow: hidden;\n  font-size: 0.75rem;\n  background-color: #e9ecef;\n  border-radius: 0.25rem;\n}\n.bg-sky[data-v-ed7d15b2] {\n  background-color: #02c2c7;\n}\n.bg-orange[data-v-ed7d15b2] {\n  background-color: #e95601;\n}\n.bg-green[data-v-ed7d15b2] {\n  background-color: #5bbd2a;\n}\n.bg-yellow[data-v-ed7d15b2] {\n  background-color: #f0d001;\n}\n.bg-pink[data-v-ed7d15b2] {\n  background-color: #ff48a4;\n}\n.bg-purple[data-v-ed7d15b2] {\n  background-color: #9d60ff;\n}\n.bg-lightred[data-v-ed7d15b2] {\n  background-color: #ff5722;\n}\n.doctor-contact[data-v-ed7d15b2] {\n  background-color: white;\n}", ""]);
 
 // exports
 
@@ -40095,7 +40101,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container my-5 container_sponsored" }, [
-    _c("h3", { staticClass: "mb-4 title" }, [
+    _c("h3", { staticClass: "mb-5 title text-center" }, [
       _vm._v("Le specializzazioni più cercate"),
     ]),
     _vm._v(" "),
@@ -40519,8 +40525,12 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container my-5 container_sponsored" }, [
-    _c("h3", { staticClass: "mb-4 title" }, [_vm._v("I nostri specialisti")]),
+  return _c("div", { staticClass: "container mb-4 container_sponsored" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("h3", { staticClass: "mb-5 title text-center" }, [
+      _vm._v("I nostri speciaListi."),
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "doctor-cards", attrs: { id: "carousel" } }, [
       _c(
@@ -40539,18 +40549,15 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("span", { staticClass: "d-block mb-2" }, [
-                _vm._v("Nome: " + _vm._s(doctor.name)),
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "d-block pb-2" }, [
-                _vm._v("Specializzazione: " + _vm._s(doctor.category)),
+              _c("span", { staticClass: "d-block text-center mb-2" }, [
+                _vm._v(_vm._s(doctor.name) + " " + _vm._s(doctor.surname)),
               ]),
               _vm._v(" "),
               _c(
                 "a",
                 {
-                  staticClass: "btn btn-primary mb-2",
+                  staticClass:
+                    "btn-1 text-white p-2 text-decoration-none rounded-2 mb-2 text-center",
                   attrs: {
                     href: "http://127.0.0.1:8000/showdoctor/" + doctor.slug,
                   },
@@ -40583,7 +40590,22 @@ var render = function () {
     }),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex justify-content-center" }, [
+      _c("img", {
+        staticClass: "specialist-icon",
+        attrs: {
+          src: "https://accademianeoippocratica.it/wp-content/uploads/2022/03/Specialist_icon-02.png",
+          alt: "",
+        },
+      }),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -41180,12 +41202,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", { staticClass: "container" }, [
+    return _c("section", { staticClass: "container-fluid px-0 bg-white" }, [
       _c(
         "section",
         {
           staticClass:
-            "section-medium section-arrow--bottom-center section-arrow-primary-color bg-primary",
+            "section-medium p-5 section-arrow--bottom-center section-arrow-primary-color bg-primary",
         },
         [
           _c("div", { staticClass: "container" }, [
@@ -41195,13 +41217,13 @@ var staticRenderFns = [
                   _vm._v(" Cosa dicono dei nostri specialisti"),
                 ]),
                 _vm._v(" "),
-                _c("p", { staticClass: "section-sub-title" }, [
+                _c("p", { staticClass: "section-sub-title mb-3" }, [
                   _vm._v(
-                    "\n                    La nostra mission è quella di aiutare e supportare l’utente in tutte le fasi della ricerca di un medico,"
+                    "\n                    Il nostro primo obiettivo è la soddisfazione del paziente e soprattutto ristabilirne lo stato di salute."
                   ),
                   _c("br"),
                   _vm._v(
-                    " nella propria città o altrove, che possa rispondere in maniera specifica e professionale alle richieste sottoposte.\n                "
+                    " Tutto questo è possibile solo grazie al nostro team di specialisti e a voi, che affidate la vostra salute nelle mani dei nostri professionisti.\n                "
                   ),
                 ]),
               ]),
@@ -41231,7 +41253,7 @@ var staticRenderFns = [
                         attrs: {
                           width: "180",
                           height: "180",
-                          src: "https://bootdey.com/img/Content/avatar/avatar1.png",
+                          src: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
                         },
                       }),
                     ]
@@ -41240,7 +41262,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "testimonial-content" }, [
                     _c("p", [
                       _vm._v(
-                        "\n                            Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.\n                        "
+                        "\n                           Lo consiglio vivamente dopo una settimana dalla cura stavo già benissimo, l'unico che dopo quattro mesi che stavo male ha capito cosa avevo.\n                        "
                       ),
                     ]),
                   ]),
@@ -41252,22 +41274,7 @@ var staticRenderFns = [
                         staticClass: "testimonial-name",
                         attrs: { itemprop: "name" },
                       },
-                      [_vm._v("Anna Vandana")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass: "testimonial-job-title",
-                        attrs: { itemprop: "jobTitle" },
-                      },
-                      [_vm._v("CEO")]
-                    ),
-                    _vm._v(" – "),
-                    _c(
-                      "a",
-                      { staticClass: "testimonial-link", attrs: { href: "#" } },
-                      [_vm._v("Media Wiki")]
+                      [_vm._v("Pino Scotto")]
                     ),
                   ]),
                 ]),
@@ -41286,7 +41293,7 @@ var staticRenderFns = [
                         attrs: {
                           width: "180",
                           height: "180",
-                          src: "https://bootdey.com/img/Content/avatar/avatar2.png",
+                          src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
                         },
                       }),
                     ]
@@ -41295,7 +41302,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "testimonial-content" }, [
                     _c("p", [
                       _vm._v(
-                        "\n                            In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.\n                        "
+                        "\n                            La mia esperienza con il dott. Piccione Salpazzo, presso il poliambulatorio e l'ospedale Casa Sollievo della sofferenza è stata molto buona, ho potuto constatare professionalità, cordialità e pazienza e tanta umanità. sono rimasto molto contento di averlo conosciuto.\n                     "
                       ),
                     ]),
                   ]),
@@ -41307,22 +41314,7 @@ var staticRenderFns = [
                         staticClass: "testimonial-name",
                         attrs: { itemprop: "name" },
                       },
-                      [_vm._v("Anna Vandana")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass: "testimonial-job-title",
-                        attrs: { itemprop: "jobTitle" },
-                      },
-                      [_vm._v("CEO")]
-                    ),
-                    _vm._v(" – "),
-                    _c(
-                      "a",
-                      { staticClass: "testimonial-link", attrs: { href: "#" } },
-                      [_vm._v("Media Wiki")]
+                      [_vm._v("Franco Gioia")]
                     ),
                   ]),
                 ]),
@@ -41341,7 +41333,7 @@ var staticRenderFns = [
                         attrs: {
                           width: "180",
                           height: "180",
-                          src: "https://bootdey.com/img/Content/avatar/avatar3.png",
+                          src: "https://images.unsplash.com/photo-1504257432389-52343af06ae3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
                         },
                       }),
                     ]
@@ -41350,7 +41342,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "testimonial-content" }, [
                     _c("p", [
                       _vm._v(
-                        "\n                            Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.\n                        "
+                        "\n                            Ho fatto intervento di protesi totale al ginocchio il 29 marzo 2021 a Casalecchio con il dott. Scarinci.\n                            Intervento riuscito.\n                            Qualità della vita migliorata notevolmente.\n                        "
                       ),
                     ]),
                   ]),
@@ -41362,22 +41354,7 @@ var staticRenderFns = [
                         staticClass: "testimonial-name",
                         attrs: { itemprop: "name" },
                       },
-                      [_vm._v("Anna Vandana")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass: "testimonial-job-title",
-                        attrs: { itemprop: "jobTitle" },
-                      },
-                      [_vm._v("CEO")]
-                    ),
-                    _vm._v(" – "),
-                    _c(
-                      "a",
-                      { staticClass: "testimonial-link", attrs: { href: "#" } },
-                      [_vm._v("Media Wiki")]
+                      [_vm._v("Paolo Echiara")]
                     ),
                   ]),
                 ]),
@@ -41396,7 +41373,7 @@ var staticRenderFns = [
                         attrs: {
                           width: "180",
                           height: "180",
-                          src: "https://bootdey.com/img/Content/avatar/avatar4.png",
+                          src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
                         },
                       }),
                     ]
@@ -41405,7 +41382,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "testimonial-content" }, [
                     _c("p", [
                       _vm._v(
-                        "\n                            In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.\n                        "
+                        "\n                            Tutto molto bello. Tanta competenza e cortesia, ho provato diversi professionisti del settore ma non mi sono mai trovato così bene, soprattutto in virtù del fatto che il mio problema al ginocchio è ormai cronico.\n\n                        "
                       ),
                     ]),
                   ]),
@@ -41417,22 +41394,7 @@ var staticRenderFns = [
                         staticClass: "testimonial-name",
                         attrs: { itemprop: "name" },
                       },
-                      [_vm._v("Anna Vandana")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass: "testimonial-job-title",
-                        attrs: { itemprop: "jobTitle" },
-                      },
-                      [_vm._v("CEO")]
-                    ),
-                    _vm._v(" – "),
-                    _c(
-                      "a",
-                      { staticClass: "testimonial-link", attrs: { href: "#" } },
-                      [_vm._v("Media Wiki")]
+                      [_vm._v("Sergio De Leonardis")]
                     ),
                   ]),
                 ]),
@@ -41451,7 +41413,7 @@ var staticRenderFns = [
                         attrs: {
                           width: "180",
                           height: "180",
-                          src: "https://bootdey.com/img/Content/avatar/avatar5.png",
+                          src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydHJhaXR8ZW58MHx8MHx8&w=1000&q=80",
                         },
                       }),
                     ]
@@ -41460,7 +41422,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "testimonial-content" }, [
                     _c("p", [
                       _vm._v(
-                        "\n                            Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.\n                        "
+                        "\n                            Oggi ho accompagnato mia madre a fare una gastroscopia presso l’ospedale di Bazzano (bo). Abbiamo trovato questo dottore. Molto professionale pacato gentile e soprattutto con due manine d’oro. Pare che sono santo. E se poi te ne penti? Gastroscopia eseguita senza far sentire alcun dolore a mia madre e senza anestesia. Ci vorrebbero più medici così ! Complimenti\n                        "
                       ),
                     ]),
                   ]),
@@ -41472,22 +41434,7 @@ var staticRenderFns = [
                         staticClass: "testimonial-name",
                         attrs: { itemprop: "name" },
                       },
-                      [_vm._v("Anna Vandana")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass: "testimonial-job-title",
-                        attrs: { itemprop: "jobTitle" },
-                      },
-                      [_vm._v("CEO")]
-                    ),
-                    _vm._v(" – "),
-                    _c(
-                      "a",
-                      { staticClass: "testimonial-link", attrs: { href: "#" } },
-                      [_vm._v("Media Wiki")]
+                      [_vm._v("Serena Variabile")]
                     ),
                   ]),
                 ]),
@@ -41506,7 +41453,7 @@ var staticRenderFns = [
                         attrs: {
                           width: "180",
                           height: "180",
-                          src: "https://bootdey.com/img/Content/avatar/avatar6.png",
+                          src: "https://images.unsplash.com/photo-1516756587022-7891ad56a8cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
                         },
                       }),
                     ]
@@ -41515,7 +41462,7 @@ var staticRenderFns = [
                   _c("div", { staticClass: "testimonial-content" }, [
                     _c("p", [
                       _vm._v(
-                        "\n                            In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.\n                        "
+                        "\n                            Faccio lunghi giri in bicicletta e passeggiate anche di 15km.\n                            La sera dell' intervento ero già autonoma, mi alzavo e potevo andare in bagno da sola\n                            Dopo tre settimane dall' intervento ho abbandonato le stampelle. Grazie Dott. Scarinci!\n                        "
                       ),
                     ]),
                   ]),
@@ -41527,22 +41474,7 @@ var staticRenderFns = [
                         staticClass: "testimonial-name",
                         attrs: { itemprop: "name" },
                       },
-                      [_vm._v("Anna Vandana")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        staticClass: "testimonial-job-title",
-                        attrs: { itemprop: "jobTitle" },
-                      },
-                      [_vm._v("CEO")]
-                    ),
-                    _vm._v(" – "),
-                    _c(
-                      "a",
-                      { staticClass: "testimonial-link", attrs: { href: "#" } },
-                      [_vm._v("Media Wiki")]
+                      [_vm._v("Alessandra Oviszach")]
                     ),
                   ]),
                 ]),
@@ -41610,28 +41542,34 @@ var render = function () {
                     "team-single-text padding-50px-left sm-no-padding-left",
                 },
                 [
-                  _c(
-                    "h4",
-                    {
-                      staticClass: "font-size38 sm-font-size32 xs-font-size30",
-                    },
-                    [
-                      _vm._v(
-                        _vm._s(_vm.doctor.name) +
-                          " " +
-                          _vm._s(_vm.doctor.surname) +
-                          " "
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "no-margin-bottom" }, [
-                    _vm._v(_vm._s(_vm.doctor.description)),
+                  _c("div", { staticClass: "card_doctor_title" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass:
+                          "font-size38 sm-font-size32 xs-font-size30",
+                      },
+                      [
+                        _vm._v(
+                          _vm._s(_vm.doctor.name) +
+                            " " +
+                            _vm._s(_vm.doctor.surname) +
+                            " "
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "no-margin-bottom" }, [
+                      _vm._v(_vm._s(_vm.doctor.description)),
+                    ]),
                   ]),
                   _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "contact-info-section margin-40px-tb" },
+                    {
+                      staticClass:
+                        "contact-info-section margin-40px-tb white_bg",
+                    },
                     [
                       _c("ul", { staticClass: "list-style9 no-margin" }, [
                         _c("li", [
@@ -41642,7 +41580,7 @@ var render = function () {
                               _c(
                                 "a",
                                 {
-                                  staticClass: "btn btn-danger",
+                                  staticClass: "btn btn_details",
                                   attrs: { href: "" + _vm.linkCv },
                                 },
                                 [_vm._v("Visualizza il CV")]
@@ -41750,9 +41688,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-5 col-5" }, [
-      _c("i", { staticClass: "fas fa-graduation-cap text-orange" }),
+      _c("i", { staticClass: "fas fa-graduation-cap text-details" }),
       _vm._v(" "),
-      _c("strong", { staticClass: "margin-10px-left text-orange" }, [
+      _c("strong", { staticClass: "margin-10px-left text-details" }, [
         _vm._v("Curriculum:"),
       ]),
     ])
@@ -41762,9 +41700,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-5 col-5" }, [
-      _c("i", { staticClass: "far fa-gem text-yellow" }),
+      _c("i", { staticClass: "far fa-gem text-details" }),
       _vm._v(" "),
-      _c("strong", { staticClass: "margin-10px-left text-yellow" }, [
+      _c("strong", { staticClass: "margin-10px-left text-details" }, [
         _vm._v("Numero di telefono:"),
       ]),
     ])
@@ -41774,9 +41712,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-5 col-5" }, [
-      _c("i", { staticClass: "far fa-file text-lightred" }),
+      _c("i", { staticClass: "far fa-file text-details" }),
       _vm._v(" "),
-      _c("strong", { staticClass: "margin-10px-left text-lightred" }, [
+      _c("strong", { staticClass: "margin-10px-left text-details" }, [
         _vm._v("Mail:"),
       ]),
     ])
@@ -41786,9 +41724,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-5 col-5" }, [
-      _c("i", { staticClass: "fas fa-map-marker-alt text-green" }),
+      _c("i", { staticClass: "fas fa-map-marker-alt text-details" }),
       _vm._v(" "),
-      _c("strong", { staticClass: "margin-10px-left text-green" }, [
+      _c("strong", { staticClass: "margin-10px-left text-details" }, [
         _vm._v("Indirizzo:"),
       ]),
     ])

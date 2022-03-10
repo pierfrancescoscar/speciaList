@@ -10319,6 +10319,67 @@ footer {
   text-decoration: underline;
 }
 
+.card_registration {
+  color: white;
+  box-shadow: 0 0 50px #00000080;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 3;
+  font-size: 18px;
+  text-align: center;
+}
+.card_registration .card_registration_title {
+  background-color: #0071c3 !important;
+}
+.card_registration .card_registration_content {
+  background-color: white;
+  color: #0071c3;
+}
+.card_registration .btn_registration {
+  background-color: #0071c3 !important;
+}
+.card_registration .btn_registration:hover {
+  background-color: #0072c3de !important;
+}
+
+.card_login_registration {
+  margin-top: 65px !important;
+}
+
+.login_registration {
+  color: white;
+  box-shadow: 0 0 50px #00000080;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 3;
+  font-size: 18px;
+  text-align: center;
+}
+.login_registration .login_registration_title {
+  background-color: #0071c3 !important;
+}
+.login_registration .login_registration_content {
+  background-color: white;
+  color: #0071c3;
+}
+.login_registration .form_check_login {
+  display: flex;
+  align-items: center;
+}
+.login_registration .form_check_login .login_label {
+  margin-bottom: -5px;
+}
+.login_registration .btn_login {
+  background-color: #0071c3 !important;
+}
+.login_registration .btn_login:hover {
+  background-color: #0072c3de !important;
+}
+.login_registration .forgot_login {
+  background-color: none;
+  color: #0071c3;
+}
+
 .patacchi {
   margin-top: 7rem;
 }

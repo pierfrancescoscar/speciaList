@@ -16,19 +16,22 @@
 
             <div class="col-lg-8 col-md-7">
                 <div class="team-single-text padding-50px-left sm-no-padding-left">
-                    <h4 class="font-size38 sm-font-size32 xs-font-size30">{{ doctor.name }} {{ doctor.surname }} </h4>
-                    <p class="no-margin-bottom">{{ doctor.description }}</p>
-                    <div class="contact-info-section margin-40px-tb">
+                    <div class="card_doctor_title">
+                        <h4 class="font-size38 sm-font-size32 xs-font-size30">{{ doctor.name }} {{ doctor.surname }} </h4>
+                        <p class="no-margin-bottom">{{ doctor.description }}</p>
+                    </div>
+                    
+                    <div class="contact-info-section margin-40px-tb white_bg">
                         <ul class="list-style9 no-margin">
                             <li>
 
                                 <div class="row">
                                     <div class="col-md-5 col-5">
-                                        <i class="fas fa-graduation-cap text-orange"></i>
-                                        <strong class="margin-10px-left text-orange">Curriculum:</strong>
+                                        <i class="fas fa-graduation-cap text-details"></i>
+                                        <strong class="margin-10px-left text-details">Curriculum:</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
-                                        <a class="btn btn-danger" :href="`${linkCv}`">Visualizza il CV</a>
+                                        <a class="btn btn_details" :href="`${linkCv}`">Visualizza il CV</a>
                                     </div>
                                 </div>
 
@@ -37,8 +40,8 @@
 
                                 <div class="row">
                                     <div class="col-md-5 col-5">
-                                        <i class="far fa-gem text-yellow"></i>
-                                        <strong class="margin-10px-left text-yellow">Numero di telefono:</strong>
+                                        <i class="far fa-gem text-details"></i>
+                                        <strong class="margin-10px-left text-details">Numero di telefono:</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
                                         <span class="d-block">{{ doctor.phone_number }}</span>
@@ -50,8 +53,8 @@
 
                                 <div class="row">
                                     <div class="col-md-5 col-5">
-                                        <i class="far fa-file text-lightred"></i>
-                                        <strong class="margin-10px-left text-lightred">Mail:</strong>
+                                        <i class="far fa-file text-details"></i>
+                                        <strong class="margin-10px-left text-details">Mail:</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
                                         <span class="d-block">{{ doctor.email }}</span>
@@ -63,8 +66,8 @@
 
                                 <div class="row">
                                     <div class="col-md-5 col-5">
-                                        <i class="fas fa-map-marker-alt text-green"></i>
-                                        <strong class="margin-10px-left text-green">Indirizzo:</strong>
+                                        <i class="fas fa-map-marker-alt text-details"></i>
+                                        <strong class="margin-10px-left text-details">Indirizzo:</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
                                         <span class="d-block">{{ doctor.address }}</span>
@@ -123,6 +126,42 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+.card_doctor_title {
+    background-color: #0071c3;
+    box-shadow: 0 0 50px #00000080;
+    color: white;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 3;
+    border-radius: 1rem 1rem 0 0;
+    font-size: 18px;
+    text-align: center;
+    padding:1rem;
+}
+
+.white_bg {
+    background-color: white;
+    color: #0071c3;
+    box-shadow: 0 0 50px #00000040;
+    border-radius: 0 0 1rem 1rem;
+    padding:1rem;
+
+    .text-details {
+        color: #0071c3;
+    }
+
+    .btn_details {
+        background-color: #0071c3;
+        color: white;
+
+    &:hover {
+        background-color: #0072c3de;
+        color: white;
+    }
+    }
+}
+
 .doctor-detail-container {
     font-size: 16px;
     color: #6f6f6f;
