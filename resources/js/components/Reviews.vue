@@ -1,12 +1,12 @@
 <template>
-  <section class="container">
-        <section class="section-medium section-arrow--bottom-center section-arrow-primary-color bg-primary">
+  <section class="container-fluid px-0 bg-white">
+        <section class="section-medium p-5 section-arrow--bottom-center section-arrow-primary-color bg-primary">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-white text-center">
                 <h2 class="section-title"> Cosa dicono dei nostri specialisti</h2>
-                <p class="section-sub-title">
-                    La nostra mission è quella di aiutare e supportare l’utente in tutte le fasi della ricerca di un medico,<br> nella propria città o altrove, che possa rispondere in maniera specifica e professionale alle richieste sottoposte.
+                <p class="section-sub-title mb-3">
+                    Il nostro primo obiettivo è la soddisfazione del paziente e soprattutto ristabilirne lo stato di salute.<br> Tutto questo è possibile solo grazie al nostro team di specialisti e a voi, che affidate la vostra salute nelle mani dei nostri professionisti.
                 </p>
             </div>
         </div>
@@ -18,16 +18,15 @@
             <div class="col-md-4 testimonial-three-col">
                 <div class="testimonial-inner">
                     <div class="testimonial-image" itemprop="image">
-                        <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+                        <img width="180" height="180" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80">
                     </div>
                     <div class="testimonial-content">
                         <p>
-                            Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                           Lo consiglio vivamente dopo una settimana dalla cura stavo già benissimo, l'unico che dopo quattro mesi che stavo male ha capito cosa avevo.
                         </p>
                     </div>
                     <div class="testimonial-meta">
-                        <strong class="testimonial-name" itemprop="name">Anna Vandana</strong>
-                        <span class="testimonial-job-title" itemprop="jobTitle">CEO</span> – <a class="testimonial-link" href="#" >Media Wiki</a>
+                        <strong class="testimonial-name" itemprop="name">Pino Scotto</strong>
                     </div>
                 </div>
             </div>
@@ -35,18 +34,17 @@
             <div class="col-md-4 testimonial-three-col">
                 <div class="testimonial-inner">
                     <div class="testimonial-image" itemprop="image">
-                        <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar2.png">
+                        <img width="180" height="180" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80">
                     </div>
 
                     <div class="testimonial-content">
                         <p>
-                            In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
-                        </p>
+                            La mia esperienza con il dott. Piccione Salpazzo, presso il poliambulatorio e l'ospedale Casa Sollievo della sofferenza è stata molto buona, ho potuto constatare professionalità, cordialità e pazienza e tanta umanità. sono rimasto molto contento di averlo conosciuto.
+                     </p>
                     </div>
 
                     <div class="testimonial-meta">
-                        <strong class="testimonial-name" itemprop="name">Anna Vandana</strong>
-                        <span class="testimonial-job-title" itemprop="jobTitle">CEO</span> – <a class="testimonial-link" href="#" >Media Wiki</a>
+                        <strong class="testimonial-name" itemprop="name">Franco Gioia</strong>
                     </div>
                 </div>
             </div>
@@ -54,16 +52,17 @@
             <div class="col-md-4 testimonial-three-col">
                 <div class="testimonial-inner">
                     <div class="testimonial-image" itemprop="image">
-                        <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar3.png">
+                        <img width="180" height="180" src="https://images.unsplash.com/photo-1504257432389-52343af06ae3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80">
                     </div>
                     <div class="testimonial-content">
                         <p>
-                            Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                            Ho fatto intervento di protesi totale al ginocchio il 29 marzo 2021 a Casalecchio con il dott. Scarinci.
+                            Intervento riuscito.
+                            Qualità della vita migliorata notevolmente.
                         </p>
                     </div>
                     <div class="testimonial-meta">
-                        <strong class="testimonial-name" itemprop="name">Anna Vandana</strong>
-                        <span class="testimonial-job-title" itemprop="jobTitle">CEO</span> – <a class="testimonial-link" href="#" >Media Wiki</a>
+                        <strong class="testimonial-name" itemprop="name">Paolo Echiara</strong>
                     </div>
                 </div>
             </div>
@@ -71,18 +70,18 @@
             <div class="col-md-4 testimonial-three-col">
                 <div class="testimonial-inner">
                     <div class="testimonial-image" itemprop="image">
-                        <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar4.png">
+                        <img width="180" height="180" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80">
                     </div>
 
                     <div class="testimonial-content">
                         <p>
-                            In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+                            Tutto molto bello. Tanta competenza e cortesia, ho provato diversi professionisti del settore ma non mi sono mai trovato così bene, soprattutto in virtù del fatto che il mio problema al ginocchio è ormai cronico.
+
                         </p>
                     </div>
 
                     <div class="testimonial-meta">
-                        <strong class="testimonial-name" itemprop="name">Anna Vandana</strong>
-                        <span class="testimonial-job-title" itemprop="jobTitle">CEO</span> – <a class="testimonial-link" href="#" >Media Wiki</a>
+                        <strong class="testimonial-name" itemprop="name">Sergio De Leonardis</strong>
                     </div>
                 </div>
             </div>
@@ -90,16 +89,15 @@
             <div class="col-md-4 testimonial-three-col">
                 <div class="testimonial-inner">
                     <div class="testimonial-image" itemprop="image">
-                        <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar5.png">
+                        <img width="180" height="180" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydHJhaXR8ZW58MHx8MHx8&w=1000&q=80">
                     </div>
                     <div class="testimonial-content">
                         <p>
-                            Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                            Oggi ho accompagnato mia madre a fare una gastroscopia presso l’ospedale di Bazzano (bo). Abbiamo trovato questo dottore. Molto professionale pacato gentile e soprattutto con due manine d’oro. Pare che sono santo. E se poi te ne penti? Gastroscopia eseguita senza far sentire alcun dolore a mia madre e senza anestesia. Ci vorrebbero più medici così ! Complimenti
                         </p>
                     </div>
                     <div class="testimonial-meta">
-                        <strong class="testimonial-name" itemprop="name">Anna Vandana</strong>
-                        <span class="testimonial-job-title" itemprop="jobTitle">CEO</span> – <a class="testimonial-link" href="#">Media Wiki</a>
+                        <strong class="testimonial-name" itemprop="name">Serena Variabile</strong>
                     </div>
                 </div>
             </div>
@@ -107,18 +105,19 @@
             <div class="col-md-4 testimonial-three-col">
                 <div class="testimonial-inner">
                     <div class="testimonial-image" itemprop="image">
-                        <img width="180" height="180" src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                        <img width="180" height="180" src="https://images.unsplash.com/photo-1516756587022-7891ad56a8cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80">
                     </div>
 
                     <div class="testimonial-content">
                         <p>
-                            In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+                            Faccio lunghi giri in bicicletta e passeggiate anche di 15km.
+                            La sera dell' intervento ero già autonoma, mi alzavo e potevo andare in bagno da sola
+                            Dopo tre settimane dall' intervento ho abbandonato le stampelle. Grazie Dott. Scarinci!
                         </p>
                     </div>
 
                     <div class="testimonial-meta">
-                        <strong class="testimonial-name" itemprop="name">Anna Vandana</strong>
-                        <span class="testimonial-job-title" itemprop="jobTitle">CEO</span> – <a class="testimonial-link" href="#" >Media Wiki</a>
+                        <strong class="testimonial-name" itemprop="name">Alessandra Oviszach</strong>
                     </div>
                 </div>
             </div>
@@ -138,18 +137,16 @@ export default {
 <style scoped lang="scss">
 body{margin-top:20px;}
 .btn.btn-outline-primary:hover, .bg-primary {
-    background-color: #0cb4ce !important;
+    background-color: #0071c3 !important;
 }
-.section-medium {
-    padding: 55px 0px;
-}
+
 .testimonial-four blockquote:hover::after, .section-arrow-primary-color.section-arrow--bottom-center:after {
-    border-right-color: #0cb4ce;
+    border-right-color: #0071c3;
 }
 .section-arrow-primary-color.section-arrow--bottom-center:after {
-    background-color: #0cb4ce;
-    border-right-color: #0cb4ce;
-    border-bottom-color: #0cb4ce;
+    background-color: #0071c3;
+    border-right-color: #0071c3;
+    border-bottom-color: #0071c3;
 }
 .section-arrow--bottom-center:after {
     z-index: 1;
@@ -189,10 +186,10 @@ body{margin-top:20px;}
     font-family: Poppins;
 }
 .section-arrow-primary-color.section-arrow--bottom-center:after {
-    border-bottom-color: #0cb4ce;
+    border-bottom-color: #0071c3;
 }
 .section-arrow-primary-color.section-arrow--bottom-center:after{
-    background-color: #0cb4ce;
+    background-color: #0071c3;
 }
 .special-heading.line span:before, .special-heading.line span:after, .footer.footer-minimal, .t-bordered {
     border-top-color: #eaeaea;
@@ -574,5 +571,9 @@ section {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.reviews-icon {
+    width: 150px !important;
 }
 </style>

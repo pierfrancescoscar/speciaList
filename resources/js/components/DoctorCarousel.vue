@@ -1,6 +1,9 @@
 <template>
-    <div class="container my-5 container_sponsored">
-        <h3 class="mb-4 title">I nostri specialisti</h3>
+    <div class="container mb-4 container_sponsored">
+        <div class="d-flex justify-content-center">
+            <img class="specialist-icon" src="https://accademianeoippocratica.it/wp-content/uploads/2022/03/Specialist_icon-02.png" alt="">
+        </div>
+        <h3 class="mb-5 title text-center">I nostri speciaListi.</h3>
         <div class="doctor-cards" id="carousel">
 
             <div class="doctor-single-card d-flex">
@@ -9,11 +12,11 @@
                     <!-- Doc Image -->
                     <img class="img-fluid mb-2" src="https://t4.ftcdn.net/jpg/02/60/04/09/360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg" alt="">
                     <!-- Doc Name -->
-                    <span class="d-block mb-2">Nome: {{ doctor.name }}</span>
+                    <span class="d-block text-center mb-2">{{ doctor.name }} {{ doctor.surname }}</span>
                     <!-- Doc Specialization -->
-                    <span class="d-block pb-2">Specializzazione: {{ doctor.category }}</span>
+                    
                     <!-- See More Button -->
-                    <a class="btn btn-primary mb-2" :href="`http://127.0.0.1:8000/showdoctor/${doctor.slug}`">Scopri di più</a>
+                    <a class="btn-1 text-white p-2 text-decoration-none rounded-2 mb-2 text-center" :href="`http://127.0.0.1:8000/showdoctor/${doctor.slug}`">Scopri di più</a>
                 </div>
 
             </div>
@@ -45,8 +48,9 @@ export default {
     methods: {
         getDoctors() {
             axios.get('http://127.0.0.1:8000/api/doctors')
+
             .then(res => {
-                
+            console.log(res.data);                
                 this.doctors = res.data;
             })
         },
@@ -80,6 +84,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '../../sass/_variables.scss';
+
 .title {
     color: #0071c3;
 }
@@ -98,6 +104,7 @@ export default {
         left: 0;
         top: 0;
         padding: 0 40px;
+        
 
         &>div {
             min-width: 200px;
@@ -113,7 +120,7 @@ export default {
     .prev_btn,
     .next_btn{
         position: absolute;
-        transform: translateY(-50%);
+        transform: translateY(230%);
         top: 50%;
         padding: 10px 15px;
         border-radius: 28%;
@@ -135,6 +142,15 @@ export default {
         right: 7px;
     }
 
+}
+
+.doc-card {
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;
+}
+
+.specialist-icon {
+    width: 150px !important;
 }
 
 </style>

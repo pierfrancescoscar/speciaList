@@ -10,8 +10,7 @@ class DoctorController extends Controller
 {
     public function index() {
 
-        $doctors = Doctor::All();
-
+        $doctors = Doctor::with(['categories'])->select(['name', 'slug', 'id', 'surname'])->get();
         /* $doctors = Doctor::whereHas('categories')
     ->orWhereHas('Medicina d’emergenza-urgenza')
     ->get(); */
