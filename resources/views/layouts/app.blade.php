@@ -39,7 +39,7 @@
         </header>
         
         {{-- Main Content --}}
-        <main class="pb-4">
+        <main class="py-4">
             @yield('content')
             
         </main>

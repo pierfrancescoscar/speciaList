@@ -10269,34 +10269,54 @@ main {
   color: #0071c3 !important;
 }
 
-.social-btn {
-  border-radius: 50%;
+footer {
+  background-color: #0071c3;
 }
 
-.column {
-  height: 500px;
+.logo {
+  max-height: 25rem;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 6rem;
+  max-width: 30rem;
 }
 
-.column_right {
+.social .link {
+  padding: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50% !important;
+  background-color: white;
+  color: #0071c3;
+  width: 3.5rem;
+  height: 3.5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-.column_right img {
-  border-radius: 15%;
+.social .link:hover {
+  opacity: 0.7;
 }
 
-ul {
-  justify-content: center;
+.learn_and_connect {
+  color: white;
+  font-size: 1.125rem;
 }
-ul li {
-  padding-right: 1rem;
+.learn_and_connect li {
+  font-weight: 600;
 }
-ul li a {
-  font-size: 12px;
+
+.sotto {
+  color: white;
 }
-ul li a img {
-  width: 60px;
+.sotto .here {
+  color: white;
+  text-decoration: underline;
 }
 
 .patacchi {

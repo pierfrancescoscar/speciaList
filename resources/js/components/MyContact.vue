@@ -5,9 +5,11 @@
                 <div class="offer-dedicated-body-left">
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade active show" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
-                            <div class="bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews">
+                            <div class="bg-white rounded-3 shadow-sm mb-4 restaurant-detailed-ratings-and-reviews">
 
-                                <h5 class="mb-1">{{title}}</h5>
+                                <div class="p-3 container-fluid my-messages-bg">
+                                    <h5 class="text-white mb-1">{{title}}</h5>
+                                </div>
 
                                 <CardContact :myloop="datarecup" />
 
@@ -48,7 +50,6 @@ export default {
 }
 .total-like {
     border: 1px solid;
-    border-radius: 50px;
     display: inline-block;
     font-weight: 500;
     height: 34px;
@@ -64,7 +65,6 @@ export default {
 }
 .progress {
     background: #f2f4f8 none repeat scroll 0 0;
-    border-radius: 0;
     height: 30px;
 }
 .rating-list {
@@ -116,7 +116,6 @@ export default {
     margin-top: 12px;
 }
 .restaurant-detailed-header-right .btn-success {
-    border-radius: 3px;
     height: 45px;
     margin: -18px 0 18px;
     min-width: 130px;
@@ -140,7 +139,6 @@ export default {
 .restaurant-detailed-header-left img {
     width: 88px;
     height: 88px;
-    border-radius: 3px;
     object-fit: cover;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
 }
@@ -149,9 +147,7 @@ export default {
     height: 56px;
     object-fit: cover;
 }
-.rounded-pill {
-    border-radius: 50rem!important;
-}
+
 .total-like-user {
     border: 2px solid #fff;
     height: 34px;
@@ -164,7 +160,6 @@ export default {
 }
 .total-like {
     border: 1px solid;
-    border-radius: 50px;
     display: inline-block;
     font-weight: 500;
     height: 34px;
@@ -180,7 +175,6 @@ export default {
 }
 .progress {
     background: #f2f4f8 none repeat scroll 0 0;
-    border-radius: 0;
     height: 30px;
 }
 .rating-list {
@@ -216,11 +210,12 @@ export default {
 
 .progress {
     background: #f2f4f8 none repeat scroll 0 0;
-    border-radius: 0;
     height: 30px;
 }
 
-
-
+.my-messages-bg {
+    background-color: #0071c3;
+    
+}
 
 </style>
