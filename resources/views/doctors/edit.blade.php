@@ -2,8 +2,8 @@
 
 @section('content') 
     <div class="container">
-        <div class="blue_bg offset-2 col-8 mt-5">Modifica il tuo profilo specia<strong>list</strong></div>
-        <div class="white_bg offset-2 col-8 mb-5">
+        <div class="blue_bg offset-1 col-10 offset-xl-2 col-xl-8 mt-5">Modifica il tuo profilo specia<strong>list</strong></div>
+        <div class="white_bg offset-1 col-10 offset-xl-2 col-xl-8">
                 <form class="form_style" action="{{ route('admin.doctor.update', $doctor->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
