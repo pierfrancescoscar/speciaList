@@ -9,11 +9,20 @@
             <div class="doctor-single-card d-flex">
                 
                 <div v-for="(doctor, i) in doctors" :key="`doctor-${i}`" class="doc-card p-4 card me-4">
+
                     <!-- Doc Image -->
                     <img class="img-fluid mb-2" src="https://t4.ftcdn.net/jpg/02/60/04/09/360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg" alt="">
+
                     <!-- Doc Name -->
                     <span class="d-block text-center mb-2">{{ doctor.name }} {{ doctor.surname }}</span>
+
+                    <span class="d-block text-center mb-1">Specializzazione:</span>
+                    
                     <!-- Doc Specialization -->
+                    <span v-for="(category, i) in doctor.categories" :key="`category-${i}`"
+                        class="d-block text-center mb-1">
+                        {{ category.name }}
+                    </span>
                     
                     <!-- See More Button -->
                     <a class="btn-1 text-white p-2 text-decoration-none rounded-2 mb-2 text-center" :href="`http://127.0.0.1:8000/showdoctor/${doctor.slug}`">Scopri di più</a>
