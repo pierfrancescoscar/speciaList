@@ -4,16 +4,16 @@
         <div class="contact__wrapper shadow-lg mt-n9 rounded-3">
             <div class="row no-gutters">
         
-                <div class="col-lg-12 p-4 contact-form__wrapper order-lg-1  ">
+                <div class="col-lg-12 p-4 contact-form__wrapper order-lg-1 white_bg">
 
                     <!-- Sent Successfully Message Alert -->
                     <div v-show="success" class="alert alert-success">
-                       Recensione inviata correttamente.
+                       Recensione inviata correttamente
                     </div>
 
                     <!-- form -->
-                    <form class="contact-form form-validate " @submit.prevent="ReviewForm">
-                        <h3 class="mb-4">Lascia una recensione.</h3>
+                    <form class="contact-form form-validate" @submit.prevent="ReviewForm">
+                        <h3 class="mb-4 card_doctor_title">Lascia una recensione.</h3>
                         <div class="row">
 
                             <!-- name -->
@@ -111,8 +111,8 @@
                                 </div>
                             </div>
         
-                            <div class="col-sm-12 mb-3">
-                                <button type="submit" name="submit" class="btn btn-primary">Invia Recensione</button>
+                            <div class="col-sm-12 mb-3 ">
+                                <button type="submit" name="submit" class="btn btn_details">Invia Recensione</button>
                             </div>
         
                         </div>
@@ -297,6 +297,35 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.card_doctor_title {
+    background-color: #0071c3;
+    color: white;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 3;
+    border-radius: 1rem;
+    font-size: 18px;
+    text-align: center;
+    padding:1rem;
+}
+
+.white_bg {
+    background-color: white;
+    color: #0071c3;
+    box-shadow: 0 0 50px #00000040;
+    padding:1rem;
+}
+
+.btn_details {
+        background-color: #0071c3;
+        color: white;
+
+    &:hover {
+        background-color: #0072c3de;
+        color: white;
+    }
+}
+
 
 .rating_label{
     margin-bottom: 25px;
@@ -327,10 +356,10 @@ export default {
         left: 50%;
 
         &.star_yellow{
-            color: rgb(250, 250, 36);
+            color: #0071c3;
         }
         &.star_gray{
-            color: rgb(78, 78, 78);
+            color: #dce4f1;
         }
 
     }
@@ -370,4 +399,6 @@ export default {
 .reviews-container {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+
 </style>

@@ -4,7 +4,7 @@
     <div class="container doctor-detail-container p-4 rounded-3">
     <div class="team-single">
         <div class="row">
-            <div class="col-lg-4 col-md-5 xs-margin-30px-bottom d-flex justify-content-center">
+            <div class="col-lg-4 col-md-5 xs-margin-30px-bottom d-flex justify-content-center align-items-center">
                 <div class="team-single-img doctor_profile mb-3">
                     <img class="img-fluid" :src="`http://127.0.0.1:8000/storage/${doctor.profile_pic}`" :alt="`${doctor.name}`">
                 </div>
@@ -284,90 +284,6 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-
-.list-style9 {
-    list-style: none;
-    padding: 0
-}
-
-.list-style9 li {
-    position: relative;
-    padding: 0 0 15px 0;
-    margin: 0 0 15px 0;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.1)
-}
-
-.list-style9 li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 0
-}
-
-
-.text-sky {
-    color: #02c2c7
-}
-
-.text-orange {
-    color: #e95601
-}
-
-.text-green {
-    color: #5bbd2a
-}
-
-.text-yellow {
-    color: #f0d001
-}
-
-.text-pink {
-    color: #ff48a4
-}
-
-.text-purple {
-    color: #9d60ff
-}
-
-.text-lightred {
-    color: #ff5722
-}
-
-a.text-sky:hover {
-    opacity: 0.8;
-    color: #02c2c7
-}
-
-a.text-orange:hover {
-    opacity: 0.8;
-    color: #e95601
-}
-
-a.text-green:hover {
-    opacity: 0.8;
-    color: #5bbd2a
-}
-
-a.text-yellow:hover {
-    opacity: 0.8;
-    color: #f0d001
-}
-
-a.text-pink:hover {
-    opacity: 0.8;
-    color: #ff48a4
-}
-
-a.text-purple:hover {
-    opacity: 0.8;
-    color: #9d60ff
-}
-
-a.text-lightred:hover {
-    opacity: 0.8;
-    color: #ff5722
-}
-
 .custom-progress {
     height: 10px;
     border-radius: 50px;
@@ -382,35 +298,6 @@ a.text-lightred:hover {
     font-size: .75rem;
     background-color: #e9ecef;
     border-radius: .25rem;
-}
-
-
-.bg-sky {
-    background-color: #02c2c7
-}
-
-.bg-orange {
-    background-color: #e95601
-}
-
-.bg-green {
-    background-color: #5bbd2a
-}
-
-.bg-yellow {
-    background-color: #f0d001
-}
-
-.bg-pink {
-    background-color: #ff48a4
-}
-
-.bg-purple {
-    background-color: #9d60ff
-}
-
-.bg-lightred {
-    background-color: #ff5722
 }
 
 .doctor-contact {

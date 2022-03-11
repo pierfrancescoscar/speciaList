@@ -1,7 +1,7 @@
 <template>
   <section class="container p-0">
 
-      <div class="row">
+      <div class="row white_bg">
 
           <div class="col-12 p-4 contact-doctor-col">
               <!-- Sent Successfully Message Alert -->
@@ -10,7 +10,7 @@
               </div>
 
               <form @submit.prevent="contactDoctor">
-                <h3 class="mb-4 ">Contatta lo speciaLista.</h3>
+                <h3 class="mb-4 card_doctor_title">Contatta lo speciaLista</h3>
                 <!-- Send Name -->
                   <div class="mb-3">
                       <label for="name" class="form-label">Nome*</label>
@@ -77,7 +77,7 @@
                       </div>
                   </div>
                   <!-- Submit Button -->
-                  <button type="submit" class="btn btn-primary">Invia</button>
+                  <button type="submit" class="btn btn_details">Invia</button>
               </form>
 
           </div>
@@ -161,5 +161,32 @@ export default {
 <style scoped lang="scss">
 .contact-doctor-col {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card_doctor_title {
+    background-color: #0071c3;
+    color: white;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 3;
+    border-radius: 1rem;
+    font-size: 18px;
+    text-align: center;
+    padding:1rem;
+}
+
+.white_bg {
+    background-color: white;
+    color: #0071c3;
+}
+
+.btn_details {
+        background-color: #0071c3;
+        color: white;
+
+    &:hover {
+        background-color: #0072c3de;
+        color: white;
+    }
 }
 </style>

@@ -7586,7 +7586,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".contact-doctor-col[data-v-686f44f8] {\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}", ""]);
+exports.push([module.i, ".contact-doctor-col[data-v-686f44f8] {\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.card_doctor_title[data-v-686f44f8] {\n  background-color: #0071c3;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  line-height: 3;\n  border-radius: 1rem;\n  font-size: 18px;\n  text-align: center;\n  padding: 1rem;\n}\n.white_bg[data-v-686f44f8] {\n  background-color: white;\n  color: #0071c3;\n}\n.btn_details[data-v-686f44f8] {\n  background-color: #0071c3;\n  color: white;\n}\n.btn_details[data-v-686f44f8]:hover {\n  background-color: #0072c3de;\n  color: white;\n}", ""]);
 
 // exports
 
@@ -7643,7 +7643,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".rating_label[data-v-65ce0832] {\n  margin-bottom: 25px;\n}\n.allstars_container[data-v-65ce0832] {\n  display: flex;\n}\n.container-star[data-v-65ce0832] {\n  position: relative;\n  width: 20px;\n  margin-right: 5px;\n}\n.container-star > input[data-v-65ce0832] {\n  position: absolute;\n  transform: translate(-50%, -50%);\n  top: 50%;\n  left: 50%;\n  opacity: 0;\n  z-index: 1;\n}\n.container-star .my_star[data-v-65ce0832] {\n  position: absolute;\n  transform: translate(-50%, -50%);\n  top: 50%;\n  left: 50%;\n}\n.container-star .my_star.star_yellow[data-v-65ce0832] {\n  color: #fafa24;\n}\n.container-star .my_star.star_gray[data-v-65ce0832] {\n  color: #4e4e4e;\n}\n.gradient-brand-color[data-v-65ce0832] {\n  background-image: -ms-linear-gradient(0deg, #376be6 0%, #6470ef 100%);\n  color: #fff;\n}\n.contact-info__wrapper[data-v-65ce0832] {\n  overflow: hidden;\n  background-color: #2b71bd;\n}\n.contact-info__list span.position-absolute[data-v-65ce0832] {\n  left: 0;\n}\n.z-index-101[data-v-65ce0832] {\n  z-index: 101;\n}\n.list-style--none[data-v-65ce0832] {\n  list-style: none;\n}\n.contact__wrapper[data-v-65ce0832] {\n  background-color: #fff;\n  overflow: hidden;\n}\n.shadow-lg[data-v-65ce0832], .shadow-lg--on-hover[data-v-65ce0832]:hover {\n  box-shadow: 0 1rem 3rem rgba(132, 138, 163, 0.1) !important;\n}\n.reviews-container[data-v-65ce0832] {\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}", ""]);
+exports.push([module.i, ".card_doctor_title[data-v-65ce0832] {\n  background-color: #0071c3;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  line-height: 3;\n  border-radius: 1rem;\n  font-size: 18px;\n  text-align: center;\n  padding: 1rem;\n}\n.white_bg[data-v-65ce0832] {\n  background-color: white;\n  color: #0071c3;\n  box-shadow: 0 0 50px #00000040;\n  padding: 1rem;\n}\n.btn_details[data-v-65ce0832] {\n  background-color: #0071c3;\n  color: white;\n}\n.btn_details[data-v-65ce0832]:hover {\n  background-color: #0072c3de;\n  color: white;\n}\n.rating_label[data-v-65ce0832] {\n  margin-bottom: 25px;\n}\n.allstars_container[data-v-65ce0832] {\n  display: flex;\n}\n.container-star[data-v-65ce0832] {\n  position: relative;\n  width: 20px;\n  margin-right: 5px;\n}\n.container-star > input[data-v-65ce0832] {\n  position: absolute;\n  transform: translate(-50%, -50%);\n  top: 50%;\n  left: 50%;\n  opacity: 0;\n  z-index: 1;\n}\n.container-star .my_star[data-v-65ce0832] {\n  position: absolute;\n  transform: translate(-50%, -50%);\n  top: 50%;\n  left: 50%;\n}\n.container-star .my_star.star_yellow[data-v-65ce0832] {\n  color: #0071c3;\n}\n.container-star .my_star.star_gray[data-v-65ce0832] {\n  color: #dce4f1;\n}\n.gradient-brand-color[data-v-65ce0832] {\n  background-image: -ms-linear-gradient(0deg, #376be6 0%, #6470ef 100%);\n  color: #fff;\n}\n.contact-info__wrapper[data-v-65ce0832] {\n  overflow: hidden;\n  background-color: #2b71bd;\n}\n.contact-info__list span.position-absolute[data-v-65ce0832] {\n  left: 0;\n}\n.z-index-101[data-v-65ce0832] {\n  z-index: 101;\n}\n.list-style--none[data-v-65ce0832] {\n  list-style: none;\n}\n.contact__wrapper[data-v-65ce0832] {\n  background-color: #fff;\n  overflow: hidden;\n}\n.shadow-lg[data-v-65ce0832], .shadow-lg--on-hover[data-v-65ce0832]:hover {\n  box-shadow: 0 1rem 3rem rgba(132, 138, 163, 0.1) !important;\n}\n.reviews-container[data-v-65ce0832] {\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}", ""]);
 
 // exports
 
@@ -7719,7 +7719,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card_doctor_title[data-v-ed7d15b2] {\n  background-color: #0071c3;\n  box-shadow: 0 0 50px #00000080;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  line-height: 3;\n  border-radius: 1rem 1rem 0 0;\n  font-size: 18px;\n  text-align: center;\n  padding: 1rem;\n}\n.white_bg[data-v-ed7d15b2] {\n  background-color: white;\n  color: #0071c3;\n  box-shadow: 0 0 50px #00000040;\n  border-radius: 0 0 1rem 1rem;\n  padding: 1rem;\n}\n.white_bg .text-details[data-v-ed7d15b2] {\n  color: #0071c3;\n}\n.white_bg .btn_details[data-v-ed7d15b2] {\n  background-color: #0071c3;\n  color: white;\n}\n.white_bg .btn_details[data-v-ed7d15b2]:hover {\n  background-color: #0072c3de;\n  color: white;\n}\n.doctor-detail-container[data-v-ed7d15b2] {\n  font-size: 16px;\n  color: #6f6f6f;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.8px;\n  margin-top: 20px;\n  background-color: white;\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.doctor_profile[data-v-ed7d15b2] {\n  width: 300px !important;\n  height: 300px !important;\n}\n.font-size38[data-v-ed7d15b2] {\n  font-size: 38px;\n}\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n  font-size: 36px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n  margin-bottom: 20px;\n}\n.team-single-img[data-v-ed7d15b2] {\n  display: flex;\n  justify-content: center;\n}\n@media screen and (max-width: 1199px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 32px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n    margin-bottom: 15px;\n}\n}\n@media screen and (max-width: 991px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 28px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n    margin-bottom: 10px;\n}\n}\n@media screen and (max-width: 767px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 24px;\n}\n}\n.team-single-icons ul li[data-v-ed7d15b2] {\n  display: inline-block;\n  border: 1px solid #02c2c7;\n  border-radius: 50%;\n  color: #86bc42;\n  margin-right: 8px;\n  margin-bottom: 5px;\n  transition-duration: 0.3s;\n}\n.team-single-icons ul li a[data-v-ed7d15b2] {\n  color: #02c2c7;\n  display: block;\n  font-size: 14px;\n  height: 25px;\n  line-height: 26px;\n  text-align: center;\n  width: 25px;\n}\n.team-single-icons ul li[data-v-ed7d15b2]:hover {\n  background: #02c2c7;\n  border-color: #02c2c7;\n}\n.team-single-icons ul li:hover a[data-v-ed7d15b2] {\n  color: #fff;\n}\n.team-social-icon li[data-v-ed7d15b2] {\n  display: inline-block;\n  margin-right: 5px;\n}\n.team-social-icon li[data-v-ed7d15b2]:last-child {\n  margin-right: 0;\n}\n.team-social-icon i[data-v-ed7d15b2] {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n  text-align: center;\n  font-size: 15px;\n  border-radius: 50px;\n}\n.padding-30px-all[data-v-ed7d15b2] {\n  padding: 30px;\n}\n.bg-light-gray[data-v-ed7d15b2] {\n  background-color: #f7f7f7;\n}\n.text-center[data-v-ed7d15b2] {\n  text-align: center !important;\n}\nimg[data-v-ed7d15b2] {\n  max-width: 100%;\n  height: auto;\n}\n.list-style9[data-v-ed7d15b2] {\n  list-style: none;\n  padding: 0;\n}\n.list-style9 li[data-v-ed7d15b2] {\n  position: relative;\n  padding: 0 0 15px 0;\n  margin: 0 0 15px 0;\n  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);\n}\n.list-style9 li[data-v-ed7d15b2]:last-child {\n  border-bottom: none;\n  padding-bottom: 0;\n  margin-bottom: 0;\n}\n.text-sky[data-v-ed7d15b2] {\n  color: #02c2c7;\n}\n.text-orange[data-v-ed7d15b2] {\n  color: #e95601;\n}\n.text-green[data-v-ed7d15b2] {\n  color: #5bbd2a;\n}\n.text-yellow[data-v-ed7d15b2] {\n  color: #f0d001;\n}\n.text-pink[data-v-ed7d15b2] {\n  color: #ff48a4;\n}\n.text-purple[data-v-ed7d15b2] {\n  color: #9d60ff;\n}\n.text-lightred[data-v-ed7d15b2] {\n  color: #ff5722;\n}\na.text-sky[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #02c2c7;\n}\na.text-orange[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #e95601;\n}\na.text-green[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #5bbd2a;\n}\na.text-yellow[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #f0d001;\n}\na.text-pink[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #ff48a4;\n}\na.text-purple[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #9d60ff;\n}\na.text-lightred[data-v-ed7d15b2]:hover {\n  opacity: 0.8;\n  color: #ff5722;\n}\n.custom-progress[data-v-ed7d15b2] {\n  height: 10px;\n  border-radius: 50px;\n  box-shadow: none;\n  margin-bottom: 25px;\n}\n.progress[data-v-ed7d15b2] {\n  display: flex;\n  height: 1rem;\n  overflow: hidden;\n  font-size: 0.75rem;\n  background-color: #e9ecef;\n  border-radius: 0.25rem;\n}\n.bg-sky[data-v-ed7d15b2] {\n  background-color: #02c2c7;\n}\n.bg-orange[data-v-ed7d15b2] {\n  background-color: #e95601;\n}\n.bg-green[data-v-ed7d15b2] {\n  background-color: #5bbd2a;\n}\n.bg-yellow[data-v-ed7d15b2] {\n  background-color: #f0d001;\n}\n.bg-pink[data-v-ed7d15b2] {\n  background-color: #ff48a4;\n}\n.bg-purple[data-v-ed7d15b2] {\n  background-color: #9d60ff;\n}\n.bg-lightred[data-v-ed7d15b2] {\n  background-color: #ff5722;\n}\n.doctor-contact[data-v-ed7d15b2] {\n  background-color: white;\n}", ""]);
+exports.push([module.i, ".card_doctor_title[data-v-ed7d15b2] {\n  background-color: #0071c3;\n  box-shadow: 0 0 50px #00000080;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  line-height: 3;\n  border-radius: 1rem 1rem 0 0;\n  font-size: 18px;\n  text-align: center;\n  padding: 1rem;\n}\n.white_bg[data-v-ed7d15b2] {\n  background-color: white;\n  color: #0071c3;\n  box-shadow: 0 0 50px #00000040;\n  border-radius: 0 0 1rem 1rem;\n  padding: 1rem;\n}\n.white_bg .text-details[data-v-ed7d15b2] {\n  color: #0071c3;\n}\n.white_bg .btn_details[data-v-ed7d15b2] {\n  background-color: #0071c3;\n  color: white;\n}\n.white_bg .btn_details[data-v-ed7d15b2]:hover {\n  background-color: #0072c3de;\n  color: white;\n}\n.doctor-detail-container[data-v-ed7d15b2] {\n  font-size: 16px;\n  color: #6f6f6f;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.8px;\n  margin-top: 20px;\n  background-color: white;\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.doctor_profile[data-v-ed7d15b2] {\n  width: 300px !important;\n  height: 300px !important;\n}\n.font-size38[data-v-ed7d15b2] {\n  font-size: 38px;\n}\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n  font-size: 36px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n  margin-bottom: 20px;\n}\n.team-single-img[data-v-ed7d15b2] {\n  display: flex;\n  justify-content: center;\n}\n@media screen and (max-width: 1199px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 32px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n    margin-bottom: 15px;\n}\n}\n@media screen and (max-width: 991px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 28px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n    margin-bottom: 10px;\n}\n}\n@media screen and (max-width: 767px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 24px;\n}\n}\n.team-single-icons ul li[data-v-ed7d15b2] {\n  display: inline-block;\n  border: 1px solid #02c2c7;\n  border-radius: 50%;\n  color: #86bc42;\n  margin-right: 8px;\n  margin-bottom: 5px;\n  transition-duration: 0.3s;\n}\n.team-single-icons ul li a[data-v-ed7d15b2] {\n  color: #02c2c7;\n  display: block;\n  font-size: 14px;\n  height: 25px;\n  line-height: 26px;\n  text-align: center;\n  width: 25px;\n}\n.team-single-icons ul li[data-v-ed7d15b2]:hover {\n  background: #02c2c7;\n  border-color: #02c2c7;\n}\n.team-single-icons ul li:hover a[data-v-ed7d15b2] {\n  color: #fff;\n}\n.team-social-icon li[data-v-ed7d15b2] {\n  display: inline-block;\n  margin-right: 5px;\n}\n.team-social-icon li[data-v-ed7d15b2]:last-child {\n  margin-right: 0;\n}\n.team-social-icon i[data-v-ed7d15b2] {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n  text-align: center;\n  font-size: 15px;\n  border-radius: 50px;\n}\n.padding-30px-all[data-v-ed7d15b2] {\n  padding: 30px;\n}\n.bg-light-gray[data-v-ed7d15b2] {\n  background-color: #f7f7f7;\n}\n.text-center[data-v-ed7d15b2] {\n  text-align: center !important;\n}\nimg[data-v-ed7d15b2] {\n  max-width: 100%;\n  height: auto;\n}\n.custom-progress[data-v-ed7d15b2] {\n  height: 10px;\n  border-radius: 50px;\n  box-shadow: none;\n  margin-bottom: 25px;\n}\n.progress[data-v-ed7d15b2] {\n  display: flex;\n  height: 1rem;\n  overflow: hidden;\n  font-size: 0.75rem;\n  background-color: #e9ecef;\n  border-radius: 0.25rem;\n}\n.doctor-contact[data-v-ed7d15b2] {\n  background-color: white;\n}", ""]);
 
 // exports
 
@@ -40186,7 +40186,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "container p-0" }, [
-    _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "row white_bg" }, [
       _c("div", { staticClass: "col-12 p-4 contact-doctor-col" }, [
         _c(
           "div",
@@ -40219,8 +40219,8 @@ var render = function () {
             },
           },
           [
-            _c("h3", { staticClass: "mb-4 " }, [
-              _vm._v("Contatta lo speciaLista."),
+            _c("h3", { staticClass: "mb-4 card_doctor_title" }, [
+              _vm._v("Contatta lo speciaLista"),
             ]),
             _vm._v(" "),
             _c(
@@ -40494,7 +40494,7 @@ var render = function () {
             _vm._v(" "),
             _c(
               "button",
-              { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+              { staticClass: "btn btn_details", attrs: { type: "submit" } },
               [_vm._v("Invia")]
             ),
           ]
@@ -40686,7 +40686,10 @@ var render = function () {
       _c("div", { staticClass: "row no-gutters" }, [
         _c(
           "div",
-          { staticClass: "col-lg-12 p-4 contact-form__wrapper order-lg-1  " },
+          {
+            staticClass:
+              "col-lg-12 p-4 contact-form__wrapper order-lg-1 white_bg",
+          },
           [
             _c(
               "div",
@@ -40703,7 +40706,7 @@ var render = function () {
               },
               [
                 _vm._v(
-                  "\n                   Recensione inviata correttamente.\n                "
+                  "\n                   Recensione inviata correttamente\n                "
                 ),
               ]
             ),
@@ -40711,7 +40714,7 @@ var render = function () {
             _c(
               "form",
               {
-                staticClass: "contact-form form-validate ",
+                staticClass: "contact-form form-validate",
                 on: {
                   submit: function ($event) {
                     $event.preventDefault()
@@ -40720,7 +40723,7 @@ var render = function () {
                 },
               },
               [
-                _c("h3", { staticClass: "mb-4" }, [
+                _c("h3", { staticClass: "mb-4 card_doctor_title" }, [
                   _vm._v("Lascia una recensione."),
                 ]),
                 _vm._v(" "),
@@ -41055,11 +41058,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-12 mb-3" }, [
+    return _c("div", { staticClass: "col-sm-12 mb-3 " }, [
       _c(
         "button",
         {
-          staticClass: "btn btn-primary",
+          staticClass: "btn btn_details",
           attrs: { type: "submit", name: "submit" },
         },
         [_vm._v("Invia Recensione")]
@@ -41518,7 +41521,7 @@ var render = function () {
               "div",
               {
                 staticClass:
-                  "col-lg-4 col-md-5 xs-margin-30px-bottom d-flex justify-content-center",
+                  "col-lg-4 col-md-5 xs-margin-30px-bottom d-flex justify-content-center align-items-center",
               },
               [
                 _c(
