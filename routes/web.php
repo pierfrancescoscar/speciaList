@@ -1,5 +1,7 @@
 <?php
 
+use App\Category;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,14 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('guests.home');
+    $categories = Category::all();
+    return view('guests.home', compact('categories'));
 });
 
 Route::post('/specialist', 'SearchController@index')->name('specialist-search');
 
-Route::get('/specialist', function () {
-    return view('guests.specialist_1');
-})->name('specialist_1');
+Route::get('/specialist', function () { return view('guests.specialist_1'); })->name('specialist_1');
 
 Route::get('/showdoctor/{slug}', 'DoctorShowController@show')
 ->name('showdoctor');

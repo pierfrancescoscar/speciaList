@@ -21,6 +21,23 @@
 @endauth
 
 @include('guests.hero')
+
+@foreach ($categories as $category)
+
+    <form class="py-3 px-3 mt-4" action="{{ route('specialist-search') }}" method="POST">
+        @csrf
+        <input
+            class="form-control w-100 mb-2 p-0 d-none"
+            placeholder="Inserisci qui la specializzazione"
+            type="text"
+            name="category"
+            value="{{ $category->name }}"
+        >
+            <button class="mt-2 text-center btn btn-primary" type="submit">{{ $category->name }}</button>
+    </form>
+    
+@endforeach
+
 {{-- Perché Scegliere Noi --}}
 <section class="container-fluid p-4 bg-white">
     <div class="d-flex justify-content-center">
