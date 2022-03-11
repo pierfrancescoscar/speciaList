@@ -44,6 +44,12 @@ Route::middleware('auth')
         Route::get('/doctor/{slug}/messages', 'MessagesController@show')->name('messages');
 
         Route::get('/doctor/{slug}/reviews', 'ReviewsController@show')->name('reviews');
+
+        Route::get('/subscription/{slug}/{type}', 'SubscriptionController@show')
+        ->name('payment');
+
+        Route::get('/confirm/{slug}/{type}', 'AddSubscriptionController@store')
+        ->name('ConfirmSubscription');
 });
 
 // Guest 'any' route

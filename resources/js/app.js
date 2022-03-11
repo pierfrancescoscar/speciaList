@@ -26,9 +26,7 @@ window.Vue = require('vue');
  */
 
 import Vue from 'vue';
-/* import DoctorCarousel from './components/DoctorCarousel';
 
-Vue.component('DoctorCarousel', DoctorCarousel); */
 
 Vue.component('doctorcarousel' , require('./components/DoctorCarousel').default);
 Vue.component('categoriescarousel' , require('./components/CategoriesCarousel').default);
@@ -38,6 +36,8 @@ Vue.component('contactdoctor' , require('./components/ContactDoctor').default);
 Vue.component('showdoctor' , require('./components/ShowDoctor').default);
 Vue.component('formreview' , require('./components/FormReview').default);
 Vue.component('mycontact' , require('./components/MyContact').default);
+Vue.component('paymentselection' , require('./components/PaymentSelection').default);
+Vue.component('paymentform' , require('./components/PaymentForm').default);
 
 
 const app = new Vue({
