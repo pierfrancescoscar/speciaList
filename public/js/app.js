@@ -40683,8 +40683,7 @@ var render = function () {
   return _c(
     "section",
     {
-      staticClass:
-        "container reviews-container p-0 h-100 white_bg_review rounded-3",
+      staticClass: "container reviews-container p-0 white_bg_review rounded-3",
     },
     [
       _c("div", { staticClass: "contact__wrapper mt-n9" }, [

@@ -1,5 +1,5 @@
 <template>
-    <section class="container reviews-container p-0 h-100 white_bg_review rounded-3">
+    <section class="container reviews-container p-0 white_bg_review rounded-3">
 
         <div class="contact__wrapper mt-n9">
             <div class="row no-gutters">
