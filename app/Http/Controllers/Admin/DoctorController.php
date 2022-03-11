@@ -7,10 +7,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Doctor;
 use App\User;
+use App\Subscription;
 use App\Category;
-//use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 class DoctorController extends Controller
 {
@@ -117,7 +118,11 @@ class DoctorController extends Controller
             abort(404);
         }
 
-        return view('doctors.show', compact('doctor'));
+        $mysub = DB::table('doctor_subscription')->where('doctor_id', $doctor->id)->orderBy('end_date', 'desc')->first();
+
+        $subscription = Subscription::all();
+
+        return view('doctors.show', compact('doctor', 'subscription', 'mysub'));
     }
 
 

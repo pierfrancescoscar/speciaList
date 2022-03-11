@@ -8,6 +8,6 @@ class Subscription extends Model
 {
     // Relation between Subscriptions and Doctors (Many to Many)
     public function doctors() {
-        return $this->belongsToMany('App\Doctor');
+        return $this->belongsToMany('App\Doctor', 'doctor_subscription')->withPivot('end_date');
     }
 }

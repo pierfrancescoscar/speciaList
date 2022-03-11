@@ -2,7 +2,9 @@
 
 @section('content')
 
-    {{-- <div class="container show_style  mb-3"> --}}
+    <div class="container show_style  mb-3">
+
+        {{-- @dd($mysub) --}}
 
         <div class="pages_container col-12 col-xl-10 offset-xl-1 d-flex flex-column flex-xl-row mt-5">
 
@@ -125,6 +127,10 @@
                     </form> --}}
                 </div>
             </div>
+        </div>
+
+        <div class="container-payment-card my-3">
+            <paymentselection :allsub=" {{ $subscription }} " :doctor=" {{ $doctor }}"></paymentselection>
         </div>
 
     {{-- </div> --}}

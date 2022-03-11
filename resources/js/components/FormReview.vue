@@ -144,6 +144,7 @@ export default {
             date: '',
             errors: {},
             success: false,
+            starSelected: null,
         }
     },
     props: {
@@ -153,6 +154,7 @@ export default {
         this.GetDate();
     },
     methods: {
+
         selectRatings(res) {
 
             this.rating = res;
@@ -161,8 +163,9 @@ export default {
 
             myrating.classList.toggle('star-checkbox')
 
-            let otherStars = document.querySelectorAll('.star-checkbox');
+            this.starSelected = `star-${res}`;
 
+            let otherStars = document.querySelectorAll('.star-checkbox');
 
             let resOtherStar = otherStars.length;
 
@@ -277,6 +280,31 @@ export default {
                     this.email = '';
                     this.content = '';
                     this.content = '';
+
+                    /* remove star */
+                    let star = document.getElementById(this.starSelected);
+
+                    star.classList.toggle('star-checkbox')
+
+                    let otherStars = document.querySelectorAll('.star-checkbox');
+
+                    otherStars.forEach(element => {
+                        element.disabled = false;
+                    });
+
+                    let starIcon = document.querySelectorAll('.starIcon');
+
+                    starIcon[0].classList.remove('star_yellow');
+                    starIcon[0].classList.add('star_gray');
+                    starIcon[1].classList.remove('star_yellow');
+                    starIcon[1].classList.add('star_gray');
+                    starIcon[2].classList.remove('star_yellow');
+                    starIcon[2].classList.add('star_gray');
+                    starIcon[3].classList.remove('star_yellow');
+                    starIcon[3].classList.add('star_gray');
+                    starIcon[4].classList.remove('star_yellow');
+                    starIcon[4].classList.add('star_gray');
+
                 }
             })
             .catch(err =>{
