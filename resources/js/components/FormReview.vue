@@ -1,10 +1,10 @@
 <template>
-    <section class="container reviews-container p-0">
+    <section class="container reviews-container p-0 h-100 white_bg_review rounded-3">
 
-        <div class="contact__wrapper shadow-lg mt-n9 rounded-3">
+        <div class="contact__wrapper mt-n9">
             <div class="row no-gutters">
         
-                <div class="col-lg-12 p-4 contact-form__wrapper order-lg-1 white_bg">
+                <div class="col-lg-12 p-4 contact-form__wrapper order-lg-1">
 
                     <!-- Sent Successfully Message Alert -->
                     <div v-show="success" class="alert alert-success">
@@ -309,10 +309,10 @@ export default {
     padding:1rem;
 }
 
-.white_bg {
+.white_bg_review {
     background-color: white;
     color: #0071c3;
-    box-shadow: 0 0 50px #00000040;
+    box-shadow: 50px #00000040;
     padding:1rem;
 }
 

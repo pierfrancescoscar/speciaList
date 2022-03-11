@@ -7585,7 +7585,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".contact-doctor-col[data-v-686f44f8] {\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.card_doctor_title[data-v-686f44f8] {\n  background-color: #0071c3;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  line-height: 3;\n  border-radius: 1rem;\n  font-size: 18px;\n  text-align: center;\n  padding: 1rem;\n}\n.white_bg[data-v-686f44f8] {\n  background-color: white;\n  color: #0071c3;\n}\n.btn_details[data-v-686f44f8] {\n  background-color: #0071c3;\n  color: white;\n}\n.btn_details[data-v-686f44f8]:hover {\n  background-color: #0072c3de;\n  color: white;\n}", ""]);
+exports.push([module.i, ".contact-doctor-col[data-v-686f44f8] {\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.card_doctor_title[data-v-686f44f8] {\n  background-color: #0071c3;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  line-height: 3;\n  border-radius: 1rem;\n  font-size: 18px;\n  text-align: center;\n  padding: 1rem;\n}\n.white_bg_contact[data-v-686f44f8] {\n  background-color: white;\n  color: #0071c3;\n}\n.btn_details[data-v-686f44f8] {\n  background-color: #0071c3;\n  color: white;\n}\n.btn_details[data-v-686f44f8]:hover {\n  background-color: #0072c3de;\n  color: white;\n}", ""]);
 
 // exports
 
@@ -7642,7 +7642,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card_doctor_title[data-v-65ce0832] {\n  background-color: #0071c3;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  line-height: 3;\n  border-radius: 1rem;\n  font-size: 18px;\n  text-align: center;\n  padding: 1rem;\n}\n.white_bg[data-v-65ce0832] {\n  background-color: white;\n  color: #0071c3;\n  box-shadow: 0 0 50px #00000040;\n  padding: 1rem;\n}\n.btn_details[data-v-65ce0832] {\n  background-color: #0071c3;\n  color: white;\n}\n.btn_details[data-v-65ce0832]:hover {\n  background-color: #0072c3de;\n  color: white;\n}\n.rating_label[data-v-65ce0832] {\n  margin-bottom: 25px;\n}\n.allstars_container[data-v-65ce0832] {\n  display: flex;\n}\n.container-star[data-v-65ce0832] {\n  position: relative;\n  width: 20px;\n  margin-right: 5px;\n}\n.container-star > input[data-v-65ce0832] {\n  position: absolute;\n  transform: translate(-50%, -50%);\n  top: 50%;\n  left: 50%;\n  opacity: 0;\n  z-index: 1;\n}\n.container-star .my_star[data-v-65ce0832] {\n  position: absolute;\n  transform: translate(-50%, -50%);\n  top: 50%;\n  left: 50%;\n}\n.container-star .my_star.star_yellow[data-v-65ce0832] {\n  color: #0071c3;\n}\n.container-star .my_star.star_gray[data-v-65ce0832] {\n  color: #dce4f1;\n}\n.gradient-brand-color[data-v-65ce0832] {\n  background-image: -ms-linear-gradient(0deg, #376be6 0%, #6470ef 100%);\n  color: #fff;\n}\n.contact-info__wrapper[data-v-65ce0832] {\n  overflow: hidden;\n  background-color: #2b71bd;\n}\n.contact-info__list span.position-absolute[data-v-65ce0832] {\n  left: 0;\n}\n.z-index-101[data-v-65ce0832] {\n  z-index: 101;\n}\n.list-style--none[data-v-65ce0832] {\n  list-style: none;\n}\n.contact__wrapper[data-v-65ce0832] {\n  background-color: #fff;\n  overflow: hidden;\n}\n.shadow-lg[data-v-65ce0832], .shadow-lg--on-hover[data-v-65ce0832]:hover {\n  box-shadow: 0 1rem 3rem rgba(132, 138, 163, 0.1) !important;\n}\n.reviews-container[data-v-65ce0832] {\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}", ""]);
+exports.push([module.i, ".card_doctor_title[data-v-65ce0832] {\n  background-color: #0071c3;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  line-height: 3;\n  border-radius: 1rem;\n  font-size: 18px;\n  text-align: center;\n  padding: 1rem;\n}\n.white_bg_review[data-v-65ce0832] {\n  background-color: white;\n  color: #0071c3;\n  box-shadow: 50px #00000040;\n  padding: 1rem;\n}\n.btn_details[data-v-65ce0832] {\n  background-color: #0071c3;\n  color: white;\n}\n.btn_details[data-v-65ce0832]:hover {\n  background-color: #0072c3de;\n  color: white;\n}\n.rating_label[data-v-65ce0832] {\n  margin-bottom: 25px;\n}\n.allstars_container[data-v-65ce0832] {\n  display: flex;\n}\n.container-star[data-v-65ce0832] {\n  position: relative;\n  width: 20px;\n  margin-right: 5px;\n}\n.container-star > input[data-v-65ce0832] {\n  position: absolute;\n  transform: translate(-50%, -50%);\n  top: 50%;\n  left: 50%;\n  opacity: 0;\n  z-index: 1;\n}\n.container-star .my_star[data-v-65ce0832] {\n  position: absolute;\n  transform: translate(-50%, -50%);\n  top: 50%;\n  left: 50%;\n}\n.container-star .my_star.star_yellow[data-v-65ce0832] {\n  color: #0071c3;\n}\n.container-star .my_star.star_gray[data-v-65ce0832] {\n  color: #dce4f1;\n}\n.gradient-brand-color[data-v-65ce0832] {\n  background-image: -ms-linear-gradient(0deg, #376be6 0%, #6470ef 100%);\n  color: #fff;\n}\n.contact-info__wrapper[data-v-65ce0832] {\n  overflow: hidden;\n  background-color: #2b71bd;\n}\n.contact-info__list span.position-absolute[data-v-65ce0832] {\n  left: 0;\n}\n.z-index-101[data-v-65ce0832] {\n  z-index: 101;\n}\n.list-style--none[data-v-65ce0832] {\n  list-style: none;\n}\n.contact__wrapper[data-v-65ce0832] {\n  background-color: #fff;\n  overflow: hidden;\n}\n.shadow-lg[data-v-65ce0832], .shadow-lg--on-hover[data-v-65ce0832]:hover {\n  box-shadow: 0 1rem 3rem rgba(132, 138, 163, 0.1) !important;\n}\n.reviews-container[data-v-65ce0832] {\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}", ""]);
 
 // exports
 
@@ -40185,7 +40185,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("section", { staticClass: "container p-0" }, [
-    _c("div", { staticClass: "row white_bg" }, [
+    _c("div", { staticClass: "row white_bg_contact rounded-3" }, [
       _c("div", { staticClass: "col-12 p-4 contact-doctor-col" }, [
         _c(
           "div",
@@ -40680,296 +40680,110 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", { staticClass: "container reviews-container p-0" }, [
-    _c("div", { staticClass: "contact__wrapper shadow-lg mt-n9 rounded-3" }, [
-      _c("div", { staticClass: "row no-gutters" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "col-lg-12 p-4 contact-form__wrapper order-lg-1 white_bg",
-          },
-          [
-            _c(
-              "div",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.success,
-                    expression: "success",
-                  },
-                ],
-                staticClass: "alert alert-success",
-              },
-              [
-                _vm._v(
-                  "\n                   Recensione inviata correttamente\n                "
-                ),
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "form",
-              {
-                staticClass: "contact-form form-validate",
-                on: {
-                  submit: function ($event) {
-                    $event.preventDefault()
-                    return _vm.ReviewForm.apply(null, arguments)
+  return _c(
+    "section",
+    {
+      staticClass:
+        "container reviews-container p-0 h-100 white_bg_review rounded-3",
+    },
+    [
+      _c("div", { staticClass: "contact__wrapper mt-n9" }, [
+        _c("div", { staticClass: "row no-gutters" }, [
+          _c(
+            "div",
+            { staticClass: "col-lg-12 p-4 contact-form__wrapper order-lg-1" },
+            [
+              _c(
+                "div",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.success,
+                      expression: "success",
+                    },
+                  ],
+                  staticClass: "alert alert-success",
+                },
+                [
+                  _vm._v(
+                    "\n                   Recensione inviata correttamente\n                "
+                  ),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  staticClass: "contact-form form-validate",
+                  on: {
+                    submit: function ($event) {
+                      $event.preventDefault()
+                      return _vm.ReviewForm.apply(null, arguments)
+                    },
                   },
                 },
-              },
-              [
-                _c("h3", { staticClass: "mb-4 card_doctor_title" }, [
-                  _vm._v("Lascia una recensione"),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-6 mb-3" }, [
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c(
-                          "label",
-                          {
-                            staticClass: "required-field",
-                            attrs: { for: "name" },
-                          },
-                          [_vm._v("Nome")]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.name,
-                              expression: "name",
-                            },
-                          ],
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "text",
-                            id: "name",
-                            name: "name",
-                            placeholder: "Inserire il proprio nome",
-                            required: "",
-                          },
-                          domProps: { value: _vm.name },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.name = $event.target.value
-                            },
-                          },
-                        }),
-                        _vm._v(" "),
-                        _vm._l(_vm.errors.name, function (error, index) {
-                          return _c(
-                            "div",
-                            {
-                              key: "err-name-" + index,
-                              staticClass: "text-danger",
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    " +
-                                  _vm._s(error) +
-                                  "\n                                "
-                              ),
-                            ]
-                          )
-                        }),
-                      ],
-                      2
-                    ),
+                [
+                  _c("h3", { staticClass: "mb-4 card_doctor_title" }, [
+                    _vm._v("Lascia una recensione"),
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-6 mb-3" }, [
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c("label", { attrs: { for: "surname" } }, [
-                          _vm._v("Cognome"),
-                        ]),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.surname,
-                              expression: "surname",
-                            },
-                          ],
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "text",
-                            id: "surname",
-                            name: "surname",
-                            placeholder: "Inserire il proprio cognome",
-                            required: "",
-                          },
-                          domProps: { value: _vm.surname },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.surname = $event.target.value
-                            },
-                          },
-                        }),
-                        _vm._v(" "),
-                        _vm._l(_vm.errors.surname, function (error, index) {
-                          return _c(
-                            "div",
-                            {
-                              key: "err-surname-" + index,
-                              staticClass: "text-danger",
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    " +
-                                  _vm._s(error) +
-                                  "\n                                "
-                              ),
-                            ]
-                          )
-                        }),
-                      ],
-                      2
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-6 mb-3" }, [
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
-                        _c(
-                          "label",
-                          {
-                            staticClass: "required-field",
-                            attrs: { for: "email" },
-                          },
-                          [_vm._v("Email")]
-                        ),
-                        _vm._v(" "),
-                        _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.email,
-                              expression: "email",
-                            },
-                          ],
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "email",
-                            id: "email",
-                            name: "email",
-                            placeholder: "Inserire la propria email",
-                            required: "",
-                          },
-                          domProps: { value: _vm.email },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.email = $event.target.value
-                            },
-                          },
-                        }),
-                        _vm._v(" "),
-                        _vm._l(_vm.errors.email, function (error, index) {
-                          return _c(
-                            "div",
-                            {
-                              key: "err-email-" + index,
-                              staticClass: "text-danger",
-                            },
-                            [
-                              _vm._v(
-                                "\n                                    " +
-                                  _vm._s(error) +
-                                  "\n                                "
-                              ),
-                            ]
-                          )
-                        }),
-                      ],
-                      2
-                    ),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-6 mb-3" }, [
-                    _c("div", { staticClass: "form-group" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "rating_label",
-                          attrs: { for: "rating" },
-                        },
-                        [_vm._v("Voto")]
-                      ),
-                      _vm._v(" "),
-                      _c("br"),
-                      _vm._v(" "),
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-sm-6 mb-3" }, [
                       _c(
                         "div",
-                        { staticClass: "allstars_container" },
+                        { staticClass: "form-group" },
                         [
-                          _vm._l(_vm.num, function (n, i) {
-                            return _c(
-                              "div",
+                          _c(
+                            "label",
+                            {
+                              staticClass: "required-field",
+                              attrs: { for: "name" },
+                            },
+                            [_vm._v("Nome")]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
                               {
-                                key: "star-" + i,
-                                staticClass: "container-star",
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.name,
+                                expression: "name",
                               },
-                              [
-                                _c("input", {
-                                  staticClass: "star-checkbox star",
-                                  attrs: {
-                                    type: "checkbox",
-                                    name: "star-" + i,
-                                    id: "star-" + i,
-                                  },
-                                  on: {
-                                    click: function ($event) {
-                                      return _vm.selectRatings(i)
-                                    },
-                                  },
-                                }),
-                                _vm._v(" "),
-                                _c("i", {
-                                  staticClass:
-                                    "fa-solid fa-star my_star starIcon star_gray",
-                                }),
-                              ]
-                            )
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              type: "text",
+                              id: "name",
+                              name: "name",
+                              placeholder: "Inserire il proprio nome",
+                              required: "",
+                            },
+                            domProps: { value: _vm.name },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.name = $event.target.value
+                              },
+                            },
                           }),
                           _vm._v(" "),
-                          _vm._l(_vm.errors.rating, function (error, index) {
+                          _vm._l(_vm.errors.name, function (error, index) {
                             return _c(
                               "div",
                               {
-                                key: "err-rating-" + index,
+                                key: "err-name-" + index,
                                 staticClass: "text-danger",
                               },
                               [
                                 _vm._v(
-                                  "\n                                        " +
+                                  "\n                                    " +
                                     _vm._s(error) +
-                                    "\n                                        "
+                                    "\n                                "
                                 ),
                               ]
                             )
@@ -40978,79 +40792,269 @@ var render = function () {
                         2
                       ),
                     ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-12 mb-3" }, [
-                    _c(
-                      "div",
-                      { staticClass: "form-group" },
-                      [
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-6 mb-3" }, [
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c("label", { attrs: { for: "surname" } }, [
+                            _vm._v("Cognome"),
+                          ]),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.surname,
+                                expression: "surname",
+                              },
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              type: "text",
+                              id: "surname",
+                              name: "surname",
+                              placeholder: "Inserire il proprio cognome",
+                              required: "",
+                            },
+                            domProps: { value: _vm.surname },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.surname = $event.target.value
+                              },
+                            },
+                          }),
+                          _vm._v(" "),
+                          _vm._l(_vm.errors.surname, function (error, index) {
+                            return _c(
+                              "div",
+                              {
+                                key: "err-surname-" + index,
+                                staticClass: "text-danger",
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                    " +
+                                    _vm._s(error) +
+                                    "\n                                "
+                                ),
+                              ]
+                            )
+                          }),
+                        ],
+                        2
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-6 mb-3" }, [
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c(
+                            "label",
+                            {
+                              staticClass: "required-field",
+                              attrs: { for: "email" },
+                            },
+                            [_vm._v("Email")]
+                          ),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.email,
+                                expression: "email",
+                              },
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              type: "email",
+                              id: "email",
+                              name: "email",
+                              placeholder: "Inserire la propria email",
+                              required: "",
+                            },
+                            domProps: { value: _vm.email },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.email = $event.target.value
+                              },
+                            },
+                          }),
+                          _vm._v(" "),
+                          _vm._l(_vm.errors.email, function (error, index) {
+                            return _c(
+                              "div",
+                              {
+                                key: "err-email-" + index,
+                                staticClass: "text-danger",
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                    " +
+                                    _vm._s(error) +
+                                    "\n                                "
+                                ),
+                              ]
+                            )
+                          }),
+                        ],
+                        2
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-6 mb-3" }, [
+                      _c("div", { staticClass: "form-group" }, [
                         _c(
                           "label",
                           {
-                            staticClass: "required-field",
-                            attrs: { for: "content" },
+                            staticClass: "rating_label",
+                            attrs: { for: "rating" },
                           },
-                          [_vm._v("Recensione")]
+                          [_vm._v("Voto")]
                         ),
                         _vm._v(" "),
-                        _c("textarea", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: _vm.content,
-                              expression: "content",
-                            },
-                          ],
-                          staticClass: "form-control",
-                          attrs: {
-                            id: "content",
-                            name: "content",
-                            rows: "4",
-                            placeholder: "Inserire la propria recensione",
-                          },
-                          domProps: { value: _vm.content },
-                          on: {
-                            input: function ($event) {
-                              if ($event.target.composing) {
-                                return
-                              }
-                              _vm.content = $event.target.value
-                            },
-                          },
-                        }),
+                        _c("br"),
                         _vm._v(" "),
-                        _vm._l(_vm.errors.content, function (error, index) {
-                          return _c(
-                            "div",
+                        _c(
+                          "div",
+                          { staticClass: "allstars_container" },
+                          [
+                            _vm._l(_vm.num, function (n, i) {
+                              return _c(
+                                "div",
+                                {
+                                  key: "star-" + i,
+                                  staticClass: "container-star",
+                                },
+                                [
+                                  _c("input", {
+                                    staticClass: "star-checkbox star",
+                                    attrs: {
+                                      type: "checkbox",
+                                      name: "star-" + i,
+                                      id: "star-" + i,
+                                    },
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.selectRatings(i)
+                                      },
+                                    },
+                                  }),
+                                  _vm._v(" "),
+                                  _c("i", {
+                                    staticClass:
+                                      "fa-solid fa-star my_star starIcon star_gray",
+                                  }),
+                                ]
+                              )
+                            }),
+                            _vm._v(" "),
+                            _vm._l(_vm.errors.rating, function (error, index) {
+                              return _c(
+                                "div",
+                                {
+                                  key: "err-rating-" + index,
+                                  staticClass: "text-danger",
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                        " +
+                                      _vm._s(error) +
+                                      "\n                                        "
+                                  ),
+                                ]
+                              )
+                            }),
+                          ],
+                          2
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-12 mb-3" }, [
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c(
+                            "label",
                             {
-                              key: "err-content-" + index,
-                              staticClass: "text-danger",
+                              staticClass: "required-field",
+                              attrs: { for: "content" },
                             },
-                            [
-                              _vm._v(
-                                "\n                                " +
-                                  _vm._s(error) +
-                                  "\n                                "
-                              ),
-                            ]
-                          )
-                        }),
-                      ],
-                      2
-                    ),
+                            [_vm._v("Recensione")]
+                          ),
+                          _vm._v(" "),
+                          _c("textarea", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.content,
+                                expression: "content",
+                              },
+                            ],
+                            staticClass: "form-control",
+                            attrs: {
+                              id: "content",
+                              name: "content",
+                              rows: "4",
+                              placeholder: "Inserire la propria recensione",
+                            },
+                            domProps: { value: _vm.content },
+                            on: {
+                              input: function ($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.content = $event.target.value
+                              },
+                            },
+                          }),
+                          _vm._v(" "),
+                          _vm._l(_vm.errors.content, function (error, index) {
+                            return _c(
+                              "div",
+                              {
+                                key: "err-content-" + index,
+                                staticClass: "text-danger",
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                " +
+                                    _vm._s(error) +
+                                    "\n                                "
+                                ),
+                              ]
+                            )
+                          }),
+                        ],
+                        2
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(0),
                   ]),
-                  _vm._v(" "),
-                  _vm._m(0),
-                ]),
-              ]
-            ),
-          ]
-        ),
+                ]
+              ),
+            ]
+          ),
+        ]),
       ]),
-    ]),
-  ])
+    ]
+  )
 }
 var staticRenderFns = [
   function () {

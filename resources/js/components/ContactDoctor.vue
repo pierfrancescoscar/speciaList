@@ -1,7 +1,7 @@
 <template>
   <section class="container p-0">
 
-      <div class="row white_bg">
+      <div class="row white_bg_contact rounded-3">
 
           <div class="col-12 p-4 contact-doctor-col">
               <!-- Sent Successfully Message Alert -->
@@ -175,7 +175,7 @@ export default {
     padding:1rem;
 }
 
-.white_bg {
+.white_bg_contact {
     background-color: white;
     color: #0071c3;
 }
