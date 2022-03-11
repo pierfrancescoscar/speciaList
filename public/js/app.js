@@ -3110,7 +3110,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -41647,14 +41646,14 @@ var render = function () {
       _c("div", { staticClass: "row" }, [
         _c(
           "div",
-          { staticClass: "col-4 doctor-contact rounded-3" },
+          { staticClass: "col-5 doctor-contact rounded-3" },
           [_c("ContactDoctor", { attrs: { doctorMessages: _vm.doctor } })],
           1
         ),
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "col-8 pe-0" },
+          { staticClass: "col-7 pe-0" },
           [_c("FormReview", { attrs: { doctorReviews: _vm.doctor } })],
           1
         ),

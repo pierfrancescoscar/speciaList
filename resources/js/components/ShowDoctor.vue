@@ -24,7 +24,6 @@
                     <div class="contact-info-section margin-40px-tb white_bg">
                         <ul class="list-style9 no-margin">
                             <li>
-
                                 <div class="row">
                                     <div class="col-md-5 col-5">
                                         <i class="fas fa-graduation-cap text-details"></i>
@@ -87,11 +86,11 @@
 <section class="container rounded-3 my-4 h-100">
     <div class="row">
         
-        <div class="col-4 doctor-contact rounded-3">
+        <div class="col-5 doctor-contact rounded-3">
             <ContactDoctor :doctorMessages="doctor"/>
         </div>
     
-        <div class="col-8 pe-0">
+        <div class="col-7 pe-0">
             <FormReview :doctorReviews="doctor"/>
         </div>
     
