@@ -10,7 +10,7 @@
               </div>
 
               <form @submit.prevent="contactDoctor">
-                <h3 class="mb-4">Contatta lo speciaLista.</h3>
+                <h3 class="mb-4 ">Contatta lo speciaLista.</h3>
                 <!-- Send Name -->
                   <div class="mb-3">
                       <label for="name" class="form-label">Nome*</label>

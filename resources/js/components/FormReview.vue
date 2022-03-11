@@ -4,7 +4,7 @@
         <div class="contact__wrapper shadow-lg mt-n9 rounded-3">
             <div class="row no-gutters">
         
-                <div class="col-lg-12 p-4 contact-form__wrapper order-lg-1 ">
+                <div class="col-lg-12 p-4 contact-form__wrapper order-lg-1  ">
 
                     <!-- Sent Successfully Message Alert -->
                     <div v-show="success" class="alert alert-success">
@@ -12,7 +12,7 @@
                     </div>
 
                     <!-- form -->
-                    <form class="contact-form form-validate" @submit.prevent="ReviewForm">
+                    <form class="contact-form form-validate " @submit.prevent="ReviewForm">
                         <h3 class="mb-4">Lascia una recensione.</h3>
                         <div class="row">
 
