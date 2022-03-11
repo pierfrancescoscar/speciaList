@@ -284,6 +284,31 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+
+.list-style9 {
+    list-style: none;
+    padding: 0
+}
+
+.list-style9 li {
+    position: relative;
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1)
+}
+
+.list-style9 li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0
+}
+
+
+
+
+
+
 .custom-progress {
     height: 10px;
     border-radius: 50px;
@@ -298,6 +323,35 @@ img {
     font-size: .75rem;
     background-color: #e9ecef;
     border-radius: .25rem;
+}
+
+
+.bg-sky {
+    background-color: #02c2c7
+}
+
+.bg-orange {
+    background-color: #e95601
+}
+
+.bg-green {
+    background-color: #5bbd2a
+}
+
+.bg-yellow {
+    background-color: #f0d001
+}
+
+.bg-pink {
+    background-color: #ff48a4
+}
+
+.bg-purple {
+    background-color: #9d60ff
+}
+
+.bg-lightred {
+    background-color: #ff5722
 }
 
 .doctor-contact {

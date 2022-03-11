@@ -13,7 +13,7 @@
 
                     <!-- form -->
                     <form class="contact-form form-validate" @submit.prevent="ReviewForm">
-                        <h3 class="mb-4 card_doctor_title">Lascia una recensione.</h3>
+                        <h3 class="mb-4 card_doctor_title">Lascia una recensione</h3>
                         <div class="row">
 
                             <!-- name -->
