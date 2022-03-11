@@ -86,11 +86,11 @@
 <section class="container rounded-3 my-4 h-100">
     <div class="row">
         
-        <div class="col-5 doctor-contact rounded-3">
+        <div class="col-lg-5 col-md-6 doctor-contact rounded-3 mb-4">
             <ContactDoctor :doctorMessages="doctor"/>
         </div>
     
-        <div class="col-7 pe-0">
+        <div class="col-lg-7 col-md-6 pe-0">
             <FormReview :doctorReviews="doctor"/>
         </div>
     
