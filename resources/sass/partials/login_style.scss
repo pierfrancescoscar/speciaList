@@ -1,0 +1,46 @@
+.card_login_registration {
+    margin-top: 65px !important;
+}
+
+.login_registration {
+    color: white;
+    box-shadow: 0 0 50px #00000080;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 3;
+    //border-radius: 1rem !important;
+    font-size: 18px;
+    text-align: center;
+
+    .login_registration_title {
+        background-color: $primary !important;
+    }
+
+    .login_registration_content {
+        background-color: white;
+        color: $primary;
+        //border-radius: 0 0 1rem 1rem !important;
+    }
+
+    .form_check_login {
+        display: flex;
+        align-items: center;
+
+        .login_label {
+            margin-bottom: -5px;
+        }
+    }
+
+    .btn_login {
+        background-color: #0071c3 !important;
+
+        &:hover {
+            background-color: #0072c3de !important;
+        }
+    }
+
+    .forgot_login {
+        background-color: none;
+        color: #0071c3;
+    }
+}
