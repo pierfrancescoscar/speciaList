@@ -22,21 +22,26 @@
 
 @include('guests.hero')
 
-@foreach ($categories as $category)
+<div class="container d-flex flex-wrap justify-content-center my-5">
 
-    <form class="py-3 px-3 mt-4" action="{{ route('specialist-search') }}" method="POST">
-        @csrf
-        <input
-            class="form-control w-100 mb-2 p-0 d-none"
-            placeholder="Inserisci qui la specializzazione"
-            type="text"
-            name="category"
-            value="{{ $category->name }}"
-        >
-            <button class="mt-2 text-center btn btn-primary" type="submit">{{ $category->name }}</button>
-    </form>
-    
-@endforeach
+    @foreach ($categories as $category)
+
+        <form class="p-3" action="{{ route('specialist-search') }}" method="POST">
+            @csrf
+            <input class="form-control w-100 mb-2 p-0 d-none" type="text" name="category" value="">
+
+            <a class="mt-2 text-center category-card text-reset text-decoration-none" type="submit">
+                <!-- Specialization Image -->
+                <img class="img-fluid icon" src="https://cdn-icons-png.flaticon.com/512/684/684262.png" alt="">
+
+                <span class="text-reset text-decoration-none category-name">{{ $category->name }}</span>
+            </a>
+
+        </form>
+        
+    @endforeach
+
+</div>
 
 {{-- Perché Scegliere Noi --}}
 <section class="container-fluid p-4 bg-white">
