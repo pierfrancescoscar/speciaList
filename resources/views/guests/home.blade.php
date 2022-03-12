@@ -30,12 +30,22 @@
             @csrf
             <input class="form-control w-100 mb-2 p-0 d-none" type="text" name="category" value="">
 
-            <a class="mt-2 text-center category-card text-reset text-decoration-none" type="submit">
+            {{-- <a class="mt-2 text-center category-card text-reset text-decoration-none" type="submit">
                 <!-- Specialization Image -->
                 <img class="img-fluid icon" src="https://cdn-icons-png.flaticon.com/512/684/684262.png" alt="">
 
                 <span class="text-reset text-decoration-none category-name">{{ $category->name }}</span>
             </a>
+ --}}
+
+
+            <button class="mt-2 text-center category-card text-reset text-decoration-none" type="submit">
+                <!-- Specialization Image -->
+                <img class="img-fluid icon" src="https://cdn-icons-png.flaticon.com/512/684/684262.png" alt="">
+
+                <span class="text-reset text-decoration-none category-name">{{ $category->name }}</span>
+            </button>
+
 
         </form>
         
