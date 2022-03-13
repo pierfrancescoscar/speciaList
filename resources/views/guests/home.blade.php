@@ -74,25 +74,31 @@
         </div>
     </div>
 
-    @foreach ($categories as $category)
     
-        <form class="py-3 px-3 mt-4" action="{{ route('specialist-search') }}" method="POST">
-            @csrf
-            <input
-                class="form-control w-100 mb-2 p-0 d-none"
-                placeholder="Inserisci qui la specializzazione"
-                type="text"
-                name="category"
-                value="{{ $category->name }}"
-            >
-                <button class="mt-2 text-center category-card text-reset text-decoration-none" type="submit">
-                    <img class="img-fluid icon" src="https://cdn-icons-png.flaticon.com/512/684/684262.png" alt="">
-                    {{ $category->name }}
-                </button>
-        </form>
-        
-    @endforeach
+    <div class="container">
+        <div class="d-flex flex-wrap">
+            @foreach ($categories as $category)
+    
+            <form class="py-3 px-3 mt-4" action="{{ route('specialist-search') }}" method="POST">
+                @csrf
+                <input
+                    class="form-control w-100 mb-2 p-0 d-none"
+                    placeholder="Inserisci qui la specializzazione"
+                    type="text"
+                    name="category"
+                    value="{{ $category->name }}"
+                >
+                    <button class="mt-2 text-center category-card text-reset text-decoration-none" type="submit">
+                        <img class="img-fluid icon" src="https://cdn-icons-png.flaticon.com/512/684/684262.png" alt="">
+                        {{ $category->name }}
+                    </button>
+            </form>
+            
+             @endforeach
+        </div>
     </div>
+    
+</div>
 
 <reviews></reviews>
 
