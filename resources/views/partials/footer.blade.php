@@ -1,6 +1,6 @@
 
 <!-- Footer -->
-<section class="col-12 d-flex flex-column justify-content-center mt-5">
+<section class="col-12 d-flex flex-column justify-content-center">
 
 
     <div class="sopra col-10 offset-1 my-5 d-flex flex-column flex-xl-row-reverse">

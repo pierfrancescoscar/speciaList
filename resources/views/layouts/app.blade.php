@@ -39,7 +39,7 @@
         </header>
         
         {{-- Main Content --}}
-        <main class="pb-4">
+        <main class="pb-0">
             @yield('content')
             
         </main>

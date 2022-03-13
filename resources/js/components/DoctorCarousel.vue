@@ -8,15 +8,13 @@
 
             <div class="doctor-single-card d-flex">
                 
-                <div v-for="(doctor, i) in doctors" :key="`doctor-${i}`" class="doc-card p-4 card me-4">
+                <div v-for="(doctor, i) in doctors" :key="`doctor-${i}`" class="doc-card p-4 card me-4 d-flex flex-column align-items-center">
 
                     <!-- Doc Image -->
-                    <img class="img-fluid mb-2" src="https://t4.ftcdn.net/jpg/02/60/04/09/360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg" alt="">
+                    <img class="img-fluid mb-2 w-50" src="https://cdn-icons.flaticon.com/png/512/2931/premium/2931141.png?token=exp=1647182925~hmac=cf0cdb5152ae2f3a7f656ad717dc5048" alt="">
 
                     <!-- Doc Name -->
                     <span class="d-block text-center mb-2">{{ doctor.name }} {{ doctor.surname }}</span>
-
-                    <span class="d-block text-center mb-1">Specializzazione:</span>
                     
                     <!-- Doc Specialization -->
                     <span v-for="(category, i) in doctor.categories" :key="`category-${i}`"
