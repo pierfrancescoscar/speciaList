@@ -15,6 +15,10 @@
   background-color: #b1f3ca87 !important;
 }
 
+.specialist-icon {
+  width: 150px;
+}
+
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10324,7 +10328,7 @@ footer {
   text-align: center;
   text-decoration: none;
   border-radius: 50% !important;
-  background-color: white;
+  background-color: #dce3f0;
   color: #0071c3;
   width: 3.5rem;
   height: 3.5rem;
@@ -10337,25 +10341,35 @@ footer {
 }
 
 .learn_and_connect {
-  color: white;
+  color: #dce3f0;
   font-size: 1.125rem;
-}
-.learn_and_connect li {
-  font-weight: 600;
 }
 
 .sotto {
-  color: white;
+  color: #dce3f0;
 }
 .sotto .here {
-  color: white;
+  color: #dce3f0;
+  text-decoration: underline;
+}
+
+.color-primary {
+  color: #dce3f0;
+}
+
+.list-footer {
+  list-style: none;
+  padding-left: 0px;
+  cursor: pointer;
+}
+.list-footer li {
   text-decoration: underline;
 }
 
 .card_registration {
   color: white;
   box-shadow: 0 0 50px #00000080;
-  margin-bottom: 0;
+  margin: 65px;
   font-size: 18px;
   line-height: 3;
   font-size: 18px;
@@ -10376,7 +10390,7 @@ footer {
 }
 
 .card_login_registration {
-  margin-top: 65px !important;
+  margin: 65px !important;
 }
 
 .login_registration {
@@ -10535,6 +10549,10 @@ footer {
     font-size: 9rem;
   }
 }
+.message {
+  background-color: red;
+}
+
 body {
   margin-top: 20px;
 }
@@ -10592,7 +10610,7 @@ body {
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background-color: #f1c40f;
+  background-color: #0071c3;
   content: "";
   top: 50%;
   right: 26px;
@@ -10628,7 +10646,7 @@ body {
   transition-duration: 500ms;
   width: 30px;
   height: 30px;
-  background-color: #f1c40f;
+  background-color: #0071c3;
   flex: 0 0 30px;
   text-align: center;
   max-width: 30px;
@@ -10661,5 +10679,9 @@ body {
 }
 
 .bg-howitworks {
-  background-image: url("https://accademianeoippocratica.it/wp-content/uploads/2022/03/HeroFunzionalità_Specialist_Tavola-disegno-1-scaled.jpg") !important;
+  background-image: url("https://accademianeoippocratica.it/wp-content/uploads/2022/03/HeroFunzionalità_Specialist_Tavola-disegno-1-scaled.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top;
 }

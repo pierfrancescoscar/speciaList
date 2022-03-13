@@ -16,9 +16,9 @@
                         <a class="nav-link" href="{{route('specialist_1')}}">I nostri specialisti</a>
                     </li>
                     
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('FAQ') }}</a>
-                    </li>
+                    </li> --}}
                     
                     @guest
                         <li class="nav-item">
