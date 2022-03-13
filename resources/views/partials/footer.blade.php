@@ -4,7 +4,7 @@
 
 
     <div class="sopra col-10 offset-1 my-5 d-flex flex-column flex-xl-row-reverse">
-        <div class="logo_and_socials mb-5 col-12 col-xl-6 d-flex flex-column align-items-center">
+        <div class="logo_and_socials col-12 col-xl-6 d-flex flex-column align-items-center">
 
             <div class="logo d-flex justify-content-center col-12 mb-3">
                 <h3 class="color-primary">SEGUICI</h3>  
