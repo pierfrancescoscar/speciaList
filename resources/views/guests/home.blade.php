@@ -22,21 +22,6 @@
 
 @include('guests.hero')
 
-@foreach ($categories as $category)
-
-    <form class="py-3 px-3 mt-4" action="{{ route('specialist-search') }}" method="POST">
-        @csrf
-        <input
-            class="form-control w-100 mb-2 p-0 d-none"
-            placeholder="Inserisci qui la specializzazione"
-            type="text"
-            name="category"
-            value="{{ $category->name }}"
-        >
-            <button class="mt-2 text-center btn btn-primary" type="submit">{{ $category->name }}</button>
-    </form>
-    
-@endforeach
 
 {{-- Perché Scegliere Noi --}}
 <section class="container-fluid p-4 bg-white">
@@ -78,9 +63,40 @@
 {{-- Vue Components --}}
 <doctorcarousel></doctorcarousel>
 
+{{-- Specialization List --}}
+<div class="container-fluid p-4 d-flex justify-content-center flex-wrap bg-white">
+
+    <div class="container d-flex justify-content-center mt-3">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="why-us-title">Le specializzazioni più cercate.</h3>
+            </div>
+        </div>
+    </div>
+
+    @foreach ($categories as $category)
+    
+        <form class="py-3 px-3 mt-4" action="{{ route('specialist-search') }}" method="POST">
+            @csrf
+            <input
+                class="form-control w-100 mb-2 p-0 d-none"
+                placeholder="Inserisci qui la specializzazione"
+                type="text"
+                name="category"
+                value="{{ $category->name }}"
+            >
+                <button class="mt-2 text-center category-card text-reset text-decoration-none" type="submit">
+                    <img class="img-fluid icon" src="https://cdn-icons-png.flaticon.com/512/684/684262.png" alt="">
+                    {{ $category->name }}
+                </button>
+        </form>
+        
+    @endforeach
+    </div>
+
 <reviews></reviews>
 
-{{-- @include('guests.howitworks') --}}
+@include('guests.howitworks')
 
 {{-- @include('guests.patacchi') --}}
 
