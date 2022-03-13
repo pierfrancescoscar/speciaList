@@ -5,3 +5,49 @@
 .why-us-title {
     color: #0071c3 !important;
 }
+
+.category-card{
+    width: 11.25rem;
+    height: 11.25rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 6px 8px 50px -20px rgba(0,0,0,0.30);
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: rgba(99, 99, 99, 0.6) 0px 2px 8px 0px;
+        padding: 12px;
+    }
+
+    &:hover .icon {
+        width: 30%;
+    }
+    
+    &:hover .category-name {
+        font-size: 13px;
+    }
+    
+
+    .icon{
+        width: 36%;
+        transition: all .2s ease-in-out;
+    }
+
+    .category-name{
+        font-size: 12px;
+        text-align: center;
+        color: #0071c3;
+        text-decoration: none;
+        transition: all .2s ease-in-out;
+
+    }
+}
+
