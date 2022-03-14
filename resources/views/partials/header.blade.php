@@ -1,6 +1,6 @@
 {{-- Navbar --}}
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-        <div class="container">
+        <div class="container ">
             {{-- logo --}}
             <a class="navbar-brand" href="{{ url('/') }}"><img class="logo" src="{{ asset('assets/Specialist_Logo_Transparent_Tavola_disegno_1.png') }}" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto d-flex aligni-items-center">
+                <ul class="navbar-nav ml-auto d-flex aligni-items-center ">
                     <!-- Authentication Links -->
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('specialist_1')}}">I nostri specialisti</a>

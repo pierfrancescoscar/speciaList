@@ -1993,6 +1993,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CardContact',
   data: function data() {
@@ -2337,6 +2346,11 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -7772,7 +7786,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".rating-star[data-v-45d49c56] {\n  list-style: none;\n  display: flex;\n}\n.rating-star li[data-v-45d49c56] {\n  color: yellow;\n  margin-right: 5px;\n}\n.my_image[data-v-45d49c56] {\n  max-width: 130px;\n}", ""]);
+exports.push([module.i, ".rating-star[data-v-45d49c56] {\n  list-style: none;\n  display: flex;\n  padding-left: 0px;\n}\n.rating-star li[data-v-45d49c56] {\n  color: #0071c3;\n  margin-right: 5px;\n}\n.media[data-v-45d49c56] {\n  padding: 2rem;\n  border-radius: 2rem;\n  display: flex;\n  align-items: center;\n}\n.media-image[data-v-45d49c56] {\n  width: 100px;\n  margin-right: 2rem;\n}\n.media-image img[data-v-45d49c56] {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n}\n.color-primary[data-v-45d49c56] {\n  color: #dce4f1;\n}\n.text-color[data-v-45d49c56] {\n  color: #0071c3;\n}\n.blue_bg_title[data-v-45d49c56] {\n  background-color: #0071c3;\n  box-shadow: 0 0 50px #00000080;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  line-height: 3;\n  border-radius: 1rem 1rem 0 0;\n  font-size: 18px;\n  text-align: center;\n}\n.white_bg_content[data-v-45d49c56] {\n  background-color: white;\n  color: #0071c3;\n  box-shadow: 0 0 50px #00000040;\n  border-radius: 0 0 1rem 1rem;\n  padding: 2rem;\n}", ""]);
 
 // exports
 
@@ -7848,7 +7862,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".btn-1[data-v-71ec4b4a] {\n  background-color: #0071c3 !important;\n  border: none !important;\n}\n.btn-1[data-v-71ec4b4a]:hover {\n  background-color: #0072c3de !important;\n}\n.btn-2[data-v-71ec4b4a] {\n  background-color: #b1f3ca !important;\n  border-color: #b1f3ca87 !important;\n}\n.btn-2[data-v-71ec4b4a]:hover {\n  background-color: #b1f3ca87 !important;\n}\n.title[data-v-71ec4b4a] {\n  color: #0071c3;\n}\n.doctor-cards[data-v-71ec4b4a] {\n  position: relative;\n  overflow-x: scroll;\n  height: 300px;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n.doctor-cards[data-v-71ec4b4a]::-webkit-scrollbar {\n  display: none;\n}\n.doctor-cards .doctor-single-card[data-v-71ec4b4a] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  padding: 0 40px;\n}\n.doctor-cards .doctor-single-card > div[data-v-71ec4b4a] {\n  min-width: 200px;\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.container_sponsored[data-v-71ec4b4a] {\n  position: relative;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a],\n.container_sponsored .next_btn[data-v-71ec4b4a] {\n  position: absolute;\n  transform: translateY(230%);\n  top: 50%;\n  padding: 10px 15px;\n  border-radius: 28%;\n  background-color: #2b71bd;\n  color: white;\n  box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a]:hover,\n.container_sponsored .next_btn[data-v-71ec4b4a]:hover {\n  cursor: pointer;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a]:active,\n.container_sponsored .next_btn[data-v-71ec4b4a]:active {\n  box-shadow: none;\n  background-color: #1961af;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a] {\n  left: 7px;\n}\n.container_sponsored .next_btn[data-v-71ec4b4a] {\n  right: 7px;\n}\n.doc-card[data-v-71ec4b4a] {\n  border-radius: 10px;\n  box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;\n}\n.specialist-icon[data-v-71ec4b4a] {\n  width: 150px !important;\n}", ""]);
+exports.push([module.i, ".btn-1[data-v-71ec4b4a] {\n  background-color: #0071c3 !important;\n  border: none !important;\n}\n.btn-1[data-v-71ec4b4a]:hover {\n  background-color: #0072c3de !important;\n}\n.btn-2[data-v-71ec4b4a] {\n  background-color: #b1f3ca !important;\n  border-color: #b1f3ca87 !important;\n}\n.btn-2[data-v-71ec4b4a]:hover {\n  background-color: #b1f3ca87 !important;\n}\n.specialist-icon[data-v-71ec4b4a] {\n  width: 150px;\n}\n.title[data-v-71ec4b4a] {\n  color: #0071c3;\n}\n.doctor-cards[data-v-71ec4b4a] {\n  position: relative;\n  overflow-x: scroll;\n  height: 300px;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n.doctor-cards[data-v-71ec4b4a]::-webkit-scrollbar {\n  display: none;\n}\n.doctor-cards .doctor-single-card[data-v-71ec4b4a] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  padding: 0 40px;\n}\n.doctor-cards .doctor-single-card > div[data-v-71ec4b4a] {\n  min-width: 200px;\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.doctor-cards .doctor-single-card .fa-user-md[data-v-71ec4b4a] {\n  font-size: 55px;\n}\n.blue_bg_doctor[data-v-71ec4b4a] {\n  background-color: #0071c3;\n  width: 100%;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  font-size: 18px;\n  text-align: center;\n  border-radius: 1rem 1rem 0 0;\n  line-height: 3rem;\n}\n.blue_bg_btn[data-v-71ec4b4a] {\n  background-color: #0071c3;\n  width: 100%;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  font-size: 18px;\n  text-align: center;\n  border-radius: 0 0 1rem 1rem;\n}\n.white_bg_doctor[data-v-71ec4b4a] {\n  background-color: white;\n  color: #0071c3;\n  box-shadow: 0 0 50px #00000040;\n  width: 100%;\n  height: 100%;\n  padding: 5px 2px 0px 2px;\n}\n.container_sponsored[data-v-71ec4b4a] {\n  position: relative;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a],\n.container_sponsored .next_btn[data-v-71ec4b4a] {\n  position: absolute;\n  transform: translateY(230%);\n  top: 50%;\n  padding: 10px 15px;\n  border-radius: 28%;\n  background-color: #2b71bd;\n  color: white;\n  box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a]:hover,\n.container_sponsored .next_btn[data-v-71ec4b4a]:hover {\n  cursor: pointer;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a]:active,\n.container_sponsored .next_btn[data-v-71ec4b4a]:active {\n  box-shadow: none;\n  background-color: #1961af;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a] {\n  left: 7px;\n}\n.container_sponsored .next_btn[data-v-71ec4b4a] {\n  right: 7px;\n}\n.doc-card[data-v-71ec4b4a] {\n  border-radius: 10px;\n  box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;\n}\n.specialist-icon[data-v-71ec4b4a] {\n  width: 150px !important;\n}", ""]);
 
 // exports
 
@@ -7924,7 +7938,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".total-like-user-main a[data-v-7755560e] {\n  display: inline-block;\n  margin: 0 -17px 0 0;\n}\n.total-like[data-v-7755560e] {\n  border: 1px solid;\n  border-radius: 50px;\n  display: inline-block;\n  font-weight: 500;\n  height: 34px;\n  line-height: 33px;\n  padding: 0 13px;\n  vertical-align: top;\n}\n.restaurant-detailed-ratings-and-reviews hr[data-v-7755560e] {\n  margin: 0 -24px;\n}\n.graph-star-rating-header .star-rating[data-v-7755560e] {\n  font-size: 17px;\n}\n.progress[data-v-7755560e] {\n  background: #f2f4f8 none repeat scroll 0 0;\n  border-radius: 0;\n  height: 30px;\n}\n.rating-list[data-v-7755560e] {\n  display: inline-flex;\n  margin-bottom: 15px;\n  width: 100%;\n}\n.rating-list-left[data-v-7755560e] {\n  height: 16px;\n  line-height: 29px;\n  width: 10%;\n}\n.rating-list-center[data-v-7755560e] {\n  width: 80%;\n}\n.rating-list-right[data-v-7755560e] {\n  line-height: 29px;\n  text-align: right;\n  width: 10%;\n}\n.restaurant-slider-pics[data-v-7755560e] {\n  bottom: 0;\n  font-size: 12px;\n  left: 0;\n  z-index: 999;\n  padding: 0 10px;\n}\n.restaurant-slider-view-all[data-v-7755560e] {\n  bottom: 15px;\n  right: 15px;\n  z-index: 999;\n}\n.offer-dedicated-nav .nav-link.active[data-v-7755560e],\n.offer-dedicated-nav .nav-link[data-v-7755560e]:hover,\n.offer-dedicated-nav .nav-link[data-v-7755560e]:focus {\n  border-color: #3868fb;\n  color: #3868fb;\n}\n.offer-dedicated-nav .nav-link[data-v-7755560e] {\n  border-bottom: 2px solid #fff;\n  color: #000000;\n  padding: 16px 0;\n  font-weight: 600;\n}\n.offer-dedicated-nav .nav-item[data-v-7755560e] {\n  margin: 0 37px 0 0;\n}\n.restaurant-detailed-action-btn[data-v-7755560e] {\n  margin-top: 12px;\n}\n.restaurant-detailed-header-right .btn-success[data-v-7755560e] {\n  border-radius: 3px;\n  height: 45px;\n  margin: -18px 0 18px;\n  min-width: 130px;\n  padding: 7px;\n}\n.text-black[data-v-7755560e] {\n  color: #000000;\n}\n.icon-overlap[data-v-7755560e] {\n  bottom: -23px;\n  font-size: 74px;\n  opacity: 0.23;\n  position: absolute;\n  right: -32px;\n}\n.menu-list img[data-v-7755560e] {\n  width: 41px;\n  height: 41px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-detailed-header-left img[data-v-7755560e] {\n  width: 88px;\n  height: 88px;\n  border-radius: 3px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;\n}\n.reviews-members .media .mr-3[data-v-7755560e] {\n  width: 56px;\n  height: 56px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.rounded-pill[data-v-7755560e] {\n  border-radius: 50rem !important;\n}\n.total-like-user[data-v-7755560e] {\n  border: 2px solid #fff;\n  height: 34px;\n  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;\n  width: 34px;\n}\n.total-like-user-main a[data-v-7755560e] {\n  display: inline-block;\n  margin: 0 -17px 0 0;\n}\n.total-like[data-v-7755560e] {\n  border: 1px solid;\n  border-radius: 50px;\n  display: inline-block;\n  font-weight: 500;\n  height: 34px;\n  line-height: 33px;\n  padding: 0 13px;\n  vertical-align: top;\n}\n.restaurant-detailed-ratings-and-reviews hr[data-v-7755560e] {\n  margin: 0 -24px;\n}\n.graph-star-rating-header .star-rating[data-v-7755560e] {\n  font-size: 17px;\n}\n.progress[data-v-7755560e] {\n  background: #f2f4f8 none repeat scroll 0 0;\n  border-radius: 0;\n  height: 30px;\n}\n.rating-list[data-v-7755560e] {\n  display: inline-flex;\n  margin-bottom: 15px;\n  width: 100%;\n}\n.rating-list-left[data-v-7755560e] {\n  height: 16px;\n  line-height: 29px;\n  width: 10%;\n}\n.rating-list-center[data-v-7755560e] {\n  width: 80%;\n}\n.rating-list-right[data-v-7755560e] {\n  line-height: 29px;\n  text-align: right;\n  width: 10%;\n}\n.restaurant-slider-pics[data-v-7755560e] {\n  bottom: 0;\n  font-size: 12px;\n  left: 0;\n  z-index: 999;\n  padding: 0 10px;\n}\n.restaurant-slider-view-all[data-v-7755560e] {\n  bottom: 15px;\n  right: 15px;\n  z-index: 999;\n}\n.progress[data-v-7755560e] {\n  background: #f2f4f8 none repeat scroll 0 0;\n  border-radius: 0;\n  height: 30px;\n}", ""]);
+exports.push([module.i, ".color_primary[data-v-7755560e] {\n  color: #0071c3;\n}\n.total-like-user-main a[data-v-7755560e] {\n  display: inline-block;\n  margin: 0 -17px 0 0;\n}\n.total-like[data-v-7755560e] {\n  border: 1px solid;\n  border-radius: 50px;\n  display: inline-block;\n  font-weight: 500;\n  height: 34px;\n  line-height: 33px;\n  padding: 0 13px;\n  vertical-align: top;\n}\n.restaurant-detailed-ratings-and-reviews hr[data-v-7755560e] {\n  margin: 0 -24px;\n}\n.graph-star-rating-header .star-rating[data-v-7755560e] {\n  font-size: 17px;\n}\n.progress[data-v-7755560e] {\n  background: #f2f4f8 none repeat scroll 0 0;\n  border-radius: 0;\n  height: 30px;\n}\n.rating-list[data-v-7755560e] {\n  display: inline-flex;\n  margin-bottom: 15px;\n  width: 100%;\n}\n.rating-list-left[data-v-7755560e] {\n  height: 16px;\n  line-height: 29px;\n  width: 10%;\n}\n.rating-list-center[data-v-7755560e] {\n  width: 80%;\n}\n.rating-list-right[data-v-7755560e] {\n  line-height: 29px;\n  text-align: right;\n  width: 10%;\n}\n.restaurant-slider-pics[data-v-7755560e] {\n  bottom: 0;\n  font-size: 12px;\n  left: 0;\n  z-index: 999;\n  padding: 0 10px;\n}\n.restaurant-slider-view-all[data-v-7755560e] {\n  bottom: 15px;\n  right: 15px;\n  z-index: 999;\n}\n.offer-dedicated-nav .nav-link.active[data-v-7755560e],\n.offer-dedicated-nav .nav-link[data-v-7755560e]:hover,\n.offer-dedicated-nav .nav-link[data-v-7755560e]:focus {\n  border-color: #3868fb;\n  color: #3868fb;\n}\n.offer-dedicated-nav .nav-link[data-v-7755560e] {\n  border-bottom: 2px solid #fff;\n  color: #000000;\n  padding: 16px 0;\n  font-weight: 600;\n}\n.offer-dedicated-nav .nav-item[data-v-7755560e] {\n  margin: 0 37px 0 0;\n}\n.restaurant-detailed-action-btn[data-v-7755560e] {\n  margin-top: 12px;\n}\n.restaurant-detailed-header-right .btn-success[data-v-7755560e] {\n  border-radius: 3px;\n  height: 45px;\n  margin: -18px 0 18px;\n  min-width: 130px;\n  padding: 7px;\n}\n.text-black[data-v-7755560e] {\n  color: #000000;\n}\n.icon-overlap[data-v-7755560e] {\n  bottom: -23px;\n  font-size: 74px;\n  opacity: 0.23;\n  position: absolute;\n  right: -32px;\n}\n.menu-list img[data-v-7755560e] {\n  width: 41px;\n  height: 41px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-detailed-header-left img[data-v-7755560e] {\n  width: 88px;\n  height: 88px;\n  border-radius: 3px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;\n}\n.reviews-members .media .mr-3[data-v-7755560e] {\n  width: 56px;\n  height: 56px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.rounded-pill[data-v-7755560e] {\n  border-radius: 50rem !important;\n}\n.total-like-user[data-v-7755560e] {\n  border: 2px solid #fff;\n  height: 34px;\n  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;\n  width: 34px;\n}\n.total-like-user-main a[data-v-7755560e] {\n  display: inline-block;\n  margin: 0 -17px 0 0;\n}\n.total-like[data-v-7755560e] {\n  border: 1px solid;\n  border-radius: 50px;\n  display: inline-block;\n  font-weight: 500;\n  height: 34px;\n  line-height: 33px;\n  padding: 0 13px;\n  vertical-align: top;\n}\n.restaurant-detailed-ratings-and-reviews hr[data-v-7755560e] {\n  margin: 0 -24px;\n}\n.graph-star-rating-header .star-rating[data-v-7755560e] {\n  font-size: 17px;\n}\n.progress[data-v-7755560e] {\n  background: #f2f4f8 none repeat scroll 0 0;\n  border-radius: 0;\n  height: 30px;\n}\n.rating-list[data-v-7755560e] {\n  display: inline-flex;\n  margin-bottom: 15px;\n  width: 100%;\n}\n.rating-list-left[data-v-7755560e] {\n  height: 16px;\n  line-height: 29px;\n  width: 10%;\n}\n.rating-list-center[data-v-7755560e] {\n  width: 80%;\n}\n.rating-list-right[data-v-7755560e] {\n  line-height: 29px;\n  text-align: right;\n  width: 10%;\n}\n.restaurant-slider-pics[data-v-7755560e] {\n  bottom: 0;\n  font-size: 12px;\n  left: 0;\n  z-index: 999;\n  padding: 0 10px;\n}\n.restaurant-slider-view-all[data-v-7755560e] {\n  bottom: 15px;\n  right: 15px;\n  z-index: 999;\n}\n.progress[data-v-7755560e] {\n  background: #f2f4f8 none repeat scroll 0 0;\n  border-radius: 0;\n  height: 30px;\n}", ""]);
 
 // exports
 
@@ -40311,59 +40325,56 @@ var render = function () {
         { key: "content-" + i, staticClass: "reviews-members pt-4 pb-4" },
         [
           _c("div", { staticClass: "media" }, [
-            _c("img", {
-              staticClass: "mr-3 rounded-3 my_image",
-              attrs: {
-                alt: "Generic placeholder image",
-                src: "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg",
-              },
-            }),
-            _vm._v(" "),
             _c("div", { staticClass: "media-body" }, [
               _c("div", { staticClass: "reviews-members-header" }, [
-                _c("h6", { staticClass: "mb-1" }, [
-                  _vm._v(
-                    "Paziente: " +
+                _c("div", { staticClass: "blue_bg_title" }, [
+                  _c("i", { staticClass: "fa-solid fa-user  pr-2" }),
+                  _c("span", {}, [
+                    _vm._v(
                       _vm._s(singleContact.name) +
-                      " " +
-                      _vm._s(singleContact.surname)
-                  ),
+                        " " +
+                        _vm._s(singleContact.surname) +
+                        " "
+                    ),
+                  ]),
                 ]),
                 _vm._v(" "),
-                _c("p", { staticClass: "text-gray" }, [
-                  _vm._v("Data: " + _vm._s(singleContact.date)),
-                ]),
-                _vm._v(" "),
-                singleContact.rating
-                  ? _c(
-                      "ul",
-                      { staticClass: "rating-star" },
-                      [
-                        _vm._v(
-                          "\n                        Voto: \n                        "
-                        ),
+                _c("div", { staticClass: "white_bg_content" }, [
+                  _c("div", { staticClass: "mb-1" }, [
+                    _c("i", { staticClass: "fa-solid fa-calendar-days  pr-2" }),
+                    _c("span", { staticClass: "text-color" }, [
+                      _vm._v(_vm._s(singleContact.date)),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mb-1" }, [
+                    _c("i", {
+                      staticClass: "fa-solid fa-envelope-open-text  pr-2",
+                    }),
+                    _c("span", { staticClass: "text-color" }, [
+                      _vm._v(_vm._s(singleContact.object)),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mb-1" }, [
+                    _c("i", { staticClass: "fa-solid fa-comment  pr-2" }),
+                    _c("span", { staticClass: "text-color" }, [
+                      _vm._v(_vm._s(singleContact.content)),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  singleContact.rating
+                    ? _c(
+                        "ul",
+                        { staticClass: "rating-star mb-1" },
                         _vm._l(singleContact.rating, function (i) {
                           return _c("li", { key: "star-" + i }, [
                             _c("i", { staticClass: "fas fa-star" }),
                           ])
                         }),
-                      ],
-                      2
-                    )
-                  : _vm._e(),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "reviews-members-body" }, [
-                singleContact.object
-                  ? _c("span", [
-                      _vm._v(
-                        "Oggetto messaggio: " + _vm._s(singleContact.object)
-                      ),
-                    ])
-                  : _vm._e(),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v("Contenuto: " + _vm._s(singleContact.content)),
+                        0
+                      )
+                    : _vm._e(),
                 ]),
               ]),
             ]),
@@ -40880,54 +40891,56 @@ var render = function () {
         _vm._l(_vm.doctors, function (doctor, i) {
           return _c(
             "div",
-            { key: "doctor-" + i, staticClass: "doc-card p-4 card me-4" },
+            {
+              key: "doctor-" + i,
+              staticClass:
+                "doc-card p-4 card me-4 d-flex flex-column align-items-center justify-content-between",
+            },
             [
-              _c("img", {
-                staticClass: "img-fluid mb-2",
-                attrs: {
-                  src: "https://t4.ftcdn.net/jpg/02/60/04/09/360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg",
-                  alt: "",
-                },
-              }),
-              _vm._v(" "),
-              _c("span", { staticClass: "d-block text-center mb-2" }, [
-                _vm._v(_vm._s(doctor.name) + " " + _vm._s(doctor.surname)),
+              _c("div", { staticClass: "blue_bg_doctor" }, [
+                _c("span", { staticClass: "d-block text-center" }, [
+                  _vm._v(_vm._s(doctor.name) + " " + _vm._s(doctor.surname)),
+                ]),
               ]),
               _vm._v(" "),
-              _c("span", { staticClass: "d-block text-center mb-1" }, [
-                _vm._v("Specializzazione:"),
-              ]),
-              _vm._v(" "),
-              _vm._l(doctor.categories, function (category, i) {
-                return _c(
-                  "span",
-                  {
-                    key: "category-" + i,
-                    staticClass: "d-block text-center mb-1",
-                  },
-                  [
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(category.name) +
-                        "\n                "
-                    ),
-                  ]
-                )
-              }),
+              _c(
+                "div",
+                { staticClass: "white_bg_doctor" },
+                _vm._l(doctor.categories, function (category, i) {
+                  return _c(
+                    "span",
+                    {
+                      key: "category-" + i,
+                      staticClass: "d-block text-center mb-1",
+                    },
+                    [
+                      _vm._v(
+                        "\n                        " +
+                          _vm._s(category.name) +
+                          "\n                    "
+                      ),
+                    ]
+                  )
+                }),
+                0
+              ),
               _vm._v(" "),
               _c(
                 "a",
                 {
                   staticClass:
-                    "btn-1 text-white p-2 text-decoration-none rounded-2 mb-2 text-center",
+                    "btn-1 text-white p-2 text-decoration-none mb-2 text-center blue_bg_btn",
                   attrs: {
                     href: "http://127.0.0.1:8000/showdoctor/" + doctor.slug,
                   },
                 },
-                [_vm._v("Scopri di più")]
+                [
+                  _vm._v(
+                    "\n                    Scopri di più\n                "
+                  ),
+                ]
               ),
-            ],
-            2
+            ]
           )
         }),
         0
@@ -41522,12 +41535,14 @@ var render = function () {
                     "div",
                     {
                       staticClass:
-                        "bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews",
+                        "bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews rounded-3",
                     },
                     [
-                      _c("h5", { staticClass: "mb-1" }, [
-                        _vm._v(_vm._s(_vm.title)),
-                      ]),
+                      _c(
+                        "h3",
+                        { staticClass: "mb-1 text-center color_primary" },
+                        [_vm._v(_vm._s(_vm.title))]
+                      ),
                       _vm._v(" "),
                       _c("CardContact", { attrs: { myloop: _vm.datarecup } }),
                     ],

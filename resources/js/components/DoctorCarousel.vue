@@ -8,22 +8,29 @@
 
             <div class="doctor-single-card d-flex">
                 
-                <div v-for="(doctor, i) in doctors" :key="`doctor-${i}`" class="doc-card p-4 card me-4 d-flex flex-column align-items-center">
+                <div v-for="(doctor, i) in doctors" :key="`doctor-${i}`" class="doc-card p-4 card me-4 d-flex flex-column align-items-center justify-content-between">
 
                     <!-- Doc Image -->
-                    <img class="img-fluid mb-2 w-50" src="https://cdn-icons.flaticon.com/png/512/2931/premium/2931141.png?token=exp=1647182925~hmac=cf0cdb5152ae2f3a7f656ad717dc5048" alt="">
+                    <!-- <img class="img-fluid mb-2 w-50" src="https://cdn-icons.flaticon.com/png/512/2931/premium/2931141.png?token=exp=1647182925~hmac=cf0cdb5152ae2f3a7f656ad717dc5048" alt=""> -->
+                    <div class="blue_bg_doctor">
+                        <!-- Doc Name -->
+                        <span class="d-block text-center">{{ doctor.name }} {{ doctor.surname }}</span>
+                    </div>
+                   
+                    <div class="white_bg_doctor">
+                        <!-- Doc Specialization -->
+                        <span v-for="(category, i) in doctor.categories" :key="`category-${i}`"
+                            class="d-block text-center mb-1">
+                            {{ category.name }}
+                        </span>
+                    </div>
 
-                    <!-- Doc Name -->
-                    <span class="d-block text-center mb-2">{{ doctor.name }} {{ doctor.surname }}</span>
-                    
-                    <!-- Doc Specialization -->
-                    <span v-for="(category, i) in doctor.categories" :key="`category-${i}`"
-                        class="d-block text-center mb-1">
-                        {{ category.name }}
-                    </span>
-                    
                     <!-- See More Button -->
-                    <a class="btn-1 text-white p-2 text-decoration-none rounded-2 mb-2 text-center" :href="`http://127.0.0.1:8000/showdoctor/${doctor.slug}`">Scopri di più</a>
+                    <a class="btn-1 text-white p-2 text-decoration-none mb-2 text-center blue_bg_btn" :href="`http://127.0.0.1:8000/showdoctor/${doctor.slug}`"
+                    >
+                        Scopri di più
+                    </a>
+                    
                 </div>
 
             </div>
@@ -111,14 +118,49 @@ export default {
         left: 0;
         top: 0;
         padding: 0 40px;
-        
 
         &>div {
             min-width: 200px;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         }
 
+        .fa-user-md {
+            font-size: 55px;
+        }
+
     }
+}
+
+.blue_bg_doctor {
+    background-color: $primary;
+    width: 100%;
+    color: white;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 1rem 1rem 0 0;
+    line-height: 3rem;
+}
+
+.blue_bg_btn {
+    background-color: $primary;
+    width: 100%;
+    color: white;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.white_bg_doctor {
+    background-color: white;
+    color: $primary;
+    box-shadow: 0 0 50px #00000040;
+    width: 100%;
+    height: 100%;
+    padding: 5px 2px 0px 2px;
 }
 
 .container_sponsored{
