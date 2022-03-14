@@ -25,6 +25,9 @@
     },
     "dependencies": {
         "dayjs": "^1.10.8",
+        "moment": "^2.29.1",
+        "vue-dayjs-plugin": "^1.0.0",
+        "vue-moment": "^4.1.0",
         "vue-stripe-payment": "^0.2.0"
     }
 }

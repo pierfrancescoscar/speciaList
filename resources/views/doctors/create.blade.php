@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div class="blue_bg offset-2 col-8 mt-5">Entra in specia<strong>list</strong> e registrati</div>
+        <div class="blue_bg offset-2 col-8 mt-5">Completa la tua registrazione ed entra in specia<strong>List</strong></div>
         <div class="white_bg offset-2 col-8 mb-5">
 
         <form class="form_style" action="{{ route('admin.doctor.store') }}" method="POST" enctype="multipart/form-data">

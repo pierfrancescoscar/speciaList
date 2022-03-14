@@ -1,6 +1,6 @@
 <template>
     <div class="container my-5 container_sponsored">
-        <h3 class="mb-5 title text-center">Le specializzazioni più cercate</h3>
+        <h3 class="mb-5 why-us-title title text-center"><strong>Clicca e cerca lo speciaLista giusto per te.</strong></h3>
         <div class="doctor-cards" id="carousel-categories">
 
             <div class="doctor-single-card d-flex">
@@ -122,6 +122,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     flex-direction: column;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     
@@ -131,6 +132,7 @@ export default {
         font-size: 26px;
     }
     .category-name{
+        color: black;
         font-size: 14px;
         text-align: center;
     }
@@ -164,6 +166,10 @@ export default {
     }
     .next_btn{
         right: 7px;
+    }
+
+    .why-us-title {
+        color:#0071c3;
     }
 
 }

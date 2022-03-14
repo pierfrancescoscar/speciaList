@@ -1,23 +1,15 @@
 <template>
     <div class="container py-5">
-        <h1 class="text-center pricing">I nostri piani di sponsorizzazione</h1> <br>
+        <h3 class=" sponsor-text text-center pricing"><strong>Aumenta la tua visibilità e diventa uno speciaList sponsorizzato.</strong></h3> <br>
 
         <div class="row text-center align-items-end">
 
             <div class="col-lg-4 mb-5 mb-lg-0"
                 v-for="sub in allsub" :key="`sub-${sub.id}`">
                 <div class="bg-white p-5 rounded-lg shadow">
-                    <h1 class="h6 text-uppercase font-weight-bold mb-4">{{sub.type}}</h1>
-                    <h2 class="h1 font-weight-bold">{{sub.price}} €<span class="text-small font-weight-normal ml-2">/ {{sub.duration}} hours</span></h2>
-                    <div class="custom-separator my-4 mx-auto bg-warning"></div>
-                    <ul class="list-unstyled my-5 text-small text-left">
-                        <li class="mb-3"> <i class="fa fa-check mr-2 text-primary"></i> VANTAGGIO</li>
-                        <li class="mb-3"> <i class="fa fa-check mr-2 text-primary"></i> VANTAGGIO</li>
-                        <li class="mb-3"> <i class="fa fa-check mr-2 text-primary"></i> VANTAGGIO</li>
-                        <!-- <li class="mb-3 text-muted"> <i class="fa fa-times mr-2"></i> <del>Unlimited Subdomain</del> </li>
-                        <li class="mb-3 text-muted"> <i class="fa fa-times mr-2"></i> <del>Automatic Cloud Backup</del> </li> -->
-                    </ul> 
-                    <a :href="`http://127.0.0.1:8000/admin/subscription/${doctor.slug}/${sub.type}`" class="btn btn-warning btn-block p-2 shadow rounded-pill">Subscribe</a>
+                    <h1 class="h6 text-uppercase font-weight-bold mb-4 sponsor-text">{{sub.type}}</h1>
+                    <h2 class="h1 font-weight-bold sponsor-text">{{sub.price}} €<span class="text-small font-weight-normal ml-2">/ {{sub.duration}} hours</span></h2>
+                    <a :href="`http://127.0.0.1:8000/admin/subscription/${doctor.slug}/${sub.type}`" class="button-sponsor btn btn-block p-2 shadow rounded-pill text-white">Acquista</a>
                 </div>
             </div>
 
@@ -73,6 +65,14 @@
     background: linear-gradient(to right, #f8c246, #f8c246);
     color: #514B64;
     min-height: 150vh
+}
+
+.sponsor-text {
+    color: #0071c3;
+}
+
+.button-sponsor {
+    background-color: #0071c3;
 }
 
 </style>

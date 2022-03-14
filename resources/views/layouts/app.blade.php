@@ -54,6 +54,8 @@
     {{-- Scripts --}}
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/category_validation.js') }}" defer></script>
+    
+
 
 </body>
 </html>
