@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container show_style mb-3">
+    <div class="container  mb-5">
 
-        <mycontact :datarecup="{{$doctorReviews->reviews}}" :title="'Le mie recensioni'" ></mycontact>
+        <mycontact :datarecup="{{$doctorReviews->reviews}}" :title="'Le mie recensioni.'" ></mycontact>
 
     </div>
 

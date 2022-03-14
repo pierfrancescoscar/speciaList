@@ -1,13 +1,14 @@
 
 <!-- Footer -->
-<section class="col-12 d-flex flex-column justify-content-center">
+<section class="col-12 d-flex flex-column justify-content-center styles-footer">
 
 
     <div class="sopra col-10 offset-1 my-5 d-flex flex-column flex-xl-row-reverse">
-        <div class="logo_and_socials mb-5 col-12 col-xl-6 d-flex flex-column align-items-center">
+        <div class="logo_and_socials col-12 col-xl-6 d-flex flex-column align-items-center">
 
-            <div class="logo d-flex justify-content-center col-12 mb-5">
-                <img src="../assets/Specialist_Logo_Transparent_White_Tavola disegno 1.png" alt="Logo SpeciaList">
+            <div class="logo d-flex justify-content-center col-12 mb-3">
+                <h3 class="color-primary">SEGUICI</h3>  
+                {{-- <img src="../assets/Specialist_Logo_Transparent_White_Tavola disegno 1.png" alt="Logo SpeciaList"> --}}
             </div>
 
             <div class="social col-12 d-flex justify-content-center">
@@ -38,17 +39,17 @@
 
         <div class="learn_and_connect learn_and_connect d-flex justify-content-center justify-content-xl-start text-xl-start text-center flex-column flex-xl-row col-12 col-xl-6">
 
-            <div class="learn mr-xl-5 mb-5"><strong>DELLE COSE</strong> 
-                <ul class="list-unstyled mt-3">
-                    <li class="mt-2">CoseCoseCose</li>
-                    <li class="mt-2">CoseCoseCose</li>
-                    <li class="mt-2">CoseCoseCose</li>
+            <div class="learn mr-xl-5 mb-5"><h3>SPECIALIST</h3> 
+                <ul class="list-footer mt-3">
+                    <li class="mt-2">Su di noi</li>
+                    <li class="mt-2">Lavora con noi</li>
+                    <li class="mt-2">FAQ</li>
                 </ul>
             </div>
 
-            <div class="connect "><strong>CONTATTACI</strong>  
-                <ul class="list-unstyled mt-3">
-                    <li class="mt-2">CoseCoseCose</li>
+            <div class="connect "><h3>CONTATTI</h3>  
+                <ul class="list-footer mt-3">
+                    <li class="mt-2">Contattaci</li>
                 </ul>
             </div>
 

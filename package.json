@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "dayjs": "^1.10.8",
+        "vue-dayjs": "^1.0.2",
         "vue-stripe-payment": "^0.2.0"
     }
 }

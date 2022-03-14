@@ -1993,6 +1993,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'CardContact',
   data: function data() {
@@ -2368,6 +2377,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'DoctorCarousel',
@@ -2609,7 +2632,8 @@ __webpack_require__.r(__webpack_exports__);
       content: '',
       date: '',
       errors: {},
-      success: false
+      success: false,
+      starSelected: null
     };
   },
   props: {
@@ -2623,6 +2647,7 @@ __webpack_require__.r(__webpack_exports__);
       this.rating = res;
       var myrating = document.getElementById("star-".concat(res));
       myrating.classList.toggle('star-checkbox');
+      this.starSelected = "star-".concat(res);
       var otherStars = document.querySelectorAll('.star-checkbox');
       var resOtherStar = otherStars.length;
 
@@ -2710,6 +2735,25 @@ __webpack_require__.r(__webpack_exports__);
           _this.email = '';
           _this.content = '';
           _this.content = '';
+          /* remove star */
+
+          var star = document.getElementById(_this.starSelected);
+          star.classList.toggle('star-checkbox');
+          var otherStars = document.querySelectorAll('.star-checkbox');
+          otherStars.forEach(function (element) {
+            element.disabled = false;
+          });
+          var starIcon = document.querySelectorAll('.starIcon');
+          starIcon[0].classList.remove('star_yellow');
+          starIcon[0].classList.add('star_gray');
+          starIcon[1].classList.remove('star_yellow');
+          starIcon[1].classList.add('star_gray');
+          starIcon[2].classList.remove('star_yellow');
+          starIcon[2].classList.add('star_gray');
+          starIcon[3].classList.remove('star_yellow');
+          starIcon[3].classList.add('star_gray');
+          starIcon[4].classList.remove('star_yellow');
+          starIcon[4].classList.add('star_gray');
         }
       })["catch"](function (err) {
         console.log(err);
@@ -2846,6 +2890,220 @@ __webpack_require__.r(__webpack_exports__);
   props: {
     datarecup: Array,
     title: String
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentForm.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PaymentForm.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_stripe_payment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-stripe-payment */ "./node_modules/vue-stripe-payment/dist/vue-stripe-payment.common.js");
+/* harmony import */ var vue_stripe_payment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_stripe_payment__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+Vue.use(vue_stripe_payment__WEBPACK_IMPORTED_MODULE_0___default.a);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'PaymentForm',
+  data: function data() {
+    return {
+      dateExpire: '',
+      nameDoctor: '',
+      date: '',
+      disableForm: true,
+      success: true
+    };
+  },
+  props: {
+    doctordata: Object,
+    paymentdata: Object
+  },
+  created: function created() {
+    this.GetDate();
+  },
+  methods: {
+    GetDate: function GetDate() {
+      var month = new Date();
+      var year = new Date();
+      this.date = "".concat(month.getMonth(), " / ").concat(year.getFullYear());
+    },
+    checkData: function checkData() {
+      var _this = this;
+
+      var dateInFormat = this.dateExpire.trim();
+      dateInFormat = dateInFormat.replace('0', '');
+      var today = this.date.trim();
+
+      if (today != dateInFormat) {
+        var letters = /^[A-Za-z]+$/;
+
+        if (this.nameDoctor.match(letters)) {
+          this.disableForm = false;
+          setTimeout(function () {
+            _this.success = false;
+            setTimeout(function () {
+              window.location.replace("http://127.0.0.1:8000/admin/confirm/".concat(_this.doctordata.slug, "/").concat(_this.paymentdata.type));
+            }, 3000);
+          }, 5000);
+        }
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentSelection.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PaymentSelection.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'PaymentSelection',
+  props: {
+    allsub: Array,
+    doctor: Object
   }
 });
 
@@ -7528,7 +7786,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".rating-star[data-v-45d49c56] {\n  list-style: none;\n  display: flex;\n}\n.rating-star li[data-v-45d49c56] {\n  color: yellow;\n  margin-right: 5px;\n}\n.my_image[data-v-45d49c56] {\n  max-width: 130px;\n}", ""]);
+exports.push([module.i, ".rating-star[data-v-45d49c56] {\n  list-style: none;\n  display: flex;\n  padding-left: 0px;\n}\n.rating-star li[data-v-45d49c56] {\n  color: #0071c3;\n  margin-right: 5px;\n}\n.media[data-v-45d49c56] {\n  padding: 2rem;\n  border-radius: 2rem;\n  display: flex;\n  align-items: center;\n}\n.media-image[data-v-45d49c56] {\n  width: 100px;\n  margin-right: 2rem;\n}\n.media-image img[data-v-45d49c56] {\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n}\n.color-primary[data-v-45d49c56] {\n  color: #dce4f1;\n}\n.text-color[data-v-45d49c56] {\n  color: #0071c3;\n}\n.blue_bg_title[data-v-45d49c56] {\n  background-color: #0071c3;\n  box-shadow: 0 0 50px #00000080;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  line-height: 3;\n  border-radius: 1rem 1rem 0 0;\n  font-size: 18px;\n  text-align: center;\n}\n.white_bg_content[data-v-45d49c56] {\n  background-color: white;\n  color: #0071c3;\n  box-shadow: 0 0 50px #00000040;\n  border-radius: 0 0 1rem 1rem;\n  padding: 2rem;\n}", ""]);
 
 // exports
 
@@ -7604,7 +7862,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".btn-1[data-v-71ec4b4a] {\n  background-color: #0071c3 !important;\n  border: none !important;\n}\n.btn-1[data-v-71ec4b4a]:hover {\n  background-color: #0072c3de !important;\n}\n.btn-2[data-v-71ec4b4a] {\n  background-color: #b1f3ca !important;\n  border-color: #b1f3ca87 !important;\n}\n.btn-2[data-v-71ec4b4a]:hover {\n  background-color: #b1f3ca87 !important;\n}\n.title[data-v-71ec4b4a] {\n  color: #0071c3;\n}\n.doctor-cards[data-v-71ec4b4a] {\n  position: relative;\n  overflow-x: scroll;\n  height: 300px;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n.doctor-cards[data-v-71ec4b4a]::-webkit-scrollbar {\n  display: none;\n}\n.doctor-cards .doctor-single-card[data-v-71ec4b4a] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  padding: 0 40px;\n}\n.doctor-cards .doctor-single-card > div[data-v-71ec4b4a] {\n  min-width: 200px;\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.container_sponsored[data-v-71ec4b4a] {\n  position: relative;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a],\n.container_sponsored .next_btn[data-v-71ec4b4a] {\n  position: absolute;\n  transform: translateY(230%);\n  top: 50%;\n  padding: 10px 15px;\n  border-radius: 28%;\n  background-color: #2b71bd;\n  color: white;\n  box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a]:hover,\n.container_sponsored .next_btn[data-v-71ec4b4a]:hover {\n  cursor: pointer;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a]:active,\n.container_sponsored .next_btn[data-v-71ec4b4a]:active {\n  box-shadow: none;\n  background-color: #1961af;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a] {\n  left: 7px;\n}\n.container_sponsored .next_btn[data-v-71ec4b4a] {\n  right: 7px;\n}\n.doc-card[data-v-71ec4b4a] {\n  border-radius: 10px;\n  box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;\n}\n.specialist-icon[data-v-71ec4b4a] {\n  width: 150px !important;\n}", ""]);
+exports.push([module.i, ".btn-1[data-v-71ec4b4a] {\n  background-color: #0071c3 !important;\n  border: none !important;\n}\n.btn-1[data-v-71ec4b4a]:hover {\n  background-color: #0072c3de !important;\n}\n.btn-2[data-v-71ec4b4a] {\n  background-color: #b1f3ca !important;\n  border-color: #b1f3ca87 !important;\n}\n.btn-2[data-v-71ec4b4a]:hover {\n  background-color: #b1f3ca87 !important;\n}\n.specialist-icon[data-v-71ec4b4a] {\n  width: 150px;\n}\n.title[data-v-71ec4b4a] {\n  color: #0071c3;\n}\n.doctor-cards[data-v-71ec4b4a] {\n  position: relative;\n  overflow-x: scroll;\n  height: 300px;\n  -ms-overflow-style: none;\n  scrollbar-width: none;\n}\n.doctor-cards[data-v-71ec4b4a]::-webkit-scrollbar {\n  display: none;\n}\n.doctor-cards .doctor-single-card[data-v-71ec4b4a] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  padding: 0 40px;\n}\n.doctor-cards .doctor-single-card > div[data-v-71ec4b4a] {\n  min-width: 200px;\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.doctor-cards .doctor-single-card .fa-user-md[data-v-71ec4b4a] {\n  font-size: 55px;\n}\n.doctor-cards .doctor-single-card .doc-card[data-v-71ec4b4a] {\n  background-color: #dce4f1;\n}\n.blue_bg_doctor[data-v-71ec4b4a] {\n  background-color: #0071c3;\n  width: 100%;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  font-size: 18px;\n  text-align: center;\n  border-radius: 1rem 1rem 0 0;\n  line-height: 3rem;\n}\n.blue_bg_btn[data-v-71ec4b4a] {\n  background-color: #0071c3;\n  width: 100%;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  font-size: 18px;\n  text-align: center;\n  border-radius: 0 0 1rem 1rem;\n}\n.white_bg_doctor[data-v-71ec4b4a] {\n  background-color: white;\n  color: #0071c3;\n  box-shadow: 0 0 50px #00000040;\n  width: 100%;\n  height: 100%;\n  padding: 5px 2px 0px 2px;\n}\n.container_sponsored[data-v-71ec4b4a] {\n  position: relative;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a],\n.container_sponsored .next_btn[data-v-71ec4b4a] {\n  position: absolute;\n  transform: translateY(230%);\n  top: 50%;\n  padding: 10px 15px;\n  border-radius: 28%;\n  background-color: #2b71bd;\n  color: white;\n  box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a]:hover,\n.container_sponsored .next_btn[data-v-71ec4b4a]:hover {\n  cursor: pointer;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a]:active,\n.container_sponsored .next_btn[data-v-71ec4b4a]:active {\n  box-shadow: none;\n  background-color: #1961af;\n}\n.container_sponsored .prev_btn[data-v-71ec4b4a] {\n  left: 7px;\n}\n.container_sponsored .next_btn[data-v-71ec4b4a] {\n  right: 7px;\n}\n.doc-card[data-v-71ec4b4a] {\n  border-radius: 10px;\n  box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;\n}\n.specialist-icon[data-v-71ec4b4a] {\n  width: 150px !important;\n}", ""]);
 
 // exports
 
@@ -7680,7 +7938,26 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".total-like-user-main a[data-v-7755560e] {\n  display: inline-block;\n  margin: 0 -17px 0 0;\n}\n.total-like[data-v-7755560e] {\n  border: 1px solid;\n  border-radius: 50px;\n  display: inline-block;\n  font-weight: 500;\n  height: 34px;\n  line-height: 33px;\n  padding: 0 13px;\n  vertical-align: top;\n}\n.restaurant-detailed-ratings-and-reviews hr[data-v-7755560e] {\n  margin: 0 -24px;\n}\n.graph-star-rating-header .star-rating[data-v-7755560e] {\n  font-size: 17px;\n}\n.progress[data-v-7755560e] {\n  background: #f2f4f8 none repeat scroll 0 0;\n  border-radius: 0;\n  height: 30px;\n}\n.rating-list[data-v-7755560e] {\n  display: inline-flex;\n  margin-bottom: 15px;\n  width: 100%;\n}\n.rating-list-left[data-v-7755560e] {\n  height: 16px;\n  line-height: 29px;\n  width: 10%;\n}\n.rating-list-center[data-v-7755560e] {\n  width: 80%;\n}\n.rating-list-right[data-v-7755560e] {\n  line-height: 29px;\n  text-align: right;\n  width: 10%;\n}\n.restaurant-slider-pics[data-v-7755560e] {\n  bottom: 0;\n  font-size: 12px;\n  left: 0;\n  z-index: 999;\n  padding: 0 10px;\n}\n.restaurant-slider-view-all[data-v-7755560e] {\n  bottom: 15px;\n  right: 15px;\n  z-index: 999;\n}\n.offer-dedicated-nav .nav-link.active[data-v-7755560e],\n.offer-dedicated-nav .nav-link[data-v-7755560e]:hover,\n.offer-dedicated-nav .nav-link[data-v-7755560e]:focus {\n  border-color: #3868fb;\n  color: #3868fb;\n}\n.offer-dedicated-nav .nav-link[data-v-7755560e] {\n  border-bottom: 2px solid #fff;\n  color: #000000;\n  padding: 16px 0;\n  font-weight: 600;\n}\n.offer-dedicated-nav .nav-item[data-v-7755560e] {\n  margin: 0 37px 0 0;\n}\n.restaurant-detailed-action-btn[data-v-7755560e] {\n  margin-top: 12px;\n}\n.restaurant-detailed-header-right .btn-success[data-v-7755560e] {\n  border-radius: 3px;\n  height: 45px;\n  margin: -18px 0 18px;\n  min-width: 130px;\n  padding: 7px;\n}\n.text-black[data-v-7755560e] {\n  color: #000000;\n}\n.icon-overlap[data-v-7755560e] {\n  bottom: -23px;\n  font-size: 74px;\n  opacity: 0.23;\n  position: absolute;\n  right: -32px;\n}\n.menu-list img[data-v-7755560e] {\n  width: 41px;\n  height: 41px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-detailed-header-left img[data-v-7755560e] {\n  width: 88px;\n  height: 88px;\n  border-radius: 3px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;\n}\n.reviews-members .media .mr-3[data-v-7755560e] {\n  width: 56px;\n  height: 56px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.rounded-pill[data-v-7755560e] {\n  border-radius: 50rem !important;\n}\n.total-like-user[data-v-7755560e] {\n  border: 2px solid #fff;\n  height: 34px;\n  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;\n  width: 34px;\n}\n.total-like-user-main a[data-v-7755560e] {\n  display: inline-block;\n  margin: 0 -17px 0 0;\n}\n.total-like[data-v-7755560e] {\n  border: 1px solid;\n  border-radius: 50px;\n  display: inline-block;\n  font-weight: 500;\n  height: 34px;\n  line-height: 33px;\n  padding: 0 13px;\n  vertical-align: top;\n}\n.restaurant-detailed-ratings-and-reviews hr[data-v-7755560e] {\n  margin: 0 -24px;\n}\n.graph-star-rating-header .star-rating[data-v-7755560e] {\n  font-size: 17px;\n}\n.progress[data-v-7755560e] {\n  background: #f2f4f8 none repeat scroll 0 0;\n  border-radius: 0;\n  height: 30px;\n}\n.rating-list[data-v-7755560e] {\n  display: inline-flex;\n  margin-bottom: 15px;\n  width: 100%;\n}\n.rating-list-left[data-v-7755560e] {\n  height: 16px;\n  line-height: 29px;\n  width: 10%;\n}\n.rating-list-center[data-v-7755560e] {\n  width: 80%;\n}\n.rating-list-right[data-v-7755560e] {\n  line-height: 29px;\n  text-align: right;\n  width: 10%;\n}\n.restaurant-slider-pics[data-v-7755560e] {\n  bottom: 0;\n  font-size: 12px;\n  left: 0;\n  z-index: 999;\n  padding: 0 10px;\n}\n.restaurant-slider-view-all[data-v-7755560e] {\n  bottom: 15px;\n  right: 15px;\n  z-index: 999;\n}\n.progress[data-v-7755560e] {\n  background: #f2f4f8 none repeat scroll 0 0;\n  border-radius: 0;\n  height: 30px;\n}", ""]);
+exports.push([module.i, ".color_primary[data-v-7755560e] {\n  color: #0071c3;\n}\n.total-like-user-main a[data-v-7755560e] {\n  display: inline-block;\n  margin: 0 -17px 0 0;\n}\n.total-like[data-v-7755560e] {\n  border: 1px solid;\n  border-radius: 50px;\n  display: inline-block;\n  font-weight: 500;\n  height: 34px;\n  line-height: 33px;\n  padding: 0 13px;\n  vertical-align: top;\n}\n.restaurant-detailed-ratings-and-reviews hr[data-v-7755560e] {\n  margin: 0 -24px;\n}\n.graph-star-rating-header .star-rating[data-v-7755560e] {\n  font-size: 17px;\n}\n.progress[data-v-7755560e] {\n  background: #f2f4f8 none repeat scroll 0 0;\n  border-radius: 0;\n  height: 30px;\n}\n.rating-list[data-v-7755560e] {\n  display: inline-flex;\n  margin-bottom: 15px;\n  width: 100%;\n}\n.rating-list-left[data-v-7755560e] {\n  height: 16px;\n  line-height: 29px;\n  width: 10%;\n}\n.rating-list-center[data-v-7755560e] {\n  width: 80%;\n}\n.rating-list-right[data-v-7755560e] {\n  line-height: 29px;\n  text-align: right;\n  width: 10%;\n}\n.restaurant-slider-pics[data-v-7755560e] {\n  bottom: 0;\n  font-size: 12px;\n  left: 0;\n  z-index: 999;\n  padding: 0 10px;\n}\n.restaurant-slider-view-all[data-v-7755560e] {\n  bottom: 15px;\n  right: 15px;\n  z-index: 999;\n}\n.offer-dedicated-nav .nav-link.active[data-v-7755560e],\n.offer-dedicated-nav .nav-link[data-v-7755560e]:hover,\n.offer-dedicated-nav .nav-link[data-v-7755560e]:focus {\n  border-color: #3868fb;\n  color: #3868fb;\n}\n.offer-dedicated-nav .nav-link[data-v-7755560e] {\n  border-bottom: 2px solid #fff;\n  color: #000000;\n  padding: 16px 0;\n  font-weight: 600;\n}\n.offer-dedicated-nav .nav-item[data-v-7755560e] {\n  margin: 0 37px 0 0;\n}\n.restaurant-detailed-action-btn[data-v-7755560e] {\n  margin-top: 12px;\n}\n.restaurant-detailed-header-right .btn-success[data-v-7755560e] {\n  border-radius: 3px;\n  height: 45px;\n  margin: -18px 0 18px;\n  min-width: 130px;\n  padding: 7px;\n}\n.text-black[data-v-7755560e] {\n  color: #000000;\n}\n.icon-overlap[data-v-7755560e] {\n  bottom: -23px;\n  font-size: 74px;\n  opacity: 0.23;\n  position: absolute;\n  right: -32px;\n}\n.menu-list img[data-v-7755560e] {\n  width: 41px;\n  height: 41px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.restaurant-detailed-header-left img[data-v-7755560e] {\n  width: 88px;\n  height: 88px;\n  border-radius: 3px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;\n}\n.reviews-members .media .mr-3[data-v-7755560e] {\n  width: 56px;\n  height: 56px;\n  -o-object-fit: cover;\n     object-fit: cover;\n}\n.rounded-pill[data-v-7755560e] {\n  border-radius: 50rem !important;\n}\n.total-like-user[data-v-7755560e] {\n  border: 2px solid #fff;\n  height: 34px;\n  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;\n  width: 34px;\n}\n.total-like-user-main a[data-v-7755560e] {\n  display: inline-block;\n  margin: 0 -17px 0 0;\n}\n.total-like[data-v-7755560e] {\n  border: 1px solid;\n  border-radius: 50px;\n  display: inline-block;\n  font-weight: 500;\n  height: 34px;\n  line-height: 33px;\n  padding: 0 13px;\n  vertical-align: top;\n}\n.restaurant-detailed-ratings-and-reviews hr[data-v-7755560e] {\n  margin: 0 -24px;\n}\n.graph-star-rating-header .star-rating[data-v-7755560e] {\n  font-size: 17px;\n}\n.progress[data-v-7755560e] {\n  background: #f2f4f8 none repeat scroll 0 0;\n  border-radius: 0;\n  height: 30px;\n}\n.rating-list[data-v-7755560e] {\n  display: inline-flex;\n  margin-bottom: 15px;\n  width: 100%;\n}\n.rating-list-left[data-v-7755560e] {\n  height: 16px;\n  line-height: 29px;\n  width: 10%;\n}\n.rating-list-center[data-v-7755560e] {\n  width: 80%;\n}\n.rating-list-right[data-v-7755560e] {\n  line-height: 29px;\n  text-align: right;\n  width: 10%;\n}\n.restaurant-slider-pics[data-v-7755560e] {\n  bottom: 0;\n  font-size: 12px;\n  left: 0;\n  z-index: 999;\n  padding: 0 10px;\n}\n.restaurant-slider-view-all[data-v-7755560e] {\n  bottom: 15px;\n  right: 15px;\n  z-index: 999;\n}\n.progress[data-v-7755560e] {\n  background: #f2f4f8 none repeat scroll 0 0;\n  border-radius: 0;\n  height: 30px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentForm.vue?vue&type=style&index=0&id=51d39462&scoped=true&lang=scss&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PaymentForm.vue?vue&type=style&index=0&id=51d39462&scoped=true&lang=scss& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".padding[data-v-51d39462] {\n  padding: 5rem !important;\n}\n.form-control[data-v-51d39462]:focus {\n  box-shadow: 10px 0px 0px 0px #ffffff !important;\n  border-color: #4ca746;\n}\n.loader[data-v-51d39462] {\n  min-height: 30vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.loader17[data-v-51d39462] {\n  position: relative;\n  width: 65px;\n  border: 1px solid transparent;\n  margin: 40px auto;\n}\n.loader17 span[data-v-51d39462] {\n  position: absolute;\n  bottom: 0;\n  display: block;\n  width: 9px;\n  height: 5px;\n  border-radius: 5px;\n  background: rgba(0, 0, 0, 0.1);\n  -webkit-animation: preloader-data-v-51d39462 2s infinite ease-in-out;\n  animation: preloader-data-v-51d39462 2s infinite ease-in-out;\n}\n.loader17 span[data-v-51d39462]:nth-child(2) {\n  left: 11px;\n  -webkit-animation-delay: 0.2s;\n  animation-delay: 0.2s;\n}\n.loader17 span[data-v-51d39462]:nth-child(3) {\n  left: 22px;\n  -webkit-animation-delay: 0.4s;\n  animation-delay: 0.4s;\n}\n.loader17 span[data-v-51d39462]:nth-child(4) {\n  left: 33px;\n  -webkit-animation-delay: 0.6s;\n  animation-delay: 0.6s;\n}\n.loader17 span[data-v-51d39462]:nth-child(5) {\n  left: 44px;\n  -webkit-animation-delay: 0.8s;\n  animation-delay: 0.8s;\n}\n.loader17 span[data-v-51d39462]:nth-child(6) {\n  left: 55px;\n  -webkit-animation-delay: 1s;\n  animation-delay: 1s;\n}\n@-webkit-keyframes preloader-data-v-51d39462 {\n0%, 100%, 50% {\n    height: 5px;\n    transform: translateY(0);\n    background: rgba(0, 0, 0, 0.1);\n}\n25% {\n    height: 30px;\n    transform: translateY(15px);\n    background: #2b71bd;\n}\n}\n@keyframes preloader-data-v-51d39462 {\n0%, 100%, 50% {\n    height: 5px;\n    transform: translateY(0);\n    background: rgba(0, 0, 0, 0.1);\n}\n25% {\n    height: 30px;\n    transform: translateY(15px);\n    background: #2b71bd;\n}\n}", ""]);
 
 // exports
 
@@ -7719,6 +7996,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, ".card_doctor_title[data-v-ed7d15b2] {\n  background-color: #0071c3;\n  box-shadow: 0 0 50px #00000080;\n  color: white;\n  margin-bottom: 0;\n  font-size: 18px;\n  line-height: 3;\n  border-radius: 1rem 1rem 0 0;\n  font-size: 18px;\n  text-align: center;\n  padding: 1rem;\n}\n.white_bg[data-v-ed7d15b2] {\n  background-color: white;\n  color: #0071c3;\n  box-shadow: 0 0 50px #00000040;\n  border-radius: 0 0 1rem 1rem;\n  padding: 1rem;\n}\n.white_bg .text-details[data-v-ed7d15b2] {\n  color: #0071c3;\n}\n.white_bg .btn_details[data-v-ed7d15b2] {\n  background-color: #0071c3;\n  color: white;\n}\n.white_bg .btn_details[data-v-ed7d15b2]:hover {\n  background-color: #0072c3de;\n  color: white;\n}\n.doctor-detail-container[data-v-ed7d15b2] {\n  font-size: 16px;\n  color: #6f6f6f;\n  font-weight: 400;\n  line-height: 28px;\n  letter-spacing: 0.8px;\n  margin-top: 20px;\n  background-color: white;\n  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;\n}\n.doctor_profile[data-v-ed7d15b2] {\n  width: 300px !important;\n  height: 300px !important;\n}\n.font-size38[data-v-ed7d15b2] {\n  font-size: 38px;\n}\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n  font-size: 36px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n  margin-bottom: 20px;\n}\n.team-single-img[data-v-ed7d15b2] {\n  display: flex;\n  justify-content: center;\n}\n@media screen and (max-width: 1199px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 32px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n    margin-bottom: 15px;\n}\n}\n@media screen and (max-width: 991px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 28px;\n}\n.team-single-text .section-heading.half[data-v-ed7d15b2] {\n    margin-bottom: 10px;\n}\n}\n@media screen and (max-width: 767px) {\n.team-single-text .section-heading h4[data-v-ed7d15b2],\n.section-heading h5[data-v-ed7d15b2] {\n    font-size: 24px;\n}\n}\n.team-single-icons ul li[data-v-ed7d15b2] {\n  display: inline-block;\n  border: 1px solid #02c2c7;\n  border-radius: 50%;\n  color: #86bc42;\n  margin-right: 8px;\n  margin-bottom: 5px;\n  transition-duration: 0.3s;\n}\n.team-single-icons ul li a[data-v-ed7d15b2] {\n  color: #02c2c7;\n  display: block;\n  font-size: 14px;\n  height: 25px;\n  line-height: 26px;\n  text-align: center;\n  width: 25px;\n}\n.team-single-icons ul li[data-v-ed7d15b2]:hover {\n  background: #02c2c7;\n  border-color: #02c2c7;\n}\n.team-single-icons ul li:hover a[data-v-ed7d15b2] {\n  color: #fff;\n}\n.team-social-icon li[data-v-ed7d15b2] {\n  display: inline-block;\n  margin-right: 5px;\n}\n.team-social-icon li[data-v-ed7d15b2]:last-child {\n  margin-right: 0;\n}\n.team-social-icon i[data-v-ed7d15b2] {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n  text-align: center;\n  font-size: 15px;\n  border-radius: 50px;\n}\n.padding-30px-all[data-v-ed7d15b2] {\n  padding: 30px;\n}\n.bg-light-gray[data-v-ed7d15b2] {\n  background-color: #f7f7f7;\n}\n.text-center[data-v-ed7d15b2] {\n  text-align: center !important;\n}\nimg[data-v-ed7d15b2] {\n  max-width: 100%;\n  height: auto;\n}\n.list-style9[data-v-ed7d15b2] {\n  list-style: none;\n  padding: 0;\n}\n.list-style9 li[data-v-ed7d15b2] {\n  position: relative;\n  padding: 0 0 15px 0;\n  margin: 0 0 15px 0;\n  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);\n}\n.list-style9 li[data-v-ed7d15b2]:last-child {\n  border-bottom: none;\n  padding-bottom: 0;\n  margin-bottom: 0;\n}\n.custom-progress[data-v-ed7d15b2] {\n  height: 10px;\n  border-radius: 50px;\n  box-shadow: none;\n  margin-bottom: 25px;\n}\n.progress[data-v-ed7d15b2] {\n  display: flex;\n  height: 1rem;\n  overflow: hidden;\n  font-size: 0.75rem;\n  background-color: #e9ecef;\n  border-radius: 0.25rem;\n}\n.bg-sky[data-v-ed7d15b2] {\n  background-color: #02c2c7;\n}\n.bg-orange[data-v-ed7d15b2] {\n  background-color: #e95601;\n}\n.bg-green[data-v-ed7d15b2] {\n  background-color: #5bbd2a;\n}\n.bg-yellow[data-v-ed7d15b2] {\n  background-color: #f0d001;\n}\n.bg-pink[data-v-ed7d15b2] {\n  background-color: #ff48a4;\n}\n.bg-purple[data-v-ed7d15b2] {\n  background-color: #9d60ff;\n}\n.bg-lightred[data-v-ed7d15b2] {\n  background-color: #ff5722;\n}\n.doctor-contact[data-v-ed7d15b2] {\n  background-color: white;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentSelection.vue?vue&type=style&index=0&id=27a05591&scoped=true&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PaymentSelection.vue?vue&type=style&index=0&id=27a05591&scoped=true&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.rounded-lg[data-v-27a05591] {\n    border-radius: 1rem !important\n}\n.text-small[data-v-27a05591] {\n    font-size: 0.9rem !important\n}\n.pricing[data-v-27a05591] {\n    color: #fff\n}\n.custom-separator[data-v-27a05591] {\n    width: 5rem;\n    height: 6px;\n    border-radius: 1rem\n}\n.text-uppercase[data-v-27a05591] {\n    letter-spacing: 0.2em\n}\n.btn-warning[data-v-27a05591] {\n    color: #fff\n}\n.btn-warning[data-v-27a05591]:hover {\n    color: #fff\n}\n.container-payment-card[data-v-27a05591] {\n    background: #f8c246;\n    background: linear-gradient(to right, #f8c246, #f8c246);\n    color: #514B64;\n    min-height: 150vh\n}\n\n", ""]);
 
 // exports
 
@@ -39241,6 +39537,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentForm.vue?vue&type=style&index=0&id=51d39462&scoped=true&lang=scss&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PaymentForm.vue?vue&type=style&index=0&id=51d39462&scoped=true&lang=scss& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./PaymentForm.vue?vue&type=style&index=0&id=51d39462&scoped=true&lang=scss& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentForm.vue?vue&type=style&index=0&id=51d39462&scoped=true&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Reviews.vue?vue&type=style&index=0&id=29979800&scoped=true&lang=scss&":
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Reviews.vue?vue&type=style&index=0&id=29979800&scoped=true&lang=scss& ***!
@@ -39280,6 +39606,36 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./ShowDoctor.vue?vue&type=style&index=0&id=ed7d15b2&scoped=true&lang=scss& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ShowDoctor.vue?vue&type=style&index=0&id=ed7d15b2&scoped=true&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentSelection.vue?vue&type=style&index=0&id=27a05591&scoped=true&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PaymentSelection.vue?vue&type=style&index=0&id=27a05591&scoped=true&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./PaymentSelection.vue?vue&type=style&index=0&id=27a05591&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentSelection.vue?vue&type=style&index=0&id=27a05591&scoped=true&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -39969,59 +40325,56 @@ var render = function () {
         { key: "content-" + i, staticClass: "reviews-members pt-4 pb-4" },
         [
           _c("div", { staticClass: "media" }, [
-            _c("img", {
-              staticClass: "mr-3 rounded-3 my_image",
-              attrs: {
-                alt: "Generic placeholder image",
-                src: "https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg",
-              },
-            }),
-            _vm._v(" "),
             _c("div", { staticClass: "media-body" }, [
               _c("div", { staticClass: "reviews-members-header" }, [
-                _c("h6", { staticClass: "mb-1" }, [
-                  _vm._v(
-                    "Paziente: " +
+                _c("div", { staticClass: "blue_bg_title" }, [
+                  _c("i", { staticClass: "fa-solid fa-user  pr-2" }),
+                  _c("span", {}, [
+                    _vm._v(
                       _vm._s(singleContact.name) +
-                      " " +
-                      _vm._s(singleContact.surname)
-                  ),
+                        " " +
+                        _vm._s(singleContact.surname) +
+                        " "
+                    ),
+                  ]),
                 ]),
                 _vm._v(" "),
-                _c("p", { staticClass: "text-gray" }, [
-                  _vm._v("Data: " + _vm._s(singleContact.date)),
-                ]),
-                _vm._v(" "),
-                singleContact.rating
-                  ? _c(
-                      "ul",
-                      { staticClass: "rating-star" },
-                      [
-                        _vm._v(
-                          "\n                        Voto: \n                        "
-                        ),
+                _c("div", { staticClass: "white_bg_content" }, [
+                  _c("div", { staticClass: "mb-1" }, [
+                    _c("i", { staticClass: "fa-solid fa-calendar-days  pr-2" }),
+                    _c("span", { staticClass: "text-color" }, [
+                      _vm._v(_vm._s(singleContact.date)),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mb-1" }, [
+                    _c("i", {
+                      staticClass: "fa-solid fa-envelope-open-text  pr-2",
+                    }),
+                    _c("span", { staticClass: "text-color" }, [
+                      _vm._v(_vm._s(singleContact.object)),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mb-1" }, [
+                    _c("i", { staticClass: "fa-solid fa-comment  pr-2" }),
+                    _c("span", { staticClass: "text-color" }, [
+                      _vm._v(_vm._s(singleContact.content)),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  singleContact.rating
+                    ? _c(
+                        "ul",
+                        { staticClass: "rating-star mb-1" },
                         _vm._l(singleContact.rating, function (i) {
                           return _c("li", { key: "star-" + i }, [
                             _c("i", { staticClass: "fas fa-star" }),
                           ])
                         }),
-                      ],
-                      2
-                    )
-                  : _vm._e(),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "reviews-members-body" }, [
-                singleContact.object
-                  ? _c("span", [
-                      _vm._v(
-                        "Oggetto messaggio: " + _vm._s(singleContact.object)
-                      ),
-                    ])
-                  : _vm._e(),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v("Contenuto: " + _vm._s(singleContact.content)),
+                        0
+                      )
+                    : _vm._e(),
                 ]),
               ]),
             ]),
@@ -40538,30 +40891,54 @@ var render = function () {
         _vm._l(_vm.doctors, function (doctor, i) {
           return _c(
             "div",
-            { key: "doctor-" + i, staticClass: "doc-card p-4 card me-4" },
+            {
+              key: "doctor-" + i,
+              staticClass:
+                "doc-card p-4 card me-4 d-flex flex-column align-items-center justify-content-between",
+            },
             [
-              _c("img", {
-                staticClass: "img-fluid mb-2",
-                attrs: {
-                  src: "https://t4.ftcdn.net/jpg/02/60/04/09/360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg",
-                  alt: "",
-                },
-              }),
-              _vm._v(" "),
-              _c("span", { staticClass: "d-block text-center mb-2" }, [
-                _vm._v(_vm._s(doctor.name) + " " + _vm._s(doctor.surname)),
+              _c("div", { staticClass: "blue_bg_doctor" }, [
+                _c("span", { staticClass: "d-block text-center" }, [
+                  _vm._v(_vm._s(doctor.name) + " " + _vm._s(doctor.surname)),
+                ]),
               ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "white_bg_doctor" },
+                _vm._l(doctor.categories, function (category, i) {
+                  return _c(
+                    "span",
+                    {
+                      key: "category-" + i,
+                      staticClass: "d-block text-center mb-1",
+                    },
+                    [
+                      _vm._v(
+                        "\n                        " +
+                          _vm._s(category.name) +
+                          "\n                    "
+                      ),
+                    ]
+                  )
+                }),
+                0
+              ),
               _vm._v(" "),
               _c(
                 "a",
                 {
                   staticClass:
-                    "btn-1 text-white p-2 text-decoration-none rounded-2 mb-2 text-center",
+                    "btn-1 text-white p-2 text-decoration-none mb-2 text-center blue_bg_btn",
                   attrs: {
                     href: "http://127.0.0.1:8000/showdoctor/" + doctor.slug,
                   },
                 },
-                [_vm._v("Scopri di più")]
+                [
+                  _vm._v(
+                    "\n                    Scopri di più\n                "
+                  ),
+                ]
               ),
             ]
           )
@@ -41158,12 +41535,14 @@ var render = function () {
                     "div",
                     {
                       staticClass:
-                        "bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews",
+                        "bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews rounded-3",
                     },
                     [
-                      _c("h5", { staticClass: "mb-1" }, [
-                        _vm._v(_vm._s(_vm.title)),
-                      ]),
+                      _c(
+                        "h3",
+                        { staticClass: "mb-1 text-center color_primary" },
+                        [_vm._v(_vm._s(_vm.title))]
+                      ),
                       _vm._v(" "),
                       _c("CardContact", { attrs: { myloop: _vm.datarecup } }),
                     ],
@@ -41179,6 +41558,413 @@ var render = function () {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentForm.vue?vue&type=template&id=51d39462&scoped=true&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PaymentForm.vue?vue&type=template&id=51d39462&scoped=true& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("section", [
+    _vm.disableForm
+      ? _c("div", { staticClass: "padding" }, [
+          _c("div", { staticClass: "row" }, [
+            _c(
+              "div",
+              { staticClass: "container-fluid d-flex justify-content-center" },
+              [
+                _c("div", { staticClass: "col-sm-8 col-md-6" }, [
+                  _c("div", { staticClass: "card" }, [
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card-body" }, [
+                      _c("div", { staticClass: "form-group" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "control-label",
+                            attrs: { for: "cc-number" },
+                          },
+                          [_vm._v("CARD NUMBER")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "payment",
+                              rawName: "v-payment:formatCardNumber",
+                              arg: "formatCardNumber",
+                            },
+                          ],
+                          staticClass: "input-lg form-control cc-number",
+                          attrs: {
+                            id: "cc-number",
+                            type: "tel",
+                            autocomplete: "cc-number",
+                            placeholder: "•••• •••• •••• ••••",
+                            required: "",
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c("div", { staticClass: "col-md-6" }, [
+                          _c("div", { staticClass: "form-group" }, [
+                            _c(
+                              "label",
+                              {
+                                staticClass: "control-label",
+                                attrs: { for: "cc-exp" },
+                              },
+                              [_vm._v("CARD EXPIRY")]
+                            ),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "payment",
+                                  rawName: "v-payment:formatCardExpiry",
+                                  arg: "formatCardExpiry",
+                                },
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.dateExpire,
+                                  expression: "dateExpire",
+                                },
+                              ],
+                              staticClass: "input-lg form-control cc-exp",
+                              attrs: {
+                                id: "cc-exp",
+                                type: "tel",
+                                autocomplete: "cc-exp",
+                                placeholder: "•• / ••",
+                                required: "",
+                              },
+                              domProps: { value: _vm.dateExpire },
+                              on: {
+                                input: function ($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.dateExpire = $event.target.value
+                                },
+                              },
+                            }),
+                          ]),
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-md-6" }, [
+                          _c("div", { staticClass: "form-group" }, [
+                            _c(
+                              "label",
+                              {
+                                staticClass: "control-label",
+                                attrs: { for: "cc-cvc" },
+                              },
+                              [_vm._v("CARD CVC")]
+                            ),
+                            _vm._v(" "),
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "payment",
+                                  rawName: "v-payment:formatCardCVC",
+                                  arg: "formatCardCVC",
+                                },
+                              ],
+                              staticClass: "input-lg form-control cc-cvc",
+                              attrs: {
+                                id: "cc-cvc",
+                                type: "tel",
+                                autocomplete: "off",
+                                placeholder: "••••",
+                                required: "",
+                              },
+                            }),
+                          ]),
+                        ]),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group mb-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "control-label",
+                            attrs: { for: "numeric" },
+                          },
+                          [_vm._v("CARD HOLDER NAME")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.nameDoctor,
+                              expression: "nameDoctor",
+                            },
+                          ],
+                          staticClass: "input-lg form-control",
+                          attrs: { type: "text", pattern: "[A-Za-z]" },
+                          domProps: { value: _vm.nameDoctor },
+                          on: {
+                            input: function ($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.nameDoctor = $event.target.value
+                            },
+                          },
+                        }),
+                      ]),
+                      _vm._v(" "),
+                      _c("hr"),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "recup my-2 mb-3" }, [
+                        _c(
+                          "div",
+                          { staticClass: "d-flex justify-content-between" },
+                          [
+                            _c("span", { staticClass: "recup-sub" }, [
+                              _vm._v(
+                                "Abbonamento " +
+                                  _vm._s(_vm.paymentdata.type) +
+                                  " dalla durata di " +
+                                  _vm._s(_vm.paymentdata.duration) +
+                                  " ore"
+                              ),
+                            ]),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "price-sub" }, [
+                              _vm._v(
+                                "Prezzo: " + _vm._s(_vm.paymentdata.price) + "€"
+                              ),
+                            ]),
+                          ]
+                        ),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "form-group" }, [
+                        _c("input", {
+                          staticClass: "btn btn-success btn-lg form-control",
+                          staticStyle: { "font-size": ".8rem" },
+                          attrs: { value: "MAKE PAYMENT", type: "button" },
+                          on: { click: _vm.checkData },
+                        }),
+                      ]),
+                    ]),
+                  ]),
+                ]),
+              ]
+            ),
+          ]),
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.disableForm
+      ? _c("div", { staticClass: "loader" }, [
+          _vm.success
+            ? _c("div", { staticClass: "container" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("br"),
+                _c("br"),
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          !_vm.success
+            ? _c("div", { staticClass: "alert alert-success" }, [
+                _vm._v(
+                  "\n            Pagamento effettuato correttamente\n        "
+                ),
+              ])
+            : _vm._e(),
+        ])
+      : _vm._e(),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("span", [_vm._v("CREDIT/DEBIT CARD PAYMENT")]),
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "col-md-6 text-right",
+            staticStyle: { "margin-top": "-5px" },
+          },
+          [
+            _c("img", {
+              attrs: { src: "https://img.icons8.com/color/36/000000/visa.png" },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              attrs: {
+                src: "https://img.icons8.com/color/36/000000/mastercard.png",
+              },
+            }),
+            _vm._v(" "),
+            _c("img", {
+              attrs: { src: "https://img.icons8.com/color/36/000000/amex.png" },
+            }),
+          ]
+        ),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "loader17" }, [
+          _c("span"),
+          _vm._v(" "),
+          _c("span"),
+          _vm._v(" "),
+          _c("span"),
+          _vm._v(" "),
+          _c("span"),
+          _vm._v(" "),
+          _c("span"),
+          _vm._v(" "),
+          _c("span"),
+        ]),
+      ]),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentSelection.vue?vue&type=template&id=27a05591&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/PaymentSelection.vue?vue&type=template&id=27a05591&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container py-5" }, [
+    _c("h1", { staticClass: "text-center pricing" }, [
+      _vm._v("I nostri piani di sponsorizzazione"),
+    ]),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "row text-center align-items-end" },
+      _vm._l(_vm.allsub, function (sub) {
+        return _c(
+          "div",
+          { key: "sub-" + sub.id, staticClass: "col-lg-4 mb-5 mb-lg-0" },
+          [
+            _c("div", { staticClass: "bg-white p-5 rounded-lg shadow" }, [
+              _c(
+                "h1",
+                { staticClass: "h6 text-uppercase font-weight-bold mb-4" },
+                [_vm._v(_vm._s(sub.type))]
+              ),
+              _vm._v(" "),
+              _c("h2", { staticClass: "h1 font-weight-bold" }, [
+                _vm._v(_vm._s(sub.price) + " €"),
+                _c(
+                  "span",
+                  { staticClass: "text-small font-weight-normal ml-2" },
+                  [_vm._v("/ " + _vm._s(sub.duration) + " hours")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", {
+                staticClass: "custom-separator my-4 mx-auto bg-warning",
+              }),
+              _vm._v(" "),
+              _vm._m(0, true),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "btn btn-warning btn-block p-2 shadow rounded-pill",
+                  attrs: {
+                    href:
+                      "http://127.0.0.1:8000/admin/subscription/" +
+                      _vm.doctor.slug +
+                      "/" +
+                      sub.type,
+                  },
+                },
+                [_vm._v("Subscribe")]
+              ),
+            ]),
+          ]
+        )
+      }),
+      0
+    ),
+  ])
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "ul",
+      { staticClass: "list-unstyled my-5 text-small text-left" },
+      [
+        _c("li", { staticClass: "mb-3" }, [
+          _c("i", { staticClass: "fa fa-check mr-2 text-primary" }),
+          _vm._v(" VANTAGGIO"),
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mb-3" }, [
+          _c("i", { staticClass: "fa fa-check mr-2 text-primary" }),
+          _vm._v(" VANTAGGIO"),
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mb-3" }, [
+          _c("i", { staticClass: "fa fa-check mr-2 text-primary" }),
+          _vm._v(" VANTAGGIO"),
+        ]),
+      ]
+    )
+  },
+]
 render._withStripped = true
 
 
@@ -41829,6 +42615,713 @@ function normalizeComponent (
   }
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/vue-stripe-payment/dist/vue-stripe-payment.common.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/vue-stripe-payment/dist/vue-stripe-payment.common.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/*!
+ * vue-stripe-payment v0.1.0 
+ * (c) 2017 Sam Turrell
+ * Released under the MIT License.
+ */
+
+
+var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+// Generated by CoffeeScript 1.7.1
+(function() {
+  var $, cardFromNumber, cardFromType, cards, defaultFormat, formatBackCardNumber, formatBackExpiry, formatCardNumber, formatExpiry, formatForwardExpiry, formatForwardSlashAndSpace, hasTextSelected, luhnCheck, reFormatCVC, reFormatCardNumber, reFormatExpiry, reFormatNumeric, replaceFullWidthChars, restrictCVC, restrictCardNumber, restrictExpiry, restrictNumeric, safeVal, setCardType,
+    __slice = [].slice,
+    __indexOf = [].indexOf || function(item) {
+    var this$1 = this;
+ for (var i = 0, l = this.length; i < l; i++) { if (i in this$1 && this$1[i] === item) { return i; } } return -1; };
+
+  $ = window.jQuery || window.Zepto || window.$;
+
+  $.payment = {};
+
+  $.payment.fn = {};
+
+  $.fn.payment = function() {
+    var args, method;
+    method = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+    return $.payment.fn[method].apply(this, args);
+  };
+
+  defaultFormat = /(\d{1,4})/g;
+
+  $.payment.cards = cards = [
+    {
+      type: 'maestro',
+      patterns: [5018, 502, 503, 506, 56, 58, 639, 6220, 67],
+      format: defaultFormat,
+      length: [12, 13, 14, 15, 16, 17, 18, 19],
+      cvcLength: [3],
+      luhn: true
+    }, {
+      type: 'forbrugsforeningen',
+      patterns: [600],
+      format: defaultFormat,
+      length: [16],
+      cvcLength: [3],
+      luhn: true
+    }, {
+      type: 'dankort',
+      patterns: [5019],
+      format: defaultFormat,
+      length: [16],
+      cvcLength: [3],
+      luhn: true
+    }, {
+      type: 'visa',
+      patterns: [4],
+      format: defaultFormat,
+      length: [13, 16],
+      cvcLength: [3],
+      luhn: true
+    }, {
+      type: 'mastercard',
+      patterns: [51, 52, 53, 54, 55, 22, 23, 24, 25, 26, 27],
+      format: defaultFormat,
+      length: [16],
+      cvcLength: [3],
+      luhn: true
+    }, {
+      type: 'amex',
+      patterns: [34, 37],
+      format: /(\d{1,4})(\d{1,6})?(\d{1,5})?/,
+      length: [15],
+      cvcLength: [3, 4],
+      luhn: true
+    }, {
+      type: 'dinersclub',
+      patterns: [30, 36, 38, 39],
+      format: /(\d{1,4})(\d{1,6})?(\d{1,4})?/,
+      length: [14],
+      cvcLength: [3],
+      luhn: true
+    }, {
+      type: 'discover',
+      patterns: [60, 64, 65, 622],
+      format: defaultFormat,
+      length: [16],
+      cvcLength: [3],
+      luhn: true
+    }, {
+      type: 'unionpay',
+      patterns: [62, 88],
+      format: defaultFormat,
+      length: [16, 17, 18, 19],
+      cvcLength: [3],
+      luhn: false
+    }, {
+      type: 'jcb',
+      patterns: [35],
+      format: defaultFormat,
+      length: [16],
+      cvcLength: [3],
+      luhn: true
+    }
+  ];
+
+  cardFromNumber = function(num) {
+    var card, p, pattern, _i, _j, _len, _len1, _ref;
+    num = (num + '').replace(/\D/g, '');
+    for (_i = 0, _len = cards.length; _i < _len; _i++) {
+      card = cards[_i];
+      _ref = card.patterns;
+      for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
+        pattern = _ref[_j];
+        p = pattern + '';
+        if (num.substr(0, p.length) === p) {
+          return card;
+        }
+      }
+    }
+  };
+
+  cardFromType = function(type) {
+    var card, _i, _len;
+    for (_i = 0, _len = cards.length; _i < _len; _i++) {
+      card = cards[_i];
+      if (card.type === type) {
+        return card;
+      }
+    }
+  };
+
+  luhnCheck = function(num) {
+    var digit, digits, odd, sum, _i, _len;
+    odd = true;
+    sum = 0;
+    digits = (num + '').split('').reverse();
+    for (_i = 0, _len = digits.length; _i < _len; _i++) {
+      digit = digits[_i];
+      digit = parseInt(digit, 10);
+      if ((odd = !odd)) {
+        digit *= 2;
+      }
+      if (digit > 9) {
+        digit -= 9;
+      }
+      sum += digit;
+    }
+    return sum % 10 === 0;
+  };
+
+  hasTextSelected = function($target) {
+    var _ref;
+    if (($target.prop('selectionStart') != null) && $target.prop('selectionStart') !== $target.prop('selectionEnd')) {
+      return true;
+    }
+    if ((typeof document !== "undefined" && document !== null ? (_ref = document.selection) != null ? _ref.createRange : void 0 : void 0) != null) {
+      if (document.selection.createRange().text) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  safeVal = function(value, $target) {
+    var currPair, cursor, digit, error, last, prevPair;
+    try {
+      cursor = $target.prop('selectionStart');
+    } catch (_error) {
+      error = _error;
+      cursor = null;
+    }
+    last = $target.val();
+    $target.val(value);
+    if (cursor !== null && $target.is(":focus")) {
+      if (cursor === last.length) {
+        cursor = value.length;
+      }
+      if (last !== value) {
+        prevPair = last.slice(cursor - 1, +cursor + 1 || 9e9);
+        currPair = value.slice(cursor - 1, +cursor + 1 || 9e9);
+        digit = value[cursor];
+        if (/\d/.test(digit) && prevPair === ("" + digit + " ") && currPair === (" " + digit)) {
+          cursor = cursor + 1;
+        }
+      }
+      $target.prop('selectionStart', cursor);
+      return $target.prop('selectionEnd', cursor);
+    }
+  };
+
+  replaceFullWidthChars = function(str) {
+    var chars, chr, fullWidth, halfWidth, idx, value, _i, _len;
+    if (str == null) {
+      str = '';
+    }
+    fullWidth = '\uff10\uff11\uff12\uff13\uff14\uff15\uff16\uff17\uff18\uff19';
+    halfWidth = '0123456789';
+    value = '';
+    chars = str.split('');
+    for (_i = 0, _len = chars.length; _i < _len; _i++) {
+      chr = chars[_i];
+      idx = fullWidth.indexOf(chr);
+      if (idx > -1) {
+        chr = halfWidth[idx];
+      }
+      value += chr;
+    }
+    return value;
+  };
+
+  reFormatNumeric = function(e) {
+    var $target;
+    $target = $(e.currentTarget);
+    return setTimeout(function() {
+      var value;
+      value = $target.val();
+      value = replaceFullWidthChars(value);
+      value = value.replace(/\D/g, '');
+      return safeVal(value, $target);
+    });
+  };
+
+  reFormatCardNumber = function(e) {
+    var $target;
+    $target = $(e.currentTarget);
+    return setTimeout(function() {
+      var value;
+      value = $target.val();
+      value = replaceFullWidthChars(value);
+      value = $.payment.formatCardNumber(value);
+      return safeVal(value, $target);
+    });
+  };
+
+  formatCardNumber = function(e) {
+    var $target, card, digit, length, re, upperLength, value;
+    digit = String.fromCharCode(e.which);
+    if (!/^\d+$/.test(digit)) {
+      return;
+    }
+    $target = $(e.currentTarget);
+    value = $target.val();
+    card = cardFromNumber(value + digit);
+    length = (value.replace(/\D/g, '') + digit).length;
+    upperLength = 16;
+    if (card) {
+      upperLength = card.length[card.length.length - 1];
+    }
+    if (length >= upperLength) {
+      return;
+    }
+    if (($target.prop('selectionStart') != null) && $target.prop('selectionStart') !== value.length) {
+      return;
+    }
+    if (card && card.type === 'amex') {
+      re = /^(\d{4}|\d{4}\s\d{6})$/;
+    } else {
+      re = /(?:^|\s)(\d{4})$/;
+    }
+    if (re.test(value)) {
+      e.preventDefault();
+      return setTimeout(function() {
+        return $target.val(value + ' ' + digit);
+      });
+    } else if (re.test(value + digit)) {
+      e.preventDefault();
+      return setTimeout(function() {
+        return $target.val(value + digit + ' ');
+      });
+    }
+  };
+
+  formatBackCardNumber = function(e) {
+    var $target, value;
+    $target = $(e.currentTarget);
+    value = $target.val();
+    if (e.which !== 8) {
+      return;
+    }
+    if (($target.prop('selectionStart') != null) && $target.prop('selectionStart') !== value.length) {
+      return;
+    }
+    if (/\d\s$/.test(value)) {
+      e.preventDefault();
+      return setTimeout(function() {
+        return $target.val(value.replace(/\d\s$/, ''));
+      });
+    } else if (/\s\d?$/.test(value)) {
+      e.preventDefault();
+      return setTimeout(function() {
+        return $target.val(value.replace(/\d$/, ''));
+      });
+    }
+  };
+
+  reFormatExpiry = function(e) {
+    var $target;
+    $target = $(e.currentTarget);
+    return setTimeout(function() {
+      var value;
+      value = $target.val();
+      value = replaceFullWidthChars(value);
+      value = $.payment.formatExpiry(value);
+      return safeVal(value, $target);
+    });
+  };
+
+  formatExpiry = function(e) {
+    var $target, digit, val;
+    digit = String.fromCharCode(e.which);
+    if (!/^\d+$/.test(digit)) {
+      return;
+    }
+    $target = $(e.currentTarget);
+    val = $target.val() + digit;
+    if (/^\d$/.test(val) && (val !== '0' && val !== '1')) {
+      e.preventDefault();
+      return setTimeout(function() {
+        return $target.val("0" + val + " / ");
+      });
+    } else if (/^\d\d$/.test(val)) {
+      e.preventDefault();
+      return setTimeout(function() {
+        var m1, m2;
+        m1 = parseInt(val[0], 10);
+        m2 = parseInt(val[1], 10);
+        if (m2 > 2 && m1 !== 0) {
+          return $target.val("0" + m1 + " / " + m2);
+        } else {
+          return $target.val("" + val + " / ");
+        }
+      });
+    }
+  };
+
+  formatForwardExpiry = function(e) {
+    var $target, digit, val;
+    digit = String.fromCharCode(e.which);
+    if (!/^\d+$/.test(digit)) {
+      return;
+    }
+    $target = $(e.currentTarget);
+    val = $target.val();
+    if (/^\d\d$/.test(val)) {
+      return $target.val("" + val + " / ");
+    }
+  };
+
+  formatForwardSlashAndSpace = function(e) {
+    var $target, val, which;
+    which = String.fromCharCode(e.which);
+    if (!(which === '/' || which === ' ')) {
+      return;
+    }
+    $target = $(e.currentTarget);
+    val = $target.val();
+    if (/^\d$/.test(val) && val !== '0') {
+      return $target.val("0" + val + " / ");
+    }
+  };
+
+  formatBackExpiry = function(e) {
+    var $target, value;
+    $target = $(e.currentTarget);
+    value = $target.val();
+    if (e.which !== 8) {
+      return;
+    }
+    if (($target.prop('selectionStart') != null) && $target.prop('selectionStart') !== value.length) {
+      return;
+    }
+    if (/\d\s\/\s$/.test(value)) {
+      e.preventDefault();
+      return setTimeout(function() {
+        return $target.val(value.replace(/\d\s\/\s$/, ''));
+      });
+    }
+  };
+
+  reFormatCVC = function(e) {
+    var $target;
+    $target = $(e.currentTarget);
+    return setTimeout(function() {
+      var value;
+      value = $target.val();
+      value = replaceFullWidthChars(value);
+      value = value.replace(/\D/g, '').slice(0, 4);
+      return safeVal(value, $target);
+    });
+  };
+
+  restrictNumeric = function(e) {
+    var input;
+    if (e.metaKey || e.ctrlKey) {
+      return true;
+    }
+    if (e.which === 32) {
+      return false;
+    }
+    if (e.which === 0) {
+      return true;
+    }
+    if (e.which < 33) {
+      return true;
+    }
+    input = String.fromCharCode(e.which);
+    return !!/[\d\s]/.test(input);
+  };
+
+  restrictCardNumber = function(e) {
+    var $target, card, digit, value;
+    $target = $(e.currentTarget);
+    digit = String.fromCharCode(e.which);
+    if (!/^\d+$/.test(digit)) {
+      return;
+    }
+    if (hasTextSelected($target)) {
+      return;
+    }
+    value = ($target.val() + digit).replace(/\D/g, '');
+    card = cardFromNumber(value);
+    if (card) {
+      return value.length <= card.length[card.length.length - 1];
+    } else {
+      return value.length <= 16;
+    }
+  };
+
+  restrictExpiry = function(e) {
+    var $target, digit, value;
+    $target = $(e.currentTarget);
+    digit = String.fromCharCode(e.which);
+    if (!/^\d+$/.test(digit)) {
+      return;
+    }
+    if (hasTextSelected($target)) {
+      return;
+    }
+    value = $target.val() + digit;
+    value = value.replace(/\D/g, '');
+    if (value.length > 6) {
+      return false;
+    }
+  };
+
+  restrictCVC = function(e) {
+    var $target, digit, val;
+    $target = $(e.currentTarget);
+    digit = String.fromCharCode(e.which);
+    if (!/^\d+$/.test(digit)) {
+      return;
+    }
+    if (hasTextSelected($target)) {
+      return;
+    }
+    val = $target.val() + digit;
+    return val.length <= 4;
+  };
+
+  setCardType = function(e) {
+    var $target, allTypes, card, cardType, val;
+    $target = $(e.currentTarget);
+    val = $target.val();
+    cardType = $.payment.cardType(val) || 'unknown';
+    if (!$target.hasClass(cardType)) {
+      allTypes = (function() {
+        var _i, _len, _results;
+        _results = [];
+        for (_i = 0, _len = cards.length; _i < _len; _i++) {
+          card = cards[_i];
+          _results.push(card.type);
+        }
+        return _results;
+      })();
+      $target.removeClass('unknown');
+      $target.removeClass(allTypes.join(' '));
+      $target.addClass(cardType);
+      $target.toggleClass('identified', cardType !== 'unknown');
+      return $target.trigger('payment.cardType', cardType);
+    }
+  };
+
+  $.payment.fn.formatCardCVC = function() {
+    this.on('keypress', restrictNumeric);
+    this.on('keypress', restrictCVC);
+    this.on('paste', reFormatCVC);
+    this.on('change', reFormatCVC);
+    this.on('input', reFormatCVC);
+    return this;
+  };
+
+  $.payment.fn.formatCardExpiry = function() {
+    this.on('keypress', restrictNumeric);
+    this.on('keypress', restrictExpiry);
+    this.on('keypress', formatExpiry);
+    this.on('keypress', formatForwardSlashAndSpace);
+    this.on('keypress', formatForwardExpiry);
+    this.on('keydown', formatBackExpiry);
+    this.on('change', reFormatExpiry);
+    this.on('input', reFormatExpiry);
+    return this;
+  };
+
+  $.payment.fn.formatCardNumber = function() {
+    this.on('keypress', restrictNumeric);
+    this.on('keypress', restrictCardNumber);
+    this.on('keypress', formatCardNumber);
+    this.on('keydown', formatBackCardNumber);
+    this.on('keyup', setCardType);
+    this.on('paste', reFormatCardNumber);
+    this.on('change', reFormatCardNumber);
+    this.on('input', reFormatCardNumber);
+    this.on('input', setCardType);
+    return this;
+  };
+
+  $.payment.fn.restrictNumeric = function() {
+    this.on('keypress', restrictNumeric);
+    this.on('paste', reFormatNumeric);
+    this.on('change', reFormatNumeric);
+    this.on('input', reFormatNumeric);
+    return this;
+  };
+
+  $.payment.fn.cardExpiryVal = function() {
+    return $.payment.cardExpiryVal($(this).val());
+  };
+
+  $.payment.cardExpiryVal = function(value) {
+    var month, prefix, year, _ref;
+    _ref = value.split(/[\s\/]+/, 2), month = _ref[0], year = _ref[1];
+    if ((year != null ? year.length : void 0) === 2 && /^\d+$/.test(year)) {
+      prefix = (new Date).getFullYear();
+      prefix = prefix.toString().slice(0, 2);
+      year = prefix + year;
+    }
+    month = parseInt(month, 10);
+    year = parseInt(year, 10);
+    return {
+      month: month,
+      year: year
+    };
+  };
+
+  $.payment.validateCardNumber = function(num) {
+    var card, _ref;
+    num = (num + '').replace(/\s+|-/g, '');
+    if (!/^\d+$/.test(num)) {
+      return false;
+    }
+    card = cardFromNumber(num);
+    if (!card) {
+      return false;
+    }
+    return (_ref = num.length, __indexOf.call(card.length, _ref) >= 0) && (card.luhn === false || luhnCheck(num));
+  };
+
+  $.payment.validateCardExpiry = function(month, year) {
+    var currentTime, expiry, _ref;
+    if (typeof month === 'object' && 'month' in month) {
+      _ref = month, month = _ref.month, year = _ref.year;
+    }
+    if (!(month && year)) {
+      return false;
+    }
+    month = $.trim(month);
+    year = $.trim(year);
+    if (!/^\d+$/.test(month)) {
+      return false;
+    }
+    if (!/^\d+$/.test(year)) {
+      return false;
+    }
+    if (!((1 <= month && month <= 12))) {
+      return false;
+    }
+    if (year.length === 2) {
+      if (year < 70) {
+        year = "20" + year;
+      } else {
+        year = "19" + year;
+      }
+    }
+    if (year.length !== 4) {
+      return false;
+    }
+    expiry = new Date(year, month);
+    currentTime = new Date;
+    expiry.setMonth(expiry.getMonth() - 1);
+    expiry.setMonth(expiry.getMonth() + 1, 1);
+    return expiry > currentTime;
+  };
+
+  $.payment.validateCardCVC = function(cvc, type) {
+    var card, _ref;
+    cvc = $.trim(cvc);
+    if (!/^\d+$/.test(cvc)) {
+      return false;
+    }
+    card = cardFromType(type);
+    if (card != null) {
+      return _ref = cvc.length, __indexOf.call(card.cvcLength, _ref) >= 0;
+    } else {
+      return cvc.length >= 3 && cvc.length <= 4;
+    }
+  };
+
+  $.payment.cardType = function(num) {
+    var _ref;
+    if (!num) {
+      return null;
+    }
+    return ((_ref = cardFromNumber(num)) != null ? _ref.type : void 0) || null;
+  };
+
+  $.payment.formatCardNumber = function(num) {
+    var card, groups, upperLength, _ref;
+    num = num.replace(/\D/g, '');
+    card = cardFromNumber(num);
+    if (!card) {
+      return num;
+    }
+    upperLength = card.length[card.length.length - 1];
+    num = num.slice(0, upperLength);
+    if (card.format.global) {
+      return (_ref = num.match(card.format)) != null ? _ref.join(' ') : void 0;
+    } else {
+      groups = card.format.exec(num);
+      if (groups == null) {
+        return;
+      }
+      groups.shift();
+      groups = $.grep(groups, function(n) {
+        return n;
+      });
+      return groups.join(' ');
+    }
+  };
+
+  $.payment.formatExpiry = function(expiry) {
+    var mon, parts, sep, year;
+    parts = expiry.match(/^\D*(\d{1,2})(\D+)?(\d{1,4})?/);
+    if (!parts) {
+      return '';
+    }
+    mon = parts[1] || '';
+    sep = parts[2] || '';
+    year = parts[3] || '';
+    if (year.length > 0) {
+      sep = ' / ';
+    } else if (sep === ' /') {
+      mon = mon.substring(0, 1);
+      sep = '';
+    } else if (mon.length === 2 || sep.length > 0) {
+      sep = ' / ';
+    } else if (mon.length === 1 && (mon !== '0' && mon !== '1')) {
+      mon = "0" + mon;
+      sep = ' / ';
+    }
+    return mon + sep + year;
+  };
+
+}).call(commonjsGlobal);
+
+function plugin (Vue, options) {
+  if ( options === void 0 ) options = {};
+
+  // Provide the whole library to vue
+  Vue.prototype.$payment = $.payment;
+  // Provide a directive for formatting fields
+  Vue.directive('payment', {
+    bind: function bind(el, binding) {
+      // If used on a component, find the input node
+      if (el.tagName.toLowerCase() !== 'input') {
+        el = $(el).find('input')[0];
+      }
+      // An element is required
+      if (!el) { return; }
+      // Arg is required
+      if (!binding.arg) { return; }
+      // DOM is case-insensitive, so values passed through will be lowercase, let\s find the correct equivalent
+      var method = Object.keys($.payment.fn).find(function (key) { return key.toLowerCase() === binding.arg.toLowerCase(); });
+      $(el).payment(method);
+    }
+  });
+}
+
+plugin.version = '0.1.0';
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(plugin);
+}
+
+module.exports = plugin;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -53967,10 +55460,6 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
  */
 
 
-/* import DoctorCarousel from './components/DoctorCarousel';
-
-Vue.component('DoctorCarousel', DoctorCarousel); */
-
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('doctorcarousel', __webpack_require__(/*! ./components/DoctorCarousel */ "./resources/js/components/DoctorCarousel.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('categoriescarousel', __webpack_require__(/*! ./components/CategoriesCarousel */ "./resources/js/components/CategoriesCarousel.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('app', __webpack_require__(/*! ./components/App */ "./resources/js/components/App.vue")["default"]);
@@ -53979,6 +55468,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('contactdoctor', __webpack_
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('showdoctor', __webpack_require__(/*! ./components/ShowDoctor */ "./resources/js/components/ShowDoctor.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('formreview', __webpack_require__(/*! ./components/FormReview */ "./resources/js/components/FormReview.vue")["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('mycontact', __webpack_require__(/*! ./components/MyContact */ "./resources/js/components/MyContact.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('paymentselection', __webpack_require__(/*! ./components/PaymentSelection */ "./resources/js/components/PaymentSelection.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('paymentform', __webpack_require__(/*! ./components/PaymentForm */ "./resources/js/components/PaymentForm.vue")["default"]);
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app'
 });
@@ -54895,6 +56386,180 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MyContact_vue_vue_type_template_id_7755560e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MyContact_vue_vue_type_template_id_7755560e_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/PaymentForm.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/PaymentForm.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PaymentForm_vue_vue_type_template_id_51d39462_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PaymentForm.vue?vue&type=template&id=51d39462&scoped=true& */ "./resources/js/components/PaymentForm.vue?vue&type=template&id=51d39462&scoped=true&");
+/* harmony import */ var _PaymentForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaymentForm.vue?vue&type=script&lang=js& */ "./resources/js/components/PaymentForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _PaymentForm_vue_vue_type_style_index_0_id_51d39462_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PaymentForm.vue?vue&type=style&index=0&id=51d39462&scoped=true&lang=scss& */ "./resources/js/components/PaymentForm.vue?vue&type=style&index=0&id=51d39462&scoped=true&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _PaymentForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PaymentForm_vue_vue_type_template_id_51d39462_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PaymentForm_vue_vue_type_template_id_51d39462_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "51d39462",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/PaymentForm.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/PaymentForm.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/PaymentForm.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./PaymentForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/PaymentForm.vue?vue&type=style&index=0&id=51d39462&scoped=true&lang=scss&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/components/PaymentForm.vue?vue&type=style&index=0&id=51d39462&scoped=true&lang=scss& ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_style_index_0_id_51d39462_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../node_modules/vue-loader/lib??vue-loader-options!./PaymentForm.vue?vue&type=style&index=0&id=51d39462&scoped=true&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentForm.vue?vue&type=style&index=0&id=51d39462&scoped=true&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_style_index_0_id_51d39462_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_style_index_0_id_51d39462_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_style_index_0_id_51d39462_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_style_index_0_id_51d39462_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/components/PaymentForm.vue?vue&type=template&id=51d39462&scoped=true&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/components/PaymentForm.vue?vue&type=template&id=51d39462&scoped=true& ***!
+  \********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_template_id_51d39462_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./PaymentForm.vue?vue&type=template&id=51d39462&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentForm.vue?vue&type=template&id=51d39462&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_template_id_51d39462_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentForm_vue_vue_type_template_id_51d39462_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/PaymentSelection.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/PaymentSelection.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _PaymentSelection_vue_vue_type_template_id_27a05591_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PaymentSelection.vue?vue&type=template&id=27a05591&scoped=true& */ "./resources/js/components/PaymentSelection.vue?vue&type=template&id=27a05591&scoped=true&");
+/* harmony import */ var _PaymentSelection_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaymentSelection.vue?vue&type=script&lang=js& */ "./resources/js/components/PaymentSelection.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _PaymentSelection_vue_vue_type_style_index_0_id_27a05591_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PaymentSelection.vue?vue&type=style&index=0&id=27a05591&scoped=true&lang=css& */ "./resources/js/components/PaymentSelection.vue?vue&type=style&index=0&id=27a05591&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _PaymentSelection_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _PaymentSelection_vue_vue_type_template_id_27a05591_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _PaymentSelection_vue_vue_type_template_id_27a05591_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "27a05591",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/PaymentSelection.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/PaymentSelection.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/PaymentSelection.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentSelection_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./PaymentSelection.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentSelection.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentSelection_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/PaymentSelection.vue?vue&type=style&index=0&id=27a05591&scoped=true&lang=css&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/components/PaymentSelection.vue?vue&type=style&index=0&id=27a05591&scoped=true&lang=css& ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentSelection_vue_vue_type_style_index_0_id_27a05591_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./PaymentSelection.vue?vue&type=style&index=0&id=27a05591&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentSelection.vue?vue&type=style&index=0&id=27a05591&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentSelection_vue_vue_type_style_index_0_id_27a05591_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentSelection_vue_vue_type_style_index_0_id_27a05591_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentSelection_vue_vue_type_style_index_0_id_27a05591_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentSelection_vue_vue_type_style_index_0_id_27a05591_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/components/PaymentSelection.vue?vue&type=template&id=27a05591&scoped=true&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/PaymentSelection.vue?vue&type=template&id=27a05591&scoped=true& ***!
+  \*************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentSelection_vue_vue_type_template_id_27a05591_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./PaymentSelection.vue?vue&type=template&id=27a05591&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/PaymentSelection.vue?vue&type=template&id=27a05591&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentSelection_vue_vue_type_template_id_27a05591_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PaymentSelection_vue_vue_type_template_id_27a05591_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

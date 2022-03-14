@@ -95,6 +95,8 @@
             </section>
         </div> --}}
     </div>
+    
+</div>
 
 <reviews></reviews>
 
