@@ -12,6 +12,7 @@ use App\Category;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class DoctorController extends Controller
 {
@@ -118,11 +119,25 @@ class DoctorController extends Controller
             abort(404);
         }
 
-        $mysub = DB::table('doctor_subscription')->where('doctor_id', $doctor->id)->orderBy('end_date', 'desc')->first();
-
         $subscription = Subscription::all();
 
-        return view('doctors.show', compact('doctor', 'subscription', 'mysub'));
+
+        $mysub = DB::table('doctor_subscription')->where('doctor_id', $doctor->id)->latest('id')->first();
+
+        $date_control = Carbon::parse($mysub->end_date);
+
+        if(Carbon::now() <= $date_control){
+
+            return view('doctors.show', compact('doctor', 'subscription', 'mysub'));
+
+        } else {
+
+            $mysub = 'Nessun abbonamento attivo';
+
+            return view('doctors.show', compact('doctor', 'subscription', 'mysub'));
+        }
+
+
     }
 
 

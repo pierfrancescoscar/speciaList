@@ -7,10 +7,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse my-collapse-header" id="navbarSupportedContent">
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto d-flex aligni-items-center ">
+
+                <ul class="navbar-nav ml-auto d-flex aligni-items-center my-navbar-header">
+                
                     <!-- Authentication Links -->
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('specialist_1')}}">I nostri specialisti</a>

@@ -19,22 +19,29 @@ class AddSubscriptionController extends Controller
 
         $sub = Subscription::where('type', $type)->first();
 
-        $existSub = DB::table('doctor_subscription')->where('doctor_id',$doctor['id'])->first();
+        $existSub = DB::table('doctor_subscription')->where('doctor_id',$doctor['id'])->latest('id')->first();
 
         if ( $existSub ) {
 
-            $lastSub = DB::table('doctor_subscription')->where('doctor_id',$doctor['id'])->first();
+            $lastSub = DB::table('doctor_subscription')->where('doctor_id',$doctor['id'])->latest('id')->first();
 
             $lastDate = $lastSub->end_date;
 
-            $dt = Carbon::parse($lastDate);
+            $lastCarbonDate = Carbon::parse($lastDate);
 
-            $date_end = $dt->addHours($sub['duration'])->format('d-m-Y');
+            if (Carbon::now() <= $lastCarbonDate) {
+                
+                $date_end = $lastCarbonDate->addHours($sub['duration'])->format('d-m-Y');
 
-            // $doctor->subscriptions()->updateExistingPivot($sub['id'], ['end_date' => $date_end]);
+                $doctor->subscriptions()->attach($sub['id'], ['end_date' => $date_end]);
 
+            } else {
 
-            $doctor->subscriptions()->updateExistingPivot($sub['id'], ['end_date' => $date_end]);
+                $new_date_end = Carbon::now()->addHours($sub['duration'])->format('d-m-Y');
+
+                $doctor->subscriptions()->attach($sub['id'], ['end_date' => $new_date_end]);
+            }
+
         }
         else {
 
