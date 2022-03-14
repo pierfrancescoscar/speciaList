@@ -9,7 +9,7 @@
 
                                 <div class="row">
 
-                                    <div class="col-md-6"> <span>Carta di Credito o di Debito</span> </div>
+                                    <div class="col-md-6"> <span>Carta di Credito - di Debito</span> </div>
                                     
 
                                     <div class="col-md-6 text-right" style="margin-top: -5px;">
@@ -134,24 +134,9 @@ Vue.use(VueStripePayment);
         methods: {
 
             GetDate() {
-<<<<<<< HEAD
-            // const month = new Date();
-            // const year = new Date();
-            // this.date = `${month.getMonth()} / ${year.getFullYear()}`;
-            // this.date = moment().month()+1;
-            // let year = moment().year().toString().substr(-2);
-            // let month = moment().month()+1;
-            // month = month.toString();
-            // console.log(month);
-            // this.date = `${}`
-            // this.date = new Date();
-
-            
-=======
             const month = new Date();
             const year = new Date();
             this.date = `${month.getMonth()}-${year.getFullYear()}`;
->>>>>>> 0b053957d528131c1d7f8757f73c6e679c6f46a5
             },
 
 
@@ -224,7 +209,9 @@ Vue.use(VueStripePayment);
                         }, 5000);
 
                         
-                    }
+                    } else {
+                            alert('Il nome inserito non è valido')
+                        }
 
                 } else if(card_year = today_year){
 
@@ -251,16 +238,18 @@ Vue.use(VueStripePayment);
                             }, 5000);
 
                             
+                        } else {
+                            alert('Il nome inserito non è valido.')
                         }
 
                     } else {
 
-                        alert('la carta è scaduta')
+                        alert('La carta inserita è scaduta.')
                     }
 
                 } else {
 
-                    alert('la carta è scaduta')
+                    alert('La carta inserita è scaduta.')
 
                 }
 
