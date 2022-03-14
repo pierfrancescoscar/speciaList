@@ -23,7 +23,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/admin/doctor/create';
 
-    public const LOGGED = '/admin';
+    public const LOGGED = '/admin/home';
 
     /* route crate page */
     public const CREATE = '/admin/doctor/create';

@@ -106,7 +106,7 @@
 
 <script>
 // import VueMoment from 'vue-moment';
-import moment from 'moment';
+//import moment from 'moment';
 import VueStripePayment from 'vue-stripe-payment';
 
 // Vue.use(require('vue-moment'));

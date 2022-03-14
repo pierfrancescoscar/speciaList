@@ -63,23 +63,15 @@
 {{-- Vue Components --}}
 <doctorcarousel></doctorcarousel>
 
-<<<<<<< HEAD
 {{-- Specialization List --}}
 <div class="container-fluid  p-4 bg-white">
     <div class="d-flex justify-content-center">
         <img class="specialist-icon" src="https://accademianeoippocratica.it/wp-content/uploads/2022/03/Recensioni_Specialist-02.png" alt="Img_not Found">
     </div>
-=======
-    {{-- Specialization List --}}
-    <div class="container-fluid p-4 bg-white">
-        <div class="d-flex justify-content-center">
-            <img class="specialist-icon" src="https://accademianeoippocratica.it/wp-content/uploads/2022/03/Recensioni_Specialist-02.png" alt="Img_not Found">
-        </div>
->>>>>>> 0b053957d528131c1d7f8757f73c6e679c6f46a5
     
         <h3 class="why-us-title text-center">Le specializzazioni più cercate.</h3>
 
-        {{-- <div class="container">
+        <div class="container">
             <section class="d-flex flex-wrap">
                 
                 @foreach ($categories as $category)
@@ -101,7 +93,7 @@
                     
                 @endforeach
             </section>
-        </div> --}}
+        </div>
     </div>
     
 </div>

@@ -36,6 +36,7 @@ export default {
 
     ReciveFilms(Array) {
             this.Films = Array;
+            console.log(this.dato);
         },
 
     ReciveSeries(Array) {
