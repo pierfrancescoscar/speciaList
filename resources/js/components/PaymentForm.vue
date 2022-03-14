@@ -9,7 +9,8 @@
 
                                 <div class="row">
 
-                                    <div class="col-md-6"> <span>CREDIT/DEBIT CARD PAYMENT</span> </div>
+                                    <div class="col-md-6"> <span>Carta di Credito o di Debito</span> </div>
+                                    
 
                                     <div class="col-md-6 text-right" style="margin-top: -5px;">
 
@@ -25,7 +26,7 @@
                                 <!-- card number -->
                                 <div class="form-group">
 
-                                    <label for="cc-number" class="control-label">CARD NUMBER</label>
+                                    <label for="cc-number" class="control-label">Numero della carta</label>
                                     <input id="cc-number" type="tel" class="input-lg form-control cc-number" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" required v-payment:formatCardNumber> 
                                 </div>
 
@@ -36,7 +37,7 @@
 
                                         <div class="form-group">
 
-                                            <label for="cc-exp" class="control-label">CARD EXPIRY</label>
+                                            <label for="cc-exp" class="control-label">Scadenza</label>
                                             <input id="cc-exp" type="tel" class="input-lg form-control cc-exp" autocomplete="cc-exp" placeholder="•• / ••" required v-payment:formatCardExpiry v-model="dateExpire">
                                         </div>
                                     </div>
@@ -46,8 +47,8 @@
 
                                         <div class="form-group">
 
-                                            <label for="cc-cvc" class="control-label">CARD CVC</label>
-                                            <input id="cc-cvc" type="tel" class="input-lg form-control cc-cvc" autocomplete="off" placeholder="••••" required v-payment:formatCardCVC>
+                                            <label for="cc-cvc" class="control-label">CVC</label>
+                                            <input id="cc-cvc" type="tel" class="input-lg form-control cc-cvc" autocomplete="off" placeholder="••••" required v-payment:formatCardCVC > 
                                         </div>
                                     </div>
                                 </div>
@@ -55,20 +56,20 @@
                                 <!-- doctor name -->
                                 <div class="form-group mb-2">
 
-                                    <label for="numeric" class="control-label">CARD HOLDER NAME</label>
-                                    <input type="text" class="input-lg form-control" v-model="nameDoctor" pattern="[A-Za-z]">
+                                    <label for="numeric" class="control-label">Proprietario della Carta</label>
+                                    <input type="text" placeholder="Inserisci qui il tuo nome completo..." class="input-lg form-control" v-model="nameDoctor" pattern="[A-Za-z]">
                                 </div>
                                 <hr>
 
                                 <div class="recup my-2 mb-3">
                                     <div class="d-flex justify-content-between">
-                                        <span class="recup-sub">Abbonamento {{paymentdata.type}} dalla durata di {{paymentdata.duration}} ore</span>
+                                        <span class="recup-sub">Abbonamento <strong>{{paymentdata.type}}</strong> dalla durata di {{paymentdata.duration}} ore</span>
                                         <span class="price-sub">Prezzo: {{paymentdata.price}}€</span>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <input value="MAKE PAYMENT" type="button" class="btn btn-success btn-lg form-control" style="font-size: .8rem;" @click="checkData">
+                                    <input value="Acquista" type="button" class="btn btn-success btn-lg form-control" style="font-size: .8rem;" @click="checkData">
                                 </div>
 
                             </div>
@@ -104,8 +105,11 @@
 </template>
 
 <script>
+// import VueMoment from 'vue-moment';
+import moment from 'moment';
 import VueStripePayment from 'vue-stripe-payment';
- 
+
+// Vue.use(require('vue-moment'));
 Vue.use(VueStripePayment);
 
     export default {
@@ -125,14 +129,27 @@ Vue.use(VueStripePayment);
         },
         created() {
             this.GetDate();
+
         },
         methods: {
 
             GetDate() {
-            const month = new Date();
-            const year = new Date();
-            this.date = `${month.getMonth()} / ${year.getFullYear()}`;
+            // const month = new Date();
+            // const year = new Date();
+            // this.date = `${month.getMonth()} / ${year.getFullYear()}`;
+            // this.date = moment().month()+1;
+            // let year = moment().year().toString().substr(-2);
+            // let month = moment().month()+1;
+            // month = month.toString();
+            // console.log(month);
+            // this.date = `${}`
+            // this.date = new Date();
+
+            
             },
+
+
+            
 
             checkData() {
 
@@ -203,6 +220,10 @@ Vue.use(VueStripePayment);
 @keyframes preloader{
 	0%,100%,50%{height:5px;-webkit-transform:translateY(0);transform:translateY(0);background:rgba(0,0,0,.1)}
 	25%{height:30px;-webkit-transform:translateY(15px);transform:translateY(15px);background:#2b71bd}
+}
+
+.blue-title {
+    color: #0071c3;
 }
 
 </style>

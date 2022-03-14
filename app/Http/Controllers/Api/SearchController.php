@@ -16,7 +16,7 @@ class SearchController extends Controller
         ->join('category_doctor', 'doctors.id', '=' , 'category_doctor.doctor_id')
         ->join('categories', 'categories.id', '=', 'category_doctor.category_id')
         ->where('categories.name', 'LIKE', '%'.$categoria.'%')
-        ->select('doctors.name as doctor', 'doctors.surname', 'categories.name as category', 'doctors.profile_pic')
+        ->select('doctors.name as doctor', 'doctors.surname', 'categories.name as category', 'doctors.profile_pic', 'doctors.slug')
         ->get();
         /* ->where('categories:name', 'Medicina d’emergenza-urgenza') */
         /* SELECT * 

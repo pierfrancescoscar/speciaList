@@ -80,7 +80,7 @@
                         <span class="name_info">Curriculum</span>
 
                         <div class="row_info">
-                            <a href="{{ asset('storage/' . $doctor->curriculum) }}">Clicca qui per visualizzare il CV</a>
+                            <a target="_blank" href="{{ asset('storage/' . $doctor->curriculum) }}">Clicca qui per visualizzare il CV</a>
                         </div>
 
                     @endif

@@ -26,11 +26,11 @@
                             <li>
                                 <div class="row">
                                     <div class="col-md-5 col-5">
-                                        <i class="fas fa-graduation-cap text-details"></i>
+                                        <i class="far fa-file-alt"></i>
                                         <strong class="margin-10px-left text-details">Curriculum:</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
-                                        <a class="btn btn_details" :href="`${linkCv}`">Visualizza il CV</a>
+                                        <a class="btn btn_details" target="_blank" :href="`${linkCv}`">Visualizza il CV</a>
                                     </div>
                                 </div>
 
@@ -39,7 +39,7 @@
 
                                 <div class="row">
                                     <div class="col-md-5 col-5">
-                                        <i class="far fa-gem text-details"></i>
+                                       <i class="fas fa-phone-alt"></i>
                                         <strong class="margin-10px-left text-details">Numero di telefono:</strong>
                                     </div>
                                     <div class="col-md-7 col-7">
@@ -52,7 +52,7 @@
 
                                 <div class="row">
                                     <div class="col-md-5 col-5">
-                                        <i class="far fa-file text-details"></i>
+                                        <i class="fas fa-envelope-open-text"></i> 
                                         <strong class="margin-10px-left text-details">Mail:</strong>
                                     </div>
                                     <div class="col-md-7 col-7">

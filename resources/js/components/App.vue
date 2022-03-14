@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <Header :search="dato" @film="ReciveFilms" @series="ReciveSeries"/>
-        <h1 v-show="Films.length != 0">Ecco gli specialisti che abbiamo trovato per te!</h1>
+        <h3 v-show="Films.length != 0">Ecco gli specialisti che abbiamo trovato per te!</h3>
+        <h4 class="mb-5" v-if="Films.length <= 0">Al momento non c'è nessuno speciaLista qui.</h4>
+        
         <CardList v-show="Films.length != 0" :CardList="Films"/>
     </div>
 </template>
@@ -55,7 +57,7 @@ export default {
     padding-top: 120px;
   }
 
-  h1 {
+  h3,h4 {
     color: #0071c3;
     margin-left: 50px;
     margin-top: 30px;
@@ -66,4 +68,6 @@ export default {
     flex-direction: column;
     align-items: center;
   }
+
+
 </style>
