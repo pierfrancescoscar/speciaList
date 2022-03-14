@@ -129,6 +129,43 @@
         }
     }
 
+    .recup-sub{
+
+        padding: 20px;
+
+        .all-info-sub{
+            font-size: 18px;
+            margin-top: 16px;
+        }
+
+        .info-sub-color{
+            color: #53ff15;
+        }
+
+        .badge-sub{
+            font-size: 56px;
+            color: #fff009;
+        }
+    }
+
+    .title-category{
+        color: #0071c3;
+    }
+
+    @media all and (max-width: 750px) {
+
+        .my-collapse-header{
+            z-index: 1;
+            background: white;
+            padding: 0 20px;
+            box-shadow: 1px 3px 18px 4px rgba(0,0,0,0.28);
+        }
+
+        .my-navbar-header{
+            padding-bottom: 20px;
+        }
+    }
+
     // @media all and (max-width: 750px) {
     //     .first_row {
     //         flex-direction: column;

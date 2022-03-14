@@ -4,8 +4,6 @@
 
     <div class="container show_style  mb-3">
 
-        {{-- @dd($mysub) --}}
-
         <div class="pages_container col-12 col-xl-10 offset-xl-1 d-flex flex-column flex-xl-row mt-5">
 
             {{-------------------------------------------- LEFT CONTAINER -------------------------------------------------}}
@@ -40,28 +38,43 @@
 
                     {{-- doctor id --}}
                     {{-- doctor category --}}
-                    <h4 class="mb-2 mt-2 text-center">Specializzazione:</h4>
-                    <ul class="list-unstyled">
+                    <h4 class="mb-2 mt-2 text-center title-category">Specializzazione:</h4>
+                    <ul class="list-unstyled text-center">
                         @if(!$doctor->categories->isEmpty())
 
-                        @foreach($doctor->categories as $category)
-                        
-                            <li>
-                                <a class="badge badge_profile" href="">{{ $category->name }}</a>
-                            </li>
+                            @foreach($doctor->categories as $category)
+                            
+                                <li>
+                                    <a class="badge badge_profile" href="">{{ $category->name }}</a>
+                                </li>
 
-                        @endforeach
+                            @endforeach
 
-                            @else
-                            <span>Nessuna specializzazione specificata</span>
+                        @else
+                        <span>Nessuna specializzazione specificata</span>
 
                         @endif
                         
                     </ul>
                 </div>
 
-                <div class="statistiche">Statistiche qui
+                <div class="statistiche recup-sub d-flex flex-column align-center justify-content-center">
+                    @if ($mysub == 'Nessun abbonamento attivo')
 
+                        <span class="d-block text-white">Non hai un abbonamento attivo</span>
+
+                    @else
+
+                        <i class="fas fa-clipboard-check text-center badge-sub"></i>
+                        
+                        <span class="d-block text-center text-white all-info-sub">
+                            Il tuo abbonamento 
+                            <span class="fw-bold info-sub-color">{{$subscription[ $mysub->subscription_id - 1 ]->type}}</span>
+                             è attivo fino al 
+                             <span class="fw-bold info-sub-color">{{$mysub->end_date}}</span>
+                        </span>
+
+                    @endif
                 </div>
 
             </div>

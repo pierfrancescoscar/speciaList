@@ -134,6 +134,7 @@ Vue.use(VueStripePayment);
         methods: {
 
             GetDate() {
+<<<<<<< HEAD
             // const month = new Date();
             // const year = new Date();
             // this.date = `${month.getMonth()} / ${year.getFullYear()}`;
@@ -146,6 +147,11 @@ Vue.use(VueStripePayment);
             // this.date = new Date();
 
             
+=======
+            const month = new Date();
+            const year = new Date();
+            this.date = `${month.getMonth()}-${year.getFullYear()}`;
+>>>>>>> 0b053957d528131c1d7f8757f73c6e679c6f46a5
             },
 
 
@@ -153,11 +159,52 @@ Vue.use(VueStripePayment);
 
             checkData() {
 
+                /* get a card date */
                 let dateInFormat = this.dateExpire.trim();
                 dateInFormat = dateInFormat.replace('0','')
-                let today = this.date.trim();
+                dateInFormat = dateInFormat.replace(/ /g,'')
 
-                if (today != dateInFormat) {
+                /* save month and year card */
+                let cardMonth;
+                let cardYear;
+
+                if(dateInFormat.length == 4){
+
+                    cardMonth = `${dateInFormat[0]}`
+
+                    cardYear = `${dateInFormat[2]}${dateInFormat[3]}`
+
+                }
+                if (dateInFormat.length == 5){
+
+                    cardMonth = `${dateInFormat[0]}${dateInFormat[1]}`
+
+                    cardYear = `${dateInFormat[3]}${dateInFormat[4]}`
+
+                }
+
+                /* get current date */
+                let month = new Date();
+                let year = new Date();
+
+                year = year.getFullYear().toString();
+
+                year = `${year[2]}${year[3]}`
+
+                /* chek validation card */
+                let cardDate = new Date(cardYear, cardMonth);
+                let today = new Date (year, month.getMonth()+1 );
+
+                let today_month = today.getMonth();
+                let card_month = cardDate.getMonth();
+
+                let today_year = today.getYear();
+                let card_year = cardDate.getYear();
+
+                /* payment */
+                if(card_year > today_year){
+
+                    this.nameDoctor = this.nameDoctor.replace(/ /g,'')
 
                     var letters = /^[A-Za-z]+$/;
 
@@ -178,7 +225,42 @@ Vue.use(VueStripePayment);
 
                         
                     }
-                    
+
+                } else if(card_year = today_year){
+
+                    /* payment */
+                    if(card_month >= today_month){
+
+                        this.nameDoctor = this.nameDoctor.replace(/ /g,'')
+
+                        var letters = /^[A-Za-z]+$/;
+
+                        if(this.nameDoctor.match(letters)) {
+
+                            this.disableForm = false;
+
+                            setTimeout(() => {
+                        
+                                this.success = false;
+
+                                setTimeout(() => {
+                        
+                                    window.location.replace(`http://127.0.0.1:8000/admin/confirm/${this.doctordata.slug}/${this.paymentdata.type}`);
+                                }, 3000);
+
+                            }, 5000);
+
+                            
+                        }
+
+                    } else {
+
+                        alert('la carta è scaduta')
+                    }
+
+                } else {
+
+                    alert('la carta è scaduta')
 
                 }
 

@@ -5,9 +5,9 @@
                 <div class="offer-dedicated-body-left">
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade active show" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
-                            <div class="bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews">
+                            <div class="bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews rounded-3">
 
-                                <h5 class="mb-1">{{title}}</h5>
+                                <h3 class="mb-1 text-center color_primary">{{title}}</h3>
 
                                 <CardContact :myloop="datarecup" />
 
@@ -41,6 +41,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+.color_primary {
+    color:#0071c3;
+}
 
 .total-like-user-main a {
     display: inline-block;
