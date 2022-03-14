@@ -128,6 +128,10 @@ export default {
             font-size: 55px;
         }
 
+        .doc-card {
+            background-color:#dce4f1;
+        }
+
     }
 }
 
