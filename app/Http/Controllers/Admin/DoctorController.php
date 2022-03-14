@@ -121,12 +121,24 @@ class DoctorController extends Controller
 
         $subscription = Subscription::all();
 
+        $register = false;
+
 
         $mysub = DB::table('doctor_subscription')->where('doctor_id', $doctor->id)->latest('id')->first();
 
-        $date_control = Carbon::parse($mysub->end_date);
+        if ($mysub) {
+            
+            $date_control = Carbon::parse($mysub->end_date);
 
-        if(Carbon::now() <= $date_control){
+
+            if (Carbon::now() <= $date_control) {
+                $register = true;
+            }
+
+        }
+
+
+        if($register == true){
 
             return view('doctors.show', compact('doctor', 'subscription', 'mysub'));
 
