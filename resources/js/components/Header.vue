@@ -1,10 +1,10 @@
 <template>
   <div class="header">
       <CategoriesCarousel @searchText="reciveText"/>
-      <h1>
+      <!-- <h1>
           Inserisci qui la specializzazione che stai cercando
-      </h1>
-      <Form :testo="testo" @searchText="reciveText"/>
+      </h1> -->
+      <Form class="d-none" :testo="testo" @searchText="reciveText"/>
   </div>
 </template>
 

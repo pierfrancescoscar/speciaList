@@ -23,7 +23,7 @@
                                 <i class="fa-solid fa-calendar-days  pr-2"></i><span class="text-color">{{ singleContact.date }}</span>
                             </div>
                             <div class="mb-1">
-                                <i class="fa-solid fa-envelope-open-text  pr-2"></i><span class="text-color">{{ singleContact.object }}</span>
+                                <i class="fa-solid fa-envelope-open-text  pr-2"></i><span class="text-color">{{ singleContact.email }}</span>
                             </div>
                             <div class="mb-1">
                                 <i class="fa-solid fa-comment  pr-2"></i><span class="text-color">{{ singleContact.content }}</span>
