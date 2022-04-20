@@ -1,0 +1,204 @@
+.patacchi {
+    margin-top: 7rem;
+    
+    .patacco {
+        margin-bottom: 7rem;
+    }
+}
+
+.bg_light {
+    background-image: linear-gradient(to bottom, #e6f8ff, #def4ff, #d8f0ff, #d2ecff, #cde7ff);
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    position: relative;
+
+    .text_container {
+
+        p {
+            font-size: 0,938rem;
+        }
+
+        .btn-text {
+            font-size: 0,938rem;
+        }
+    }
+}
+
+.bg_dark {
+    position: absolute;
+    height: 17rem;
+    border-radius: 2rem;
+    transform: translateY(-50%);
+    left: 3rem;
+    top: 50%;
+    opacity: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0071c3;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.4;
+    }
+    
+    .borsa_img {
+        font-size: 10rem;
+        color: white;
+    }
+}
+
+.bg_light_green {
+    background-image: linear-gradient(to bottom, #deffea, #d9fde4, #d3fbde, #cff8d8, #caf6d2);    
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.bg_dark_green {
+    position: absolute;
+    height: 17rem;
+    border-radius: 2rem;
+    transform: translateY(-50%);
+    right: 3rem;
+    top: 50%;
+    opacity: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2bf77a;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.4;
+    }
+    
+    .borsa_img {
+        font-size: 10rem;
+        color: white;
+    }
+}
+
+
+// @media all and (max-width: 1200px) {
+//     .patacchi {
+//         margin-top: 4rem;
+//     }
+
+//     .bg_light {
+//         padding: 1rem 0;
+
+//         .text_container {
+//             margin-top: 14rem;
+
+//             .title {
+//                 font-size: 1.4rem;
+//             }
+
+//             .text {
+//                 font-size: 1rem;
+//             }
+//         }
+//     }
+    
+//     .bg_dark {
+//         max-height: 12rem;
+//         left: -5%;
+//         top: 8rem;
+//         width: 110%;
+
+//         .borsa_img {
+//             font-size: 9rem;
+//         }
+//     }
+    
+//     .bg_light_green {
+//         padding: 1rem 0;
+
+//         .text_container {
+//             margin-top: 14rem;
+
+//             .title {
+//                 font-size: 1.4rem;
+//             }
+
+//             .text {
+//                 font-size: 1rem;
+//             }
+//         }
+//     }
+    
+//     .bg_dark_green {
+//         max-height: 12rem;
+//         left: -5%;
+//         top: 8rem;
+//         width: 110%;
+
+//         .borsa_img {
+//             font-size: 9rem;
+//         }
+//     }
+    
+// }
+
+
+@media all and (max-width: 1200px) {
+    .patacchi {
+        margin-top: 4rem;
+    }
+
+    .bg_light {
+        padding: 1rem 0;
+
+        .text_container {
+            margin-top: 14rem;
+
+            .title {
+                font-size: 1.4rem;
+            }
+
+            .text {
+                font-size: 1rem;
+            }
+        }
+    }
+    
+    .bg_dark {
+        max-height: 12rem;
+        left: -5%;
+        top: 8rem;
+        width: 110%;
+
+        .borsa_img {
+            font-size: 9rem;
+        }
+    }
+    
+    .bg_light_green {
+        padding: 1rem 0;
+
+        .text_container {
+            margin-top: 14rem;
+
+            .title {
+                font-size: 1.4rem;
+            }
+
+            .text {
+                font-size: 1rem;
+            }
+        }
+    }
+    
+    .bg_dark_green {
+        max-height: 12rem;
+        left: -5%;
+        top: 8rem;
+        width: 110%;
+
+        .borsa_img {
+            font-size: 9rem;
+        }
+    }
+    
+}

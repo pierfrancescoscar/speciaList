@@ -19,13 +19,26 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+
+import Vue from 'vue';
+
+
+Vue.component('doctorcarousel' , require('./components/DoctorCarousel').default);
+Vue.component('categoriescarousel' , require('./components/CategoriesCarousel').default);
+Vue.component('app' , require('./components/App').default);
+Vue.component('reviews' , require('./components/Reviews').default);
+Vue.component('contactdoctor' , require('./components/ContactDoctor').default);
+Vue.component('showdoctor' , require('./components/ShowDoctor').default);
+Vue.component('formreview' , require('./components/FormReview').default);
+Vue.component('mycontact' , require('./components/MyContact').default);
+Vue.component('paymentselection' , require('./components/PaymentSelection').default);
+Vue.component('paymentform' , require('./components/PaymentForm').default);
+
 
 const app = new Vue({
     el: '#app',

@@ -17,3 +17,36 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+// More colours
+$primary: #0071c3;
+
+
+// ---------------------------------- Utilities --------------------------------------- //
+.btn-1 {
+    background-color: #0071c3 !important;
+    border: none !important;
+
+    &:hover {
+        background-color: #0072c3de !important;
+    }
+}
+
+.btn-2 {
+    background-color: #b1f3ca !important;
+    border-color: #b1f3ca87 !important;
+
+    &:hover {
+        background-color: #b1f3ca87 !important;
+    }
+}
+
+.specialist-icon {
+    width: 150px;
+}
+
+
+// --------------------------------- Footer -------------------------------------------- //
+
+$footer-bg: #dce4f1;
+$footer-text: white;

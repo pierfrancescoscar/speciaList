@@ -1,8 +1,49 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    font-family: Poppins;
+}
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+// Home
+@import "partials/home_style.scss";
+
+// Header
+@import "partials/header.scss";
+
+// doctor show
+@import "partials/show_style.scss";
+
+// doctor edit
+@import "partials/edit_style.scss";
+
+//hero
+@import "partials/hero_style.scss";
+
+// Footer
+@import "partials/footer.scss";
+
+// Registrazione
+@import "partials/registrazione_style.scss";
+
+// Login
+@import "partials/login_style.scss";
+
+// Patacchi
+@import "partials/patacchi.scss";
+
+// message
+@import "partials/message_style.scss";
+
+// How it works section
+@import "partials/howitworks_style.scss";
+
+// Payment
+@import "partials/paymentform.scss";
+

@@ -1,0 +1,48 @@
+.hero {
+    background-image: url('../assets/Hero_Specialist.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 600px;
+    .hero-text {
+        .content {
+            background-color: rgba(220, 228, 241, 0.6);
+            border-radius: 10px;
+        }
+    }
+    h2 {
+        color: $primary;
+    }
+    h4 {
+        color: $primary;
+    }
+    form {
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 2px solid $primary;
+        input {
+            border-radius: 0px;
+            border: none;
+            border-bottom: 1px solid rgb(218, 218, 218);
+            &::placeholder {
+                color: rgb(192, 192, 192);
+            }
+        }
+        .btn-1 {
+            background-color: #0071c3;
+            border-radius: 20px;
+            border: none;
+            color: white;
+        }
+    }
+
+}
+.description-hero {
+    color: #0071c3;
+}
+
+.title-form-hero {
+    color: #0071c3 !important;
+}
+

@@ -1,29 +1,36 @@
 {{-- Navbar --}}
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
-            </a>
+        <div class="container ">
+            {{-- logo --}}
+            <a class="navbar-brand" href="{{ url('/') }}"><img class="logo" src="{{ asset('assets/Specialist_Logo_Transparent_Tavola_disegno_1.png') }}" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav mr-auto">
-                    
-                </ul>
+            <div class="collapse navbar-collapse my-collapse-header" id="navbarSupportedContent">
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
+
+                <ul class="navbar-nav ml-auto d-flex aligni-items-center my-navbar-header">
+                
                     <!-- Authentication Links -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('specialist_1')}}">I nostri specialisti</a>
+                    </li>
+                    
+                    {{-- <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('FAQ') }}</a>
+                    </li> --}}
+                    
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li> 
+                            <a class="nav-link" href="{{ route('login')}}">{{ __('Accedi') }}</a>
+                        </li>
+
+
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link btn-1 ms-2 p-2" href="{{ route('register') }}">{{ __('Sei uno specialista? Registrati!') }}</a>
                             </li>
                         @endif
                     @else
@@ -38,6 +45,28 @@
                                                 document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
+
+                                @if (DB::table('doctors')->where('slug', Auth::user()->slug)->first())
+                                    
+                                    <a class="dropdown-item" href="{{ route('admin.doctor.show', Auth::user()->slug) }}">
+                                        Il mio profilo
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{ route('admin.messages', Auth::user()->slug) }}">
+                                        I miei messaggi
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{ route('admin.reviews', Auth::user()->slug) }}">
+                                        Le mie recensioni
+                                    </a>
+                                
+                                @else
+                                
+                                    <a class="dropdown-item" href="{{ route('admin.doctor.create') }}">
+                                        Completa il tuo profilo
+                                    </a>
+
+                                @endif
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf

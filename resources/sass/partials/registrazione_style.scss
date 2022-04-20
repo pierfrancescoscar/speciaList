@@ -1,0 +1,28 @@
+.card_registration {
+    color: white;
+    box-shadow: 0 0 50px #00000080;
+    margin: 65px;
+    font-size: 18px;
+    line-height: 3;
+    //border-radius: 1rem !important;
+    font-size: 18px;
+    text-align: center;
+
+    .card_registration_title {
+        background-color: $primary !important;
+    }
+
+    .card_registration_content {
+        background-color: white;
+        color: $primary;
+        //border-radius: 0 0 1rem 1rem !important;
+    }
+
+    .btn_registration {
+        background-color: #0071c3 !important;
+
+        &:hover {
+            background-color: #0072c3de !important;
+        }
+    }
+}
